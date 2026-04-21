@@ -45,4 +45,4 @@ The web of associations the predicate activates is the Form Contract layer of th
   - Different layers of the form hierarchy: `extends_contract::` is contract-to-contract inheritance; `conforms_to::` is instance-to-specification compliance.
 
 - grounded_in::[[Vocabulary Diversity Is a Feature]]
-  - The Conviction that makes the distinction-naming in this Predicate's Crescent sections load-bearing. The `is_a::` vs `conforms_to::` distinction is the one deepcontext-dev commits to preserving against the convergence pressure that would flatten them.
+  - The Conviction that makes the distinction-naming in this Predicate's Crescent sections load-bearing. The `is_a::` vs `conforms_to::` distinction is one the project commits to preserving against the convergence pressure that would flatten them.

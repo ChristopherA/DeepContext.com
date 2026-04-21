@@ -26,14 +26,33 @@ TAXONOMY_DESCRIPTIONS: dict[str, str] = {
 }
 
 
+def _first_clause(text: str) -> str:
+    """Return the clause before the first em-dash or double-hyphen separator."""
+    for sep in (" \u2014 ", " -- "):
+        idx = text.find(sep)
+        if idx > 0:
+            return text[:idx].rstrip()
+    return text
+
+
 def _entry_summary(path: Path) -> str:
+    """Pick the taxonomy-index summary for a node.
+
+    Use the tagline's first clause (before an em-dash or double-hyphen break);
+    fall back to brief_summary when no tagline is present.
+    """
     meta, _ = strip_frontmatter(path.read_text(encoding="utf-8"))
     tagline = meta.get("tagline", "").strip()
+    if tagline:
+        clause = _first_clause(tagline)
+        if len(clause) <= 180:
+            return clause
+        return clause[:177].rstrip() + "..."
+
     brief = meta.get("brief_summary", "").strip()
-    summary = tagline or brief
-    if len(summary) > 240:
-        summary = summary[:237].rstrip() + "..."
-    return summary
+    if len(brief) > 180:
+        return brief[:177].rstrip() + "..."
+    return brief
 
 
 def build_taxonomy_index(
@@ -59,10 +78,12 @@ def build_taxonomy_index(
     for entry in unique:
         summary = _entry_summary(entry["path"])
         label = entry["title"]
+        # Emit as a bare wikilink so linkify renders it with visible brackets,
+        # matching the Render Bare Wikilinks with Visible Brackets Decision.
         if summary:
-            lines.append(f"- [**{label}**]({entry['url']}) -- {summary}")
+            lines.append(f"- [[{label}]] -- {summary}")
         else:
-            lines.append(f"- [**{label}**]({entry['url']})")
+            lines.append(f"- [[{label}]]")
     lines.append("")
     lines.append(f"*{len(unique)} nodes in this section.*")
     return "\n".join(lines) + "\n"

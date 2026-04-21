@@ -6,10 +6,10 @@ front page; the site's landing page is in `landing.md` and renders to
 
 ## What this repository publishes
 
-A curated node graph authored in
-[`deepcontext-dev`](https://github.com/ChristopherA/deepcontext-dev) and
-projected here for publication. See `landing.md` (or visit the
-published site) for the graph's vision, link legend, and form-type guide.
+A curated node graph published as a static site. See `landing.md` (or visit
+the published site) for the graph's vision, link legend, and form-type
+guide. This repository is the source of truth; contributions are welcome
+via Issues, Discussions, and Pull Requests.
 
 ## Forking
 
@@ -65,7 +65,7 @@ DeepContext.com/
 |-- landing.md           <- site landing page source
 |-- AGENTS.md            <- orientation for AI agents
 |-- pyproject.toml       <- Python dependencies (uv-managed)
-|-- nodes/               <- projected from deepcontext-dev/prototype/nodes/
+|-- nodes/               <- the node graph (see landing page for overview)
 |-- .scripts/            <- Python build pipeline + CSS
 |-- .github/workflows/   <- build-and-deploy action
 |-- .build/              <- generated site (gitignored; regenerated per deploy)
@@ -73,9 +73,11 @@ DeepContext.com/
 
 ## Contributing
 
-Editorial work happens in the workshop repository
-[`deepcontext-dev`](https://github.com/ChristopherA/deepcontext-dev).
-Direct edits here are valid but should flow back to the workshop.
+Contributions are welcome via this repository's
+[Issues](https://github.com/ChristopherA/DeepContext.com/issues),
+[Discussions](https://github.com/ChristopherA/DeepContext.com/discussions),
+and Pull Requests. Edit nodes via the GitHub Web UI or clone locally. See
+`landing.md` for the link legend, form types, and reading paths.
 
 ## License
 

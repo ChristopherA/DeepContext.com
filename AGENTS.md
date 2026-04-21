@@ -5,10 +5,9 @@ workshop repository; this file gives enough to start.
 
 ## What this repository is
 
-`DeepContext.com` is the **publication view** of a curated knowledge graph.
-Nodes are authored in [`deepcontext-dev`](https://github.com/ChristopherA/deepcontext-dev)
-and projected here. Edits made here are valid but should flow back to the
-workshop for sustained curation.
+`DeepContext.com` is a curated knowledge graph published as a static site.
+This repository is the source of truth; contributions flow in via GitHub
+Issues, Discussions, and Pull Requests.
 
 ## Graph conventions
 
@@ -20,7 +19,8 @@ workshop for sustained curation.
 - Named edges: `predicate::[[Target]]` bullets below the H1 and in the
   `## Relations` section carry the graph's typed structure.
 
-Full conventions: `CONVENTIONS.md` in `deepcontext-dev`.
+Full conventions: the Contract nodes under `nodes/Contracts/` and the landing
+page's Link Legend and Form Types sections.
 
 ## Taxonomies
 

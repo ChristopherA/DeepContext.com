@@ -11,6 +11,14 @@ conventions, the node drafts, and the conversation all live here on GitHub.
 Comments and contributions are welcome -- via Issues, Discussions, and Pull
 Requests.
 
+The stewards carry decades of experience with online collaboration, across
+both what has worked and what has fallen apart. The commitments encoded in
+these conventions are drawn from that experience -- small-group shared-thinking
+spaces that succeeded, larger ones that fractured, wikis that sustained and
+wikis that drifted to write-only. The motivation is shared: to make
+collaborative knowledge work easier to sustain, not to relitigate any one
+prior attempt.
+
 ## Why this exists
 
 Most collaborative wikis drift toward write-only: contributors keep adding,
