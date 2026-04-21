@@ -58,11 +58,11 @@ The `has_commitment::[[Firm Commitment]]` predicate marks this decision as expen
 
 ## Relations
 
-- grounded_in::[[Reasoning Fidelity]]↗
-  - The architecture exists to serve this value in the estate — capturing how someone reasons, not just what they know. The estate's node holds the value's full statement; this decision is the structural implementation.
+- grounded_in::[[Capture Reasoning, Not Just Knowledge]]
+  - The Conviction that makes this architecture load-bearing. Capturing how contributors actually reason — values, patterns, alternatives, grounds — is what the form contracts and the named-edge convention implement at the structural layer. A Decision that records only the choice is a fact; this architecture exists so Decisions carry their reasoning.
 
-- grounded_in::[[Knowledge Durability]]↗
-  - Plain markdown, git, and the zero-tooling floor all serve the value that knowledge must outlast the tools that helped produce it. Cross-wiki reference; the value itself lives in the estate.
+- grounded_in::[[Knowledge Outlives Its Tools]]
+  - The Conviction that makes plain markdown, git, and the zero-tooling floor load-bearing rather than aesthetic. The captured reasoning must survive tool changes; the architecture's durability commitments are how it meets that requirement.
 
 - informs::[[Adopt Wikilinks and Named Edges]]
   - The wikilinks-and-named-edges decision commits this graph's semantic layer to author-declared named edges. Taking the architecture decision seriously requires committing to the mechanism that makes predicate traversal expressible; the gist-level decision is that mechanism's concrete form.
