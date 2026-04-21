@@ -1,3 +1,6 @@
+# Build output (generated; deployed via Actions, not committed)
+.build/
+
 # Python / uv
 .venv/
 __pycache__/
