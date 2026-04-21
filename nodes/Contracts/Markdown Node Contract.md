@@ -102,7 +102,7 @@ Enforces [[Adopt Predicate Atomicity]].
 - built_on::[[CommonMark Markdown]]↗
   - A node conforming to this contract is valid CommonMark; the contract adds reading and authoring discipline on top of the file format.
 
-- grounded_in::[[Wikilinks and Named Edges]]↗
+- grounded_in::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]
   - The canonical reference for the underlying wikilinks-plus-named-edges convention this contract specializes.
 
 - grounded_in::[[Adopt Wikilinks and Named Edges]]

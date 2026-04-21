@@ -34,5 +34,5 @@ The compound is a structural answer to concepts with substantial supporting mate
 - grounded_in::[[Markdown Node Contract]]
   - The node-atomicity Requirement in the Markdown Node Contract is the thin enforcement clause for Adopt Node Atomicity. The compound-node pattern is the structural answer for concepts with substantial supporting material under that Requirement.
 
-- grounded_in::[[Wikilinks and Named Edges]]↗
+- grounded_in::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]
   - The wikilinks-and-named-edges convention specifies that a wikilink target resolves to either a single file or a folder whose lead file carries the same name.

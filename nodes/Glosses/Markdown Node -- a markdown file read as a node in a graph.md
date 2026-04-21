@@ -20,7 +20,7 @@ The contrast is with markdown-as-prose, where every `[[link]]` is just a conveni
 
 ## Relations
 
-- grounded_in::[[Wikilinks and Named Edges]]↗
+- grounded_in::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]
   - The canonical reference that names markdown-with-wikilinks-and-named-edges as the underlying convention.
 
 - built_on::[[CommonMark Markdown]]↗

@@ -69,7 +69,7 @@ Enforces [[Require Explanatory Prose Before Contract Requirements]].
 - extends_contract::[[Markdown Node Contract]]
   - A Contract is a Markdown Node with additional structural obligations — notably the parseable `## Requirements` section and the inheritance pattern.
 
-- grounded_in::[[Wikilinks and Named Edges]]↗
+- grounded_in::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]
   - The underlying convention that makes `conforms_to::[[X]]` a first-class classification edge rather than a tag.
 
 - grounded_in::[[Use RFC 2119 Keywords in Contract Requirements]]
