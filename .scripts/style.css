@@ -47,6 +47,9 @@ p, li { color: var(--ink); }
 a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(42, 93, 138, 0.3); }
 a:hover { border-bottom-color: var(--accent); }
 
+a.wikilink { border-bottom: none; }
+a.wikilink:hover { border-bottom: 1px solid var(--accent); }
+
 ul, ol { padding-left: 1.2rem; }
 li { margin: 0.25rem 0; }
 li > ul, li > ol { margin: 0.25rem 0; }

@@ -1,16 +1,22 @@
 """Rewrite wikilinks in source markdown.
 
 Transforms (in-memory; callers write to .build/ via render.py):
-    [[Target]]              -> [Target](/nodes/<tax>/<slug>/)           if resolved
-    [[Target|Display]]      -> [Display](/nodes/<tax>/<slug>/)          if resolved
+    [[Target]]              -> <a class="wikilink" href="/nodes/<tax>/<slug>/">[[Target]]</a>
+    [[Target|Display]]      -> [Display](/nodes/<tax>/<slug>/)          (pipe drops brackets)
     [[Target]]              -> <span class="ghost-link">[[Target]]</span>
     [[Target]]\u2197          -> <span class="external-ref">[[Target]]\u2197</span>
 
 Fenced code blocks and inline code spans are protected during the rewrite.
+
+The bare-wikilink form preserves `[[brackets]]` in the rendered output as a
+deliberate convention so the source pattern stays legible on the site. The
+piped form drops the brackets so the display text reads naturally in prose.
+See Decision node 'Render Bare Wikilinks with Visible Brackets'.
 """
 
 from __future__ import annotations
 
+import html
 import re
 from pathlib import Path
 
@@ -50,8 +56,13 @@ def linkify_text(text: str, slug_table: dict[str, dict]) -> str:
             # Unresolved: render as ghost link span.
             return f'<span class="ghost-link">[[{raw_target}]]</span>'
 
-        link_text = (display if display is not None else target).strip()
-        return f"[{link_text}]({entry['url']})"
+        url = entry["url"]
+        if display is not None:
+            # Pipe wikilink: display text only, brackets dropped.
+            return f"[{display.strip()}]({url})"
+        # Bare wikilink: preserve [[brackets]] in the rendered link.
+        target_escaped = html.escape(target.strip())
+        return f'<a class="wikilink" href="{url}">[[{target_escaped}]]</a>'
 
     text = WIKILINK_RE.sub(_replace, text)
 
