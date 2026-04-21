@@ -53,7 +53,7 @@ Apply the same move recursively within sections when it helps — lead a section
 ## Instances
 
 - **Every Form Contract in the prototype** specifies a required opening that carries the card-scale claim. Pattern Form Contract ("The body MUST open with a `## Heart` section of two to three prose sentences"); Decision Form Contract ("The body MUST contain content that states why the commitment was made"); Conviction Form Contract ("The body MUST open by stating the conviction in one or two prose sentences"); the Markdown Node Contract's layered-structure Requirement names the minimum structural tiering every extending contract inherits. The contracts are this Pattern's structural fingerprint per form.
-- **The Group Works deck tradition** is the card-scale precursor. Each card IS the pattern at card scale — a reader holding only the card gets the whole of it. The prototype's `## Heart` convention adopts the same principle explicitly, via the estate's [[Pattern Form]]↗.
+- **The Group Works deck tradition** is the card-scale precursor. Each card IS the pattern at card scale — a reader holding only the card gets the whole of it. The prototype's `## Heart` convention adopts the same principle explicitly; see [[A Pattern Language (Christopher Alexander et al., 1977)]] for the tradition this draws on.
 - **The Wikilinks and Named Edges Gist reference node** names this same move in one bullet as "Progressive disclosure for agents" — convention-stub scale. This Pattern is the prototype's reframed and elaborated rendition.
 
 ## Also Known As

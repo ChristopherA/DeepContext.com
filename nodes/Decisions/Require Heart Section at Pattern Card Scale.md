@@ -45,8 +45,8 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Adopt Layered Node Structure]]
   - The layered-structure commitment requires each layer to be complete at its scale. The Heart is the claim-layer complement to Patterns' elaboration-tier body; both are required for the Pattern's layered structure to hold.
 
-- grounded_in::[[Pattern Form]]↗
-  - The Alexandrian tradition, via the Group Works deck and the larger estate-level Pattern Form, supplies the card-IS-the-pattern convention. The `## Heart` section is the prototype's specific realization of that convention.
+- grounded_in::[[A Pattern Language (Christopher Alexander et al., 1977)]]
+  - The Alexandrian tradition, via the Group Works deck and its descendants, supplies the card-IS-the-pattern convention: each pattern is legible at card scale through its Heart alone; further sections serve elaboration, not completion. The `## Heart` section is this graph's specific realization of that convention.
 
 - informs::[[Pattern Form Contract]]
   - Pattern Form Contract's Body-Heart Requirement carries the thin enforcement clause pointing at this Decision.

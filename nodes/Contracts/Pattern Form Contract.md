@@ -119,5 +119,5 @@ Enforces [[Require Forces Authenticity in Patterns]].
 - grounded_in::[[Reserve Predicate Vocabularies to Specific Forms]]
   - Grounds the prohibition on `has_commitment::` and `decided_on::` in the identity predicate block Requirement.
 
-- grounded_in::[[Pattern Form]]↗
-  - The estate's Pattern Form (Alexandrian tradition, tiered Heart plus Problem plus Forces plus Solution structure drawn from Alexander, Coplien, Björk and Holopainen, and the Group Works deck) is the parent vocabulary this contract mirrors.
+- grounded_in::[[A Pattern Language (Christopher Alexander et al., 1977)]]
+  - The Alexandrian tradition's Heart-Problem-Forces-Solution structural shape is the parent vocabulary this contract mirrors. Downstream descendants of the tradition (Coplien's software patterns, Björk and Holopainen's game-design patterns, the Group Works deck's card-scale patterns) inherit the same shape; the local Reference aggregates the tradition rather than singling out any one descendant.

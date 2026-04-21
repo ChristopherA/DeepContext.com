@@ -45,8 +45,8 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The named-edge spine gives Patterns first-class graph identity via wikilink. Filename-shape conventions operate on top of that identity — the naming rule specifies how Pattern filenames carry their form and discoverability.
 
-- grounded_in::[[Pattern Form]]↗
-  - The Alexandrian tradition, via the Group Works deck and the larger estate-level Pattern Form, supplies the naming-convention substrate. The prototype imports the naming semantics rather than inventing one.
+- grounded_in::[[A Pattern Language (Christopher Alexander et al., 1977)]]
+  - The Alexandrian tradition, via the Group Works deck and its descendants, supplies the naming-convention substrate: evocative names over descriptive ones, carrying the pattern's felt quality rather than a functional label. This graph imports the naming semantics rather than inventing one.
 
 - informs::[[Pattern Form Contract]]
   - Pattern Form Contract's filename pattern Requirement carries the thin enforcement clause pointing at this Decision.
