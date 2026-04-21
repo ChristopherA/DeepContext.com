@@ -62,26 +62,36 @@ edges themselves. [[conforms_to]], [[grounded_in]], [[informed_by]], and
 The graph is held together by `[[wikilinks]]` and `predicate::[[Target]]` named
 edges. Six surface forms appear in node bodies.
 
-**Resolved wikilink** -- renders as a working link to the target node.
-[[Atomic Node]] is a live example; clicking it opens the Gloss.
+**Resolved wikilink** -- source `[[Target]]`; rendered as a working link that
+preserves the brackets, so the source pattern stays legible on the site.
+[[Atomic Node]] is a live example; clicking it opens the Gloss. Brackets are
+kept deliberately ([see the Decision](/nodes/decisions/render-bare-wikilinks-with-visible-brackets/)).
 
-**Pipe wikilink** -- displays custom text and links to the target. Source
-syntax is `[[Atomic Node|atomic]]`, rendered: [[Atomic Node|atomic]].
+**Pipe wikilink** -- source `[[Target|Display]]`; rendered as the display text
+only so it reads naturally in prose. The full filename stem on a Gloss like
+Compound Node is long; the pipe lets a reference read as
+[[Compound Node -- a folder of markdown nodes with a designated lead|Compound Node]]
+(displayed as "Compound Node", linked to the Gloss).
 
 **Ghost link** -- a named but unseeded concept. The target has no node yet, so
-the graph shows the name without a destination.
-[[A Concept That Does Not Yet Have A Node]] renders as ghost styling.
+the graph shows the name in ghost styling. Every identity block in this graph
+currently carries `has_lifecycle::[[Seed Stage]]`, but [[Seed Stage]] itself
+is a ghost -- the lifecycle vocabulary is named but not yet seeded as nodes.
 
-**External marker** -- a concept named in another garden or graph. The `↗`
-suffix is the source-form convention; the rendered site styles it distinctly.
-[[Egregore]]↗ is an example.
+**External marker** -- a concept named in another graph. The `↗` suffix is
+the source-form convention. [[Egregore]]↗ is a real one in this graph --
+the Conviction that [[Agents Translate, Not Extract]] names it as the
+adjacent vision this project engages with.
 
 **Plain URL** -- a link to the web outside this graph. For example,
 https://www.lifewithalacrity.com/2014/12/deep-context.html.
 
 **Named edge** -- a typed relation in bullet form, e.g.
 `conforms_to::[[Gloss Form Contract]]`. The predicate to the left of `::`
-names the relation; the wikilink to the right names the target.
+names the relation; the wikilink to the right names the target. Each
+[Predicate](/nodes/predicates/) is itself a node specifying what the
+predicate carries, what it distinguishes itself from, and the node shapes
+it connects.
 
 Unresolved and external targets render with visibly-distinct styling so a
 reader can see where the graph ends.
