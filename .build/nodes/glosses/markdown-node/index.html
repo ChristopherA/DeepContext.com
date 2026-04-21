@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Markdown Node</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/glosses/">Glosses</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/gloss-form-contract/">Gloss Form Contract</a></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+</ul>
+<h1>Markdown Node</h1>
+<p>A markdown file read as a node in a graph: its wikilinks and named edges are first-class structure, not prose decoration. The file format does not change — a Markdown Node is valid CommonMark — but a reader that understands the convention parses specific constructs as typed graph edges rather than as arbitrary hyperlinks.</p>
+<p>Three constructs carry structure. An <strong>identity predicate block</strong> above the H1 declares what the node IS (<code>conforms_to::</code>, <code>in_domain::</code>, <code>has_lifecycle::</code>, and so on). A <strong>Relations section</strong> after the body lists typed edges to other nodes, each with an optional indented annotation explaining why the edge matters. <strong>Inline wikilinks</strong> in prose are readable cross-references, not structural edges — a reader distinguishes them by section, not by syntax.</p>
+<p>The contrast is with markdown-as-prose, where every <code>[[link]]</code> is just a convenient cross-reference. A Markdown Node commits to typed, annotated connection — the graph emerges from the file itself rather than from a separate index.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<span class="external-ref">[[Wikilinks and Named Edges]]↗</span></p>
+<ul>
+<li>The canonical reference that names markdown-with-wikilinks-and-named-edges as the underlying convention.</li>
+</ul>
+</li>
+<li>
+<p>built_on::<span class="external-ref">[[CommonMark Markdown]]↗</span></p>
+<ul>
+<li>CommonMark is the substrate file format. A Markdown Node stays valid CommonMark — the reading discipline is layered on top, not a divergent dialect.</li>
+</ul>
+</li>
+<li>
+<p>has_component::<span class="external-ref">[[Wikilink Syntax]]↗</span></p>
+<ul>
+<li>Wikilinks are the targets of the edges a Markdown Node declares.</li>
+</ul>
+</li>
+<li>
+<p>has_component::<a href="/nodes/glosses/named-edge/">Named Edge</a></p>
+<ul>
+<li>Named edges are the typed predicates that make a Markdown Node's links first-class structure rather than prose.</li>
+</ul>
+</li>
+<li>
+<p>informed_by::<span class="external-ref">[[Karpathy LLM Wiki Pattern]]↗</span></p>
+<ul>
+<li>Karpathy's plain-markdown-plus-LLM-curator pattern is one precedent for treating markdown files as first-class knowledge nodes.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

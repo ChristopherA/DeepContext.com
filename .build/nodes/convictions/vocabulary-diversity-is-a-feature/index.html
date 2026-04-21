@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vocabulary Diversity Is a Feature</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/convictions/">Convictions</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/conviction-form-contract/">Conviction Form Contract</a></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Vocabulary Diversity Is a Feature</h1>
+<p>When contributors from different naming traditions meet in a shared graph, the differences in their predicates, their classification names, and their typed relations are not noise to normalize. They are design decisions each tradition made about what distinctions matter. The project holds that vocabulary diversity across contributors is a feature of the graph and a property the graph is committed to preserving, not a friction to resolve.</p>
+<h2>Why It Is Held</h2>
+<p>Each naming tradition encodes decisions that would be destroyed by flattening. Choosing <code>estate</code> over <code>workspace</code> encodes stewardship and generational continuity; choosing <code>gardener</code> over <code>content curator</code> encodes a living-systems relation to knowledge; choosing <code>critiques::</code> over <code>challenges::</code> encodes a particular stance toward disagreement. The names are not cosmetic labels on interchangeable concepts — the names <em>are</em> the concepts, and the web of associations each name activates is the context through which every subsequent inference runs. Collapsing multiple naming traditions into a single shared vocabulary erases the distinctions that made each tradition legible to the communities it came from.</p>
+<p>Convergence pressure carries costs that are not evenly distributed. When a community converges on a shared vocabulary, the participants who helped create it acquire natural authority, and newcomers face a choice between learning an ontology they did not shape or creating a parallel community with its own vocabulary. Standardized language stops evolving with the understanding of practitioners doing the work. Flattening three distinct predicates into one merged term produces an impoverished vocabulary less precise than any of the originals. The alternative — keeping each vocabulary intact and translating between them — preserves what each tradition built.</p>
+<p>The stance is what makes author-declared edges load-bearing. When one contributor writes <code>critiques::[[X]]</code> and another writes <code>challenges::[[X]]</code>, both edges land in the graph as distinct claims. An agent reading across them translates rather than normalizing, and the contributors remain participants in their own naming rather than subjects of the system's extraction. Without the stance, author-declared edges drift toward agent-normalized edges at read time, and the graph silently converges on whichever vocabulary the normalizing agent prefers.</p>
+<h2>What It Asks</h2>
+<p>Authors translate between vocabularies rather than normalize them. When a contributor brings naming that differs from existing conventions, the first response is to understand what distinction the new naming encodes — not to route it back to an existing predicate.</p>
+<p>New predicates join the local vocabulary rather than being turned back at the door. A predicate unique to one contributor's tradition is added to <code>CONVENTIONS.md</code> and used. A predicate that overlaps with existing ones is kept as distinct whenever the contributor's distinction is load-bearing, with a glossary entry documenting the overlap and the difference.</p>
+<p>Reviews flag convergence pressure as a drift signal. When a reviewer suggests "use the standard predicate" without asking what distinction the original carried, the suggestion is itself a sign that the reviewer is treating vocabulary variation as error rather than as preserved distinction. The review surface for vocabulary is translation, not normalization.</p>
+<p>Cross-system collaboration adds translation layers rather than shared vocabularies. When the graph interoperates with another graph whose predicates differ, the response is a gloss document or a typed cross-reference — not schema alignment. Mutual intelligibility through translation is the target; a single shared ontology is not.</p>
+<h2>Drift Recognition</h2>
+<p>The stance has drifted when the project starts treating contributor vocabularies as problems to resolve rather than as distinctions to preserve. Convergence pressure appears in reviews without being flagged; new predicates stop being added to the local vocabulary because authors default to existing terms; the <code>CONVENTIONS.md</code> vocabulary list stops growing by accretion.</p>
+<p>A reader scanning the graph after drift would see convergence toward a single vocabulary — redundant predicates merged without preserving the merged distinction, contributor-specific terms replaced silently during review, glossary entries for the project's local dialect disappearing from the vocabulary section rather than being kept as translation anchors. A cross-system interop attempt that reaches for a shared schema rather than a translation layer is a louder signal of the same drift. None of these require a structural Requirement to fail; they accumulate as cultural erosion.</p>
+<h2>Sources</h2>
+<ul>
+<li>Allen, Christopher. "Wikilinks and Named Edges," 2026 — the "Why vocabulary diversity matters across systems" section develops the argumentative substrate, including the three costs of convergence (consensus creates priesthoods, standardized language becomes dogma, flattening destroys encoded meaning).</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The substrate Decision that makes author-declared edges the graph's spine. Vocabulary diversity only survives structurally if each contributor's edges are author-declared rather than agent-inferred; the Decision is what makes the stance viable in plain markdown.</li>
+</ul>
+</li>
+<li>
+<p>informed_by::<a href="/nodes/references/wikilinks-and-named-edges-gist-christopher-allen-2026/">Wikilinks and Named Edges Gist (Christopher Allen, 2026)</a></p>
+<ul>
+<li>The gist's "Why vocabulary diversity matters across systems" section supplies the direct argument this Conviction compresses — the three-cost analysis of convergence and the alternative of mutual intelligibility through translation.</li>
+</ul>
+</li>
+<li>
+<p>informed_by::<a href="/nodes/references/deep-context-shared-languages-post-christopher-allen-2014/">Deep Context Shared Languages Post (Christopher Allen, 2014)</a></p>
+<ul>
+<li>The 2014 post that framed shared languages as layered machinery carrying community-specific meaning — the philosophical substrate under this Conviction's claim that adjacent vocabularies' distinctions are load-bearing content.</li>
+</ul>
+</li>
+<li>
+<p>informed_by::<a href="/nodes/references/creating-shared-language-and-shared-artifacts-post-christopher-allen-2009/">Creating Shared Language and Shared Artifacts Post (Christopher Allen, 2009)</a></p>
+<ul>
+<li>The earlier 2009 post that framed meaning as provided by users rather than inherent in words. The sovereignty argument in this Conviction rests on that substrate: author-declared edges preserve distinct claims because meaning is not reducible to a canonical vocabulary's terms.</li>
+</ul>
+</li>
+<li>
+<p>informed_by::<a href="/nodes/observations/consensus-creates-priesthoods/">Consensus Creates Priesthoods</a></p>
+<ul>
+<li>The Observation supplies the empirical grounding for one of the three convergence costs the Why rests on. Ghost link until the Observation is seeded in the same commit group.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/convictions/translation-over-convergence/">Translation Over Convergence</a></p>
+<ul>
+<li>Translation Over Convergence specializes this stance into a concrete operational rule for what happens when vocabularies meet. This Conviction names the feature; Translation Over Convergence names what the feature asks of the project at the contact surface between vocabularies.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/decisions/document-predicate-crescents-against-adjacent-predicates/">Document Predicate Crescents Against Adjacent Predicates</a></p>
+<ul>
+<li>The Decision that operationalizes this Conviction at the predicate layer. Per-neighbor Crescent subsections are the structural enforcement that keeps adjacent predicates' distinctions from being silently merged under convergence pressure.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/decisions/require-carries-section-in-predicate-nodes/">Require Carries Section in Predicate Nodes</a></p>
+<ul>
+<li>The Decision that pairs with the Crescent Requirement at the predicate layer. A dedicated positive-sense Carries section gives each Predicate an independent account of itself — Crescent's contrast work is what it is not, and Carries is what it is.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

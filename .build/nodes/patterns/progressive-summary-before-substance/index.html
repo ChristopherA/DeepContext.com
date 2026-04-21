@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Progressive Summary Before Substance</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/patterns/">Patterns</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/pattern-form-contract/">Pattern Form Contract</a></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+</ul>
+<h1>Progressive Summary Before Substance</h1>
+<h2>Heart</h2>
+<p>Lead with the cheapest structural tier and add depth in order: identity predicates above the H1, then the card-scale claim, then elaboration, then structured edges. Each tier stands alone as a complete read at its own scale. The move is summary-first composition against the authoring habit of writing detail-first — the discipline is what produces a node that serves both a minute of reading and an hour of it.</p>
+<h2>Problem</h2>
+<p>Authoring flows detail-first. The writer thinks through the argument as they compose, and the card-scale summary emerges last, if at all. Readers and agents then pay the deepest read's cost to extract what they actually needed: a one-line orientation, a structural filter, a graph neighbor. Without progressive structure, every consumer reads the body in full or gives up; there is no middle tier at which to stop and have what they came for.</p>
+<p>The difficulty is discipline, not mechanics. Once a writer has internalized summary-first composition, the tier arrangement is natural. The craft this Pattern teaches is fighting the detail-first habit long enough for the card-scale claim to be written before the body that elaborates it.</p>
+<h2>Forces</h2>
+<ul>
+<li><strong>Authoring flow.</strong> Writing proceeds detail-first because argumentation is generative — the writer discovers the claim by elaborating it. Composing the summary last is natural; composing it first requires pre-formed clarity the writer may not yet have.</li>
+<li><strong>Consumer orientation.</strong> Readers and agents encountering a node need to know cheaply whether to commit attention. The question <em>is this node worth reading?</em> is answerable only if the node offers something cheaper than its body to answer it.</li>
+<li><strong>Context budget.</strong> Agent tools operate under literal token budgets. An agent traversing a hundred nodes cannot read a hundred full bodies; the structure must offer a cheap tier to scan. The same pressure holds for human readers at human scale.</li>
+<li><strong>Recursive fidelity.</strong> The Pattern wants to apply within sections too — every section should lead with its purpose before its detail. Over-specifying this turns a craft move into a brittle checklist; under-specifying loses the recursive benefit. The Pattern must honor the recursion as craft without mandating it as rule.</li>
+</ul>
+<h2>Solution</h2>
+<p>When authoring or reviewing a node, arrange content in four tiers:</p>
+<ol>
+<li><strong>Tier 0 — Identity predicates (above the H1).</strong> Structured data: <code>conforms_to::</code>, <code>in_domain::</code>, <code>authored_by::</code>, <code>has_lifecycle::</code>, <code>has_curation::</code>. Answers <em>what is this node?</em> structurally; cheapest to read for any consumer.</li>
+<li><strong>Tier 1 — Card-scale claim (H1 plus opening prose, or <code>## Heart</code>).</strong> Two to three sentences stating the node's claim, move, or commitment. Complete at its own scale — a consumer stopping here has the claim, not a promise of it.</li>
+<li><strong>Tier 2 — Elaboration (body sections).</strong> Why the claim holds, forces, structural consequences, instances, reasoning. The expensive tier, for consumers who have committed attention.</li>
+<li><strong>Tier 3 — Structured edges (Sources, Relations).</strong> Machine-traversable data: provenance, paired principle or pattern, grounded-in edges, informs edges. Cheap again — a consumer traverses the graph without paying body cost.</li>
+</ol>
+<p>Write Tier 1 first as a discipline, even when the final wording is refined after the body drafts. The discipline is what produces the card-scale claim; without it, the writer defaults to detail-first and the card-scale tier never lands.</p>
+<p>Apply the same move recursively within sections when it helps — lead a section with its purpose, then its detail — but treat recursion as craft, not requirement.</p>
+<h2>Consequences</h2>
+<ul>
+<li><strong>Nodes become readable at multiple depths without loss.</strong> A consumer stopping at any tier completes their task at that tier's scale. Tier 1 readers have the claim; Tier 0 agents can filter; Tier 3 traversers find neighbors.</li>
+<li><strong>Agent augmentation becomes feasible at scale.</strong> Agent tools can scan Tier 0 cheaply across many nodes before committing context to full body reads. The progressive shape is what makes graph-scale agent use possible without blowing token budgets on every traversal.</li>
+<li><strong>Form contracts encode the tier pattern per node type.</strong> Pattern Form Contract requires a Heart section; Decision Form Contract requires Why content at the opening; Conviction Form Contract requires opening prose stating the stance; the Markdown Node Contract's layered-structure Requirement names the minimum tiering every node inherits. The contracts are the Pattern's structural enforcement per form.</li>
+<li><strong>Authoring requires discipline.</strong> The summary-last habit has to become summary-first. The discipline is finite and learnable — across many nodes it becomes natural — but the first nodes an author writes after adopting the Pattern often have to be reworked once. That cost is the tradeoff for downstream reader and agent speed.</li>
+<li><strong>Recursive application is encouraged, not mandated.</strong> A section that leads with its purpose and follows with detail is good craft; enforcing recursion as rule produces brittle templates. Authors exercise judgment about when the recursion pays.</li>
+</ul>
+<h2>Instances</h2>
+<ul>
+<li><strong>Every Form Contract in the prototype</strong> specifies a required opening that carries the card-scale claim. Pattern Form Contract ("The body MUST open with a <code>## Heart</code> section of two to three prose sentences"); Decision Form Contract ("The body MUST contain content that states why the commitment was made"); Conviction Form Contract ("The body MUST open by stating the conviction in one or two prose sentences"); the Markdown Node Contract's layered-structure Requirement names the minimum structural tiering every extending contract inherits. The contracts are this Pattern's structural fingerprint per form.</li>
+<li><strong>The Group Works deck tradition</strong> is the card-scale precursor. Each card IS the pattern at card scale — a reader holding only the card gets the whole of it. The prototype's <code>## Heart</code> convention adopts the same principle explicitly, via the estate's <span class="external-ref">[[Pattern Form]]↗</span>.</li>
+<li><strong>The Wikilinks and Named Edges Gist reference node</strong> names this same move in one bullet as "Progressive disclosure for agents" — convention-stub scale. This Pattern is the prototype's reframed and elaborated rendition.</li>
+</ul>
+<h2>Also Known As</h2>
+<ul>
+<li><strong>Progressive disclosure</strong> — the HCI and interaction-design tradition, though applied there to UI reveal rather than node structure.</li>
+<li><strong>Card-scale authoring</strong> — the Group Works deck's claim that the card text IS the pattern, not a summary of it.</li>
+<li><strong>Progressive disclosure for agents</strong> — the earlier informal naming in the Wikilinks and Named Edges gist; this Pattern is that convention stub elaborated.</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-layered-node-structure/">Adopt Layered Node Structure</a></p>
+<ul>
+<li>The Decision that commits the project to layered node structure. This Pattern is the authoring move that realizes that commitment in the prototype's specific vocabulary — identity predicates above the H1, card-scale opening or <code>## Heart</code>, elaboration body, and Relations. The Decision states the standing commitment; the Pattern names the craft applied when composing a node.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></p>
+<ul>
+<li>The Contract's layered-structure Requirement is the thin enforcement clause for Adopt Layered Node Structure. This Pattern realizes the Requirement's compliance rule through the authoring move named in its Solution.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The Decision that makes Tier 0 and Tier 3 possible as machine-traversable structural data. Without the named-edge vocabulary, the progressive structure would collapse into prose tiers with no cheap-read layer.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></p>
+<ul>
+<li>The base contract whose structural shape — identity predicates above H1, H1, body, Relations — is this Pattern's enforcement at the base-form level. Every form contract extending Markdown Node Contract inherits the layered shape.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/references/wikilinks-and-named-edges-gist-christopher-allen-2026/">Wikilinks and Named Edges Gist (Christopher Allen, 2026)</a></p>
+<ul>
+<li>The gist names the move as "Progressive disclosure for agents"; this Pattern is the prototype's reframed and elaborated rendition at Problem-plus-Forces-plus-Solution scale.</li>
+</ul>
+</li>
+<li>
+<p>composes_with::<a href="/nodes/patterns/refactor-the-predicates-axes/">Refactor the Predicate's Axes</a></p>
+<ul>
+<li>Both are node-design craft moves operating on different scales. This Pattern concerns macro-structure (how the node's tiers are arranged); the predicate refactor concerns predicate atomicity (how individual edges answer one question). Applied together, they produce nodes that are both well-layered and precisely queryable.</li>
+</ul>
+</li>
+<li>
+<p>composes_with::<a href="/nodes/patterns/reconcile-the-standing-account/">Reconcile the Standing Account</a></p>
+<ul>
+<li>Both are craft moves on the corpus, operating at different orientations. This Pattern is the authoring move that produces well-layered nodes; Reconcile the Standing Account is the curation move that keeps documents describing those nodes accurate as the graph grows. Applied together, the graph stays readable at multiple depths and the documents about the graph stay trustworthy.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

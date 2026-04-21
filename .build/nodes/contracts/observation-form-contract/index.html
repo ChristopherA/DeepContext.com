@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Observation Form Contract</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/contracts/">Contracts</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/contract-form-contract/">Contract Form Contract</a></li>
+<li>extends_contract::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+</ul>
+<h1>Observation Form Contract</h1>
+<p>An Observation is a node that records a descriptive claim about how things are or have been — a statement about the world, the graph, or the practice whose force rests on evidence rather than on commitment or structural necessity. It carries the claim, the epistemic grounds on which the claim rests, the evidence or reasoning that supports it, and the conditions under which the claim would be revised.</p>
+<p>An Observation is not a Conviction (which records a held normative stance), not a Decision (which commits to a situational choice), not a Contract Requirement (which states a structural MUST rule), and not a Pattern (which names a recurring move). An Observation says "X is the case, on these grounds, at this epistemic tier." Observations may support Convictions and inform Requirements as evidence, but they are not themselves commitments; they are claims about the world that evidence can revise.</p>
+<h2>Requirements</h2>
+<h3>Inherits Markdown Node Contract</h3>
+<ul>
+<li>All requirements of <a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a> apply.</li>
+<li>The requirements below are additions or refinements, not overrides.</li>
+</ul>
+<h3>Filename pattern</h3>
+<ul>
+<li>The filename MUST read as a descriptive claim the reader can evaluate, not as a topic the node discusses. Typical shapes: declarative claim about the world (<code>Agent Generation Is Cheaper Than Agent Verification</code>), empirical relation (<code>Contribution Follows Heavy-Tailed Distribution</code>), attribution claim (<code>Wikis Without Curation Drift Toward Write-Only</code>).</li>
+<li>A bare noun phrase MUST NOT be used as an Observation filename.</li>
+<li>The filename MUST NOT use the <code>&lt;Concept&gt; -- &lt;definition&gt;.md</code> separator.</li>
+</ul>
+<h3>Identity predicate block</h3>
+<p>Enforces <a href="/nodes/decisions/classify-observations-by-epistemic-status-with-matched-grounds/">Classify Observations by Epistemic Status With Matched Grounds</a> and <a href="/nodes/decisions/reserve-predicate-vocabularies-to-specific-forms/">Reserve Predicate Vocabularies to Specific Forms</a>.</p>
+<ul>
+<li>The identity block above the H1 MUST include <code>conforms_to::[[Observation Form Contract]]</code>.</li>
+<li>The identity block MUST include <code>has_epistemic_status::[[&lt;Status&gt;]]</code> where the value is one of <code>[[Empirical Observation]]</code>, <code>[[Retrospective Observation]]</code>, <code>[[On-Faith Observation]]</code>, or <code>[[Contested Observation]]</code>.</li>
+<li>The identity block SHOULD include <code>in_domain::[[&lt;Domain&gt;]]</code>.</li>
+<li>The identity block MAY include <code>authored_by::</code>, <code>has_lifecycle::</code>, and <code>has_curation::</code> as for any Markdown Node.</li>
+<li>The identity block MAY include <code>drawn_from::[[Canonical Set]]</code> when the Observation was imported from a named external set.</li>
+<li>An Observation MUST NOT carry <code>has_commitment::</code> or <code>decided_on::</code> — those are Decision predicates.</li>
+</ul>
+<h3>H1</h3>
+<ul>
+<li>The H1 MUST match the filename exactly (minus the <code>.md</code> extension).</li>
+</ul>
+<h3>Body: Claim</h3>
+<ul>
+<li>The body MUST open by stating the claim in one or two prose sentences.</li>
+<li>The opening MUST be prose, not a bullet list.</li>
+</ul>
+<h3>Body: Grounds</h3>
+<p>Enforces <a href="/nodes/decisions/classify-observations-by-epistemic-status-with-matched-grounds/">Classify Observations by Epistemic Status With Matched Grounds</a>.</p>
+<ul>
+<li>The body MUST describe the grounds on which the claim rests. The grounds MUST match the declared <code>has_epistemic_status::</code>.</li>
+<li>An <code>[[Empirical Observation]]</code> MUST name the measurement, experiment, or direct observation that produced the claim.</li>
+<li>A <code>[[Retrospective Observation]]</code> MUST name the record or reconstruction the claim rests on and acknowledge the limits of that record.</li>
+<li>An <code>[[On-Faith Observation]]</code> MUST name the source adopted and the reason for accepting it provisionally, and SHOULD name what it would take to promote the claim to empirical or retrospective status.</li>
+<li>A <code>[[Contested Observation]]</code> MUST name the sides of the contest and why the debate is load-bearing for this graph.</li>
+</ul>
+<h3>Body: What Would Revise It</h3>
+<p>Enforces <a href="/nodes/decisions/require-revision-conditions-on-observations/">Require Revision Conditions on Observations</a>.</p>
+<ul>
+<li>The body MUST describe the conditions under which the observation would be updated, downgraded, or abandoned.</li>
+<li>The revision conditions MUST be concrete: new measurement, contradicting record, promotion of a premise to empirical status, resolution of the contest.</li>
+</ul>
+<h3>Sources section</h3>
+<ul>
+<li>When the observation draws on external sources, a <code>## Sources</code> section MUST appear after the body and before <code>## Relations</code>.</li>
+<li>Sources are listed as bulleted URLs with brief annotations.</li>
+</ul>
+<h3>Relations section</h3>
+<ul>
+<li>The Relations section follows the base Markdown Node Contract.</li>
+<li>An Observation typically carries these edges:<ul>
+<li><code>grounded_in::[[Prior Observation or Reference]]</code> — the substrate the claim rests on.</li>
+<li><code>informed_by::[[Precedent Observation]]</code> — a precedent that influences how the claim is framed.</li>
+<li><code>informs::[[Downstream Node]]</code> — Convictions, Decisions, Contract Requirements, or Patterns the observation supports as evidence.</li>
+<li><code>contrasts_with::[[Adjacent Observation]]</code> — a sibling observation occupying adjacent territory.</li>
+<li><code>drawn_from::[[Canonical Set]]</code> — when the observation was imported from a named external set.</li>
+</ul>
+</li>
+</ul>
+<h3>Optional scalar metadata</h3>
+<ul>
+<li>YAML frontmatter MAY include <code>created:</code>, <code>tagline:</code>, and <code>brief_summary:</code>.</li>
+<li>YAML is OPTIONAL for Observations.</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>extends_contract::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></p>
+<ul>
+<li>Inherits all base file-form requirements; adds the descriptive-claim filename pattern, the required <code>has_epistemic_status::</code> identity predicate, the prohibition on <code>has_commitment::</code> and <code>decided_on::</code>, and the required Claim plus Grounds plus What Would Revise It body structure.</li>
+</ul>
+</li>
+<li>
+<p>conforms_to::<a href="/nodes/contracts/contract-form-contract/">Contract Form Contract</a></p>
+<ul>
+<li>This file is itself a Contract; it conforms to the meta-contract that specifies what Contract nodes look like.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<a href="/nodes/contracts/conviction-form-contract/">Conviction Form Contract</a></p>
+<ul>
+<li>A Conviction records a held normative stance — what the project's authors hold ought to be the case; an Observation records a descriptive claim about what is the case. An Observation may support a Conviction as evidence (via <code>informs::</code>), but an Observation does not commit to anything.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The named-edge spine that lets <code>has_epistemic_status::</code>, <code>grounded_in::</code>, <code>informs::</code>, and <code>drawn_from::</code> land as first-class classification and relational edges.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/classify-observations-by-epistemic-status-with-matched-grounds/">Classify Observations by Epistemic Status With Matched Grounds</a></p>
+<ul>
+<li>Grounds the <code>has_epistemic_status::</code> predicate and its matched body-Grounds requirements.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/require-revision-conditions-on-observations/">Require Revision Conditions on Observations</a></p>
+<ul>
+<li>Grounds the Body-What-Would-Revise-It Requirement.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/reserve-predicate-vocabularies-to-specific-forms/">Reserve Predicate Vocabularies to Specific Forms</a></p>
+<ul>
+<li>Grounds the <code>has_epistemic_status::</code> reservation and the prohibition on <code>has_commitment::</code> and <code>decided_on::</code> in the identity predicate block Requirement.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

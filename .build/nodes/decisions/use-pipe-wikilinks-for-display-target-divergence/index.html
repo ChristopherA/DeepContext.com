@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Use Pipe Wikilinks for Display-Target Divergence</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/decisions/">Decisions</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></li>
+<li>has_commitment::<span class="ghost-link">[[Provisional Commitment]]</span></li>
+<li>decided_on::2026-04-19</li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Use Pipe Wikilinks for Display-Target Divergence</h1>
+<p>Pipe form <code>[[Full Filename|Display Text]]</code> is the canonical way to write a wikilink when the author wants the link to read in prose differently from how the target file is named. The target on the left is the canonical filename the graph edge resolves to; the display on the right is the phrasing the reader sees. The edge stays graph-participating — typed-edge traversal uses the target, not the display — while prose reads the way the author wants it to read.</p>
+<h2>Why</h2>
+<p>The primary rationale is <strong>author phrasing flexibility</strong>. A writer working in running prose wants each link to fit its sentence: a shorter surface form, a grammatical variant ("resolving" rather than "Display-Target Divergence"), an in-context synonym, or simply the concept name rather than the canonical filename. Pipe form lets the author choose that phrasing without abandoning graph participation — the edge still resolves to the canonical target; only the rendered text changes. The author is not forced to choose between prose that reads naturally and edges that resolve correctly; pipe form gives both.</p>
+<p>The forcing case is the Gloss Form's <code>-- &lt;definition&gt;</code> filename pattern. A gloss named <code>Ghost Link -- a wikilink to a target that does not yet exist.md</code> carries its concept name ("Ghost Link") on the left of the separator and its working definition on the right. Prose referring to the concept wants to write "Ghost Link," not the full filename — but a bare <code>[[Ghost Link]]</code> resolves only if a file named <code>Ghost Link.md</code> exists. In vanilla wiki tooling and Obsidian's default configuration, no partial-filename resolution happens; <code>[[Ghost Link]]</code> becomes a ghost link even though the gloss is sitting right next to it. Pipe form — <code>[[Ghost Link -- a wikilink to a target that does not yet exist|Ghost Link]]</code> — names the target explicitly while rendering the concept name the reader expects. This is the case where pipe form is not optional but required; the convention's broader use is author-discretionary.</p>
+<p>The same mechanism applies wherever display and target diverge for any reason: a long commitment-phrased Decision filename that reads poorly in running prose, a node whose canonical filename includes disambiguation the inline context does not need, a reference to an existing node under a synonym that carries shorter grammar, or any other prose-fit choice. The Gloss case is the loudest because the ghost link is a visible failure; author-phrasing use is quieter but no less legitimate. The convention is one mechanism serving both.</p>
+<h2>Alternatives Considered</h2>
+<p><strong>Obsidian <code>aliases:</code> frontmatter.</strong> Rejected because aliases are graph-non-participating by prior decision in the Markdown Node Contract. An alias lets Obsidian's autocomplete offer "Ghost Link" when the user types the concept name, but writing <code>[[Ghost Link]]</code> in source still produces a ghost link unless Obsidian-specific alias resolution is active. Aliases break the plain-markdown-expressibility floor — the graph's meaning depends on Obsidian-resolved aliases rather than on filename-only resolution.</p>
+<p><strong>Gloss stub files.</strong> Rejected because they violate one-file-one-concept. Creating <code>Ghost Link.md</code> as a stub that redirects to <code>Ghost Link -- a wikilink to a target that does not yet exist.md</code> doubles the maintenance surface (two files per gloss), and the stub has no content of its own. The redirect mechanism itself requires tool support, violating the zero-tooling floor.</p>
+<p><strong>Bare full filename in prose.</strong> Rejected because it breaks prose readability. Writing "The <code>[[Ghost Link -- a wikilink to a target that does not yet exist]]</code> convention signals an intentional future node" is functionally correct but unreadable. Prose that strings the full gloss filename into running text makes bodies harder to scan and reveals implementation detail the reader does not need.</p>
+<p><strong>Drop the filename-carries-definition gloss convention.</strong> Rejected because the convention is load-bearing. A contributor browsing the gloss folder reads the dictionary at a glance; opening files or hovering for tooltips defeats the purpose. The filename-in-folder view as readable index is a first-class feature of the Gloss Form Contract, not an incidental property.</p>
+<h2>What Would Change It</h2>
+<p>Three signals would prompt revisit.</p>
+<p><strong>Author friction overwhelms the convention.</strong> If contributors consistently forget the full filename and revert to bare wikilinks, ghost links accumulate and the decision has failed at the adoption layer. A lightweight author aid — a template snippet or a seed script that emits pipe-form references — could arrive as a refinement; if even that does not move the practice, the convention is not viable.</p>
+<p><strong>Display/target drift becomes a maintenance problem.</strong> The pipe form decouples what the reader sees from what the graph traverses. If glosses rename (definition refined) and pipe-form references do not update, display text continues reading correctly while the target breaks silently — the cheap-to-write form becomes the expensive-to-maintain form. A link-check hook would detect the first wave of drift; if drift keeps outpacing detection, the convention is not sustainable.</p>
+<p><strong>A graph-participating alias mechanism emerges.</strong> Standard wiki tooling could add first-class alias-as-target resolution (Obsidian's <code>aliases:</code> reaching into wikilink resolution, or a similar feature at the CommonMark level). A graph-participating alias would let <code>[[Ghost Link]]</code> resolve directly to the gloss file without pipe syntax. We would prefer the bare form if it became viable — pipe syntax is overhead the author pays to restore the intuition a bare wikilink ought to carry.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The wikilinks-and-named-edges convention commits the graph to plain-markdown expressibility and author-declared edges. Pipe form is the same convention's answer to display-target divergence: an author-declared target and an author-declared display, no tooling between them.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></p>
+<ul>
+<li>The Markdown Node Contract's wikilink syntax inherits this decision. The contract's description of how bare wikilinks resolve must note that gloss filenames (and any <code>--</code> filename) do not resolve from the concept side alone; pipe form is the canonical way to reference such nodes from prose or named edges.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/gloss-form-contract/">Gloss Form Contract</a></p>
+<ul>
+<li>The Gloss Form Contract establishes the filename-carries-definition pattern. Pipe form is the mechanism that makes the pattern usable in prose: contributors reference the gloss by its concept name without the definition flooding the reader's view.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

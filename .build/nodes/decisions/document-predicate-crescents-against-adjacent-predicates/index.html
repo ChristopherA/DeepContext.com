@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Document Predicate Crescents Against Adjacent Predicates</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/decisions/">Decisions</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></li>
+<li>has_commitment::<span class="ghost-link">[[Provisional Commitment]]</span></li>
+<li>decided_on::2026-04-20</li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Document Predicate Crescents Against Adjacent Predicates</h1>
+<p>Every Predicate node that declares one or more <code>contrasts_with::</code> edges MUST include a <code>## Crescent</code> section containing one H3 subsection per adjacent predicate, headed <code>### Against [[adjacent predicate]]</code>. Each Crescent subsection states what this predicate holds that the adjacent one does not — the distinction that would be destroyed by merging them. The Crescent content on two adjacent Predicate nodes is not required to be symmetric; each node carries its own account of its stance against the neighbor.</p>
+<h2>Why</h2>
+<p>Vocabulary Diversity Is a Feature holds that adjacent predicates' distinctions are load-bearing; Translation Over Convergence holds that convergence pressure is a drift signal. Undocumented crescents between adjacent predicates are the specific failure mode those Convictions name. When the distinction between <code>critiques::</code> and <code>challenges::</code> lives only in the shared understanding of the contributors who use both, it is one review cycle away from being collapsed into a normalized predicate; when the distinction lives in a structural section that every Predicate node carries, the merge move requires overriding an explicit account of what the distinction holds.</p>
+<p>The per-neighbor structure is what makes each distinction separately auditable. A Predicate with four adjacent neighbors carries four distinctions; a single global paragraph listing all four would force the author to generalize across distinctions that may not compose. The generalization move is itself a convergence pressure — it subtly unifies the distinctions under a single framing — and separately-headed subsections resist the pressure by keeping each distinction in its own space. A reader checking whether <code>critiques::</code> still distinguishes itself from <code>challenges::</code> reads the <code>### Against [[challenges]]</code> subsection specifically, not a global paragraph that has diffused the <code>critiques</code>-vs-<code>challenges</code> content across several other comparisons.</p>
+<p>Asymmetric Crescents are the honest structure. <code>critiques::</code>'s Crescent against <code>challenges::</code> names what <code>critiques</code> holds; <code>challenges::</code>'s Crescent against <code>critiques</code> names what <code>challenges</code> holds. The two accounts are independently authored and may differ in emphasis — one predicate's stance against the neighbor does not automatically yield the reverse stance. Requiring symmetric Crescents (the same content mirrored on both nodes) would either produce copy-paste that decays when one side is edited, or force the author to artificially flatten two independent accounts into one shared statement. Asymmetric authoring is what the distinctions earn.</p>
+<h2>Alternatives Considered</h2>
+<p><strong>Optional Crescent sections per neighbor.</strong> Let authors decide whether to document each adjacency or leave the <code>contrasts_with::</code> edge standing without explanation. Rejected because optional-under-time-pressure Crescent content disappears. The Convictions this Requirement serves are strongest when the distinction-naming discipline is enforced rather than suggested — an optional Crescent section is the first thing cut when the author is in a hurry, and the Requirement's purpose (making the distinction structurally visible) fails at exactly the moment when convergence pressure is strongest.</p>
+<p><strong>One global Crescent paragraph listing all neighbors.</strong> Replace the per-neighbor H3 subsections with a single Crescent paragraph that mentions every adjacent predicate in sequence. Rejected because a single paragraph loses the per-neighbor structure that makes each distinction separately auditable. A predicate with four neighbors has four distinctions; collapsing them into one paragraph forces generalization across distinctions that may not compose, and the reader checking a specific adjacency has to parse the whole paragraph rather than reading the named subsection. The paragraph form is also easier to soften under convergence pressure — editing one paragraph that blends four distinctions invites compressing the distinctions, while editing four H3 subsections preserves their separateness.</p>
+<p><strong>Symmetric Crescents required on both nodes.</strong> Require that the Crescent on Predicate A against Predicate B be mirrored on Predicate B against Predicate A, with the same content inverted. Rejected because symmetric Crescents can fall into wrote-once-copied-twice — the authored content on one side is copied to the other, and edits to one side do not propagate. Asymmetric Crescents (each predicate's node states what <em>it</em> holds against the neighbor) are the honest structure because each node's account is its own. The <code>critiques::</code> node's stance against <code>challenges::</code> is not automatically the inverse of the <code>challenges::</code> node's stance against <code>critiques::</code>; each predicate has its own voice, and the two accounts together are the full pairing.</p>
+<p><strong>Apply the rule only to Predicate nodes with three or more neighbors.</strong> Require per-neighbor Crescent subsections only when a predicate has enough neighbors for the global-paragraph failure mode to matter; allow single-adjacency Predicates to use a single Crescent paragraph. Rejected because the per-neighbor discipline is also what the single-adjacency case benefits from — the H3 heading is the cue that tells the author the distinction is load-bearing and that tells the reader where to look. A one-neighbor Predicate with a single Crescent paragraph invites later authors adding a second neighbor to append a second paragraph to the same section rather than adding an H3 — starting with the wrong structure. Uniform H3 structure from the start avoids the migration problem.</p>
+<h2>What Would Change It</h2>
+<p>The commitment would be revisited under one condition.</p>
+<p><strong>A majority of seeded Predicates have no adjacent neighbors.</strong> If the graph accumulates Predicate nodes and a majority carry no <code>contrasts_with::</code> edges, the Requirement's load-bearing premise weakens — the enforcement is for a case that does not occur. The revisit would either soften the rule to a SHOULD (Crescent sections are still required when adjacencies exist but no rule needs to be stated for the case that doesn't arise) or reconsider whether the distinctions predicates draw are as adjacency-dependent as the Convictions assumed. Current evidence from the eleven-Predicate seeding set is that adjacencies exist in at least three semantic clusters (classification, provenance hierarchy, relational adjacency), which is the load-bearing confirmation the Requirement needs.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/convictions/vocabulary-diversity-is-a-feature/">Vocabulary Diversity Is a Feature</a></p>
+<ul>
+<li>The Conviction this Requirement directly operationalizes at the predicate layer. The Conviction names adjacent vocabularies' distinctions as load-bearing; this Requirement is the structural enforcement that makes each distinction survive.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/convictions/translation-over-convergence/">Translation Over Convergence</a></p>
+<ul>
+<li>The Conviction whose operational rule this Requirement encodes at the predicate layer. Translation between adjacent predicates requires each predicate's distinctive claim to be documented; per-neighbor Crescent subsections are the documentation.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/predicate-form-contract/">Predicate Form Contract</a></p>
+<ul>
+<li>Predicate Form Contract's Body-Crescent Requirement carries the thin enforcement clause pointing at this Decision.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

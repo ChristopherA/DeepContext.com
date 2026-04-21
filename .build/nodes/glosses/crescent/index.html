@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crescent</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/glosses/">Glosses</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/gloss-form-contract/">Gloss Form Contract</a></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+</ul>
+<h1>Crescent</h1>
+<p>The distinction one predicate holds against an adjacent predicate — the non-overlapping arc when the two are pictured as overlapping circles in a Venn diagram. The term names both the geometric shape and the section in a Predicate node (<code>## Crescent</code>) whose job is to carry that distinction as prose.</p>
+<p>Two overlapping circles produce three regions: the intersection, which is what the predicates share, and the two crescent-shaped arcs outside the intersection, which are what each predicate holds that the other does not. A <code>## Crescent</code> section on a Predicate node carries the content of exactly one of those arcs — this predicate's non-overlapping territory against one specific neighbor. A predicate with multiple adjacent neighbors has multiple crescents, each against a different circle, each with its own shape.</p>
+<p>The asymmetry is geometric, not just an authoring convenience. The crescent of A against B and the crescent of B against A are different regions of the page — different shapes, different sizes — because they sit on opposite sides of the intersection. A Crescent section on Predicate A names what A holds that B does not; the mirror section on Predicate B names what B holds that A does not; neither is the inverse of the other. Two independent accounts together are the full pairing.</p>
+<p>The metaphor presupposes adjacency. Crescents exist only where circles overlap; between two disjoint predicates there is no intersection and therefore no crescent. This is why the Predicate Form Contract requires <code>## Crescent</code> subsections only against predicates declared as near-neighbors via <code>contrasts_with::</code>, not against every predicate in the vocabulary. Adjacency is load-bearing for the form; crescents are how the adjacency's distinctions get recorded. Leaving an adjacent predicate's crescent undocumented is a silent invitation to merge the two under later convergence pressure, because nothing in the graph records what the merge would destroy.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>informs::<a href="/nodes/contracts/predicate-form-contract/">Predicate Form Contract</a></p>
+<ul>
+<li>The Contract's <code>## Crescent</code> Requirement uses this term. The Venn-non-overlap metaphor is what gives the section its shape — per-neighbor H3 subsections, asymmetric content across adjacent nodes, scoped to predicates with declared adjacency.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/decisions/document-predicate-crescents-against-adjacent-predicates/">Document Predicate Crescents Against Adjacent Predicates</a></p>
+<ul>
+<li>The Decision that grounds the Crescent Requirement. The metaphor is the reason the Requirement takes the shape it does — per-neighbor rather than global paragraph, asymmetric rather than mirrored.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/convictions/vocabulary-diversity-is-a-feature/">Vocabulary Diversity Is a Feature</a></p>
+<ul>
+<li>The Conviction that makes the distinction-preservation work load-bearing. The Crescent metaphor is how the project pictures what convergence pressure destroys: the non-overlap arc is the distinction, and merging adjacent predicates flattens the crescent into the intersection.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<a href="/nodes/glosses/named-edge/">Named Edge</a></p>
+<ul>
+<li>A Named Edge is a typed relation between two nodes; a Crescent is the distinction one predicate holds against another. Named Edges are the graph's connections; Crescents are the authorial accounts of what those connections keep separate.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

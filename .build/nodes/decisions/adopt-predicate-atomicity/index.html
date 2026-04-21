@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adopt Predicate Atomicity</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/decisions/">Decisions</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></li>
+<li>has_commitment::<span class="ghost-link">[[Firm Commitment]]</span></li>
+<li>decided_on::2026-04-19</li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Adopt Predicate Atomicity</h1>
+<p>Every predicate answers exactly one question. When a predicate is found carrying two or more axes of distinction, the remedy is a predicate family — each member a single-axis predicate — not a revised but still-overloaded name. The commitment is to keep the vocabulary's query handles sharp: a reader filtering on a predicate finds nodes whose assertion on that predicate means one thing, not several.</p>
+<h2>Why</h2>
+<p>The commitment provides <strong>query sharpness</strong>. Predicates are the graph's query handles — each is a question a reader poses to any node: <em>what is this node's X?</em> When the question has one answer per node along one axis, filtering is sharp: a query for all nodes with <code>has_lifecycle::[[Seed Stage]]</code> returns exactly the nodes at that lifecycle stage, no disambiguation required. When the predicate carries multiple axes, the same query returns nodes whose value <em>might</em> mean any of several things, and the reader has to re-interpret each match against the original author's intent. The sharpness degrades continuously with corpus growth — the more nodes assert the overloaded predicate, the more work any reader does to sort the clusters back apart.</p>
+<p>The commitment is the edge-level companion of <a href="/nodes/decisions/adopt-node-atomicity/">Adopt Node Atomicity</a>. Node atomicity says a node names one concept, not a collection; compound shapes exist for supporting material, not for sub-concepts. The predicate-level commitment is the same shape: a predicate names one question, not a bundle. Predicate families carry related distinctions, but each family member owns exactly one axis. The graph has atomicity commitments at both levels — vertices and edges — and each grounds the other.</p>
+<p>The commitment is not a count-the-values rule. A predicate can take many values (<code>[[Seed Stage]]</code>, <code>[[Growth Stage]]</code>, <code>[[Mature Stage]]</code>) and still answer one question (<em>what lifecycle stage?</em>). The discipline is about the <em>question</em>, not the cardinality of the answer. A predicate with three values along one axis is atomic; a predicate with two values spanning two axes is not. The recurring craft move that performs the refactor when an overloaded predicate is discovered in the wild is <a href="/nodes/patterns/refactor-the-predicates-axes/">Refactor the Predicate's Axes</a>.</p>
+<p>Deprecations become part of the graph. Retired overloaded predicates do not vanish; they land in the "deliberately not used" section of the conventions document with a pointer to the family that replaced them. The deprecation record is how the graph carries the history of its predicate atomicity work, and it protects future contributors from reintroducing the same overload under a new name.</p>
+<h2>Alternatives Considered</h2>
+<p><strong>Tolerate overloaded predicates with runtime disambiguation.</strong> Allow predicates to carry multiple axes and expect readers or tools to sort the clusters at query time. Rejected because runtime disambiguation requires that every reader know how to split the axes, and that knowledge is not expressible in the predicate itself. The reader is left auditing the author's intent on every match. The cost compounds: a single overloaded predicate is tolerable, three overloaded predicates composing in a query produces matches whose meaning no reader can reconstruct without reading each cited node's full body.</p>
+<p><strong>Revise the overloaded name rather than split.</strong> Keep one predicate but rename it to signal the overload (<code>has_combined_status::</code> for lifecycle-plus-curation). Rejected because the overload persists — the rename makes the predicate more honest about its sin without fixing it. Filtering on the renamed predicate still returns nodes whose value means multiple things; the reader still audits each match.</p>
+<p><strong>Global fixed vocabulary.</strong> Define the predicate set in advance, schema-style, and require contributors to use only the predefined predicates. Rejected because the convention is specifically designed to let contributor vocabulary stay local-dialect and emergent. Fixed vocabularies prevent <em>introducing</em> overloaded predicates but also prevent the contributor diversity the graph depends on; the discipline needs to live at the authoring moment, not at the schema layer. The <code>relates_to::</code> case is the forcing example — the overload was introduced organically, and the fix is a specific-predicate family introduced as contributors needed it, not a vocabulary locked in advance.</p>
+<h2>What Would Change It</h2>
+<p>Two classes of condition would prompt revisit.</p>
+<p><strong>Predicate typing absorbs disambiguation.</strong> If the underlying convention grew a standard way to type predicate values — typed ranges like <code>has_status::lifecycle=[[Seed Stage]]</code>, typed tuples, or predicate-internal schema — the runtime cost of overload would fall. A reader or tool could filter on the typed component rather than on the predicate-as-a-whole. No such typing exists at the plain-markdown floor today, and inventing one would require agreement across contributor vocabularies the convention is specifically designed not to centralize.</p>
+<p><strong>Tooling re-interprets overloaded predicates reliably.</strong> If agent tooling grew the ability to split overloaded predicate assertions into their constituent axes at read time — recognizing that <code>has_status::[[Seed]]</code> was asserting lifecycle while <code>has_status::[[Curated]]</code> was asserting curation — the authoring-time split would become less load-bearing. The tooling would have to be reliable across the full contributor vocabulary, not just the predicates one implementer wrote. The bar is high because the wrong split silently mis-classifies every node the tool processes.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The Decision that makes predicates first-class structural elements. This commitment is a standing claim about the quality those predicates should carry as the vocabulary grows — the question-per-predicate discipline is what keeps the named-edge spine usable at corpus scale.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-node-atomicity/">Adopt Node Atomicity</a></p>
+<ul>
+<li>The parallel atomicity commitment at the vertex level. Node atomicity (one concept per node) and predicate atomicity (one question per predicate) are the two faces of the same design discipline — the graph has atomicity claims at both levels, and each grounds the other.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></p>
+<ul>
+<li>Markdown Node Contract's predicate-atomicity Requirement is the thin enforcement clause pointing at this Decision. The Contract carries the compliance rule; this Decision carries the reasoning and the revisit conditions.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/patterns/refactor-the-predicates-axes/">Refactor the Predicate's Axes</a></p>
+<ul>
+<li>The Pattern that realizes or restores this commitment when a predicate is discovered in the wild carrying multiple axes. This Decision states the standing commitment; the Pattern names the craft move applied when the commitment is violated.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

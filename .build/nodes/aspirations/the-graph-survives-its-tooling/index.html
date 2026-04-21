@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Graph Survives Its Tooling</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/aspirations/">Aspirations</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/aspiration-form-contract/">Aspiration Form Contract</a></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>The Graph Survives Its Tooling</h1>
+<p>The project works toward a graph whose meaning survives the tools that helped produce it. The plain-markdown floor holds across tool changes — editor changes, wiki-layer changes, agent changes, build-system changes — and no tool becomes load-bearing for the graph's interpretation. Tool-dependent conveniences remain conveniences; the graph's structural claims stay in the markdown.</p>
+<h2>Why It Is Worth Pursuing</h2>
+<p>A shared knowledge graph intends to outlast the tools of any particular moment. The generational timeline the practice assumes — contributors joining and leaving across years, the graph accumulating across tool generations, the conventions read by readers who were not present at the authoring — only holds if no tool becomes a dependency for interpreting what the graph says. A graph readable only through a specific editor or wiki renderer has traded durability for current convenience; that trade may be acceptable for a personal notebook and is not acceptable for a shared knowledge practice.</p>
+<p>The zero-tooling-floor commitment is already made in the substrate Decisions. Adopt Wikilinks and Named Edges rejects tool-dependent query layers (Dataview, Logseq properties) and RDF-in-frontmatter as alternatives, preserving plain-markdown expressibility. Restrict YAML to Scalar Metadata keeps graph-participating predicates out of frontmatter, where they would be invisible to readers parsing the body. Keep URLs as Scalar Metadata, Not Predicates keeps the graph's structural claims free of URL-shaped entanglements with external services. Each Decision rejects a specific tool-binding temptation; together, they describe the commitment this Aspiration tests against reality.</p>
+<p>The Aspiration is worth pursuing because the commitments are currently untested. The Decisions rule out tool-binding in principle; they do not prove that a graph authored under one configuration can be read and authored under another. A decision ruling out a category of failure is a necessary condition; actually migrating between tools and finding the graph still coherent is the sufficient condition. The Aspiration pursues the sufficient condition.</p>
+<h2>Current Gap</h2>
+<p>The graph has been authored under one editor configuration. The author has used a specific editor with specific plugins, a specific file-system layout, and a specific agent-harness configuration (Claude Code with the project's rules and skills). The extent to which the graph depends on any of those conveniences is currently unknown — not because dependencies are suspected but because the test has not run.</p>
+<p>Tool-independence has not been exercised. No migration has happened; no different wiki renderer has read the graph; no alternative agent harness has been used to author against the conventions. The claim that the graph's meaning survives tool changes is a claim made from the inside of the tool set.</p>
+<p>Silent tool dependencies could exist without being noticed. A convention that relies on the editor's autocomplete to produce well-formed predicates, a folder scheme that relies on a specific plugin's folder-handling, a filename pattern that relies on a specific rendering layer's resolution — any of these could be in place without being visible from within the current configuration. The gap is measurable only by stepping outside the configuration and seeing what breaks.</p>
+<p>The distinction between in-scope substrate and tool-specific convenience is not yet documented. A reader working out which aspects of the authoring surface are required (CommonMark, filename-resolving wikilinks, author-declared body predicates, <code>↗</code> external-referent marker) versus which are conveniences (hover previews, backlink panels, autocomplete, wiki-syntax highlighting) has to reconstruct the distinction from the Decisions; it is not explicitly stated anywhere.</p>
+<h2>Work It Asks</h2>
+<p>Periodically test reading the graph with different tools. A bare text editor (Vim, nano), a different wiki renderer (Foam, Dendron, a custom renderer), a different agent configuration (a different harness, or Claude without the project's rules) — each reading pass produces a specific diagnostic of what the current configuration was providing that the alternative configuration does not. The reading passes do not need to be exhaustive; any pass that exercises a different tool generates data.</p>
+<p>Audit the graph for silent tool dependencies. The audit reads through a sample of nodes and asks, for each convention in use, whether a reader without the current tool set would recognize the convention as intended. Where the audit finds a tool-dependent behavior, the finding is a candidate for either reclassification as a convenience (documented as non-substrate) or correction of the underlying node (brought into tool-independent form).</p>
+<p>Document in-scope substrate versus tool-specific convenience explicitly. The distinction exists implicitly in the Decisions; making it explicit as a reference document — or as a section of <code>CONVENTIONS.md</code> — gives contributors and readers an authoritative record of what the graph requires a tool to support versus what the graph allows a tool to enhance.</p>
+<p>Migrate between tools once. A single deliberate migration — from the current editor to a different editor, from the current agent harness to a different one, from the current file-system layout to a migrated one — provides the most concentrated test the Aspiration can get. The migration does not need to be permanent; it needs to produce a record of what broke, what held, and what ambiguity the migration revealed.</p>
+<h2>Progress Recognition</h2>
+<p>A reader opens the graph in a tool not previously used — a bare text editor, a different wiki renderer, an alternative agent harness — and can author, traverse, and understand nodes without losing access to the graph's meaning. The reader does not need to reproduce the current tool set; the reader needs to be able to work with the graph.</p>
+<p>Agent configuration changes without breaking graph interpretation. A different set of rules, a different skill configuration, or a different model produces agent interactions that respect the graph's predicates and conventions rather than inferring a different interpretation from prose.</p>
+<p>A migration (editor, wiki layer, git host, agent harness) completes without requiring the graph's content to be rewritten. Filenames remain valid, wikilinks resolve, predicates read correctly, YAML frontmatter parses. Any migration-specific artifact produced (a compatibility shim, a rename script) operates on the tool layer, not on the graph layer.</p>
+<p>Tool-dependent behaviors stay documented as conveniences, not substrate. The in-scope / convenience distinction appears explicitly in <code>CONVENTIONS.md</code> or a reference document, and review surfaces use the distinction when evaluating whether a proposed convention is tool-binding or tool-independent.</p>
+<p>The audit for silent tool dependencies runs at least once and produces either findings or an explicit record of no findings. A <code>CONVENTIONS.md</code> section or reference document captures the audit's scope and outcome; the audit is a standing practice, not a one-time pass.</p>
+<h2>Sources</h2>
+<ul>
+<li>Allen, Christopher. "Wikilinks and Named Edges," 2026 — the gist's opening ("Everything here applies to any collection of markdown files — no special software required. A text editor and a terminal are sufficient") supplies the substrate commitment this Aspiration tests against sustained practice.</li>
+<li><code>context/Founding Conversation.md</code> — the exploration's rejection of tool-hostage alternatives (Egregore's terminal-first frontend, database-backed graph engines) named the zero-tooling-floor commitment as a founding constraint.</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The substrate Decision that commits the graph to plain-markdown expressibility and author-declared edges. This Aspiration is the directional target that takes the Decision seriously across the generational timeline — the Decision rules out tool-binding in principle, and the Aspiration pursues the sufficient condition of actually demonstrating tool-independence in practice.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/restrict-yaml-to-scalar-metadata/">Restrict YAML to Scalar Metadata</a></p>
+<ul>
+<li>The Decision that keeps graph-participating predicates out of YAML frontmatter. This Aspiration's work depends on the Decision holding — if graph structure ever migrates into YAML, readers without frontmatter-parsing tools lose access to the structure, and the tool-independence target becomes unreachable.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/keep-urls-as-scalar-metadata-not-predicates/">Keep URLs as Scalar Metadata, Not Predicates</a></p>
+<ul>
+<li>The Decision that keeps URLs out of the predicate layer. This Aspiration depends on the Decision because URLs are the primary mechanism by which graphs entangle with external services; a graph whose structural claims referenced URL-shaped external resources would be vulnerable to every external service's deprecation schedule, and tool-independence would be a target for the graph's meaning while its referents drifted.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/aspirations/the-second-cycle-of-contribution-happens/">The Second Cycle of Contribution Happens</a></p>
+<ul>
+<li>The second-cycle Aspiration is the general target this Aspiration specializes. A second cycle reached under dependence on a specific tool configuration would not satisfy the durability this Aspiration implies — the cycle's continuity would be contingent on the tool's availability rather than on the graph's own structure.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DeepContext</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header></header>
+<main>
+<h1>DeepContext</h1>
+<p>Deep Context is a <strong>practice</strong>, not a product -- a set of conventions for shared
+knowledge work among heterogeneous contributors aligned around a common domain,
+expressed in plain markdown with wikilinks and named edges, and curated with
+Claude's help.</p>
+<p>This site is the published view of the graph. Nodes are authored in the
+<a href="https://github.com/ChristopherA/deepcontext-dev"><code>deepcontext-dev</code></a> workshop
+and projected here for publication. The workshop retains drafts, decisions, and
+process; this repository carries only the curated graph.</p>
+<h2>Link legend</h2>
+<p>The graph is held together by <code>[[wikilinks]]</code> and <code>predicate::[[Target]]</code> named
+edges. Six surface forms appear in node bodies.</p>
+<p><strong>Resolved wikilink</strong> -- renders as a working link to the target node.
+<a href="/nodes/glosses/atomic-node/">Atomic Node</a> is a live example; clicking it opens the Gloss.</p>
+<p><strong>Pipe wikilink</strong> -- displays custom text and links to the target. Source
+syntax is <code>[[Atomic Node|atomic]]</code>, rendered: <a href="/nodes/glosses/atomic-node/">atomic</a>.</p>
+<p><strong>Ghost link</strong> -- a named but unseeded concept. The target has no node yet, so
+the graph shows the name without a destination.
+<span class="ghost-link">[[A Concept That Does Not Yet Have A Node]]</span> renders as ghost styling.</p>
+<p><strong>External marker</strong> -- a concept named in another garden or graph. The <code>↗</code>
+suffix is the source-form convention; the rendered site styles it distinctly.
+<span class="external-ref">[[Egregore]]↗</span> is an example.</p>
+<p><strong>Plain URL</strong> -- a link to the web outside this graph. For example,
+https://www.lifewithalacrity.com/2014/12/deep-context.html.</p>
+<p><strong>Named edge</strong> -- a typed relation in bullet form, e.g.
+<code>conforms_to::[[Gloss Form Contract]]</code>. The predicate to the left of <code>::</code>
+names the relation; the wikilink to the right names the target.</p>
+<p>Unresolved and external targets render with visibly-distinct styling so a
+reader can see where the graph ends.</p>
+<h2>Form types</h2>
+<p>Each node conforms to one of nine Form Contracts. Each contract names a shape
+and a compliance rule; the Decisions that ground each contract carry the
+reasoning.</p>
+<ul>
+<li><strong>Contract</strong> -- what a node of this form looks like. Example: <a href="/nodes/contracts/gloss-form-contract/">Gloss Form Contract</a>.</li>
+<li><strong>Decision</strong> -- what was chosen, why, and what would change it. Example: <a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a>.</li>
+<li><strong>Conviction</strong> -- a normative stance the project holds. Example: <a href="/nodes/convictions/human-authority-over-augmentation-systems/">Human Authority Over Augmentation Systems</a>.</li>
+<li><strong>Aspiration</strong> -- a direction the project pulls toward, with acknowledged gaps. Example: <a href="/nodes/aspirations/the-second-cycle-of-contribution-happens/">The Second Cycle of Contribution Happens</a>.</li>
+<li><strong>Observation</strong> -- a descriptive claim with epistemic grounds (Empirical, Retrospective, Contested). Example: <a href="/nodes/observations/wikis-without-curation-drift-toward-write-only/">Wikis Without Curation Drift Toward Write-Only</a>.</li>
+<li><strong>Pattern</strong> -- a recurring craft move that resolves a tension. Example: <a href="/nodes/patterns/refactor-the-predicates-axes/">Refactor the Predicate's Axes</a>.</li>
+<li><strong>Predicate</strong> -- a typed edge with Carries, Crescent, and Typing sections. Example: <a href="/nodes/predicates/conforms_to/">conforms_to</a>.</li>
+<li><strong>Gloss</strong> -- an interpretive definition that frames a concept. Example: <a href="/nodes/glosses/atomic-node/">Atomic Node</a>.</li>
+<li><strong>Reference</strong> -- an external source the graph draws on. Example: <a href="/nodes/references/wikilinks-and-named-edges-gist-christopher-allen-2026/">Wikilinks and Named Edges Gist (Christopher Allen, 2026)</a>.</li>
+</ul>
+<h2>Browse by taxonomy</h2>
+<ul>
+<li><a href="/nodes/contracts/">Contracts</a></li>
+<li><a href="/nodes/decisions/">Decisions</a></li>
+<li><a href="/nodes/convictions/">Convictions</a></li>
+<li><a href="/nodes/aspirations/">Aspirations</a></li>
+<li><a href="/nodes/observations/">Observations</a></li>
+<li><a href="/nodes/patterns/">Patterns</a></li>
+<li><a href="/nodes/predicates/">Predicates</a></li>
+<li><a href="/nodes/glosses/">Glosses</a></li>
+<li><a href="/nodes/references/">References</a></li>
+</ul>
+<h2>For agents</h2>
+<p>Agents collaborating on this graph should start with
+<a href="https://github.com/ChristopherA/DeepContext.com/blob/main/AGENTS.md">AGENTS.md</a>
+and the full
+<a href="https://github.com/ChristopherA/deepcontext-dev/blob/main/CONVENTIONS.md">CONVENTIONS.md</a>
+in the workshop repository.</p>
+<h2>Forking and contributing</h2>
+<p>This repository is <strong>forkable and collaboratively editable</strong> -- Egregore-style.
+A fork produces its own Pages site on first push. Edit nodes directly via
+github.com's web editor or clone locally; the same pipeline publishes every
+downstream garden.</p>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

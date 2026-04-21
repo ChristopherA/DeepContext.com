@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Named Edge</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/glosses/">Glosses</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/gloss-form-contract/">Gloss Form Contract</a></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+</ul>
+<h1>Named Edge</h1>
+<p>A predicate-annotated wikilink expressing a typed relation between two nodes, written as a top-level bullet of the form <code>- predicate::[[Target]]</code> or <code>- predicate::[[Target]]↗</code>. The predicate names the kind of relation (<code>extends_contract::</code>, <code>composed_of::</code>, <code>grounded_in::</code>, <code>contrasts_with::</code>); the wikilink identifies the target node; an indented sub-bullet annotation under the edge explains why the relationship matters. Together the three pieces carry a graph claim that is parseable by an agent and scannable by a human in the same markdown document.</p>
+<p>Named Edges appear in two places. The <strong>identity predicate block</strong> above the H1 carries classification edges — <code>conforms_to::[[X Form Contract]]</code>, <code>in_domain::[[Y]]</code>, <code>has_lifecycle::[[Z Stage]]</code> — that declare what the node is. The <strong>Relations section</strong> after the body carries semantic edges — <code>composed_of::</code>, <code>contends_with::</code>, <code>informs::</code> — that declare how the node connects to others. Both use the same syntax; their roles differ by position in the file, not by form.</p>
+<p>The contrast is with inline wikilinks in prose, which are readable cross-references rather than structural edges. A sentence like "this draws on <span class="external-ref">[[Wikilinks and Named Edges]]↗</span> as a starting point" contains a wikilink but no predicate — a reader follows it if they want context, an agent does not treat it as a graph claim. The predicate is what makes an edge <em>named</em>, and the bullet position is what makes it <em>structural</em>. Lose either and the construction falls back to inline reference.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>has_component::<span class="external-ref">[[Wikilink Syntax]]↗</span></p>
+<ul>
+<li>The target half of a Named Edge is always a wikilink; the <code>[[...]]</code> syntax is the substrate on top of which the predicate layer runs. The wikilink resolution is Obsidian-style filename matching, not URL resolution.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/references/wikilinks-and-named-edges-gist-christopher-allen-2026/">Wikilinks and Named Edges Gist (Christopher Allen, 2026)</a></p>
+<ul>
+<li>The canonical specification for the convention. This gloss captures the local working definition; the gist carries the full discussion of why the convention works the way it does.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<span class="ghost-link">[[Inline Wikilink Reference]]</span></p>
+<ul>
+<li>Inline wikilinks in prose are readable cross-references without structural weight. Named Edges are typed structural claims in the identity block or Relations section. Both use <code>[[...]]</code> but only one participates in the graph. Ghost link pending local gloss.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

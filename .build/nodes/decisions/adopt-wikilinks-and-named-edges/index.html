@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adopt Wikilinks and Named Edges</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/decisions/">Decisions</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></li>
+<li>has_commitment::<span class="ghost-link">[[Provisional Commitment]]</span></li>
+<li>decided_on::2026-04-18</li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Adopt Wikilinks and Named Edges</h1>
+<p>The spine of the graph is author-declared wikilinks with named-edge predicates and indented annotations. Every relational claim takes the form <code>- predicate::[[Target]]</code> or <code>- predicate::[[Target]]↗</code>, expressed as a top-level bullet in the identity block above the H1 or under a node's Relations section. Classification rides the same rails: <code>conforms_to::[[X Form Contract]]</code> over <code>is_a::[[X Form]]</code>. Unconflation is a discipline — predicates that smuggle more than one question into a single value get split into single-axis predicates before they ossify. We keep structural claims off prose, off YAML, and off tags entirely: if a named edge can carry it, a named edge carries it.</p>
+<h2>Why</h2>
+<p>We face the vocabulary-sovereignty problem that kills shared wikis in diverse-contributor settings. When contributors bring different naming traditions, a system that forces convergence on one ontology destroys the meaning each tradition preserved, and a system with no discipline produces a pile of terms no one can navigate. We want a third option: each contributor's vocabulary stays local-dialect and emergent, but the graph an agent reads remains coherent — because the author names each edge rather than an agent inferring it.</p>
+<p>The hinge is <strong>author-declared edges</strong> rather than agent-inferred edges. When one contributor writes <code>- critiques::[[X]]</code> on a contested-concept node and another writes <code>- challenges::[[X]]</code> on their own, both edges land in the graph as distinct claims; a facilitating agent reading the graph later translates between the vocabularies rather than collapsing them into a normalized <code>disagrees_with::</code>. Wikilinks and named-edge predicates are the plain-markdown mechanism that makes this expressible without tooling — no database, no schema, no editor lock-in. Any markdown file becomes a graph node; any <code>predicate::[[Target]]</code> line becomes a typed edge; any external reference (<code>[[Target]]↗</code>) signals a node in another wiki rather than a broken or ghost link.</p>
+<p>Classification through <code>conforms_to::[[X Form Contract]]</code> rather than <code>is_a::[[X Form]]</code> is not cosmetic: a node conforms to a specification rather than being identical to one, which lets it pluralize (a node can conform to multiple contracts from different traditions) and stay revisable. Unconflation is the same principle applied to single-value predicates — a predicate carrying two axes (lifecycle and curation, say, under one status name) splits into two single-axis predicates, so a predicate answering two questions doesn't smuggle a decision past deliberation. Progressive disclosure for agents is the practical payoff: classification predicates above the H1 orient a reader or agent to the node's type, domain, and maturity before any prose is read, and a finite reading budget gets spent deliberately on the edges most worth traversing.</p>
+<h2>Alternatives Considered</h2>
+<p>A successor to the wikilink-and-named-edge bundle would need to preserve plain-markdown expressibility, author-declared edges, and contributor-vocabulary plurality simultaneously. Every alternative considered violates at least one.</p>
+<p><strong>Tool-dependent query layers (Dataview, Logseq properties).</strong> Rejected because they break plain-markdown expressibility. The graph becomes hostage to the tool — the same notes read elsewhere lose their structure, and any reader that does not run the tool sees only prose and unprocessed metadata.</p>
+<p><strong>RDF-in-frontmatter.</strong> Rejected because it is unreadable in raw markdown and pushes toward ontological imposition. RDF requires committing to a schema before the predicates stabilize, which forecloses the local-dialect-and-emergent property the convention is specifically designed to preserve.</p>
+<p><strong>LLM-inferred edge layers.</strong> Rejected because they violate the author-declared property. When an agent infers relations from prose rather than transcribing relations the author declared, contributors become subjects of the system's extraction rather than participants in its naming — the precise failure mode that drove the design toward author-declared edges.</p>
+<p><strong>Fixed global vocabulary.</strong> Rejected because it breaks contributor-vocabulary plurality. Forcing convergence on one ontology destroys the meaning each naming tradition preserved; the system we want is one where contributor vocabularies stay local-dialect and a facilitating agent translates across them, not one where a single agreed vocabulary papers over the underlying differences.</p>
+<h2>What Would Change It</h2>
+<p>This decision bundles two tightly-coupled commitments; the revisit conditions split by part.</p>
+<p><strong>Wikilink spine.</strong> We'd revisit if plain-markdown expressibility broke down — if tooling became required to follow links at usable scale, if authors could no longer rely on ghost links as planning signals because target discoverability demanded pre-existing files, or if broken-link accumulation outpaced seed velocity. None of these look plausible at current scale; the convention assumes a human-readable graph and nothing so far has contradicted that.</p>
+<p><strong>Named-edge vocabulary.</strong> We'd revisit if contributors cannot produce annotations reliably — if the discipline overhead outweighs the curation payoff, if single-word predicates reappear by default, if <code>relates_to::</code> becomes the lazy catch-all, or if vocabulary drift outpaces consolidation. The unconflation decisions already in play are preventative; if they prove insufficient, we'd move to tighter predicate gatekeeping. A switch to a fixed global vocabulary would break the local-dialect property that made the convention viable for diverse contributors in the first place, so we'd treat that as an expensive revisit, not a cheap one.</p>
+<p>We'll revisit the whole bundle after the first seed-and-run cycle produces 15-30 nodes that exercise the full predicate family.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<span class="ghost-link">[[Founding Conversation]]</span></p>
+<ul>
+<li>The exploration that grounds this Decision — what was considered, what was rejected, what became provisionally committed. The Founding Conversation is a context-folder record rather than a first-class node; the edge points at that record so the reasoning remains traversable.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></p>
+<ul>
+<li>Markdown Node Contract encodes the wikilink and named-edge mechanics as file-form requirements (identity block above H1, <code>- predicate::[[Target]]</code> bullets, <code>↗</code> for external provenance, no scalar mirrors of graph predicates). The wikilink-and-named-edge decision is the upstream substrate; Markdown Node Contract is the first concrete downstream implementation.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

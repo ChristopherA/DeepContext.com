@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Require What-It-Asks and Drift Recognition in Convictions</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/decisions/">Decisions</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></li>
+<li>has_commitment::<span class="ghost-link">[[Provisional Commitment]]</span></li>
+<li>decided_on::2026-04-19</li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Require What-It-Asks and Drift Recognition in Convictions</h1>
+<p>Every Conviction body contains two paired sections that together make the stance accountable. The <strong>what-it-asks</strong> content describes what taking the stance seriously asks of the project — the observable commitments, mechanisms, boundaries, or practices that follow when contributors hold the conviction. The <strong>drift recognition</strong> content describes how a reader or contributor would notice the stance weakening without being explicitly revoked — cumulative and cultural practices, outputs, or omissions that would signal drift. Both are required; neither alone is sufficient.</p>
+<h2>Why</h2>
+<p>The commitment <strong>distinguishes a Conviction from a silently-held belief</strong>. A belief may be held without showing up in what the project does; a Conviction is a stance that actively shapes practice and whose maintenance is observable. The two sections express that distinction from opposite sides: what-it-asks says "here is what holding the stance does"; drift recognition says "here is what losing the stance would look like." Together they make the stance accountable both at the action layer (the project takes these moves) and at the maintenance layer (the project notices when the moves stop happening).</p>
+<p>The two sections bundle because <strong>each is incomplete without the other</strong>. What-it-asks without drift recognition describes what the stance motivates but leaves no mechanism for noticing when motivation has faded; the Conviction becomes a list of commendable practices without a way to detect their erosion. Drift recognition without what-it-asks names signals of drift without anchoring them to concrete practice; the Conviction's drift becomes unverifiable because the baseline it drifts from is unnamed. Both sections reinforce each other: what-it-asks supplies the concrete content that drift recognition watches for; drift recognition supplies the maintenance accountability that makes what-it-asks more than aspirational.</p>
+<p>The two sections operate at <strong>different scales of observation</strong>, and that difference is load-bearing. What-it-asks content is specific-and-actionable — "the project maintains human authorship on all published nodes." Drift recognition is cumulative-and-cultural — "over time, the project's content begins leaning toward ambiguity between human and AI authorship." A Contract Requirement is violated when its structural MUST rule fails at a specific point; a Conviction drifts when contributors stop acting as though the stance were held, even without any single structural rule being broken. The two sections cover both scales; either alone would cover only one.</p>
+<p>The what-it-asks content MAY be partitioned by level of application (session-level, architectural, knowledge-level) when a conviction's consequences span scales; partitioning should emerge from the conviction's own shape, not be imposed. Drift recognition MAY appear as a closing paragraph of the what-it-asks section or as its own brief section. Both MUST be concrete: specific asks that can be checked against practice; observable drift signals that a reviewer can assess against actual content.</p>
+<h2>Alternatives Considered</h2>
+<p><strong>Permit pure values statements.</strong> Let Convictions record a stance without either section. Rejected because values-only Convictions are silently-held beliefs in form — the project holds them without showing up in behavior or in maintenance accountability. The Conviction form's whole contribution is the active shaping of practice and its visibility.</p>
+<p><strong>Require only what-it-asks.</strong> Keep the observable-commitments rule but let drift recognition be author-discretionary. Rejected because optional-at-discretion drift recognition is absent under time pressure. The Conviction then has no maintenance accountability — the project can drift without the form noticing. The asymmetric rule (strict on one side, loose on the other) would admit Convictions whose maintenance is invisible.</p>
+<p><strong>Require only drift recognition.</strong> Keep the drift signals but let what-it-asks be implicit. Rejected because drift recognition has no concrete anchor without named asks. "The stance has drifted when things feel different" is the degenerate form; avoiding it requires what-it-asks to supply the observable baseline drift is measured against.</p>
+<p><strong>Treat drift recognition as the Conviction's violation condition, parallel to Contract Requirements.</strong> Rejected because a Conviction does not violate pointwise; its drift is cumulative and cultural. A Contract Requirement is violated when a specific file fails a specific MUST rule; a Conviction drifts when the project's content, over time, stops reflecting the stance. The recognition is a different kind of signal, and conflating it with Requirement violation semantics would lose the kind of accountability the Conviction form targets.</p>
+<h2>What Would Change It</h2>
+<p>The commitment bundles two sections; the revisit conditions converge.</p>
+<p><strong>Convictions prove so abstract that deriving observable asks feels forced.</strong> If the project accumulates Convictions whose honest asks are at the values-only level — where the stance shapes thinking but does not translate into observable practice at current scale — the rule would produce Convictions with placeholder asks. The revisit would soften the rule to "what-it-asks SHOULD be observable when the stance's consequences are observable at current scale; a Conviction at a scale that has not yet surfaced observable asks MAY note the scale issue explicitly." Drift recognition would follow the same softening, since unmeasurable asks produce unmeasurable drift.</p>
+<p><strong>Drift proves unmeasurable or too subjective at any level of concreteness.</strong> If the honest answer to "how would we know if we are losing this?" has no observable form even after serious effort, the rule would force authors to produce drift content that is either vague or fabricated. The revisit would allow explicit acknowledgment of unmeasurability rather than forcing content; the what-it-asks side would remain as the primary accountability.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-layered-node-structure/">Adopt Layered Node Structure</a></p>
+<ul>
+<li>The layered-structure commitment requires each layer to be complete at its scale. The what-it-asks and drift-recognition sections are part of the Conviction's elaboration tier — the stance is the claim tier, and these two sections together complete the elaboration. Both tiers must be complete.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/conviction-form-contract/">Conviction Form Contract</a></p>
+<ul>
+<li>Conviction Form Contract's Body-what-it-asks and Body-drift-recognition Requirements carry the thin enforcement clauses pointing at this Decision.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

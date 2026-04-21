@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adopt Layered Node Structure</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/decisions/">Decisions</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></li>
+<li>has_commitment::<span class="ghost-link">[[Firm Commitment]]</span></li>
+<li>decided_on::2026-04-19</li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Adopt Layered Node Structure</h1>
+<p>A node is arranged in layers that differ in their cost to read, and each layer is complete at its own scale. The minimum layering is an identity predicate block above the H1 (cheap, structural, machine-readable), an opening claim at card scale, an elaboration body carrying reasoning and instances, and a Relations section listing graph neighbors (cheap, structural, machine-readable). Specific form contracts may extend or refine the shape; none may collapse it below the minimum. The commitment is to a node whose consumer can stop at any layer and have what that layer's scale claims to carry — not a teaser forcing them deeper.</p>
+<h2>Why</h2>
+<p>The commitment answers <strong>finite context as the universal constraint</strong>. Human readers arrive with a minute, not an hour; agents operate under literal token budgets; graph queries filter under traversal-cost limits. The common shape across all three consumers is identical: each has limited room and needs to know, cheaply, whether a node is worth the deeper cost. A node without structural layering forces every consumer to the full cost of the deepest tier regardless of what their task actually requires — skim-to-classify burns the same tokens as read-to-reason.</p>
+<p>Layered structure answers that constraint by letting each consumer choose where to stop. Classification predicates above the H1 orient the reader to the node's form, domain, and maturity before any prose is read — an agent deciding whether to load a node's body reads the identity block first. The opening claim (the H1 and its paragraph, or a <code>## Heart</code> section) states the node's commitment or move at card scale — complete in a handful of sentences, not a teaser for deeper prose. Elaboration follows for consumers who have committed to the deeper cost. A structural Relations layer exposes graph neighbors without re-reading the body — a consumer traversing the graph should not have to parse body prose to find outgoing edges.</p>
+<p>Completeness at each layer is what makes the layering usable. A consumer who stops at the claim layer has the claim itself — not a promise of the claim, not a summary-of-a-summary, but the claim complete at its scale. A consumer who reads only the cheap structural layer can filter authoritatively — the data is the data, not preview text. Each layer is designed to stand alone; none is a teaser for a deeper tier. The authoring move that composes a node through these tiers in the prototype's specific vocabulary is <a href="/nodes/patterns/progressive-summary-before-substance/">Progressive Summary Before Substance</a>.</p>
+<p>The cheapest structural layer appears before the expensive prose. Inverting the ordering defeats the cost gradient the layering exists to serve — a consumer paying the cost of the elaboration tier before seeing the identity tier cannot benefit from the early stop the cheap layer was designed to permit. The identity block above the H1 is a deliberate violation of Markdown's usual "H1 first" pattern for exactly this reason.</p>
+<h2>Alternatives Considered</h2>
+<p><strong>Unstructured prose with tooling-extracted structure.</strong> Let authors write nodes as flowing prose and rely on an agent or curator to extract identity, claim, and relations from the body at read time. Rejected because tooling-extracted structure violates the author-declared property of the wikilinks-and-named-edges commitment. An extractor decides which sentence is the claim, which predicates are identity, which mentions are relations — decisions the author never made explicit. The graph becomes a record of what the extractor inferred rather than what the author intended, and the plain-markdown floor dissolves.</p>
+<p><strong>Single-layer prose nodes.</strong> Let every node be a single block of prose without structural tiers. Rejected because it forces every consumer to the same cost regardless of task. A reader classifying a node pays the same cost as a reader reasoning about it; an agent deciding whether to load a node pays the full load cost before the decision. The layering exists specifically to break that equivalence.</p>
+<p><strong>Teaser-style claim layers.</strong> Let the opening be a preview pointing at the body rather than a complete claim at card scale. Rejected because teasers force every consumer committed to the claim tier's cost into the body tier anyway. The cost gradient the layering promises is lost; the reader who needed the claim ends up paying body cost to extract it. Completeness at each layer is non-negotiable — a teaser is a failure of the tier.</p>
+<h2>What Would Change It</h2>
+<p>The commitment would be revisited under conditions that no longer hold.</p>
+<p><strong>Finite context stops being the binding constraint.</strong> If reader attention, agent token budget, and query traversal cost all became effectively unbounded — if context windows grew large enough that loading every node in full became free for every consumer — the layering's central purpose would weaken. No plausible candidate exists: agent token budgets are growing but not outpacing graph growth; human attention is the slowest-moving constraint in the system. The commitment is firm because the constraint that motivates it is the firmest thing in the environment.</p>
+<p><strong>A layered structure becomes un-authorable at scale.</strong> If contributors consistently cannot produce layers complete at their own scale — if teaser claim layers dominate or identity blocks decay into partial data — the authoring discipline has failed. The failure is at the authoring layer, not the structural one; remedies would move toward authoring aids (templates, seed scripts, curation passes) before loosening the commitment. Only if aids cannot hold the discipline would the layered commitment itself be revisited, and the alternative would have to address finite context some other way.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The named-edge infrastructure is what lets the cheap structural layers (identity block, Relations section) be machine-traversable. Without author-declared predicate edges, those tiers would collapse into prose with no tier distinction left — classification and relation would become inferential rather than structural.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></p>
+<ul>
+<li>Markdown Node Contract's layered-structure Requirement is the thin enforcement clause pointing at this Decision. The Contract carries the compliance rule; this Decision carries the reasoning and the revisit conditions.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/patterns/progressive-summary-before-substance/">Progressive Summary Before Substance</a></p>
+<ul>
+<li>The Pattern that realizes this commitment in the prototype's specific vocabulary — identity predicates above the H1, card-scale opening or <code>## Heart</code>, elaboration body, and Relations. This Decision states the standing commitment; the Pattern names the authoring move an author makes composing a node in practice.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

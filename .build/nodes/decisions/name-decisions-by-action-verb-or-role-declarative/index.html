@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Name Decisions by Action Verb or Role Declarative</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/decisions/">Decisions</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></li>
+<li>has_commitment::<span class="ghost-link">[[Firm Commitment]]</span></li>
+<li>decided_on::2026-04-19</li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Name Decisions by Action Verb or Role Declarative</h1>
+<p>Every Decision filename takes one of two shapes. The <strong>action-verb lead</strong> begins with an imperative verb naming the move the project made — <code>Adopt &lt;X&gt;</code>, <code>Use &lt;X&gt;</code>, <code>Prefer &lt;X&gt;</code>, <code>Require &lt;X&gt;</code>, <code>Treat &lt;X&gt;</code>, <code>No &lt;X&gt;</code> (prohibitive, read as "do not X"). The <strong><code>&lt;Subject&gt; as &lt;Role&gt;</code> declarative</strong> frames the subject as playing a role the project has committed to — <code>Deep Context as an Architecture for Captured Reasoning</code>. When the subject is a thing with an established title (a named convention, tool, person, practice, or existing node), the filename embeds that subject verbatim with only the Decision-shape verb or connector added; paraphrase, appended category nouns, and implicit-category rewording are excluded.</p>
+<h2>Why</h2>
+<p>The commitment provides <strong>form-from-filename classification</strong>. A reader scanning a folder of nodes can tell a Decision from a Conviction, a Gloss, or a Pattern by filename shape alone — before opening any file. The Decision's filename reads as a move the project made at a moment (an adopted commitment, a chosen use, a stated preference); a Conviction's filename reads as a held stance (<code>Folders Serve Human Legibility, Not the Graph</code>, <code>Human Authority Over Augmentation Systems</code>); a Gloss carries the <code>&lt;Concept&gt; -- &lt;definition&gt;</code> separator; a Pattern reads as a recurring move or situation. The filename carries the form; the form carries the reader's expectations.</p>
+<p>The two permitted shapes serve the same classification job differently. The action-verb lead is the ordinary case — the project made a choice, and the filename names the choice as a directive the reader can match against the project's behavior. The <code>&lt;Subject&gt; as &lt;Role&gt;</code> declarative is for Decisions whose force is about a subject playing a specific role — <code>Deep Context as an Architecture for Captured Reasoning</code> commits to reading Deep Context through a specific interpretive frame. Bare noun phrases (<code>YAML Scalar Rules</code>, <code>Three-Layer Architecture</code>) are excluded because they read as topics being described, not as commitments being made; comparative and declarative shapes starting with the subject (<code>&lt;X&gt; Over &lt;Y&gt;</code>, <code>&lt;X&gt; Is &lt;Y&gt;</code>, <code>&lt;X&gt; Carries &lt;Y&gt;</code>) are excluded because they overlap with Conviction filename shape and would silently mis-classify.</p>
+<p>The verbatim-embedding rule protects <strong>citation stability</strong>. When a Decision's subject is something the graph already names — <code>Wikilinks and Named Edges</code> (the gist), <code>Markdown Node Contract</code> (an existing Contract), <code>Named Edge</code> (a Gloss) — the filename embeds the subject exactly as the graph names it. The Decision <code>Adopt Wikilinks and Named Edges.md</code> uses the gist's exact title; it does not paraphrase to <code>Adopt Wikilinks and Named Edges Convention.md</code> (appends an implicit category noun) or <code>Adopt the Wikilinks-and-Named-Edges Approach.md</code> (paraphrases and adds implicit category). Paraphrased filenames break citation in two directions: other nodes citing the subject lose resolution to the verbatim target, and readers looking up the subject by its established name find a file with a different title.</p>
+<p>The two rules bundle because they share the form-from-filename Why and because rollback is bundled. Loosening the shape rule (accepting bare noun phrases) would produce Decisions indistinguishable from topic-descriptor files; loosening the verbatim-embedding rule (accepting paraphrases) would produce Decisions whose subjects drift from what the graph actually names. Both compromises would unwind the same discipline — that filenames classify form and preserve citation — from different directions. They are adopted and revisited together.</p>
+<h2>Alternatives Considered</h2>
+<p><strong>Uniform filenames with type-in-predicate classification.</strong> Let every node use a neutral <code>&lt;Subject&gt;.md</code> filename and classify by <code>conforms_to::</code> predicate in the identity block. Rejected because classification-by-filename is a tier cheaper than classification-by-identity-block. A reader scanning a folder of forty nodes sees forty filenames; to classify each by predicate, they would need to open each file. The filename-shape-carries-form convention is what makes classification a folder-view operation rather than a forty-file-open operation. The identity block is still required — the predicate is the graph-participating classification — but the filename shape is the cheap preview.</p>
+<p><strong>Paraphrase for filename flow.</strong> Allow Decision filenames to paraphrase their subjects for better reading ("Adopt the Wikilinks and Named Edges Convention" flows better than "Adopt Wikilinks and Named Edges"). Rejected because paraphrase introduces drift. A Decision named with a paraphrased subject no longer cites the subject by its established name; over time, the paraphrase becomes the de facto name of the subject in downstream nodes, and the original reference is lost. Verbatim embedding holds the graph's naming stable across Decisions that adopt or reinterpret existing nodes.</p>
+<p><strong>Allow any filename the author chooses.</strong> Treat the classification job as secondary and let authors name Decisions however they read best. Rejected because the filename is the cheapest classification tier. Giving it up means every folder-level operation (browse, search, cite, triage) has to pay the cost of opening or previewing each file to know what it is. The convention's benefit — form-from-filename at zero tooling — is what makes large corpora navigable; abandoning it collapses navigation onto tooling the graph is committed to not requiring.</p>
+<h2>What Would Change It</h2>
+<p>The commitment bundles two rules; the revisit conditions share a source.</p>
+<p><strong>Filename-based classification becomes redundant.</strong> If tooling reliably classified nodes at folder-view time — if a file browser or wiki tool showed <code>conforms_to::</code> values alongside filenames in all common reading surfaces — the filename-shape convention would lose its cheap-tier benefit. The convention would remain valid but non-load-bearing. Current tooling does not do this across Obsidian, VS Code, GitHub's repository view, and the shell simultaneously; the convention continues to earn its weight.</p>
+<p><strong>Citation resilience through renaming.</strong> If wiki tooling grew universal redirect-on-rename support (any wikilink to an old filename resolved to the new one, annotated as a rename), the verbatim-embedding rule's citation-stability rationale would weaken. The rule would remain valid as a discipline (preventing paraphrase-drift in the graph's naming) but would no longer protect citation specifically. No such universal support exists; rename-tracking is tool-specific where it exists at all.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The wikilink spine resolves by filename. Filename-shape conventions are what let the graph's folder-level classification and citation operate at zero-tooling cost on top of that resolution.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></p>
+<ul>
+<li>Decision Form Contract's filename-pattern Requirement carries the thin enforcement clause pointing at this Decision.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<a href="/nodes/contracts/conviction-form-contract/">Conviction Form Contract</a></p>
+<ul>
+<li>Conviction Form Contract's filename pattern is the mirror: Convictions MUST NOT use the action-verb lead or the <code>&lt;Subject&gt; as &lt;Role&gt;</code> declarative; their filenames read as held stances. The two Contracts' filename rules compose — if a filename shape fits a Decision, it does not fit a Conviction, and vice versa. Classification-by-filename depends on both rules holding.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

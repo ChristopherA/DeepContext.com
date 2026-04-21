@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wikilinks and Named Edges Gist (Christopher Allen, 2026)</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/references/">References</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/reference-form-contract/">Reference Form Contract</a></li>
+<li>serves_as::<span class="ghost-link">[[Primary Convention Source]]</span></li>
+<li>under_license::<span class="external-ref">[[CC-BY 4.0]]↗</span></li>
+<li>authored_by::<span class="external-ref">[[Christopher Allen]]↗</span></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+</ul>
+<h1>Wikilinks and Named Edges Gist (Christopher Allen, 2026)</h1>
+<p>URL: <a href="https://gist.github.com/ChristopherA/151aefa6a6bde1ce4fa6b1182656cebe">https://gist.github.com/ChristopherA/151aefa6a6bde1ce4fa6b1182656cebe</a></p>
+<p>The gist Christopher Allen published as an agent-reference guide for a plain-markdown convention combining wikilinks, named-edge predicates, and indented annotations. Deep Context treats it as the root of this project's convention layer: the filesystem-as-graph primitives, the progressive-disclosure discipline of annotated edges, the classification pattern using <code>conforms_to::[[X Form Contract]]</code> rather than <code>is_a::[[X]]</code>, and the vocabulary-sovereignty stance that lets diverse contributors keep their local dialects while a facilitating agent translates across them.</p>
+<h3>Adopted</h3>
+<ul>
+<li><strong>The three-piece convention</strong> — <code>[[Multi Word Wikilink]]</code> plus <code>predicate::[[Target]]</code> named edges plus indented sub-bullet annotations — as the primary machinery every node uses.</li>
+<li><strong><code>↗</code> as external-referent marker</strong> — a trailing arrow on a wikilink whose target lives in a different wiki or external tradition, signaling "not a broken link, not a ghost link, a cross-wiki reference."</li>
+<li><strong><code>conforms_to::</code> over <code>is_a::</code></strong> for classification — conformance is pluralizable; identity forces premature commitment.</li>
+<li><strong>Predicate axis refactoring</strong> — predicates that smuggle more than one question into a single value get split into single-axis predicates before they ossify. The prototype names this as a recurring craft move in <a href="/nodes/patterns/refactor-the-predicates-axes/">Refactor the Predicate's Axes</a>, paired with the predicate-atomicity Requirement in <a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a> as its standing structural rule.</li>
+<li><strong>Translation, not convergence</strong> — when two contributors use different vocabulary for overlapping territory, both edges land in the graph as distinct claims and an agent translates between them rather than normalizing to a canonical form.</li>
+<li><strong>Progressive disclosure for finite context</strong> — identity predicates above the H1 let a reader or agent orient before any prose is read, spending a finite context budget deliberately on the nodes and edges most worth traversing. The prototype names this as a recurring authoring move in <a href="/nodes/patterns/progressive-summary-before-substance/">Progressive Summary Before Substance</a>, paired with the layered-structure Requirement in <a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a> as its standing structural rule.</li>
+</ul>
+<h3>Not adopted (yet)</h3>
+<ul>
+<li><strong><code>Renditions/</code> and <code>Archives/</code> convention</strong> — adopted in principle for later sessions, but no sources yet warrant the folder layout. The decision to adopt it is deferred until the first source wants it.</li>
+<li><strong>Full vocabulary breadth</strong> — the gist surveys a richer predicate family than Deep Context has introduced. Predicates are added locally only when 2–3 nodes actually want them; the gist's full catalog is reference material, not a checklist.</li>
+</ul>
+<h3>Key moves to remember</h3>
+<ul>
+<li>Annotated predicates (indented sub-bullet under the edge) are the mechanism that keeps the graph readable to a contributor scanning it, not just to an agent traversing it.</li>
+<li>Ghost links (wikilinks to targets that do not yet exist) are a planning signal, not a bug — they declare intended future nodes without requiring creation-first discipline.</li>
+<li>The convention is plain-markdown expressible without tooling: no database, no schema layer, no editor lock-in. Any markdown file is a graph node; any <code>predicate::[[Target]]</code> line is a typed edge.</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>informs::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></p>
+<ul>
+<li>Markdown Node Contract encodes the gist's wikilinks-and-named-edges specification as file-form requirements — identity block above H1, <code>- predicate::[[Target]]</code> bullets, <code>↗</code> for external provenance, no scalar mirrors of graph predicates.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The Decision that commits this graph to wikilinks plus named edges plus contributor-vocabulary plurality. This Reference is the source the Decision is <code>informed_by::</code>.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/contract-form-contract/">Contract Form Contract</a></p>
+<ul>
+<li>Contract Form Contract specializes the gist's <code>conforms_to::[[X Form Contract]]</code> move into the self-conformance and inheritance patterns that Contract nodes use.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

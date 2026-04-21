@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>extends_contract</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/predicates/">Predicates</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/predicate-form-contract/">Predicate Form Contract</a></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>extends_contract</h1>
+<p>A predicate declaring that the subject Form Contract inherits all Requirements of the object Form Contract — the inheritance is strict and structural, not merely naming or analogy. The subject may add Requirements or refine inherited ones, but it does not weaken or remove them. The edge places the subject Contract on a named extension chain whose root is the Markdown Node Contract.</p>
+<p>The edge lands both in the identity block (declaring inheritance as an identity claim alongside <code>conforms_to::[[Contract Form Contract]]</code>) and in the Relations section (declaring inheritance as a typed edge with an annotation explaining what the subject adds to the parent).</p>
+<h2>Carries</h2>
+<p>The predicate names structural inheritance between Form Contracts: the subject Contract carries every Requirement of the object Contract, applies to every node form that conforms to the object Contract, and may extend the object's specification with additional or refined Requirements. The inheritance is not nominal — the subject does not merely reference the object and pick what to borrow; the subject inherits the full set and any divergence is an explicit refinement documented in the subject Contract's own Requirements section.</p>
+<p>The web of associations the predicate activates is the Contract hierarchy. A reader traversing <code>extends_contract::</code> edges from a Contract back to Markdown Node Contract reads the full stack of Requirements that apply to any node conforming to the subject — the extension chain is what makes Requirements composable across forms.</p>
+<h2>Crescent</h2>
+<h3>Against <a href="/nodes/predicates/conforms_to/">conforms_to -- compliance with a specification</a></h3>
+<p><code>conforms_to::</code> is an instance-to-specification relationship: any node declares compliance with a Form Contract it satisfies. <code>extends_contract::</code> is a specification-to-specification relationship: one Form Contract inherits another Form Contract's Requirements and refines them. The two predicates operate at different layers of the form hierarchy and on different subject types — <code>conforms_to::</code> on any node; <code>extends_contract::</code> only between Form Contracts. The distinction matters because a single Form Contract typically carries both: the Gloss Form Contract <code>conforms_to::[[Contract Form Contract]]</code> (it is itself a Contract subject to the meta-Contract's rules) and <code>extends_contract::[[Markdown Node Contract]]</code> (it inherits the base file-form Requirements and adds gloss-specific ones).</p>
+<h3>Against <span class="ghost-link">[[composed_of]]</span></h3>
+<p>Ghost link; the target Predicate node is not yet seeded. Composition is whole-to-part — the subject is composed of the object as a structural component of itself. Extension is specialization-to-generalization — the subject inherits the object and specializes it. The two are different structural shapes: a compound node <code>composed_of::</code> its constituent nodes carries the constituents as parts; a Form Contract <code>extends_contract::</code> another Form Contract carries the parent's Requirements as inherited structure, not as parts the child contains.</p>
+<h2>Typing</h2>
+<ul>
+<li><strong>Subject:</strong> A Form Contract node. Only Form Contracts participate in the extension chain.</li>
+<li><strong>Object:</strong> A Form Contract node. The object MUST be the parent Contract whose Requirements the subject inherits.</li>
+</ul>
+<h2>Instances</h2>
+<ul>
+<li><code>prototype/nodes/Contracts/Gloss Form Contract.md</code> carries <code>extends_contract::[[Markdown Node Contract]]</code> — the Gloss Form Contract inherits every Markdown Node Contract Requirement (filename rules, identity block, Relations section, named-edge syntax) and adds gloss-specific Requirements (filename-carries-definition pattern, body-shape rules).</li>
+<li><code>prototype/nodes/Contracts/Predicate Form Contract.md</code> carries <code>extends_contract::[[Gloss Form Contract]]</code> — the Predicate Form Contract inherits everything Gloss Form Contract specifies and adds the Carries, Crescent, and Typing Requirements that make a predicate Gloss a Predicate node.</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>contrasts_with::<a href="/nodes/predicates/conforms_to/">conforms_to -- compliance with a specification</a></p>
+<ul>
+<li>Different layers of the form hierarchy: <code>conforms_to::</code> is instance-to-specification compliance; <code>extends_contract::</code> is contract-to-contract inheritance.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<span class="ghost-link">[[composed_of]]</span></p>
+<ul>
+<li>Ghost link; <code>composed_of::</code> is not yet seeded as a Predicate. The Crescent names the distinction between whole-to-part composition and specialization-to-generalization extension.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/convictions/vocabulary-diversity-is-a-feature/">Vocabulary Diversity Is a Feature</a></p>
+<ul>
+<li>The Conviction that makes naming the inheritance-vs-composition distinction load-bearing. Both shapes get their own predicate rather than collapsing to a generic structural-relation term.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ghost Link</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/glosses/">Glosses</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/gloss-form-contract/">Gloss Form Contract</a></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+</ul>
+<h1>Ghost Link</h1>
+<p>A wikilink whose target does not yet exist as a file in the graph. Ghost Links are written with the ordinary <code>[[Multi Word Target]]</code> syntax and are indistinguishable in source from resolved wikilinks; what marks them as ghosts is the absence of a target file, not any special notation. A contributor writes a ghost link when they want to declare that a concept deserves a node without writing that node now — and the graph remembers the intent.</p>
+<p>Ghost Links carry planning signal in two directions. A contributor scanning their own draft sees which concepts they have named but not yet elaborated — each ghost link is a reminder that the term is in use and wants a home. A curation pass across the whole graph aggregates ghost links into a backlog of candidate nodes, weighted by how many other nodes already reference each one: a term that appears as a ghost in five places has earned a seed, while a term that appears once may be a one-off the contributor no longer intends to elaborate. Ghost links turn the act of writing into an implicit vote for what deserves attention next, without any separate tracking mechanism.</p>
+<p>The convention distinguishes Ghost Links from two adjacent constructions. A <strong>broken link</strong> points to a target that used to exist and was renamed or removed; the fix is to rename, repoint, or delete the link. A <strong>cross-wiki reference</strong> marked with <code>↗</code> points to a target that lives in a different wiki or an external tradition and is not expected to resolve locally; the <code>↗</code> is the signal that absence-of-file is intentional. A Ghost Link is neither — it is a pending intent inside this graph, waiting to be fulfilled.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>has_component::<span class="external-ref">[[Wikilink Syntax]]↗</span></p>
+<ul>
+<li>A Ghost Link uses ordinary wikilink syntax; the only thing that makes it a ghost is the absence of a target file. Tools that detect and report ghost links do so by cross-referencing wikilinks against the filename index.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<span class="ghost-link">[[Broken Link]]</span></p>
+<ul>
+<li>A broken link points to a target that was renamed or removed and needs a repair; a ghost link points to a target that was never written and signals intent. A curation pass distinguishes them by history — broken links have a prior resolution; ghost links do not. Ghost link pending local gloss.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<span class="ghost-link">[[Cross Wiki Reference]]</span></p>
+<ul>
+<li>A cross-wiki reference marked with <code>↗</code> signals that the target deliberately lives in a different wiki or external tradition; a ghost link signals a target intended to live here but not yet written. The <code>↗</code> marker is the disambiguator. Ghost link pending local gloss.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/references/wikilinks-and-named-edges-gist-christopher-allen-2026/">Wikilinks and Named Edges Gist (Christopher Allen, 2026)</a></p>
+<ul>
+<li>The gist specifies ghost-links-as-planning-signal as one of the convention's intentional features.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

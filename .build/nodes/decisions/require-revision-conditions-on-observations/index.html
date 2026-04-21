@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Require Revision Conditions on Observations</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/decisions/">Decisions</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></li>
+<li>has_commitment::<span class="ghost-link">[[Provisional Commitment]]</span></li>
+<li>decided_on::2026-04-19</li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Require Revision Conditions on Observations</h1>
+<p>Every Observation body describes concrete conditions under which the observation would be updated, downgraded, or abandoned. A <code>## What Would Revise It</code> section (or an equivalent closing paragraph) names the specific evidence or circumstance that would change the claim: new measurement contradicting it, new record contradicting the reconstructed record, promotion of an on-faith premise to empirical or retrospective status, or resolution of the contest. An Observation with no conceivable revision condition is likely misidentified as a Conviction (a held stance not accountable to evidence) or a Contract Requirement (a structural MUST rule not accountable to revision through evidence).</p>
+<h2>Why</h2>
+<p>The commitment distinguishes <strong>Observation's accountability mode from other forms</strong>. An Observation is accountable to evidence: the claim is assessed by grounds, and grounds can change. Specifying revision conditions is how the Observation commits to that accountability — the claim is held open to revision along the conditions the author names, not permanently across all evidence. A Conviction is accountable to fidelity (the project holds the stance or drifts from it); a Contract Requirement is accountable to structural conformance (nodes satisfy the MUST or violate it). Revision conditions make Observation's specific accountability legible.</p>
+<p>The rule <strong>diagnoses misidentification</strong>. An Observation that resists naming revision conditions is usually one of two things: a Conviction dressed as a descriptive claim (the author wanted to assert "X is the case" as a stance, not as a revisable empirical position), or a Contract Requirement dressed as an observation (the author wanted to state a structural rule, not a claim about the world). The revision-conditions Requirement is what surfaces the mis-form — an author trying to write revision conditions for a Conviction struggles because Convictions do not revise against evidence; an author trying for a Contract Requirement struggles because Requirements do not revise against empirical observation.</p>
+<p>Concrete revision conditions are the rule. Vague conditions ("if this turns out to be wrong") do not meet the requirement. A well-formed revision condition names what kind of evidence, what source, what measurement, or what resolution would count. "A measurement showing X &gt; Y at the specified scale" is concrete; "further investigation" is not. Concreteness is what makes the revision condition accountable at the moment it arrives — a reader assessing whether to revise the claim can check whether the condition has obtained.</p>
+<p>Revision conditions compose with epistemic status. An empirical Observation's revision condition typically names a new measurement contradicting the original; a retrospective Observation's revision condition names a contradicting record; an on-faith Observation's revision condition names the promotion path (what would move the claim to empirical or retrospective grounds); a contested Observation's revision condition names the resolution of the contest. Each status's revision conditions have a characteristic shape, and the body's revision section matches the shape to the status the Observation declared.</p>
+<h2>Alternatives Considered</h2>
+<p><strong>Treat Observations as stable claims.</strong> Let Observations record what the author believes to be the case without committing to revision conditions. Rejected because the form would collapse into Conviction-adjacent territory. Observations' distinguishing property is evidential accountability — without revision conditions, the form is a held belief, which is what Convictions record. The revision-conditions requirement keeps Observation distinct.</p>
+<p><strong>Optional revision section.</strong> Keep the classification and grounds as required but let revision conditions be author-discretionary. Rejected because optional-at-author-discretion effectively means "absent by default." Observations written under time pressure would systematically omit the revision section; the accountability property would live only in strong Observations. The requirement is what produces revision conditions across the Observation corpus, not just in the author's best efforts.</p>
+<p><strong>Require revision conditions only for empirical and retrospective Observations.</strong> Let on-faith and contested Observations omit revision conditions. Rejected because on-faith and contested Observations also have revision conditions — on-faith claims are revised when the source is reconsidered or when empirical grounds become available; contested claims are revised when the debate resolves. The conditions differ by status, but every status has them. The Requirement applies universally because every Observation is accountable to some form of evidential revision.</p>
+<h2>What Would Change It</h2>
+<p>The commitment would be revisited under one condition.</p>
+<p><strong>Revision conditions prove so rare that requirement feels forced.</strong> If Observations arise whose honest revision conditions are "nothing plausible" — where the author genuinely cannot name a condition under which the claim would revise — the rule would produce Observations whose revision sections degrade to perfunctory hand-waving. The revisit would consider whether "nothing plausible" Observations are actually Convictions or Contract Requirements in disguise (the rule's diagnostic) or whether some Observations are genuinely irrevisable (and the form needs a fifth epistemic status like <code>[[Foundational Observation]]</code> with no revision expectations). Current Observations have not been written; the condition is latent.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/classify-observations-by-epistemic-status-with-matched-grounds/">Classify Observations by Epistemic Status With Matched Grounds</a></p>
+<ul>
+<li>The epistemic-status commitment and the revision-conditions commitment are paired Observation-form disciplines. Classification makes the claim's epistemic tier explicit; revision conditions make the claim's accountability to evidence explicit. Both together distinguish Observations from Convictions and from Requirements.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/observation-form-contract/">Observation Form Contract</a></p>
+<ul>
+<li>Observation Form Contract's Body-What-Would-Revise-It Requirement carries the thin enforcement clause pointing at this Decision.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

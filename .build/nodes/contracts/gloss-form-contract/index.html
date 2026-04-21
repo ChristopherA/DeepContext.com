@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gloss Form Contract</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/contracts/">Contracts</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/contract-form-contract/">Contract Form Contract</a></li>
+<li>extends_contract::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+</ul>
+<h1>Gloss Form Contract</h1>
+<p>A Gloss is a node whose purpose is to define a term used elsewhere in the graph. It carries enough body to make the term usable on first encounter and carries its working definition in the filename itself, so that a contributor browsing the filesystem reads the definition without opening the file.</p>
+<p>A Gloss is not a Reference (which points to external authoritative source material) and not a Contract (which specifies structural requirements). It is the most compact self-contained node the graph supports, but its body may grow when the term is load-bearing enough to deserve elaboration.</p>
+<h2>Requirements</h2>
+<h3>Inherits Markdown Node Contract</h3>
+<ul>
+<li>All requirements of <a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a> apply.</li>
+<li>The requirements below are additions or refinements, not overrides.</li>
+</ul>
+<h3>Filename pattern</h3>
+<p>Enforces <a href="/nodes/decisions/use-double-hyphen-separator-for-gloss-definitions/">Use Double-Hyphen Separator for Gloss Definitions</a>.</p>
+<ul>
+<li>The filename MUST follow <code>&lt;Concept&gt; -- &lt;one-clause definition&gt;.md</code>.</li>
+<li>The separator between concept and definition MUST be <code>--</code> (space, double hyphen, space).</li>
+<li>The concept side MUST match the wikilink target other nodes use to reference this gloss.</li>
+<li>The definition side MUST be a single clause, no trailing period, no internal <code>--</code>.</li>
+</ul>
+<h3>H1</h3>
+<ul>
+<li>The H1 MUST be the bare concept name only, matching the concept side of the filename.</li>
+<li>The H1 MUST NOT repeat the definition from the filename.</li>
+</ul>
+<h3>Body shape</h3>
+<p>Enforces <a href="/nodes/decisions/require-body-elaboration-beyond-filename-definition/">Require Body Elaboration Beyond Filename Definition</a>.</p>
+<ul>
+<li>The body MAY be a single sentence, a short paragraph, or several paragraphs with H2 subsections. Typical shape is two or three paragraphs: the opening restate-and-elaborate, a paragraph giving concrete elaboration or showing the concept at work, and a paragraph distinguishing the concept from an obvious alternative.</li>
+<li>The first sentence MUST restate the filename definition and elaborate it by one useful clause or contrast — not a verbatim repeat. A body whose only content is the bare definition is not conforming.</li>
+<li>Subsection headings (H2) are permitted when a gloss carries distinct sub-angles that each want their own named section. For a compact gloss, prefer unheaded paragraphs.</li>
+<li>If the content grows beyond what a gloss can comfortably carry (roughly 300 words of body, or more than three sub-sections), consider whether the node wants a different form (Reference, Case Study, Pattern).</li>
+</ul>
+<h3>Sources section</h3>
+<ul>
+<li>When the gloss draws on external sources, a <code>## Sources</code> section MUST appear after the body and before <code>## Relations</code>.</li>
+<li>Sources are listed as bulleted URLs with brief annotations. They are not typed edges; the typed edges go in <code>## Relations</code>.</li>
+</ul>
+<h3>Relations section</h3>
+<ul>
+<li>A Gloss MAY omit <code>## Relations</code> when it has no non-trivial relational edges.</li>
+<li>When present, relational edges follow the base Markdown Node Contract.</li>
+</ul>
+<h3>Identity predicate block</h3>
+<ul>
+<li>The identity block above the H1 MUST include <code>conforms_to::[[Gloss Form Contract]]</code>.</li>
+</ul>
+<h3>Optional scalar metadata</h3>
+<ul>
+<li>YAML frontmatter MAY include <code>created:</code> (ISO date), <code>tagline:</code> (a pithy one-liner), and <code>brief_summary:</code> (a paragraph-length summary).</li>
+<li>All three are scalar metadata, not graph-structural. They support human browsing and build-time rendering.</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>extends_contract::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></p>
+<ul>
+<li>Inherits all base file-form requirements; adds the filename-carries-definition pattern, body-shape allowances, and the standard section order (body → Sources → Relations).</li>
+</ul>
+</li>
+<li>
+<p>conforms_to::<a href="/nodes/contracts/contract-form-contract/">Contract Form Contract</a></p>
+<ul>
+<li>This file is itself a Contract, so it conforms to the meta-contract that specifies what Contract nodes look like.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/use-double-hyphen-separator-for-gloss-definitions/">Use Double-Hyphen Separator for Gloss Definitions</a></p>
+<ul>
+<li>Grounds the filename pattern Requirement.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/require-body-elaboration-beyond-filename-definition/">Require Body Elaboration Beyond Filename Definition</a></p>
+<ul>
+<li>Grounds the body-shape rule against verbatim repetition of the filename definition.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<a href="/nodes/contracts/reference-form-contract/">Reference Form Contract</a></p>
+<ul>
+<li>A Gloss defines a term used internally; a Reference points to external authoritative source material. Both may be short, but the purposes are distinct.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

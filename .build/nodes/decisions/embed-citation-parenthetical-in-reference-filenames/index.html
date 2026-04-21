@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Embed Citation Parenthetical in Reference Filenames</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/decisions/">Decisions</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></li>
+<li>has_commitment::<span class="ghost-link">[[Provisional Commitment]]</span></li>
+<li>decided_on::2026-04-19</li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Embed Citation Parenthetical in Reference Filenames</h1>
+<p>Every Reference filename carries a <code>(&lt;Author&gt;, &lt;Year&gt;)</code> citation parenthetical as its final component: <code>&lt;Artifact Name&gt; (&lt;Author&gt;, &lt;Year&gt;).md</code>. The author component uses the human-readable display form matching the <code>authored_by::</code> target (without the <code>↗</code> marker): <code>(Christopher Allen, 2026)</code>, not <code>(ChristopherA, 2026)</code>. Two authors use <code>(Author One &amp; Author Two, Year)</code>; three or more use <code>(Author One et al., Year)</code> with the full author set enumerated in <code>authored_by::</code> predicates. The year refers to the source's publication or last substantive revision, not the node file's creation date. When no year is discoverable, the parenthetical takes the form <code>(&lt;Author&gt;)</code>.</p>
+<h2>Why</h2>
+<p>The commitment provides <strong>filename-as-inline-citation</strong>. A wikilink to a Reference node with the parenthetical embedded renders as a readable citation in running prose: "the convention articulated in <a href="/nodes/references/wikilinks-and-named-edges-gist-christopher-allen-2026/">Wikilinks and Named Edges Gist (Christopher Allen, 2026)</a> shapes..." becomes a sentence that carries the cited author and year inline without extra markup, parenthetical annotation, or footnote infrastructure. The rendered link reads like a standard academic inline citation; the graph layer sees a wikilink target resolving to the Reference node. Prose and graph participation are satisfied in one mechanism.</p>
+<p>The parenthetical makes <code>(&lt;Author&gt;, &lt;Year&gt;)</code> a <strong>visual marker</strong> for Reference-form nodes. A reader scanning the Glosses folder, the Decisions folder, or a graph listing sees Reference filenames by their trailing parenthetical — no other form uses the <code>(&lt;Author&gt;, &lt;Year&gt;)</code> convention. Filename-shape-carries-form (the rule <a href="/nodes/decisions/name-decisions-by-action-verb-or-role-declarative/">Name Decisions by Action Verb or Role Declarative</a> applies to Decisions, the Concept -- definition pattern <a href="/nodes/decisions/use-double-hyphen-separator-for-gloss-definitions/">Use Double-Hyphen Separator for Gloss Definitions</a> applies to Glosses) extends to Reference: the parenthetical suffix identifies the form at a glance.</p>
+<p>The parenthetical is the <strong>canonical citation location</strong>. A Reference body does not need a separate citation line — the filename carries the citation form directly. This avoids two sources of truth: a YAML citation scalar and a filename-level citation would have to be kept aligned; a body-level citation and a filename-level citation would duplicate. The filename is the canonical form; <code>authored_by::</code> predicates enumerate authors for graph traversal; the body carries what the source contributes. No duplication.</p>
+<p>Specific formatting choices inherit from established citation conventions: <code>(Author, Year)</code> is the APA inline-citation shape; <code>et al.</code> for three-plus authors matches academic convention; organizational publications use the organization name (<code>(IETF, 2024)</code>, <code>(Wikipedia, 2026)</code>). Revision-worthy histories may use <code>(&lt;Author&gt;, &lt;OrigYear&gt;, rev. &lt;RevYear&gt;)</code> for sources with load-bearing revisions. Each sub-choice follows existing practice rather than inventing new forms; the prototype imports the citation vocabulary the reader population is already literate in.</p>
+<h2>Alternatives Considered</h2>
+<p><strong>YAML-only citation data.</strong> Carry citation information in YAML frontmatter (<code>author:</code>, <code>year:</code>) and keep filenames bare. Rejected because citation-as-scalar loses graph participation. A reader wanting the source's citation must open the file to read YAML; a wikilink in prose cannot render the citation inline. The filename-carries-citation pattern keeps the citation graph-participating and prose-inline; YAML citation keeps it file-opening-only.</p>
+<p><strong>Body citation line.</strong> Put a citation string at the top of the body (<code>Cite as: Christopher Allen (2026).</code>). Rejected because body-level citation duplicates the filename-level information. When the filename and body citation drift — one updated without the other — neither is authoritative. Single source of truth principle picks the filename, where the citation serves the wikilink-rendering use case the body-line cannot.</p>
+<p><strong>Author-only filenames without year.</strong> Include <code>(Author)</code> but drop the year. Rejected because year is part of the citation's disambiguating information. Two artifacts from the same author without year distinction produce wikilink collisions or require awkward disambiguation strings; with year, each artifact is uniquely identified. The year is dropped only when genuinely unknown — the rule is "use what is known, do not guess."</p>
+<h2>What Would Change It</h2>
+<p>The commitment would be revisited under one condition.</p>
+<p><strong>Citation parsing becomes burdensome or informal references dominate.</strong> If most References the project draws from turn out to be informal sources without clear author or year (community discussions, ephemeral posts, unattributed documents), the parenthetical convention would produce awkward filenames with <code>(Unknown)</code> or <code>(Unknown, Unknown)</code> suffixes. Current References draw from artifacts with clear authorship and publication year; the informal-reference pressure has not arisen. The revisit condition is latent.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The named-edge spine resolves wikilinks by filename. Citation parentheticals in filenames make the wikilink target self-citing — the prose layer and the graph layer agree on what the target says.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/reference-form-contract/">Reference Form Contract</a></p>
+<ul>
+<li>Reference Form Contract's filename pattern Requirement carries the thin enforcement clause pointing at this Decision.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

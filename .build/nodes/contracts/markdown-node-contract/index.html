@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Markdown Node Contract</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/contracts/">Contracts</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/contract-form-contract/">Contract Form Contract</a></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+</ul>
+<h1>Markdown Node Contract</h1>
+<p>The base contract every Markdown Node in this project conforms to. It specifies the file-level form: encoding, filename rules, YAML frontmatter scope, the predicate block above the H1, the Relations section, and the named-edge syntax. More specific contracts (Gloss, Contract, Reference, Decision, Pattern, Observation, Conviction, Aspiration Form Contracts) extend this one by adding structural requirements on top of the base form.</p>
+<p>The Requirements below are thin enforcement clauses; their reasoning, alternatives, and revisit conditions live in the Decisions they ground in. The grounding edges are named in each Requirement and listed in the Relations section.</p>
+<h2>Requirements</h2>
+<h3>File form</h3>
+<p>Enforces <a href="/nodes/decisions/use-ascii-dashes-in-filenames/">Use ASCII Dashes in Filenames</a>.</p>
+<ul>
+<li>The file MUST be UTF-8 markdown with <code>.md</code> extension.</li>
+<li>The filename MUST NOT contain em-dashes (<code>—</code>) or en-dashes (<code>–</code>). Use ASCII hyphens.</li>
+<li>Where a visual dash is needed in a filename, the form MUST be a double ASCII hyphen <code>--</code>.</li>
+<li>The filename MUST be either <code>&lt;wikilink target&gt;.md</code> or <code>&lt;wikilink target&gt; -- &lt;description&gt;.md</code> (the latter reserved for Gloss Form per its own contract).</li>
+<li>Referencing this file from another node depends on whether the filename carries a <code>-- &lt;description&gt;</code> suffix. When the filename has no suffix, other nodes reference it using the bare wikilink <code>[[&lt;filename&gt;]]</code>. When the filename has a <code>-- &lt;description&gt;</code> suffix, references MUST use the pipe form <code>[[&lt;full filename&gt;|&lt;concept&gt;]]</code> per <a href="/nodes/decisions/use-pipe-wikilinks-for-display-target-divergence/">Use Pipe Wikilinks for Display-Target Divergence</a>.</li>
+</ul>
+<h3>Node atomicity</h3>
+<p>Enforces <a href="/nodes/decisions/adopt-node-atomicity/">Adopt Node Atomicity</a>.</p>
+<ul>
+<li>A file MUST address exactly one concept. One node names one concept, and one concept has one node.</li>
+<li>A file whose body would legibly split into two independent sections serving two different concepts MUST be split into two files, each naming one concept.</li>
+<li>Compound nodes follow node atomicity: a compound names one concept; its sub-files are supporting material, not sub-concepts or facets. A sub-file that reads as a node in its own right — cited by other nodes under its own name, carrying its own identity predicates — MUST be promoted to an atomic node, and the compound split.</li>
+<li>Decisions MAY bundle multiple logically-related commitments under the narrow conditions in <a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a>. A bundled Decision still names ONE concept — the bundle itself.</li>
+</ul>
+<h3>YAML frontmatter</h3>
+<p>Enforces <a href="/nodes/decisions/restrict-yaml-to-scalar-metadata/">Restrict YAML to Scalar Metadata</a>.</p>
+<ul>
+<li>YAML frontmatter is OPTIONAL.</li>
+<li>When present, YAML MUST contain only scalar metadata (e.g., <code>created</code>, <code>tagline</code>, <code>brief_summary</code>).</li>
+<li>YAML keys for Deep Context-specific scalars MUST be multi-word <code>snake_case</code>, matching named-edge predicate discipline. Two classes of exception: tool-reserved or convention-respecting fields (<code>aliases</code>, <code>tags</code>, <code>created</code>) keep their established names, and fused compound words (<code>tagline</code>, <code>wikilink</code>) operate as single concepts.</li>
+<li>Named-edge predicates MUST NOT live in YAML. This applies to graph-participating predicates and to their scalar mirrors.</li>
+<li>An <code>aliases:</code> field MAY appear as a tool-level convenience; it is graph-non-participating.</li>
+</ul>
+<h3>Identity predicate block</h3>
+<p>Enforces <a href="/nodes/decisions/adopt-layered-node-structure/">Adopt Layered Node Structure</a>.</p>
+<ul>
+<li>The body MUST begin with a bullet list of identity predicates before the H1.</li>
+<li>This block MUST include <code>conforms_to::[[&lt;Form&gt; Contract]]</code> or <code>conforms_to::[[&lt;Form&gt; Form Contract]]</code>.</li>
+<li>This block SHOULD include <code>in_domain::[[&lt;Domain&gt;]]</code>.</li>
+<li>This block MAY include <code>has_lifecycle::[[&lt;X&gt; Stage]]</code>, <code>has_curation::[[&lt;descriptive phrase&gt;]]</code>, and <code>authored_by::[[&lt;Person&gt;]]</code>.</li>
+<li>Identity predicates describe what the node IS; they do not describe its relationships to other nodes.</li>
+</ul>
+<h3>H1</h3>
+<ul>
+<li>The file MUST contain exactly one H1.</li>
+<li>The H1 MUST be the concept name — not the full filename, not a definition, not a sentence.</li>
+</ul>
+<h3>Body</h3>
+<ul>
+<li>Prose body follows the H1.</li>
+<li>Prose MAY contain inline wikilinks; inline links are readable references, not structural edges.</li>
+</ul>
+<h3>Layered structure</h3>
+<p>Enforces <a href="/nodes/decisions/adopt-layered-node-structure/">Adopt Layered Node Structure</a>.</p>
+<ul>
+<li>A node MUST be arranged in layers that differ in cost to read, and each layer MUST be complete at its own scale.</li>
+<li>The minimum layering is: (a) the identity predicate block above the H1 (cheap, structural, machine-readable), (b) the H1 and its opening prose — or the opening designated section such as a Heart — stating the node's claim at card scale, (c) the elaboration body carrying reasoning, consequences, or instances, and (d) the Relations section (cheap, structural, machine-readable). Specific form contracts MAY extend or refine this shape; they MUST NOT collapse it below the minimum.</li>
+<li>Each layer MUST carry what its scale claims to carry. A claim layer MUST state the claim, not tease it; a structural layer MUST carry authoritative data, not preview text; an elaboration layer MUST reason about the claim, not re-introduce it.</li>
+<li>The cheapest structural layer MUST appear before the expensive prose.</li>
+</ul>
+<h3>Relations section</h3>
+<p>Enforces <a href="/nodes/decisions/annotate-edges-with-why-they-matter/">Annotate Edges With Why-They-Matter</a> and <a href="/nodes/decisions/no-generic-relatesto-predicate/">No Generic relates_to Predicate</a>.</p>
+<ul>
+<li>If the node has relational edges, they MUST appear in a section headed <code>## Relations</code> after the body.</li>
+<li>Each relational edge MUST be a top-level bullet in the form <code>- predicate::[[Target]]</code> or <code>- predicate::[[Target]]↗</code>.</li>
+<li>Each relational edge SHOULD carry an indented sub-bullet annotation explaining why the relationship matters.</li>
+<li>The <code>relates_to::</code> predicate MUST NOT be used. Choose a specific predicate (<code>extends_contract::</code>, <code>has_component::</code>, <code>composed_of::</code>, <code>grounded_in::</code>, <code>built_on::</code>, <code>informed_by::</code>, <code>contrasts_with::</code>, <code>contends_with::</code>, and so on) or add one to the local vocabulary.</li>
+</ul>
+<h3>Named-edge syntax</h3>
+<p>Enforces <a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a>.</p>
+<ul>
+<li>Predicates MUST be multi-word, lower-case, joined by underscores (<code>has_component::</code>, not <code>includes::</code>).</li>
+<li>Wikilink targets MUST be multi-word. Single-word targets are not permitted (<code>[[Wikilink Syntax]]</code>, not <code>[[Wikilink]]</code>).</li>
+<li>A target whose referent belongs to a different wiki or to an external tradition MUST be marked with a trailing <code>↗</code>. The <code>↗</code> marks the referent's provenance, not a URL. URLs, when recorded, live in a stub node under <code>sources/</code>.</li>
+<li>Ghost links (wikilinks to targets that do not yet exist) are permitted and signal intended future nodes.</li>
+</ul>
+<h3>Predicate atomicity</h3>
+<p>Enforces <a href="/nodes/decisions/adopt-predicate-atomicity/">Adopt Predicate Atomicity</a>.</p>
+<ul>
+<li>Each predicate MUST answer exactly one question — one axis of distinction, not multiple.</li>
+<li>A predicate's values MAY span many points along that one axis. What MUST NOT occur is values that cluster into subgroups answering different questions.</li>
+<li>When a predicate is found carrying two or more axes, the remedy MUST be a predicate family — each member a single-axis predicate — not a revised but still-overloaded name. The recurring craft move is <a href="/nodes/patterns/refactor-the-predicates-axes/">Refactor the Predicate's Axes</a>.</li>
+<li>A new axis of distinction MUST earn a new predicate; retrofitting existing predicates to carry a new axis is forbidden.</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>built_on::<span class="external-ref">[[CommonMark Markdown]]↗</span></p>
+<ul>
+<li>A node conforming to this contract is valid CommonMark; the contract adds reading and authoring discipline on top of the file format.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<span class="external-ref">[[Wikilinks and Named Edges]]↗</span></p>
+<ul>
+<li>The canonical reference for the underlying wikilinks-plus-named-edges convention this contract specializes.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The project-level Decision that commits to the wikilinks-and-named-edges spine. Node atomicity, predicate atomicity, and layered structure all presuppose this Decision.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-node-atomicity/">Adopt Node Atomicity</a></p>
+<ul>
+<li>The Decision grounding the node-atomicity Requirement.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-predicate-atomicity/">Adopt Predicate Atomicity</a></p>
+<ul>
+<li>The Decision grounding the predicate-atomicity Requirement.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-layered-node-structure/">Adopt Layered Node Structure</a></p>
+<ul>
+<li>The Decision grounding the layered-structure Requirement and the identity-predicate-block placement.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/restrict-yaml-to-scalar-metadata/">Restrict YAML to Scalar Metadata</a></p>
+<ul>
+<li>The Decision grounding the YAML-frontmatter Requirement.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/use-ascii-dashes-in-filenames/">Use ASCII Dashes in Filenames</a></p>
+<ul>
+<li>The Decision grounding the filename-dash rules in the File form Requirement.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/annotate-edges-with-why-they-matter/">Annotate Edges With Why-They-Matter</a></p>
+<ul>
+<li>The Decision grounding the Relations-section annotation requirement.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/no-generic-relatesto-predicate/">No Generic relates_to Predicate</a></p>
+<ul>
+<li>The Decision grounding the <code>relates_to::</code> prohibition in the Relations-section Requirement.</li>
+</ul>
+</li>
+<li>
+<p>extended_by::<a href="/nodes/contracts/gloss-form-contract/">Gloss Form Contract</a></p>
+<ul>
+<li>Gloss Form Contract extends this contract with filename-carries-definition and body-shape allowances.</li>
+</ul>
+</li>
+<li>
+<p>extended_by::<a href="/nodes/contracts/contract-form-contract/">Contract Form Contract</a></p>
+<ul>
+<li>Contract Form Contract extends this contract with requirements for parseable <code>## Requirements</code> sections and the self-conformance pattern.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/glosses/compound-node/">Compound Node</a></p>
+<ul>
+<li>The compound-node pattern realizes node atomicity for concepts whose supporting material warrants its own sub-files: the compound names one concept, the sub-files are supporting material, and the node-atomicity Requirement's split criterion is what tells the author whether a prospective sub-file is supporting material (stays compound) or an independent concept (promote to atomic).</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/patterns/progressive-summary-before-substance/">Progressive Summary Before Substance</a></p>
+<ul>
+<li>The Pattern that realizes the layered-structure Requirement in the prototype's specific vocabulary. The Requirement states the standing structural rule; the Pattern names the move an author makes composing a node in practice.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/patterns/refactor-the-predicates-axes/">Refactor the Predicate's Axes</a></p>
+<ul>
+<li>The Pattern that realizes or restores predicate atomicity when a predicate is found carrying multiple axes. The Requirement states the rule; the Pattern names the craft applied when the rule is violated in the wild.</li>
+</ul>
+</li>
+<li>
+<p>informed_by::<a href="/nodes/decisions/use-pipe-wikilinks-for-display-target-divergence/">Use Pipe Wikilinks for Display-Target Divergence</a></p>
+<ul>
+<li>Bare <code>[[Concept]]</code> does not resolve to a file whose name carries a <code>-- &lt;description&gt;</code> suffix; the pipe form Decision specifies the canonical way to reference gloss nodes and other disambiguated filenames from both prose and named edges.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

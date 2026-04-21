@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wikis Without Curation Drift Toward Write-Only</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/observations/">Observations</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/observation-form-contract/">Observation Form Contract</a></li>
+<li>has_epistemic_status::<span class="ghost-link">[[Retrospective Observation]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Wikis Without Curation Drift Toward Write-Only</h1>
+<p>Collaborative wikis operated without active curation practice drift toward write-only dynamics. Contributors continue adding nodes, but readers cannot navigate the accumulation, ontology decisions stall in arbitration, the bus factor concentrates in whoever does the bookkeeping, and newcomers cannot find an onboarding path into the existing material. The drift is the failure mode the Deep Context practice is designed to address.</p>
+<h2>Grounds</h2>
+<p>The record rests on reconstructed community experience across several collaborative-wiki traditions. Federated Wiki (Ward Cunningham) developed a rich architecture and a small committed community but has not sustained mass contribution — reader navigability of the federation remains the open problem. Agora and Anagora experiments sustained contributor enthusiasm for a period and accumulated material, then slowed as the link-integrity and ontology-reconciliation work outpaced contributor willingness to do bookkeeping. Massive Wiki has produced multiple garden instances with the same pattern — an active seeding phase, then a plateau when the maintenance overhead becomes visible. Personal-wiki traditions (digital garden, Obsidian public vaults, Zettelkasten publications) show the same dynamic at single-author scale: the garden thrives under the author's active curation and decays when the author's attention moves elsewhere.</p>
+<p>The Founding Conversation names this pattern as the project's motivating problem: "Prior attempts at this — wikis of various shapes — have stalled from a mix of technical and cultural obstacles: ontology fights, curation burden, write-only dynamics, bus factor, onboarding friction." The <code>External Sources</code> document supplies the annotated list of the specific wiki traditions the founding exploration reviewed, each with a structural note on what worked, what did not, and what Deep Context chose to adopt or decline.</p>
+<p>The record's limits are substantive. No collaborative wiki has run a controlled counterfactual — identical wiki with active curation versus identical wiki without — and the observed pattern could be confounded by community-specific factors (size, domain, platform friction, maintainer incentives) that curation discipline alone does not address. The claim is that write-only drift appears reliably across the reviewed cases, not that curation discipline is sufficient to prevent it in any particular case. The Observation supports the hypothesis that active curation is <em>necessary</em>; it does not prove it <em>sufficient</em>.</p>
+<h2>What Would Revise It</h2>
+<p>A documented case where a large collaborative wiki sustained contributor engagement, reader navigability, and newcomer onboarding over multiple years without active curation practice — no vocabulary tending, no ontology reconciliation, no link-integrity maintenance, no onboarding-surface upkeep — would revise the claim. The revision would be particularly strong if the case's surrounding community and domain were comparable to the traditions already reviewed.</p>
+<p>A demonstrable mechanism that removes the curation-burden pressure — automated curation at sufficient quality to carry the vocabulary-tending and ontology-reconciliation load without human attention — would also revise the claim. The Deep Context practice is a partial test: if agent-mediated curation at current capability levels can sustain a multi-contributor graph past the point where comparable manually-curated wikis plateaued, the Observation would need to account for the mechanism.</p>
+<p>The project's own experience is itself in the record's tail. If the Deep Context practice reaches a second cycle of contribution without write-only drift — or if it drifts despite the conventions — the case becomes additional evidence in whichever direction the outcome runs.</p>
+<h2>Sources</h2>
+<ul>
+<li>Allen, Christopher. "Wikilinks and Named Edges," 2026 — the gist's "gardening metaphor" and vocabulary-maintenance sections supply the specific failure modes (redundant predicates, ambiguous predicates, vocabulary drift) that this Observation generalizes across non-predicate-level curation work.</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>informs::<a href="/nodes/decisions/deep-context-as-an-architecture-for-captured-reasoning/">Deep Context as an Architecture for Captured Reasoning</a></p>
+<ul>
+<li>The architecture decision's emphasis on structural contracts, progressive disclosure, and typed relations follows from this Observation — the write-only failure mode is what the architectural moves are designed to counter. The Decision is the response; this Observation is the grounds.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/aspirations/the-second-cycle-of-contribution-happens/">The Second Cycle of Contribution Happens</a></p>
+<ul>
+<li>The second-cycle Aspiration is defined against this Observation as its failure mode. A wiki that fails at the second cycle has drifted toward write-only; the Aspiration is the target of sustained contribution this Observation's drift describes the absence of. Ghost link until the Aspiration is seeded in the next commit group.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/patterns/reconcile-the-standing-account/">Reconcile the Standing Account</a></p>
+<ul>
+<li>The Pattern names the recurring curation move — audit for drift between what a node says and what the graph now is, collapse duplication to pointers, realign stale counts and references. The move is what active curation practice looks like in operation; this Observation is the motivating case for why the Pattern is worth running as a cadence rather than an occasional cleanup.</li>
+</ul>
+</li>
+<li>
+<p>informed_by::<a href="/nodes/references/wikilinks-and-named-edges-gist-christopher-allen-2026/">Wikilinks and Named Edges Gist (Christopher Allen, 2026)</a></p>
+<ul>
+<li>The gist's gardening-metaphor and vocabulary-lifecycle sections supply the micro-level failure modes (weed predicates, un-tended vocabularies, precedent poisoning) this Observation generalizes to the wiki-maintenance level.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/observations/llm-assistance-widens-the-participation-gap/">LLM Assistance Widens the Participation Gap</a></p>
+<ul>
+<li>The write-only failure mode at the system level and the LLM-assistance rejection pattern at the contribution-review level compose. Without curation, contributions accumulate; with curation of the current Wikipedia style, newcomer LLM-assisted contributions are filtered at the membership-fluency register. This Observation names the mechanism at one layer; the LLM Observation names a specific mechanism at a different layer.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/observations/meaningful-wiki-contribution-requires-both-pride-and-humility/">Meaningful Wiki Contribution Requires Both Pride and Humility</a></p>
+<ul>
+<li>The system-level failure mode (this Observation) and the trait-level filtering (the pride-humility Observation) describe the same failure at different layers. The aggregate write-only drift results from trait-level filtering on the contributor tail; the two Observations compose into a two-layer account.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

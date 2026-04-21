@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Require Held-Stance Filename Shape for Convictions</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/decisions/">Decisions</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></li>
+<li>has_commitment::<span class="ghost-link">[[Firm Commitment]]</span></li>
+<li>decided_on::2026-04-19</li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>Require Held-Stance Filename Shape for Convictions</h1>
+<p>Every Conviction filename reads as a held stance the reader can assess as held-or-not-held by the project. Typical shapes include scoped authority claims (<code>Human Authority Over Augmentation Systems</code>), value declarations (<code>Vocabulary Diversity Is a Feature</code>), directional commitments (<code>Content Over Container</code>), bounded stances (<code>Translation Over Convergence</code>), or subject-carries-object declaratives (<code>Folders Serve Human Legibility, Not the Graph</code>). The filename MUST NOT begin with an imperative action verb (<code>Adopt &lt;X&gt;</code>, <code>Use &lt;X&gt;</code>, <code>Prefer &lt;X&gt;</code>, <code>No &lt;X&gt;</code>) and MUST NOT use the <code>&lt;Subject&gt; as &lt;Role&gt;</code> shape. Those shapes belong to Decision Form Contract; a filename conforming to either classifies as a Decision, not a Conviction.</p>
+<h2>Why</h2>
+<p>The commitment <strong>enforces the Decision-vs-Conviction distinction at the filename level</strong>. A Decision is a situational commitment the project made at a moment with revisit conditions; a Conviction is a held normative stance the project holds over time without situational dating. The two forms share a domain — both commit the project to how something ought to be — but they differ in temporality and accountability. Decisions are accountable through <code>decided_on::</code> dates and <code>has_commitment::</code> levels; Convictions are accountable through drift recognition and what-it-asks elaboration. The filename carries the distinction before any body is read.</p>
+<p>Filename-shape-carries-form extends the prototype's general classification-by-filename discipline (which <a href="/nodes/decisions/name-decisions-by-action-verb-or-role-declarative/">Name Decisions by Action Verb or Role Declarative</a> applies to Decisions and <a href="/nodes/decisions/use-double-hyphen-separator-for-gloss-definitions/">Use Double-Hyphen Separator for Gloss Definitions</a> applies to Glosses). A reader scanning the Convictions folder knows each file is a Conviction by filename shape — no action verbs, no <code>as Role</code> declaratives. A reader scanning the Decisions folder knows each file is a Decision by the mirror shape rules. The two folders and the two rules compose: if a filename shape fits a Decision, it does not fit a Conviction, and vice versa.</p>
+<p>The rule <strong>prevents mis-classification by filename shape</strong>. An author uncertain whether a commitment is a Decision or a Conviction writes a filename that fits one shape, and the shape forces the classification. An author who wants to write "Adopt Vocabulary Diversity" as a Conviction finds the action-verb shape forbidden; the forced rewrite to "Vocabulary Diversity Is a Feature" or "Adopt Vocabulary Diversity as Value" clarifies which form the author actually intends. The filename-shape rules are diagnostic as well as prescriptive — they surface the form question at the authoring moment.</p>
+<p>A bare noun phrase (<code>Human Authority</code>, <code>Vocabulary Diversity</code>) does not satisfy the rule. Bare noun phrases read as topics the node describes, not as stances the node holds. The rule does not permit them because the Conviction form's whole contribution is recording a specific stance, not a topic. The recommended rewrites — <code>Human Authority Over Augmentation Systems</code>, <code>Vocabulary Diversity Is a Feature</code> — carry the stance in the filename itself.</p>
+<h2>Alternatives Considered</h2>
+<p><strong>Runtime type disambiguation via predicates.</strong> Let any filename shape be permitted and distinguish Decisions from Convictions by <code>conforms_to::</code> predicate alone. Rejected because filename-level classification is the cheapest tier. Reading each file to check its <code>conforms_to::</code> predicate is an order of magnitude more expensive than scanning the filename; filename-shape conventions are what let classification be a folder-view operation. The predicate is still required for graph participation, but filename shape is what makes the predicate unnecessary for casual classification.</p>
+<p><strong>Permit action-verb leads on Convictions when the stance reads as a directive.</strong> Let <code>Adopt Human Authority</code> work as a Conviction filename. Rejected because action verbs read as situational commitments ("we adopted this at this time"), which is Decision territory. A stance read as a held directive still reads as a move the project made, which is what Decision filenames are for. The forced-stance rewrite (<code>Human Authority Over Augmentation Systems</code>) preserves what the author meant — the stance itself — in a filename shape that does not overlap with Decisions.</p>
+<p><strong>Permit <code>&lt;Subject&gt; as &lt;Role&gt;</code> on Convictions.</strong> Let the Decision-form <code>&lt;X&gt; as &lt;Y&gt;</code> declarative also be valid for Convictions when the stance reads that way. Rejected because the declarative explicitly frames the subject as playing a committed role — "Deep Context as an Architecture for Captured Reasoning" commits to a specific interpretive frame. Convictions hold stances rather than committing to interpretive frames; the shape overlap would blur the distinction the filename-shape rules exist to preserve.</p>
+<h2>What Would Change It</h2>
+<p>The commitment would be revisited under one condition.</p>
+<p><strong>Filename shape proves insufficient and predicate-only typing becomes reliable.</strong> If tooling or conventions grew the ability to disambiguate Decisions from Convictions by <code>conforms_to::</code> predicate at every reading surface — folder views, search results, inline citations — the filename-shape discipline would become a convention without its load-bearing purpose. The shape rules would remain for authoring diagnostic (surfacing form questions at the authoring moment) but would no longer be the cheapest classification tier. Current tooling does not provide universal predicate-level classification; the filename-shape rules carry their weight.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/name-decisions-by-action-verb-or-role-declarative/">Name Decisions by Action Verb or Role Declarative</a></p>
+<ul>
+<li>The Decision-form filename-shape rule is the mirror commitment. Decisions must use action-verb or Subject-as-Role shapes; Convictions must not. The two rules compose — a filename that fits one does not fit the other, and classification follows the filename.</li>
+</ul>
+</li>
+<li>
+<p>informs::<a href="/nodes/contracts/conviction-form-contract/">Conviction Form Contract</a></p>
+<ul>
+<li>Conviction Form Contract's filename pattern Requirement carries the thin enforcement clause pointing at this Decision.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></p>
+<ul>
+<li>The Conviction/Decision distinction the filename shape preserves is load-bearing for how each form handles commitment. Decisions commit situationally (with <code>decided_on::</code> and <code>has_commitment::</code>); Convictions hold stances without situational dating. The filename rule is the first tier of the distinction.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

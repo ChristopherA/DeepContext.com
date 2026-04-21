@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Compound Node</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/glosses/">Glosses</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/gloss-form-contract/">Gloss Form Contract</a></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+</ul>
+<h1>Compound Node</h1>
+<p>A folder with a designated lead, where the concept the compound names has supporting material substantial enough to warrant its own sub-files. The folder resolves to a graph node via the lead file, which carries the concept's identity predicates, body, and outgoing edges. The sub-files inside the folder are supporting material for that one concept — not sub-concepts, facets, or parts of a partitioned whole.</p>
+<p>The <strong>lead file</strong> carries the compound's identity and elaboration; its filename matches the folder's wikilink target. <strong>Sub-files</strong> are siblings of the lead, serving the lead's concept (a meeting's agenda and transcript; a gloss's longer exegesis; a decision's ancillary records). A reader resolving <code>[[Compound]]</code> lands on the lead; sub-files are accessed through the lead's navigation, not typically cited from elsewhere in the graph under their own names.</p>
+<p>Tool compatibility is the main gotcha. With a folder-notes plugin (Obsidian, Foam), the folder is directly addressable. Without one, the lead is just another file and the folder is a grouping device — the graph resolves identically, but navigation through the folder entry differs. The contract makes no plugin assumption: the lead file is canonical; folder-notes is a convenience layer on top.</p>
+<p>The compound is a structural answer to concepts with substantial supporting material; it is not an exception to the one-node-one-concept rule. If a sub-file begins to accrue citations under its own name from other nodes, or starts carrying its own identity predicates and its own outgoing semantic edges, that is the signal that the sub-file was always a second concept sharing a folder with the first, and the compound should be split — see the node-atomicity Requirement in <a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a>.</p>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>composed_of::<a href="/nodes/glosses/markdown-node/">Markdown Node</a></p>
+<ul>
+<li>A Compound Node is a folder of Markdown Nodes. The lead and its supporting sub-files are each Markdown Nodes at the file-form level; the folder groups them for filesystem navigation. The compound as a whole names one concept.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<a href="/nodes/glosses/atomic-node/">Atomic Node</a></p>
+<ul>
+<li>An Atomic Node is a single markdown file; a Compound Node is a folder with a lead plus supporting material. Both name exactly one concept — the contrast is filesystem layout (single file vs folder with sub-files), not the count of concepts named.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-node-atomicity/">Adopt Node Atomicity</a></p>
+<ul>
+<li>The Decision that commits the project to one-node-one-concept correspondence applies uniformly to atomic and compound nodes. A compound names one concept; its sub-files are supporting material, not additional concepts. The Decision's split criterion — a sub-file cited by other nodes under its own name, or carrying its own outgoing edges — defines when a compound must be split.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></p>
+<ul>
+<li>The node-atomicity Requirement in the Markdown Node Contract is the thin enforcement clause for Adopt Node Atomicity. The compound-node pattern is the structural answer for concepts with substantial supporting material under that Requirement.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<span class="external-ref">[[Wikilinks and Named Edges]]↗</span></p>
+<ul>
+<li>The wikilinks-and-named-edges convention specifies that a wikilink target resolves to either a single file or a folder whose lead file carries the same name.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

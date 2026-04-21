@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>contends_with</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/predicates/">Predicates</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/predicate-form-contract/">Predicate Form Contract</a></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>contends_with</h1>
+<p>A predicate declaring that the subject sits inside an unresolved tension with the object — the tension is a load-bearing feature of both nodes, not a drift signal to be resolved by picking a side. The edge carries the author's recognition that two legitimate stances are in conflict and that the conflict is itself what the relationship contributes.</p>
+<p>The edge lands in Relations on nodes whose content is partly defined by the tension they hold with adjacent nodes. A Conviction may contend with a practical constraint; a Decision may contend with an Aspiration that it does not yet fully satisfy; a Pattern may contend with another Pattern whose Forces overlap.</p>
+<h2>Carries</h2>
+<p>The predicate names tension-as-first-class-content: the subject's relationship to the object is characterized by unresolved debate, pulling in different directions, or claims that cannot be simultaneously satisfied. Both sides are legitimate — neither the subject nor the object is claimed wrong — and the tension is what the relationship preserves rather than a problem it points toward. The web of associations the predicate activates is the network of open tensions the graph has explicitly acknowledged; any node carrying <code>contends_with::</code> is declaring that a load-bearing debate is present.</p>
+<p>Holding tension rather than resolving it is a deliberate stance. The alternative — privileging one side and documenting the other as rejected or obsolete — would flatten a real tension into a false resolution. The predicate is the graph's way of saying "these two are in conflict; the conflict is real; both are kept."</p>
+<h2>Crescent</h2>
+<h3>Against <a href="/nodes/predicates/contrasts_with/">contrasts_with -- adjacent concept occupying different territory</a></h3>
+<p><code>contrasts_with::</code> names distinction without tension: the subject and object are different, the difference is preserved, but neither side is in debate. <code>contends_with::</code> names tension as first-class content: the subject and object are in unresolved conflict, and the conflict is what the relationship carries. Contrast is a stable stance toward adjacency; contention is an active stance toward disagreement. A relationship may legitimately shift between the two — a contrast can escalate to contention when tension emerges, and a contention can de-escalate to contrast when the tension resolves — but the predicates are distinct because they describe different authorial stances at the moment of authoring.</p>
+<h3>Against <span class="ghost-link">[[contradicts]]</span></h3>
+<p>Ghost link; <code>contradicts::</code> is used in adjacent vocabularies but not seeded as a Predicate in this graph. <code>contradicts::</code> names directional negation: the subject claims the object is wrong, and the two sides are held as incompatible. <code>contends_with::</code> holds both sides as legitimate and the tension between them as first-class content — neither is claimed wrong. The distinction is load-bearing at the cross-vocabulary level because a graph that uses <code>contradicts::</code> to name disagreements records a different stance than one that uses <code>contends_with::</code>: contradiction asserts a winner-to-be, contention preserves the unresolved state. An author migrating between vocabularies carries the stance difference, not merely the word choice.</p>
+<h2>Typing</h2>
+<ul>
+<li><strong>Subject:</strong> Any node where a standing tension with another node is acknowledged.</li>
+<li><strong>Object:</strong> Any node that is the other side of the tension.</li>
+</ul>
+<h2>Instances</h2>
+<ul>
+<li><code>CONVENTIONS.md</code> carries <code>contends_with::[[Convention Overhead vs Graph Quality]]</code> — the trade-off between the discipline the conventions require and the friction that discipline creates is acknowledged as an unresolved tension rather than resolved by picking a side. Periodic audits confirm whether the trade-off still serves the project.</li>
+<li><code>CLAUDE.md</code> carries <code>contends_with::[[Wikis Without Curation Drift Toward Write-Only]]</code> — the failure mode the project exists to address is held as an open tension with the project's work rather than declared resolved by any particular convention or practice.</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>contrasts_with::<a href="/nodes/predicates/contrasts_with/">contrasts_with -- adjacent concept occupying different territory</a></p>
+<ul>
+<li>Different stances toward adjacency: contention holds tension as first-class; contrast preserves distinction without tension.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<span class="ghost-link">[[contradicts]]</span></p>
+<ul>
+<li>Ghost link; target Predicate not seeded. Held-as-legitimate tension vs directional negation.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/convictions/vocabulary-diversity-is-a-feature/">Vocabulary Diversity Is a Feature</a></p>
+<ul>
+<li>The Conviction that makes naming tension-vs-contrast-vs-contradiction load-bearing. Each stance toward disagreement is a distinct predicate in this vocabulary, and the distinctions are the content the project commits to preserving.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

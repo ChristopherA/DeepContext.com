@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aspiration Form Contract</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/contracts/">Contracts</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/contract-form-contract/">Contract Form Contract</a></li>
+<li>extends_contract::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+</ul>
+<h1>Aspiration Form Contract</h1>
+<p>An Aspiration is a node that records a directional target the project works toward — an end-state the authors are committed to pursuing without claiming to have achieved. It carries the target, the value grounding that makes the target worth pursuing, the honest account of the current gap between the project's state and the target, the work taking the aspiration seriously asks, and the markers by which progress toward the target would be recognized.</p>
+<p>An Aspiration is not a Conviction (which records a stance the project currently maintains), not a Decision (which commits to a specific situational choice), not a Contract Requirement (which states a structural MUST rule that currently holds), and not an Observation (which reports on what is the case). An Aspiration says "we work toward X, which is not yet the case, and here is how progress would be known." An Aspiration with no acknowledged gap is a Conviction mislabeled; a Conviction with no claim of present validity is an Aspiration mislabeled. The distinction matters because Aspirations are accountable for progress, while Convictions are accountable for fidelity.</p>
+<h2>Requirements</h2>
+<h3>Inherits Markdown Node Contract</h3>
+<ul>
+<li>All requirements of <a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a> apply.</li>
+<li>The requirements below are additions or refinements, not overrides.</li>
+</ul>
+<h3>Filename pattern</h3>
+<ul>
+<li>The filename MUST read as a directional target — an end-state the reader can evaluate as moved-toward or drifted-from. Typical shapes: end-state claim (<code>Contributors Across Vocabularies Can Collaborate</code>), target relation (<code>The Graph Survives Its Tooling</code>), directional commitment (<code>Curation Becomes Participatory</code>).</li>
+<li>A bare noun phrase MUST NOT be used as an Aspiration filename.</li>
+<li>The filename MUST NOT use the <code>&lt;Concept&gt; -- &lt;definition&gt;.md</code> separator.</li>
+</ul>
+<h3>Identity predicate block</h3>
+<p>Enforces <a href="/nodes/decisions/reserve-predicate-vocabularies-to-specific-forms/">Reserve Predicate Vocabularies to Specific Forms</a>.</p>
+<ul>
+<li>The identity block above the H1 MUST include <code>conforms_to::[[Aspiration Form Contract]]</code>.</li>
+<li>The identity block SHOULD include <code>in_domain::[[&lt;Domain&gt;]]</code>.</li>
+<li>The identity block MAY include <code>authored_by::</code>, <code>has_lifecycle::</code>, and <code>has_curation::</code> as for any Markdown Node.</li>
+<li>An Aspiration MUST NOT carry <code>has_commitment::</code> or <code>decided_on::</code> — those are Decision predicates.</li>
+<li>An Aspiration MUST NOT carry <code>has_epistemic_status::</code> — that predicate is Observation-specific.</li>
+</ul>
+<h3>H1</h3>
+<ul>
+<li>The H1 MUST match the filename exactly (minus the <code>.md</code> extension).</li>
+</ul>
+<h3>Body: the target</h3>
+<ul>
+<li>The body MUST open by stating the directional target in one or two prose sentences — what the project works toward.</li>
+<li>The opening MUST be prose, not a bullet list.</li>
+</ul>
+<h3>Body: why it is worth pursuing</h3>
+<ul>
+<li>The body MUST elaborate the values, prior convictions, or observations that make the target worth pursuing.</li>
+<li>This elaboration MAY be an unheaded paragraph for compact aspirations, or an explicit subsection heading when the justification rests on multiple distinct supporting arguments.</li>
+<li>Where an Aspiration rests on another node's argument, that node SHOULD appear in <code>## Relations</code> via <code>grounded_in::</code> or <code>informed_by::</code> with an annotation naming the load-bearing claim.</li>
+</ul>
+<h3>Body: current gap</h3>
+<p>Enforces <a href="/nodes/decisions/require-gap-work-and-progress-recognition-in-aspirations/">Require Gap, Work, and Progress Recognition in Aspirations</a>.</p>
+<ul>
+<li>The body MUST contain a section headed <code>## Current Gap</code> (or equivalent) that gives an honest account of where the project currently is relative to the target — what is missing, incomplete, untested, or misaligned.</li>
+<li>The Gap section is what distinguishes an Aspiration from a Conviction. A Gap section that effectively says "no gap" reveals the node is a Conviction, not an Aspiration; such a node SHOULD be reclassified.</li>
+<li>The Gap SHOULD name concrete shortfalls — specific capabilities not yet present, practices not yet adopted, tests not yet passed — rather than abstract hand-waving about the target being "hard."</li>
+</ul>
+<h3>Body: work it asks</h3>
+<p>Enforces <a href="/nodes/decisions/require-gap-work-and-progress-recognition-in-aspirations/">Require Gap, Work, and Progress Recognition in Aspirations</a>.</p>
+<ul>
+<li>The body MUST describe what taking the aspiration seriously asks — the concrete moves, investments, or commitments the project would make to progress toward the target.</li>
+<li>The Work SHOULD name moves the project can actually take given its current resources and practices, not a wish list contingent on circumstances the project does not control.</li>
+</ul>
+<h3>Body: progress recognition</h3>
+<p>Enforces <a href="/nodes/decisions/require-gap-work-and-progress-recognition-in-aspirations/">Require Gap, Work, and Progress Recognition in Aspirations</a>.</p>
+<ul>
+<li>The body MUST contain a section that names observable markers by which progress toward the target would be recognized.</li>
+<li>Progress markers MUST be specific enough that a contributor (or a later reviewer) can assess whether the project has moved toward the target since the Aspiration was seeded. Vague markers ("things feel better") are insufficient.</li>
+</ul>
+<h3>Sources section</h3>
+<ul>
+<li>When the aspiration draws on external sources, a <code>## Sources</code> section MUST appear after the body and before <code>## Relations</code>.</li>
+</ul>
+<h3>Relations section</h3>
+<ul>
+<li>The Relations section follows the base Markdown Node Contract.</li>
+<li>An Aspiration typically carries these edges:<ul>
+<li><code>grounded_in::[[Value or Conviction]]</code> — the substrate that makes the target worth pursuing.</li>
+<li><code>informed_by::[[Observation or Reference]]</code> — evidence or external work that shapes how the target is framed or pursued.</li>
+<li><code>informs::[[Downstream Node]]</code> — Decisions, Patterns, or further Aspirations the target motivates.</li>
+<li><code>contrasts_with::[[Adjacent Aspiration]]</code> — a sibling aspiration occupying adjacent territory.</li>
+<li><code>composes_with::[[Related Aspiration]]</code> — another aspiration routinely pursued alongside this one.</li>
+</ul>
+</li>
+</ul>
+<h3>Optional scalar metadata</h3>
+<ul>
+<li>YAML frontmatter MAY include <code>created:</code>, <code>tagline:</code>, and <code>brief_summary:</code>.</li>
+<li>YAML is OPTIONAL for Aspirations.</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>extends_contract::<a href="/nodes/contracts/markdown-node-contract/">Markdown Node Contract</a></p>
+<ul>
+<li>Inherits all base file-form requirements; adds the directional-target filename pattern, the prohibition on <code>has_commitment::</code>, <code>decided_on::</code>, and <code>has_epistemic_status::</code>, and the required Target plus Why plus Gap plus Work plus Progress Recognition body structure.</li>
+</ul>
+</li>
+<li>
+<p>conforms_to::<a href="/nodes/contracts/contract-form-contract/">Contract Form Contract</a></p>
+<ul>
+<li>This file is itself a Contract; it conforms to the meta-contract that specifies what Contract nodes look like.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<a href="/nodes/contracts/conviction-form-contract/">Conviction Form Contract</a></p>
+<ul>
+<li>A Conviction records a stance currently held; an Aspiration records a target worked toward but not yet achieved. The Gap section is the structural difference.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<a href="/nodes/contracts/decision-form-contract/">Decision Form Contract</a></p>
+<ul>
+<li>A Decision is a situational choice made at a moment with revisit conditions; an Aspiration is a directional target pursued over time.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/adopt-wikilinks-and-named-edges/">Adopt Wikilinks and Named Edges</a></p>
+<ul>
+<li>The named-edge spine that lets <code>grounded_in::</code>, <code>informed_by::</code>, <code>informs::</code>, <code>contrasts_with::</code>, and <code>composes_with::</code> land as first-class relational edges.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/require-gap-work-and-progress-recognition-in-aspirations/">Require Gap, Work, and Progress Recognition in Aspirations</a></p>
+<ul>
+<li>Grounds the three paired body-section Requirements (Gap, Work, Progress Recognition). The three sections share one accountability Why and roll back together.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/decisions/reserve-predicate-vocabularies-to-specific-forms/">Reserve Predicate Vocabularies to Specific Forms</a></p>
+<ul>
+<li>Grounds the prohibitions on <code>has_commitment::</code>, <code>decided_on::</code>, and <code>has_epistemic_status::</code> in the identity predicate block Requirement.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>

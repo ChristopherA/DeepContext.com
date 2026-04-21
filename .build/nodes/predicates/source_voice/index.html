@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>source_voice</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header><nav class="crumb"><a href="/">DeepContext</a> / <a href="/nodes/predicates/">Predicates</a></nav></header>
+<main>
+<ul>
+<li>conforms_to::<a href="/nodes/contracts/predicate-form-contract/">Predicate Form Contract</a></li>
+<li>in_domain::<span class="ghost-link">[[Deep Context Architecture]]</span></li>
+<li>authored_by::<a href="/nodes/glosses/deep-context-community/">Deep Context Community</a></li>
+<li>has_lifecycle::<span class="ghost-link">[[Seed Stage]]</span></li>
+<li>has_curation::<span class="ghost-link">[[Working Draft]]</span></li>
+</ul>
+<h1>source_voice</h1>
+<p>A predicate declaring that the subject node's content represents the object's thinking even though the subject's <code>authored_by::</code> names someone else. The edge carries an attribution split observed in practice across plural-contributor corpora: an agent or scribe authors a document that captures another person's thinking, and both the writing-of-it and the thinking-behind-it are separately load-bearing attributions.</p>
+<p>The edge lands in Relations alongside <code>authored_by::</code> when a node's authorship and its voice diverge. Without the split, the node's attribution is a single fused claim and the distinction — who wrote versus whose ideas — is lost.</p>
+<h2>Carries</h2>
+<p>The predicate names an idea-origin claim that is distinct from the authorship claim. The object is the person (human or agent) whose thinking the node's content carries; the subject's <code>authored_by::</code> edge names the person who produced the words. The two may refer to the same person — in which case <code>source_voice::</code> adds nothing — but when they differ, each carries a separate kind of attribution: authorship names the producer of the artifact, source voice names the origin of the ideas.</p>
+<p>The web of associations the predicate activates is the authorship stack under any document. A meeting note <code>authored_by::</code> a scribe who is <code>source_voice::</code> for multiple meeting participants preserves the scribal-vs-principal distinction. A document <code>authored_by::</code> an agent with <code>source_voice::</code> naming the principal whose thinking the agent captured preserves the agent-vs-principal distinction. The predicate is an acknowledgment that some nodes are doubly-authored — one author for the words, another for the ideas — and that the graph commits to keeping both visible.</p>
+<h2>Crescent</h2>
+<h3>Against <span class="ghost-link">[[authored_by]]</span></h3>
+<p>Ghost link; <code>authored_by::</code> is in the local vocabulary but not yet seeded as a Predicate node. <code>authored_by::</code> names who wrote the words — the producer of the artifact. <code>source_voice::</code> names whose ideas are captured — the origin of the content, when distinct from the writer. The same document can carry both predicates with different referents (the agent authored; the principal thought), and the distinction is load-bearing because collapsing the two would hide either the scribal work or the intellectual work. Authorship and voice are different contributions to the same artifact.</p>
+<h3>Against <a href="/nodes/predicates/assists_by/">assists_by -- facilitation by agent or person</a></h3>
+<p><code>source_voice::</code> names idea-origin — whose thinking is captured by the node's content. <code>assists_by::</code> names facilitation — whose shaping work supported the node's authoring without being the content's voice. The distinction is between the idea-side of a contribution (voice) and the shaping-side of a contribution (facilitation). A document with <code>source_voice::[[Principal]]</code> and <code>assists_by::[[Editor]]</code> preserves both: the principal's thinking is the content, the editor's work shaped its delivery without being its voice. Merging the two would lose the kind distinction — shaping and voicing are different contribution modes.</p>
+<h2>Typing</h2>
+<ul>
+<li><strong>Subject:</strong> Any node whose content carries distinct voice-authoring pairing. Most commonly a meeting note, a summary, a transcription, or an agent-authored document preserving a principal's thinking.</li>
+<li><strong>Object:</strong> A person (human or agent). The object MUST be a node or wikilink target that identifies a specific contributor whose thinking the subject's content represents.</li>
+</ul>
+<h2>Instances</h2>
+<ul>
+<li>A meeting summary <code>authored_by::[[Scribe]]</code> with <code>source_voice::[[Speaker]]</code> preserves the scribal-vs-principal authorship distinction that a single <code>authored_by::</code> edge would flatten. The scribe produced the words; the speaker's thinking is the content. Both attributions matter when a reader needs to trace either the writing or the ideas.</li>
+<li>An agent-authored document <code>authored_by::[[Agent]]</code> with <code>source_voice::[[Principal]]</code> preserves the agent-vs-principal distinction in agent-mediated authoring. The agent generated the text; the principal's thinking is what the text captures. Without the split, the agent appears as the idea source (inflating its authority) or the principal appears as the writer (denying the agent's work).</li>
+</ul>
+<h2>Relations</h2>
+<ul>
+<li>
+<p>contrasts_with::<span class="ghost-link">[[authored_by]]</span></p>
+<ul>
+<li>Ghost link; target Predicate not seeded. Idea-origin vs words-producer — different attributions that may name the same or different contributors.</li>
+</ul>
+</li>
+<li>
+<p>contrasts_with::<a href="/nodes/predicates/assists_by/">assists_by -- facilitation by agent or person</a></p>
+<ul>
+<li>Different contribution modes: voice is idea-origin; facilitation is shaping-during-authoring.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/convictions/translation-over-convergence/">Translation Over Convergence</a></p>
+<ul>
+<li>The Conviction that makes adopting this predicate load-bearing. The source-voice-vs-authorship distinction comes from an adjacent plural-contributor corpus where agent-mediated authoring made the split necessary; adopting the predicate here is translation-not-convergence at the predicate layer.</li>
+</ul>
+</li>
+<li>
+<p>grounded_in::<a href="/nodes/convictions/vocabulary-diversity-is-a-feature/">Vocabulary Diversity Is a Feature</a></p>
+<ul>
+<li>The substrate Conviction. The distinction the adjacent corpus's practice surfaced is preserved by keeping <code>source_voice::</code> as a separate predicate rather than folding it into <code>authored_by::</code>.</li>
+</ul>
+</li>
+</ul>
+</main>
+<footer><a href="/">DeepContext</a></footer>
+</body>
+</html>
