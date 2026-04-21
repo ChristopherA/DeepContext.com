@@ -1,0 +1,39 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '.build/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.head_commit.author.username != 'github-actions[bot]'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Sync dependencies
+        run: uv sync
+
+      - name: Build site
+        run: uv run python .scripts/build.py
+
+      - name: Commit .build/
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .build/
+          if git diff --cached --quiet; then
+            echo "No changes to .build/"
+          else
+            git commit -m "Build site [skip ci]"
+            git push
+          fi

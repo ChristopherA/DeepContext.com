@@ -1,0 +1,129 @@
+"""Generate per-taxonomy index pages.
+
+For each taxonomy folder under nodes/:
+- If a README.md exists in the folder, render it as the taxonomy index (hand-authored).
+- Else, walk the folder and build a list page from each node's tagline/brief_summary.
+"""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+from linkify import linkify_text
+from render import render_html, strip_frontmatter
+from slugify import TAXONOMIES
+
+TAXONOMY_DESCRIPTIONS: dict[str, str] = {
+    "Contracts": "Form specifications — thin compliance rules with RFC 2119 keywords.",
+    "Decisions": "Recorded choices with Why, Alternatives Considered, and What Would Change It.",
+    "Convictions": "Normative stances the project holds about how to work.",
+    "Aspirations": "Directional targets with acknowledged gaps and recognition criteria.",
+    "Observations": "Descriptive claims with epistemic grounds (Empirical, Retrospective, Contested).",
+    "Patterns": "Recurring craft moves that resolve specific tensions.",
+    "Predicates": "Typed edges with Carries, Crescent-per-neighbor, and Typing sections.",
+    "Glosses": "Interpretive definitions that frame concepts through a broader lens.",
+    "References": "External sources the graph draws on, with publication metadata.",
+}
+
+
+def _entry_summary(path: Path) -> str:
+    meta, _ = strip_frontmatter(path.read_text(encoding="utf-8"))
+    tagline = meta.get("tagline", "").strip()
+    brief = meta.get("brief_summary", "").strip()
+    summary = tagline or brief
+    if len(summary) > 240:
+        summary = summary[:237].rstrip() + "..."
+    return summary
+
+
+def build_taxonomy_index(
+    *, taxonomy_name: str, taxonomy_slug: str, slug_table: dict[str, dict]
+) -> str:
+    description = TAXONOMY_DESCRIPTIONS.get(taxonomy_name, "")
+    entries = [
+        e for e in slug_table.values() if e["taxonomy"] == taxonomy_slug
+    ]
+    # Deduplicate (concept-side registrations share entries with full-stem ones).
+    seen = set()
+    unique: list[dict] = []
+    for e in entries:
+        if e["path"] in seen:
+            continue
+        seen.add(e["path"])
+        unique.append(e)
+    unique.sort(key=lambda e: e["title"].lower())
+
+    lines = [f"# {taxonomy_name}", ""]
+    if description:
+        lines += [description, ""]
+    for entry in unique:
+        summary = _entry_summary(entry["path"])
+        label = entry["title"]
+        if summary:
+            lines.append(f"- [**{label}**]({entry['url']}) -- {summary}")
+        else:
+            lines.append(f"- [**{label}**]({entry['url']})")
+    lines.append("")
+    lines.append(f"*{len(unique)} nodes in this section.*")
+    return "\n".join(lines) + "\n"
+
+
+def write_taxonomy_indexes(
+    *, root: Path, build_dir: Path, slug_table: dict[str, dict]
+) -> None:
+    nodes_dir = root / "nodes"
+    for taxonomy_name, taxonomy_slug in TAXONOMIES.items():
+        tax_dir = nodes_dir / taxonomy_name
+        if not tax_dir.is_dir():
+            continue
+
+        readme = tax_dir / "README.md"
+        if readme.exists():
+            markdown_source = readme.read_text(encoding="utf-8")
+        else:
+            markdown_source = build_taxonomy_index(
+                taxonomy_name=taxonomy_name,
+                taxonomy_slug=taxonomy_slug,
+                slug_table=slug_table,
+            )
+
+        linkified = linkify_text(markdown_source, slug_table)
+        _, body = strip_frontmatter(linkified)
+        page = render_html(
+            body,
+            title=f"{taxonomy_name} - DeepContext",
+            taxonomy_name=None,
+            taxonomy_url=None,
+        )
+
+        out = build_dir / "nodes" / taxonomy_slug / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(page, encoding="utf-8")
+
+
+def write_landing_page(
+    *, root: Path, build_dir: Path, slug_table: dict[str, dict]
+) -> None:
+    landing = root / "landing.md"
+    if not landing.exists():
+        return
+    linkified = linkify_text(landing.read_text(encoding="utf-8"), slug_table)
+    _, body = strip_frontmatter(linkified)
+    page = render_html(
+        body,
+        title="DeepContext",
+        taxonomy_name=None,
+        taxonomy_url=None,
+    )
+    (build_dir / "index.html").write_text(page, encoding="utf-8")
+
+
+def copy_style(*, root: Path, build_dir: Path) -> None:
+    style_src = root / ".scripts" / "style.css"
+    if not style_src.exists():
+        return
+    (build_dir / "style.css").write_text(style_src.read_text(encoding="utf-8"), encoding="utf-8")
+
+
+def write_nojekyll(build_dir: Path) -> None:
+    (build_dir / ".nojekyll").write_text("", encoding="utf-8")
