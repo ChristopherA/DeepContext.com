@@ -20,11 +20,11 @@ in `.scripts/` and the workflow in `.github/workflows/build-and-deploy.yml`.
 To fork:
 
 1. Fork on GitHub.
-2. Edit nodes directly via the web UI, or clone locally.
-3. Push. The Action builds `.build/` and commits it back.
-4. In the fork's Pages settings, set **Source = Deploy from a branch**,
-   **Branch = main**, **Folder = /.build**. A `.nojekyll` file tells Pages
-   to serve the folder as static HTML.
+2. In the fork's **Settings -> Actions -> General**, allow Actions to run
+   (forked workflows are disabled by default for security).
+3. In the fork's **Settings -> Pages**, set **Source = GitHub Actions**.
+4. Edit nodes directly via the web UI, or clone locally.
+5. Push. The Action builds `.build/` and deploys it as a Pages artifact.
 
 ## Local build
 
@@ -51,11 +51,11 @@ generate_indexes.py
                 per-taxonomy index pages, landing page, style.css, .nojekyll
    |
    v
-.build/  committed to main and served by GitHub Pages
+.build/  uploaded as Pages artifact and deployed via actions/deploy-pages
 ```
 
-`.build/` is committed to `main`. The workflow's `paths-ignore: ['.build/**']`
-and bot-author guard prevent the commit from retriggering itself.
+`.build/` is gitignored; the workflow regenerates it in the runner for each
+deploy. No build output in git, no self-triggering cycle to prevent.
 
 ## Layout
 
@@ -68,7 +68,7 @@ DeepContext.com/
 |-- nodes/               <- projected from deepcontext-dev/prototype/nodes/
 |-- .scripts/            <- Python build pipeline + CSS
 |-- .github/workflows/   <- build-and-deploy action
-|-- .build/              <- generated site, served by Pages
+|-- .build/              <- generated site (gitignored; regenerated per deploy)
 ```
 
 ## Contributing
