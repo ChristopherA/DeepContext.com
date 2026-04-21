@@ -1,29 +1,68 @@
 # DeepContext
 
-Deep Context is a **practice**, not a product -- a set of conventions for shared
-knowledge work among heterogeneous contributors aligned around a common domain,
-expressed in plain markdown with wikilinks and named edges, and curated with
-Claude's help.
+Deep Context is a **practice** for working on shared knowledge together when
+the people involved don't agree on the words for the things. It's a small set
+of conventions -- plain markdown, wikilinks, and named edges -- that let each
+contributor keep their own vocabulary while the graph as a whole stays
+navigable.
 
-This repository is the source of truth for the published graph. The conventions,
-the node drafts, and the discussion all live here on GitHub. Comments and
-contributions are welcome via Issues, Discussions, and Pull Requests.
+This repository is where the practice is being worked out in public. The
+conventions, the node drafts, and the conversation all live here on GitHub.
+Comments and contributions are welcome -- via Issues, Discussions, and Pull
+Requests.
 
 ## Why this exists
 
-Wikis drift toward write-only: contributors keep adding, but the shared
-vocabulary gets flattened by editorial convergence, participation concentrates
-in the bus-factor-of-one who does the curation, and newcomers can't find a way
-in. [[Wikis Without Curation Drift Toward Write-Only]] reconstructs the pattern
-across several wiki traditions.
+Most collaborative wikis drift toward write-only: contributors keep adding,
+but readers can't find what they need, the people doing the curation burn out,
+and newcomers can't find a way in. [[Wikis Without Curation Drift Toward Write-Only]]
+walks through the pattern across several wiki traditions.
 
-Deep Context tries a different route: preserve contributors' vocabularies as
-load-bearing rather than convergence-friendly, surface distinctions rather than
-paper them over, and treat curation as a practice with named commitments
-rather than an editorial instinct. The nodes in this graph are the result --
-rules that make vocabulary diversity structurally supportable, and enough
-visible scaffolding for a newcomer to enter mid-stream without having to learn
-an oral tradition first.
+Deep Context tries a different route. Keep each contributor's own naming
+instead of flattening everything into one shared vocabulary. Let different
+ways of framing the same territory sit alongside each other. Treat the work
+of curation as a set of named, discussable commitments rather than an
+editorial instinct that only the insiders can see. The nodes in this graph
+are the result -- rules that make vocabulary diversity structurally
+supportable, and enough visible scaffolding that a newcomer can find their
+way around without having to learn an oral tradition first.
+
+## The tension this addresses
+
+Two dynamics shape how shared-knowledge communities form and fall apart.
+
+**Founders' words calcify into the group's words.** Whoever shows up first
+picks the early terms -- the metaphors for the problem, the labels for the
+concepts, the predicate names that structure the graph. By the time later
+participants arrive, the vocabulary is already in use, so their position
+shifts from *proposer* to *adopter or dissenter*. The terms aren't
+necessarily wrong; the problem is that the people who had to live with them
+didn't get a chance to shape them. [[Founding Vocabularies Constrain Later Participants]]
+records the dynamic, grounded in conversations where the author of this graph
+watched it happen around his own early word-choices.
+
+**Accumulated vocabulary becomes a barrier.** As a community keeps working,
+its shared vocabulary grows -- more predicates, more named distinctions, more
+established senses of previously-ordinary words. Growth feels like progress
+from inside. From outside, it looks like a debt newcomers have to pay before
+they can contribute, and many don't. [[Shared Languages Get Intimidating Over Time]]
+traces this across wikis, online communities, and long-running groups where
+early contributors ended up occupying all the senior positions.
+
+Together, these two dynamics produce a predictable cycle: founders pick
+terms; the vocabulary converges and calcifies into authority ([[Consensus Creates Priesthoods]]);
+later participants either adopt it, stay silent about their own framings,
+or leave to form parallel communities with parallel vocabularies. The
+reinvention of the same concepts under different names every decade is the
+visible symptom.
+
+This project is an experiment in whether that cycle can be interrupted.
+[[Vocabulary Diversity Is a Feature]] names the stance (keep each vocabulary
+intact); [[Translation Over Convergence]] names what happens at the contact
+surface (translate, don't normalize); [[Terms Become Common Through Unanimity, Not Precedent]]
+names the process for how a term crosses from one contributor's dialect into
+the shared vocabulary (it doesn't, until participants explicitly agree).
+Whether this actually works is what the graph is being built to test.
 
 ## Where to start
 
