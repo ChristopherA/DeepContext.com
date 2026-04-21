@@ -127,3 +127,14 @@ def copy_style(*, root: Path, build_dir: Path) -> None:
 
 def write_nojekyll(build_dir: Path) -> None:
     (build_dir / ".nojekyll").write_text("", encoding="utf-8")
+
+
+# Canonical hostname for GitHub Pages custom domain. Forks should set this to
+# their own domain or to an empty string to disable custom-domain routing.
+CUSTOM_DOMAIN = "deepcontext.com"
+
+
+def write_cname(build_dir: Path) -> None:
+    if not CUSTOM_DOMAIN:
+        return
+    (build_dir / "CNAME").write_text(CUSTOM_DOMAIN + "\n", encoding="utf-8")

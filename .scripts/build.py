@@ -17,6 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from generate_indexes import (  # noqa: E402
     copy_style,
+    write_cname,
     write_landing_page,
     write_nojekyll,
     write_taxonomy_indexes,
@@ -63,6 +64,7 @@ def build(root: Path) -> None:
     write_landing_page(root=root, build_dir=build_dir, slug_table=slug_table)
     copy_style(root=root, build_dir=build_dir)
     write_nojekyll(build_dir)
+    write_cname(build_dir)
 
     print(f"Built {node_count} node pages across {len(TAXONOMIES)} taxonomies")
     print(f"Output: {build_dir}")
