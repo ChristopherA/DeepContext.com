@@ -21,19 +21,30 @@ prior attempt.
 
 ## Why this exists
 
-Most collaborative wikis drift toward write-only: contributors keep adding,
-but readers can't find what they need, the people doing the curation burn out,
-and newcomers can't find a way in. [[Wikis Without Curation Drift Toward Write-Only]]
-walks through the pattern across several wiki traditions.
+Collaborative knowledge work has been tried many ways. International
+standards bodies. Email lists. Online forums. Private chat groups. Public
+and private wikis. Federated and single-author gardens. Each of them keeps
+running into the same failure modes from different angles -- contributors
+keep adding, but readers can't find what they need, the people doing the
+curation burn out, shared vocabulary accumulates faster than newcomers can
+absorb, and the communities end up fracturing along lines the participants
+themselves didn't quite choose. [[Wikis Without Curation Drift Toward Write-Only]]
+records the pattern at wiki scale; the same dynamic shows up wherever the
+coordination cost exceeds what sustained participation can pay.
 
-Deep Context tries a different route. Keep each contributor's own naming
-instead of flattening everything into one shared vocabulary. Let different
-ways of framing the same territory sit alongside each other. Treat the work
-of curation as a set of named, discussable commitments rather than an
-editorial instinct that only the insiders can see. The nodes in this graph
-are the result -- rules that make vocabulary diversity structurally
-supportable, and enough visible scaffolding that a newcomer can find their
-way around without having to learn an oral tradition first.
+There is also, at this particular moment, a new opportunity. Large language
+models and agentic tools change what curation, translation, onboarding, and
+cross-vocabulary work cost -- not by replacing the people doing the work,
+but by making certain kinds of help cheap that used to be expensive. A new
+collaborative medium can form that takes this seriously: one that preserves
+each contributor's own naming instead of flattening everything into one
+shared vocabulary, lets different ways of framing the same territory sit
+alongside each other, and treats the work of curation as a set of named,
+discussable commitments rather than an editorial instinct that only the
+insiders can see. The nodes in this graph are an attempt at that medium's
+conventions -- rules that make vocabulary diversity structurally supportable,
+and enough visible scaffolding that a newcomer can find their way around
+without having to learn an oral tradition first.
 
 ## The tension this addresses
 
