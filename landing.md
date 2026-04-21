@@ -118,9 +118,10 @@ currently carries `has_lifecycle::[[Seed Stage]]`, but [[Seed Stage]] itself
 is a ghost -- the lifecycle vocabulary is named but not yet seeded as nodes.
 
 **External marker** -- a concept named in another graph. The `↗` suffix is
-the source-form convention. [[Egregore]]↗ is a real one in this graph --
-the Conviction that [[Agents Translate, Not Extract]] names it as the
-adjacent vision this project engages with.
+the source-form convention -- the target is recognized as living in another
+graph or tradition rather than being ghost or broken. A node can include an
+external reference like `engages_with::[[Some Adjacent Idea]]↗` without
+committing to importing the other graph's frame.
 
 **Plain URL** -- a link to the web outside this graph. For example,
 https://www.lifewithalacrity.com/2014/12/deep-context.html.
@@ -191,6 +192,7 @@ are welcome through GitHub.
   [README.md](https://github.com/ChristopherA/DeepContext.com#readme) for
   setup.
 
-The practice is Egregore-style: forkable, collaboratively editable, no single
-editorial gatekeeper. The curation discipline lives in the conventions, not in
-permissions.
+The practice is forkable, collaboratively editable, and has no single
+editorial gatekeeper. The curation discipline lives in the conventions, not
+in permissions. See [[Adopt Forkable Publication Model]] for the specific
+commitments this implies.
