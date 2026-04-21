@@ -5,10 +5,57 @@ knowledge work among heterogeneous contributors aligned around a common domain,
 expressed in plain markdown with wikilinks and named edges, and curated with
 Claude's help.
 
-This site is the published view of the graph. Nodes are authored in the
-[`deepcontext-dev`](https://github.com/ChristopherA/deepcontext-dev) workshop
-and projected here for publication. The workshop retains drafts, decisions, and
-process; this repository carries only the curated graph.
+This repository is the source of truth for the published graph. The conventions,
+the node drafts, and the discussion all live here on GitHub. Comments and
+contributions are welcome via Issues, Discussions, and Pull Requests.
+
+## Why this exists
+
+Wikis drift toward write-only: contributors keep adding, but the shared
+vocabulary gets flattened by editorial convergence, participation concentrates
+in the bus-factor-of-one who does the curation, and newcomers can't find a way
+in. [[Wikis Without Curation Drift Toward Write-Only]] reconstructs the pattern
+across several wiki traditions.
+
+Deep Context tries a different route: preserve contributors' vocabularies as
+load-bearing rather than convergence-friendly, surface distinctions rather than
+paper them over, and treat curation as a practice with named commitments
+rather than an editorial instinct. The nodes in this graph are the result --
+rules that make vocabulary diversity structurally supportable, and enough
+visible scaffolding for a newcomer to enter mid-stream without having to learn
+an oral tradition first.
+
+## Where to start
+
+Different entry points by what you want to understand.
+
+**The conventions** -- [Contracts](/nodes/contracts/) specify node shapes
+(Contract, Decision, Conviction, Gloss, Observation, and so on) with RFC 2119
+compliance rules. Start with [[Markdown Node Contract]] for the base shape,
+then [[Contract Form Contract]] for how contracts themselves are structured.
+
+**The choices and their reasoning** -- [Decisions](/nodes/decisions/) each
+record what was chosen, what was considered, and what would change the call.
+[[Adopt Wikilinks and Named Edges]] is the foundational one.
+
+**The stance** -- [Convictions](/nodes/convictions/) are normative positions
+the practice holds. [[Human Authority Over Augmentation Systems]],
+[[Vocabulary Diversity Is a Feature]], and [[Translation Over Convergence]]
+are the current six.
+
+**The direction** -- [Aspirations](/nodes/aspirations/) name what the
+project pulls toward with honest acknowledgement of the gap.
+[[The Second Cycle of Contribution Happens]] is the core success metric.
+
+**The open questions** -- [Observations](/nodes/observations/) record
+descriptive claims with epistemic grounds (Empirical, Retrospective,
+Contested). Contested observations like
+[[LLM Assistance Widens the Participation Gap]] are claims the project takes
+seriously but does not yet have a definitive answer to.
+
+**The predicates** -- [Predicates](/nodes/predicates/) document the typed
+edges themselves. [[conforms_to]], [[grounded_in]], [[informed_by]], and
+[[contrasts_with]] are the most load-bearing.
 
 ## Link legend
 
@@ -70,14 +117,31 @@ reasoning.
 ## For agents
 
 Agents collaborating on this graph should start with
-[AGENTS.md](https://github.com/ChristopherA/DeepContext.com/blob/main/AGENTS.md)
-and the full
-[CONVENTIONS.md](https://github.com/ChristopherA/deepcontext-dev/blob/main/CONVENTIONS.md)
-in the workshop repository.
+[AGENTS.md](https://github.com/ChristopherA/DeepContext.com/blob/main/AGENTS.md),
+which names the curator stance (suggest, flag, translate -- do not rewrite a
+contributor's vocabulary without confirmation) and points at the taxonomy
+entry points. Agents joining a fork should read their own fork's AGENTS.md
+first; forks may customize the stance.
 
-## Forking and contributing
+## How to contribute
 
-This repository is **forkable and collaboratively editable** -- Egregore-style.
-A fork produces its own Pages site on first push. Edit nodes directly via
-github.com's web editor or clone locally; the same pipeline publishes every
-downstream garden.
+This repository is the source of truth for the published graph. Contributions
+are welcome through GitHub.
+
+- **Read first.** Browse the taxonomies or follow the reading paths above.
+  The graph is in its seed stage; not every node you want to reference will
+  exist yet. Ghost links mark where gaps are.
+- **Open an [Issue](https://github.com/ChristopherA/DeepContext.com/issues)
+  or [Discussion](https://github.com/ChristopherA/DeepContext.com/discussions)**
+  to propose a node, flag a conflation between two concepts, suggest a predicate,
+  or ask a question about the conventions.
+- **Edit directly in the GitHub Web UI.** Any node under `nodes/` can be
+  edited in-browser; clicking "Commit changes" opens a pull request.
+- **Fork the repository** to build your own garden on these conventions. A
+  fork publishes to its own Pages site on first push -- see
+  [README.md](https://github.com/ChristopherA/DeepContext.com#readme) for
+  setup.
+
+The practice is Egregore-style: forkable, collaboratively editable, no single
+editorial gatekeeper. The curation discipline lives in the conventions, not in
+permissions.
