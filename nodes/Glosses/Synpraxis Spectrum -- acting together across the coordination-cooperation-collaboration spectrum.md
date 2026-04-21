@@ -10,9 +10,9 @@ brief_summary: Synpraxis (Greek syn + praxis = "acting together") is a coined do
 - has_curation::[[Working Draft]]
 - in_domain::[[Deep Context Architecture]]
 
-# Synpraxis
+# Synpraxis Spectrum
 
-Acting together across the coordination-cooperation-collaboration spectrum — a coined domain term from Greek *syn* (together) + *praxis* (purposeful action), naming the full territory of how independent agents achieve outcomes together, together with the anti-patterns that shadow each point on the spectrum. Coordination aligns timing. Cooperation splits and assembles. Collaboration produces work intertwined throughout. Each has different preconditions (predictability, agency, trust), different structures (rules, roles, joint governance), and different failure modes (collision, free-riding, coercion).
+Acting together across the coordination-cooperation-collaboration spectrum — the domain term "synpraxis," coined from Greek *syn* (together) + *praxis* (purposeful action), naming the full territory of how independent agents achieve outcomes together, together with the anti-patterns that shadow each point on the spectrum. The node title pairs the coined term with "spectrum" as the wikilink-target discipline: single-word targets collide with common usage, so the multi-word form serves navigability while the body text uses the bare term. Coordination aligns timing. Cooperation splits and assembles. Collaboration produces work intertwined throughout. Each has different preconditions (predictability, agency, trust), different structures (rules, roles, joint governance), and different failure modes (collision, free-riding, coercion).
 
 The term is coined because no existing word covers the full spectrum cleanly. "Cooperation" and "collaboration" each cover a region and get used interchangeably to the graph's cost. "Collective action" narrows to public-goods problems. "Game theory" covers the formal mathematics but leaves the institutional, biological, and creative dimensions elsewhere. "Interdependence" names the condition but not the dynamics. Synpraxis names the whole: constructive patterns, preconditions, failure modes, and the structural conditions that favor one position over another.
 

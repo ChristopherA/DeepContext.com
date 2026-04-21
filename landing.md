@@ -1,23 +1,52 @@
 # DeepContext
 
-Deep Context is a **practice** for working on shared knowledge together when
-the people involved don't agree on the words for the things. It's a small set
-of conventions -- plain markdown, wikilinks, and named edges -- that let each
-contributor keep their own vocabulary while the graph as a whole stays
-navigable.
+DeepContext.com captures **reasoning** -- not just facts, not just decisions,
+but the *why* behind both -- in a plain-markdown graph that multiple people
+can work in without having to agree on the words for the things. Each page
+is a typed node (a Contract, a Decision, a Conviction, a Gloss, and so on),
+connected to other pages by named edges that carry their reasoning inline.
+The result is a navigable record: a reader following an edge finds not just
+what is linked, but why.
+
+## The founding decision
+
+The project's founding commitment -- the one the three stewards arrived at
+before anything else was built -- is [[Deep Context as an Architecture for Captured Reasoning]].
+It names what this graph is *for*: representing reasoning as typed markdown
+forms with traversable named-edge predicates, not as fine-tuned model weights,
+not as retrieval chunks, not as database records, not as tags. The Decision
+is grounded in two Convictions -- [[Capture Reasoning, Not Just Knowledge]]
+and [[Knowledge Outlives Its Tools]] -- and everything else in the graph
+descends from it, directly or through a short chain.
+
+## What the practice is for
+
+The larger practice this architecture supports is
+[[Synpraxis Spectrum|synpraxis]] -- a coined term for the full spectrum of
+acting together, from coordination (aligning timing) through cooperation
+(splitting work and reassembling) to collaboration (work intertwined
+throughout). DeepContext is specifically infrastructure for the cooperation
+end of that spectrum. Contributors keep their own vocabularies. Edges stay
+author-declared rather than agent-inferred. Agents translate across
+vocabularies rather than normalizing them. The practice is not trying to
+force collaboration in the strict sense (shared identity, jointly-authored
+output); it is trying to make cooperation across diverse contributors work
+without flattening their distinctions.
+
+## About this repository
 
 This repository is where the practice is being worked out in public. The
 conventions, the node drafts, and the conversation all live here on GitHub.
-Comments and contributions are welcome -- via Issues, Discussions, and Pull
+Comments and contributions are welcome via Issues, Discussions, and Pull
 Requests.
 
 The stewards carry decades of experience with online collaboration, across
 both what has worked and what has fallen apart. The commitments encoded in
-these conventions are drawn from that experience -- small-group shared-thinking
-spaces that succeeded, larger ones that fractured, wikis that sustained and
-wikis that drifted to write-only. The motivation is shared: to make
-collaborative knowledge work easier to sustain, not to relitigate any one
-prior attempt.
+these conventions are drawn from that experience -- small-group
+shared-thinking spaces that succeeded, larger ones that fractured, wikis
+that sustained and wikis that drifted to write-only. The motivation is
+shared: to make collaborative knowledge work easier to sustain, not to
+relitigate any one prior attempt.
 
 ## Why this exists
 

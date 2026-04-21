@@ -10,9 +10,9 @@ brief_summary: A Crescent is the portion of one predicate's conceptual territory
 - has_curation::[[Working Draft]]
 - in_domain::[[Deep Context Architecture]]
 
-# Crescent
+# Predicate Crescent
 
-The distinction one predicate holds against an adjacent predicate — the non-overlapping arc when the two are pictured as overlapping circles in a Venn diagram. The term names both the geometric shape and the section in a Predicate node (`## Crescent`) whose job is to carry that distinction as prose.
+The distinction one predicate holds against an adjacent predicate — the non-overlapping arc when the two are pictured as overlapping circles in a Venn diagram. The term names both the geometric shape and the section in a Predicate node (`## Crescent`) whose job is to carry that distinction as prose. In short-form references elsewhere in the graph, the concept may appear as simply "the crescent" or "## Crescent"; the multi-word wikilink target disambiguates from unrelated uses of "crescent."
 
 Two overlapping circles produce three regions: the intersection, which is what the predicates share, and the two crescent-shaped arcs outside the intersection, which are what each predicate holds that the other does not. A `## Crescent` section on a Predicate node carries the content of exactly one of those arcs — this predicate's non-overlapping territory against one specific neighbor. A predicate with multiple adjacent neighbors has multiple crescents, each against a different circle, each with its own shape.
 
