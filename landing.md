@@ -77,61 +77,64 @@ without having to learn an oral tradition first.
 
 ## The tension this addresses
 
-Two dynamics shape how shared-knowledge communities form and fall apart.
+Shared-knowledge communities run into the same dynamics from different
+angles. The graph carries each as an Observation with its grounds and what
+would revise it; the landing sketches three clusters.
 
-**Founders' words calcify into the group's words.** Whoever shows up first
-picks the early terms -- the metaphors for the problem, the labels for the
-concepts, the predicate names that structure the graph. By the time later
-participants arrive, the vocabulary is already in use, so their position
-shifts from *proposer* to *adopter or dissenter*. The terms aren't
-necessarily wrong; the problem is that the people who had to live with them
-didn't get a chance to shape them. [[Founding Vocabularies Constrain Later Participants]]
-records the dynamic, grounded in conversations where the author of this graph
-watched it happen around his own early word-choices.
+**Vocabulary accumulates asymmetrically.** The terms founders choose become
+the group's terms before later participants have a chance to shape them
+([[Founding Vocabularies Constrain Later Participants]]). As the shared
+vocabulary grows, newcomers experience the breadth as a debt they owe before
+contributing ([[Shared Languages Get Intimidating Over Time]]). Converged
+vocabularies then produce authority asymmetries that make reshaping harder
+still ([[Consensus Creates Priesthoods]]).
 
-**Accumulated vocabulary becomes a barrier.** As a community keeps working,
-its shared vocabulary grows -- more predicates, more named distinctions, more
-established senses of previously-ordinary words. Growth feels like progress
-from inside. From outside, it looks like a debt newcomers have to pay before
-they can contribute, and many don't. [[Shared Languages Get Intimidating Over Time]]
-traces this across wikis, online communities, and long-running groups where
-early contributors ended up occupying all the senior positions.
+**Participation follows power-law distributions.** A small fraction of
+participants produce most of the contribution across every online
+collaborative platform studied
+([[Online Participation Follows Power-Law Distributions]]). The bottleneck
+is not first-cycle entry but second-cycle continuation, where roughly one
+in four first-cycle contributors continues
+([[Second-Cycle Contributors Are the Scarce Resource]]). Tooling
+improvements that lower the surface barrier have not shifted the curve
+alone ([[Markup Simplification Does Not Flatten Participation]]), and
+volume-only measures miss contributors whose work takes the form of
+responding or curating rather than authoring
+([[Participation Takes Different Forms Not Different Levels]]). Critical
+mass -- enough sustained participation for a practice to feed itself -- is
+hard to reach against that shape, and harder still to keep.
 
-**Participation follows a power-law distribution.** Online collaborative
-communities reliably produce a shape in which a small fraction of participants
-produce most of the contribution, and critical mass -- enough sustained
-participation for a practice to feed itself -- is hard to reach against that
-shape, harder still to keep. [[Online Participation Follows Power-Law Distributions]]
-records the pattern; [[Second-Cycle Contributors Are the Scarce Resource]]
-names the specific attrition point that filters who continues;
-[[Markup Simplification Does Not Flatten Participation]] records that
-lowering the surface barrier through tooling has not shifted the curve in
-prior attempts.
+**Contribution requires an unusual trait combination.** Meaningful
+contribution demands someone who simultaneously believes the contribution
+is worthwhile (pride) and accepts that others can improve it (humility) --
+a combination rarer than either trait alone, and one the surface of most
+collaborative tools does not specifically cultivate
+([[Meaningful Wiki Contribution Requires Both Pride and Humility]]).
 
-Together, these dynamics produce a predictable cycle: founders pick terms;
-the vocabulary converges and calcifies into authority
-([[Consensus Creates Priesthoods]]); later participants either adopt it,
-stay silent about their own framings, or leave to form parallel communities
-with parallel vocabularies; participation concentrates among early arrivers
-and reinvention under different names becomes the visible symptom every
-decade.
+These clusters compose into a predictable cycle: founders seed vocabulary;
+the vocabulary calcifies into authority; later participants either adopt
+it, stay silent about their own framings, or leave to form parallel
+communities; participation concentrates among early arrivers; and the
+reinvention of the same concepts under different names becomes the visible
+symptom each decade.
 
 The stewards do not believe any of this can be wholly overcome. The power
 law is robust across platforms. Accumulated vocabulary cannot be made
-weightless. Founding choices do shape what comes after. What they believe is
-that culture and tooling can do *better than past best practices* --
-especially now that agentic tools change what curation, translation, and
-onboarding cost. Vocabulary diversity as a feature rather than a bug
+weightless. Founding choices do shape what comes after. The rare trait
+combination remains rare. What they believe is that culture and tooling can
+do *better than past best practices* -- especially now that agentic tools
+change what curation, translation, and onboarding cost. Vocabulary
+diversity as a feature rather than a bug
 ([[Vocabulary Diversity Is a Feature]]). Curation as named, discussable
-commitments rather than an editorial instinct that only insiders can see.
+commitments rather than an editorial instinct only insiders can see.
 Translation across vocabularies rather than convergence
-([[Translation Over Convergence]]). New terms entering the shared vocabulary
-only by agreement, not by precedent
+([[Translation Over Convergence]]). New terms entering the shared
+vocabulary only by agreement, not by precedent
 ([[Terms Become Common Through Unanimity, Not Precedent]]). Forking as the
-structural escape hatch when translation fails. Honest attention to the ways
-tool-adoption can widen the gaps it was meant to close
-([[LLM Assistance Widens the Participation Gap]] holds the sharpest version
-of that worry as a Contested Observation). This project is the experiment
+structural escape hatch when translation fails. Honest attention to the
+ways tool-adoption can widen the gaps it was meant to close --
+[[LLM Assistance Widens the Participation Gap]] holds the sharpest version
+of that worry as a Contested Observation. This project is the experiment
 for whether those specific moves, composed, add up to something that
 survives its own growth better than what came before.
 
