@@ -8,6 +8,35 @@ connected to other pages by named edges that carry their reasoning inline.
 The result is a navigable record: a reader following an edge finds not just
 what is linked, but why.
 
+## The stance
+
+The author names the relation. The software works with that fact afterward --
+it does not arrive with an opinion about what your relation words should mean.
+Edges stay author-declared, not agent-inferred. Different contributors'
+distinctions sit alongside each other in the graph rather than being flattened
+into a canonical vocabulary. The gap between adjacent vocabularies -- what
+each author preserves that the other doesn't -- is often the most valuable
+content the graph carries, not a friction to resolve. This matters more the
+more people are in the graph: a solo graph can cheat the vocabulary question;
+a shared graph cannot.
+
+Four commitments carry the stance at the substrate:
+
+- [[Vocabulary Diversity Is a Feature]] -- contributors keep their own
+  naming; the graph translates rather than normalizes.
+- [[Translation Over Convergence]] -- when two vocabularies meet, both edges
+  land in the graph as distinct claims, not one merged claim.
+- [[Terms Become Common Through Unanimity, Not Precedent]] -- a term joins
+  the shared vocabulary by agreement, never by one contributor's repeated
+  usage alone.
+- [[Agents Translate, Not Extract]] -- an agent helps authors communicate
+  across their choices; it does not decide what their choices should mean.
+
+The substrate claim is simple: software should not default to platform
+meaning over authored meaning. Every convention in this graph is built to
+carry that principle into a medium many contributors can share without the
+medium rewriting their words.
+
 ## The founding decision
 
 The project's founding commitment -- the one the three stewards arrived at
@@ -26,12 +55,9 @@ The larger practice this architecture supports is
 acting together, from coordination (aligning timing) through cooperation
 (splitting work and reassembling) to collaboration (work intertwined
 throughout). DeepContext is specifically infrastructure for the cooperation
-end of that spectrum. Contributors keep their own vocabularies. Edges stay
-author-declared rather than agent-inferred. Agents translate across
-vocabularies rather than normalizing them. The practice is not trying to
-force collaboration in the strict sense (shared identity, jointly-authored
-output); it is trying to make cooperation across diverse contributors work
-without flattening their distinctions.
+end of that spectrum: not trying to force collaboration in the strict sense
+(shared identity, jointly-authored output), but to make cooperation across
+diverse contributors work without flattening their distinctions.
 
 ## About this repository
 
