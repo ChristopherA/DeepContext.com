@@ -97,20 +97,43 @@ they can contribute, and many don't. [[Shared Languages Get Intimidating Over Ti
 traces this across wikis, online communities, and long-running groups where
 early contributors ended up occupying all the senior positions.
 
-Together, these two dynamics produce a predictable cycle: founders pick
-terms; the vocabulary converges and calcifies into authority ([[Consensus Creates Priesthoods]]);
-later participants either adopt it, stay silent about their own framings,
-or leave to form parallel communities with parallel vocabularies. The
-reinvention of the same concepts under different names every decade is the
-visible symptom.
+**Participation follows a power-law distribution.** Online collaborative
+communities reliably produce a shape in which a small fraction of participants
+produce most of the contribution, and critical mass -- enough sustained
+participation for a practice to feed itself -- is hard to reach against that
+shape, harder still to keep. [[Online Participation Follows Power-Law Distributions]]
+records the pattern; [[Second-Cycle Contributors Are the Scarce Resource]]
+names the specific attrition point that filters who continues;
+[[Markup Simplification Does Not Flatten Participation]] records that
+lowering the surface barrier through tooling has not shifted the curve in
+prior attempts.
 
-This project is an experiment in whether that cycle can be interrupted.
-[[Vocabulary Diversity Is a Feature]] names the stance (keep each vocabulary
-intact); [[Translation Over Convergence]] names what happens at the contact
-surface (translate, don't normalize); [[Terms Become Common Through Unanimity, Not Precedent]]
-names the process for how a term crosses from one contributor's dialect into
-the shared vocabulary (it doesn't, until participants explicitly agree).
-Whether this actually works is what the graph is being built to test.
+Together, these dynamics produce a predictable cycle: founders pick terms;
+the vocabulary converges and calcifies into authority
+([[Consensus Creates Priesthoods]]); later participants either adopt it,
+stay silent about their own framings, or leave to form parallel communities
+with parallel vocabularies; participation concentrates among early arrivers
+and reinvention under different names becomes the visible symptom every
+decade.
+
+The stewards do not believe any of this can be wholly overcome. The power
+law is robust across platforms. Accumulated vocabulary cannot be made
+weightless. Founding choices do shape what comes after. What they believe is
+that culture and tooling can do *better than past best practices* --
+especially now that agentic tools change what curation, translation, and
+onboarding cost. Vocabulary diversity as a feature rather than a bug
+([[Vocabulary Diversity Is a Feature]]). Curation as named, discussable
+commitments rather than an editorial instinct that only insiders can see.
+Translation across vocabularies rather than convergence
+([[Translation Over Convergence]]). New terms entering the shared vocabulary
+only by agreement, not by precedent
+([[Terms Become Common Through Unanimity, Not Precedent]]). Forking as the
+structural escape hatch when translation fails. Honest attention to the ways
+tool-adoption can widen the gaps it was meant to close
+([[LLM Assistance Widens the Participation Gap]] holds the sharpest version
+of that worry as a Contested Observation). This project is the experiment
+for whether those specific moves, composed, add up to something that
+survives its own growth better than what came before.
 
 ## Where to start
 
