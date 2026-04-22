@@ -1,24 +1,43 @@
 # DeepContext
 
-DeepContext.com captures **reasoning** -- not just facts, not just decisions,
-but the *why* behind both -- in a plain-markdown graph that multiple people
-can work in without having to agree on the words for the things. Each page
-is a typed node (a Contract, a Decision, a Conviction, a Gloss, and so on),
-connected to other pages by named edges that carry their reasoning inline.
-The result is a navigable record: a reader following an edge finds not just
-what is linked, but why.
+Every collaborative community builds up **deep context** -- the shared
+meaning, distinctions, and compressions that make communication efficient
+inside the group. A community's hashtags, specialized terms, in-jokes, and
+accumulated conventions carry tribal weight an outsider cannot immediately
+parse, because insiders co-built the substrate that gives those terms their
+implications. That accumulated substrate is deep context, and it is the
+thing this project is named for.
+
+Deep context is fragile. Founding vocabularies calcify before later
+participants have a chance to shape them. Newcomers experience the
+accumulated depth as a debt they owe before contributing. Shared languages
+get intimidating as they mature. When the tools that held the deep context
+become obsolete, the deep context can die with them -- a decade of
+conversation trapped in a wiki engine nobody maintains. Systems that try to
+bridge communities often compound the loss by flattening each community's
+distinctions to fit a canonical model.
+
+Large language models and agentic tools change what curation, translation,
+onboarding, and cross-vocabulary work cost -- not by replacing the people
+doing the work, but by making certain kinds of help cheap that used to be
+expensive. That shifts what a medium for deep context can plausibly carry.
+DeepContext is an experiment in such a medium. Shared meaning accumulates
+as typed markdown nodes whose reasoning is part of the record rather than
+implicit in oral tradition ([[Capture Reasoning, Not Just Knowledge]]).
+Different contributors' distinctions sit alongside each other rather than
+being normalized into a canonical vocabulary. The record is plain markdown,
+so it outlives the tools that authored it ([[Knowledge Outlives Its Tools]]).
+The project's core stance is compact: the author names the relation, and the
+software works with that fact afterward -- it does not arrive with an
+opinion about what the author's words should mean.
 
 ## The stance
 
-The author names the relation. The software works with that fact afterward --
-it does not arrive with an opinion about what your relation words should mean.
-Edges stay author-declared, not agent-inferred. Different contributors'
-distinctions sit alongside each other in the graph rather than being flattened
-into a canonical vocabulary. The gap between adjacent vocabularies -- what
-each author preserves that the other doesn't -- is often the most valuable
-content the graph carries, not a friction to resolve. This matters more the
-more people are in the graph: a solo graph can cheat the vocabulary question;
-a shared graph cannot.
+Edges stay author-declared, not agent-inferred. The gap between adjacent
+vocabularies -- what each author preserves that the other doesn't -- is
+often the most valuable content the graph carries, not a friction to
+resolve. This matters more the more people are in the graph: a solo graph
+can cheat the vocabulary question; a shared graph cannot.
 
 Four commitments carry the stance at the substrate:
 
@@ -59,54 +78,35 @@ end of that spectrum: not trying to force collaboration in the strict sense
 (shared identity, jointly-authored output), but to make cooperation across
 diverse contributors work without flattening their distinctions.
 
-## Why this exists
+## What goes wrong
 
 Collaborative knowledge work has been tried many ways. International
 standards bodies. Email lists. Online forums. Private chat groups. Public
-and private wikis. Federated and single-author gardens. Each of them keeps
-running into the same failure modes from different angles -- contributors
-keep adding, but readers can't find what they need, the people doing the
-curation burn out, shared vocabulary accumulates faster than newcomers can
-absorb, and the communities end up fracturing along lines the participants
-themselves didn't quite choose. [[Wikis Without Curation Drift Toward Write-Only]]
-records the pattern at wiki scale; the same dynamic shows up wherever the
-coordination cost exceeds what sustained participation can pay.
-
-There is also, at this particular moment, a new opportunity. Large language
-models and agentic tools change what curation, translation, onboarding, and
-cross-vocabulary work cost -- not by replacing the people doing the work,
-but by making certain kinds of help cheap that used to be expensive. A new
-collaborative medium can form that takes this seriously: one that preserves
-each contributor's own naming instead of flattening everything into one
-shared vocabulary, lets different ways of framing the same territory sit
-alongside each other, and treats the work of curation as a set of named,
-discussable commitments rather than an editorial instinct that only the
-insiders can see. The nodes in this graph are an attempt at that medium's
-conventions -- rules that make vocabulary diversity structurally supportable,
-and enough visible scaffolding that a newcomer can find their way around
-without having to learn an oral tradition first.
-
-## The tension this addresses
-
-Shared-knowledge communities run into the same dynamics from different
-angles. The graph carries each as an Observation with its grounds and what
-would revise it; the landing sketches three clusters.
+and private wikis. Federated and single-author gardens. Each of them runs
+into the same failure modes from different angles -- contributors keep
+adding, but readers can't find what they need; the people doing the
+curation burn out; shared vocabulary accumulates faster than newcomers can
+absorb; communities fracture along lines the participants themselves didn't
+quite choose. [[Wikis Without Curation Drift Toward Write-Only]] records
+the pattern at wiki scale; the same dynamic shows up wherever the
+coordination cost exceeds what sustained participation can pay. The graph
+carries each dynamic as an Observation with grounds and revision
+conditions; three clusters sketch the shape.
 
 **Vocabulary accumulates asymmetrically.** The terms founders choose become
 the group's terms before later participants have a chance to shape them
 ([[Founding Vocabularies Constrain Later Participants]]). As the shared
-vocabulary grows, newcomers experience the breadth as a debt they owe before
-contributing ([[Shared Languages Get Intimidating Over Time]]). Converged
-vocabularies then produce authority asymmetries that make reshaping harder
-still ([[Consensus Creates Priesthoods]]).
+vocabulary grows, newcomers experience the breadth as a debt they owe
+before contributing ([[Shared Languages Get Intimidating Over Time]]).
+Converged vocabularies then produce authority asymmetries that make
+reshaping harder still ([[Consensus Creates Priesthoods]]).
 
 **Participation follows power-law distributions.** A small fraction of
 participants produce most of the contribution across every online
 collaborative platform studied. The bottleneck is not first-cycle entry
 but second-cycle continuation, where roughly one in four first-cycle
-contributors continues
-([[Second-Cycle Contributors Are the Scarce Resource]], which carries
-the power-law distributional finding in its Grounds). Tooling
+contributors continues ([[Second-Cycle Contributors Are the Scarce Resource]],
+which carries the power-law distributional finding in its Grounds). Tooling
 improvements that lower the surface barrier have not shifted the curve
 alone ([[Markup Simplification Does Not Flatten Participation]]), and
 volume-only measures miss contributors whose work takes the form of
@@ -127,27 +127,20 @@ the vocabulary calcifies into authority; later participants either adopt
 it, stay silent about their own framings, or leave to form parallel
 communities; participation concentrates among early arrivers; and the
 reinvention of the same concepts under different names becomes the visible
-symptom each decade.
+symptom each decade. Deep context built under those dynamics accumulates
+unevenly, ages badly, and frequently ends up trapped in whichever tool
+happened to hold it.
 
 The stewards do not believe any of this can be wholly overcome. The power
 law is robust across platforms. Accumulated vocabulary cannot be made
 weightless. Founding choices do shape what comes after. The rare trait
-combination remains rare. What they believe is that culture and tooling can
-do *better than past best practices* -- especially now that agentic tools
-change what curation, translation, and onboarding cost. Vocabulary
-diversity as a feature rather than a bug
-([[Vocabulary Diversity Is a Feature]]). Curation as named, discussable
-commitments rather than an editorial instinct only insiders can see.
-Translation across vocabularies rather than convergence
-([[Translation Over Convergence]]). New terms entering the shared
-vocabulary only by agreement, not by precedent
-([[Terms Become Common Through Unanimity, Not Precedent]]). Forking as the
-structural escape hatch when translation fails. Honest attention to the
-ways tool-adoption can widen the gaps it was meant to close --
+combination remains rare. Honest attention to the ways tool adoption can
+widen the gaps it was meant to close stays part of the work --
 [[LLM Assistance Widens the Participation Gap]] holds the sharpest version
 of that worry as a Contested Observation. This project is the experiment
-for whether those specific moves, composed, add up to something that
-survives its own growth better than what came before.
+for whether the specific moves recorded in its stance and architecture,
+composed, add up to something that survives its own growth better than
+what came before.
 
 ## Where to start
 
