@@ -59,21 +59,6 @@ end of that spectrum: not trying to force collaboration in the strict sense
 (shared identity, jointly-authored output), but to make cooperation across
 diverse contributors work without flattening their distinctions.
 
-## About this repository
-
-This repository is where the practice is being worked out in public. The
-conventions, the node drafts, and the conversation all live here on GitHub.
-Comments and contributions are welcome via Issues, Discussions, and Pull
-Requests.
-
-The stewards carry decades of experience with online collaboration, across
-both what has worked and what has fallen apart. The commitments encoded in
-these conventions are drawn from that experience -- small-group
-shared-thinking spaces that succeeded, larger ones that fractured, wikis
-that sustained and wikis that drifted to write-only. The motivation is
-shared: to make collaborative knowledge work easier to sustain, not to
-relitigate any one prior attempt.
-
 ## Why this exists
 
 Collaborative knowledge work has been tried many ways. International
@@ -272,6 +257,19 @@ which names the curator stance (suggest, flag, translate -- do not rewrite a
 contributor's vocabulary without confirmation) and points at the taxonomy
 entry points. Agents joining a fork should read their own fork's AGENTS.md
 first; forks may customize the stance.
+
+## About this repository
+
+This repository is where the practice is being worked out in public. The
+conventions, the node drafts, and the conversation all live here on GitHub.
+
+The stewards carry decades of experience with online collaboration, across
+both what has worked and what has fallen apart. The commitments encoded in
+these conventions are drawn from that experience -- small-group
+shared-thinking spaces that succeeded, larger ones that fractured, wikis
+that sustained and wikis that drifted to write-only. The motivation is
+shared: to make collaborative knowledge work easier to sustain, not to
+relitigate any one prior attempt.
 
 ## How to contribute
 
