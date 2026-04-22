@@ -20,7 +20,7 @@ Enforces [[Use ASCII Dashes in Filenames]].
 - The filename MUST NOT contain em-dashes (`—`) or en-dashes (`–`). Use ASCII hyphens.
 - Where a visual dash is needed in a filename, the form MUST be a double ASCII hyphen `--`.
 - The filename MUST be either `<wikilink target>.md` or `<wikilink target> -- <description>.md` (the latter reserved for Gloss Form per its own contract).
-- Referencing this file from another node depends on whether the filename carries a ` -- <description>` suffix. When the filename has no suffix, other nodes reference it using the bare wikilink `[[<filename>]]`. When the filename has a ` -- <description>` suffix, references MUST use the pipe form `[[<full filename>|<concept>]]` per [[Use Pipe Wikilinks for Display-Target Divergence]].
+- Referencing this file from another node depends on whether the filename carries a ` -- <description>` suffix. When the filename has no suffix, other nodes reference it using the bare wikilink `[[<filename>]]`. When the filename has a ` -- <description>` suffix, references in prose flow MUST use the pipe form `[[<full filename>|<concept>]]` per [[Use Pipe Wikilinks for Display-Target Divergence]]. In structural contexts — `## Relations` edges, subsection headings, and other locations where readers scan a structured index rather than read running prose — the bare full filename `[[<full filename>]]` is permitted, because the ` -- <description>` suffix carries the target's working definition to the reader at the edge site. The bare concept form `[[<concept>]]` is never permitted for a ` -- `-suffixed target, because it does not resolve in standard wiki tooling.
 
 ### Node atomicity
 
@@ -84,6 +84,8 @@ Enforces [[Annotate Edges With Why-They-Matter]] and [[No Generic relates_to Pre
 Enforces [[Adopt Wikilinks and Named Edges]].
 
 - Predicates MUST be multi-word, lower-case, joined by underscores (`has_component::`, not `includes::`).
+- Named-edge values MUST take one of two shapes: a wikilink target (`- predicate::[[Target]]` or `- predicate::[[Target]]↗`) or a structural scalar introduced by a form-specific Contract.
+- A form-specific Contract MAY introduce a scalar-valued predicate when the scalar carries structural content (e.g., `decided_on::YYYY-MM-DD` introduced by [[Decision Form Contract]]). The introducing Contract MUST name the value shape and MUST reserve the predicate to the form it belongs to via [[Reserve Predicate Vocabularies to Specific Forms]]. Scalar-valued predicates inherit every other Requirement in this section (naming discipline, form-specific reservation).
 - Wikilink targets MUST be multi-word. Single-word targets are not permitted (`[[Wikilink Syntax]]`, not `[[Wikilink]]`).
 - A target whose referent belongs to a different wiki or to an external tradition MUST be marked with a trailing `↗`. The `↗` marks the referent's provenance, not a URL. URLs, when recorded, live in a stub node under `sources/`.
 - Ghost links (wikilinks to targets that do not yet exist) are permitted and signal intended future nodes.

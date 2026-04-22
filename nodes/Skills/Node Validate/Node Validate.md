@@ -54,7 +54,8 @@ Apply `Markdown Node Contract`'s Requirements to the node:
 - **Body** — prose follows the H1; inline wikilinks are readable references, not structural edges.
 - **Layered structure** — identity block above H1, opening card-scale claim, elaboration body, Relations section; cheaper layers precede expensive prose.
 - **Relations section** — if the node carries relational edges, they appear under `## Relations` after the body; each edge is a top-level bullet in `- predicate::[[Target]]` form, with an indented sub-bullet annotation explaining why the edge matters. The `relates_to::` predicate MUST NOT be used.
-- **Named-edge syntax** — predicates are multi-word, lower-case, joined by underscores; wikilink targets are multi-word; external targets carry the literal `↗` character (U+2197), never the escape notation.
+- **Named-edge syntax** — predicates are multi-word, lower-case, joined by underscores; wikilink targets are multi-word; external targets carry the literal `↗` character (U+2197), never the escape notation. Named-edge values are wikilink targets in `[[Target]]` or `[[Target]]↗` form, or scalar values when a form-specific Contract explicitly introduces a scalar-valued predicate (currently `decided_on::YYYY-MM-DD` on Decisions).
+- **Pipe wikilinks for ` -- `-suffixed targets** — When a wikilink target resolves to a file whose name contains ` -- `, the reference form depends on context. In **prose flow** (running text in the elaboration body, Why, Grounds, etc.), the reference MUST use the pipe form `[[<full filename>|<concept>]]` per `Use Pipe Wikilinks for Display-Target Divergence`. In **structural contexts** — `## Relations` edges, identity-block predicate edges, `### Against [[adjacent]]` H3 subsection headings, and other index-shaped locations — the bare full filename `[[<full filename>]]` is permitted; the ` -- sense` suffix there carries the target's working definition at the edge. The bare concept form `[[<concept>]]` is never permitted for a ` -- `-suffixed target, because it does not resolve in standard wiki tooling. Report any bare-concept reference to a ` -- `-suffixed target as a violation regardless of context.
 - **Predicate atomicity** — each predicate answers one axis; predicate values MUST NOT cluster into subgroups answering different questions.
 
 For each check that fails, record the Requirement's short name, what was found, and what the Requirement expects.
@@ -84,7 +85,9 @@ For each edge in `## Relations`, verify:
 - The target is multi-word (or is a ghost-link target that will become a multi-word node).
 - An indented sub-bullet annotation follows the edge, stating why the relationship matters.
 - The predicate is not `relates_to::`.
-- The predicate is in the graph's active vocabulary (exists as a Predicate node under `nodes/Predicates/`, or is a base-contract predicate like `grounded_in::`, `informs::`, `conforms_to::`). A predicate used without a Predicate node is a drift signal; report it as a proposal-invitation, not a hard violation.
+- The predicate is in the graph's active vocabulary. A predicate with a backing `nodes/Predicates/<predicate> -- <sense>.md` node is definitional; one in use without a backing node is provisional.
+
+Unbacked predicates are reported once per node as a single Signal finding, not per-edge. Report format: "Uses N predicates without backing Predicate nodes: [predicate list]." The bundled signal flags drift without overwhelming output with a repeated per-edge finding; graph-wide vocabulary drift is Graph Audit's concern.
 
 An edge with no annotation is tag spaghetti by `Annotate Edges With Why-They-Matter`; report each unannotated edge as its own finding with the edge text quoted.
 

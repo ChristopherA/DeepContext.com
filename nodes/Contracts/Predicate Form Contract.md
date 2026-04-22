@@ -44,7 +44,7 @@ Enforces [[Require Carries Section in Predicate Nodes]].
 Enforces [[Document Predicate Crescents Against Adjacent Predicates]].
 
 - The body MUST include a `## Crescent` section when the Predicate declares one or more `contrasts_with::` edges.
-- Each adjacent predicate MUST have its own H3 subsection headed `### Against [[adjacent predicate]]`.
+- Each adjacent predicate MUST have its own H3 subsection headed `### Against [[adjacent predicate -- sense]]` using the adjacent Predicate node's full filename as the wikilink target. The bare full filename is the permitted form here per [[Markdown Node Contract]]'s refinement for structural contexts; the ` -- sense` suffix carries the adjacent predicate's working definition to the reader at the heading. The bare concept form `[[adjacent predicate]]` MUST NOT be used because it does not resolve in standard wiki tooling.
 - Each Crescent subsection MUST state what this predicate carries that the adjacent one does not — the distinction that would be destroyed by merging them.
 - The Crescent content on two adjacent Predicate nodes is NOT required to be symmetric. `critiques -- ...`'s crescent against `challenges` names what `critiques` holds; `challenges -- ...`'s crescent against `critiques` names what `challenges` holds. Each node carries its own account; the two accounts together are the full pairing.
 - A Predicate with no declared `contrasts_with::` edges MAY omit the Crescent section, but SHOULD include a sentence in the Carries section noting that no adjacent predicate has yet emerged.
