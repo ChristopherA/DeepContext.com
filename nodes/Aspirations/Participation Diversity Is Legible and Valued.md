@@ -74,5 +74,5 @@ Form-sensitive measurement reveals patterns that volume-only measurement would m
 - composes_with::[[Contributors Across Vocabularies Can Collaborate]]
   - Adjacent specializations of the same plural-participation stance at two different layers. Contributors Across Vocabularies targets vocabulary-plurality; this Aspiration targets form-plurality. Both are load-bearing; neither subsumes the other. The two compose into a plural-participation stance that operates at both layers.
 
-- informs::[[Newcomers Cross the Second-Cycle Threshold]]
-  - Second-cycle contribution may arrive in a different form than first-cycle contribution. The contributor-transition Aspiration's progress-recognition markers need to be form-sensitive for the transition to be measurable; this Aspiration's work is what makes form-sensitive measurement possible.
+- informs::[[The Second Cycle of Contribution Happens]]
+  - Second-cycle contribution may arrive in a different form than first-cycle contribution. The Aspiration's contributor-level transition progress-recognition markers need to be form-sensitive for the transition to be measurable; this Aspiration's work is what makes form-sensitive measurement possible.

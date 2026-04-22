@@ -24,7 +24,7 @@ The second-cycle frame also distinguishes this project from an MVP. The first cy
 
 ## Current Gap
 
-No first cycle has completed yet. The seed graph carries contract and decision nodes — the substrate the practice runs on — but no real nodes in the intended knowledge domain. The `prototype/nodes/` corpus holds Contracts (9), Decisions (~32 after this commit group), Glosses (6), Convictions (6 after this commit group), Patterns (3), References (1), Observations (2 after this commit group), Aspirations (will be 3 after this commit group). All of those nodes document the convention layer, not the domain.
+No first cycle has completed yet. The seed graph carries Contract, Decision, Conviction, Observation, Aspiration, Pattern, Predicate, Gloss, and Reference nodes — the substrate the practice runs on — but no real nodes in the intended knowledge domain. Every seeded node documents the convention layer; none documents the subject matter the practice is for.
 
 The bounded-slice selection that would seed a first cycle is an open question. `context/Decision Log.md` tracks the "Seed corpus domain" Open Question as unresolved — the project has not decided which slice of the intended domain to seed with 15-30 real nodes that exercise the conventions under authoring pressure. Without that decision, the first cycle cannot start, and the second cycle is gated on the first.
 
@@ -44,6 +44,18 @@ Support a curation ritual cadence through the first cycle. The Pattern `Reconcil
 
 Observe and record what breaks, what holds, what contributors need. Every observation from the first cycle is input to whether the second cycle can be invited. A first cycle that produces only nodes (without recorded observations about the authoring experience) wastes the test.
 
+### Contributor-level transition
+
+The project-level target (the cycle continues) requires contributor-level work (individual contributors find return the natural next move). The scarcity at the first-to-second-cycle transition recorded in `[[Second-Cycle Contributors Are the Scarce Resource]]` is the specific attrition point this work addresses. Four friction points are named and addressable:
+
+Contributor acknowledgment closes the loop between first contribution and the subsequent curation pass. The curator's acknowledgment names what the contribution added, where it now lives, and what edges it sits at. Acknowledgment is not optional politeness — it is a first-class curator responsibility, and the sustainability of the practice rests in part on whether curators carry it forward.
+
+Curation output is visible to contributors between cycles. A contributor who authored in a first cycle can see the subsequent curation pass's result — a summary, a diff, or a narrative naming what was preserved, what was revised, and what was routed. Curation-as-contributor-surface turns a back-stage operation into a contributor-facing practice that contributors participate in rather than observe from outside.
+
+A first-cycle follow-up cadence exists. Candidate cadences: acknowledgment within a week of contribution, a first curation-summary surface within a month, an explicit invitation to the second cycle within three months. The specific numbers are proposals; the cadence itself — that some cadence exists and is committed to — is the work. An unresponded-to contribution accretes the wrong signal.
+
+Contribution recognition is built into the graph's structure where possible. Candidate predicates: `first_authored_by::` preserved through revision so the original author remains visible when the node has evolved; `cited_by::` or incoming-edge aggregation so a contributor can see what their contribution has come to ground; per-contributor summary surfaces that aggregate graph footprint. The specifics are open; the commitment is that recognition is graph-native rather than an external acknowledgment system.
+
 ## Progress Recognition
 
 The first bounded slice is selected and seeded with 15-30 nodes that exercise the full predicate family, form contract catalog, and curation cadence.
@@ -53,6 +65,10 @@ A second contributor authors their first node in the graph without convergence p
 A curation pass reconciles the graph without ontology arbitration. The pass runs; drift is caught; the graph stays legible; no decision gets stalled in "which term is right" arbitration.
 
 A returning or new contributor arrives for the second cycle, reads the existing conventions and the existing nodes, and finds the ground legible enough to begin authoring. The contributor does not need the founder to explain the conventions or the nodes in real-time; the graph's own structure carries enough context to onboard.
+
+At least one first-cycle contributor returns for a second contribution within the established follow-up cadence. The return is verifiable through graph state — new nodes authored by a returning contributor, edges added to existing nodes, curation participation — rather than through self-report alone. A first-to-second-cycle transition rate becomes measurable even if anecdotally, which is the signal that the contributor-level work is producing observable effects.
+
+Curators report that acknowledgment practice is a sustainable part of the curation cadence rather than a burden that falls away under pressure. The practice holds if curators carry it forward; drifts if acknowledgment becomes an intermittent gesture. Sustainability is the measure — one-time acknowledgment is not cultivation.
 
 The project reaches a steady state where contribution happens on at least two contributors' cadences, curation happens on at least one contributor's cadence, and the practice's continuation does not depend on any single author being present this week.
 
@@ -73,22 +89,16 @@ The project reaches a steady state where contribution happens on at least two co
   - The Observation names the failure mode this Aspiration is the counter-target of. A wiki that drifts toward write-only has not reached a second cycle; the Aspiration is the directional commitment not to drift, and the Observation grounds why the directional commitment is worth carrying the work it asks.
 
 - informs::[[Contributors Across Vocabularies Can Collaborate]]
-  - The cross-vocabulary Aspiration specializes the second-cycle target to the plural-contributor case. This Aspiration is the general target; the cross-vocabulary Aspiration is a specific dimension of it. Ghost link until the cross-vocabulary Aspiration is seeded in the next commit group.
+  - The cross-vocabulary Aspiration specializes the second-cycle target to the plural-contributor case. This Aspiration is the general target; the cross-vocabulary Aspiration is a specific dimension of it.
 
 - informs::[[The Graph Survives Its Tooling]]
-  - The tool-independence Aspiration specializes the second-cycle target to the tool-independence dimension. A second cycle that depends on a specific tool configuration remaining available has not reached the durability the Aspiration implies; the tool-independence Aspiration is what durability means at the tool layer. Ghost link until seeded in the next commit group.
-
-- informed_by::[[Online Participation Follows Power-Law Distributions]]
-  - The power-law Observation supplies the distributional context within which the second-cycle target operates. The Aspiration's Current Gap and Progress Recognition sections implicitly assume a power-law shape; making the grounding explicit surfaces the assumption rather than leaving it in the Aspiration's implicit substrate.
+  - The tool-independence Aspiration specializes the second-cycle target to the tool-independence dimension. A second cycle that depends on a specific tool configuration remaining available has not reached the durability the Aspiration implies; the tool-independence Aspiration is what durability means at the tool layer.
 
 - informed_by::[[Second-Cycle Contributors Are the Scarce Resource]]
-  - The specific attrition at the first-to-second-cycle transition is what the Aspiration's project-level target is a response to. The Observation supplies the measured scarcity; the Aspiration names the directional response.
+  - The specific attrition at the first-to-second-cycle transition is what the Aspiration's project-level target is a response to. The Observation supplies the measured scarcity and the power-law distributional context within which the attrition operates; the Aspiration names the directional response.
 
 - informed_by::[[Participation Takes Different Forms Not Different Levels]]
   - A second cycle may arrive in a different form than the first — a contributor whose first cycle was authoring-dominant may return in a responding-dominant or curating-dominant form. The Aspiration's progress recognition needs to be form-sensitive to catch this; the form-plurality Observation is what makes the form-sensitive reading available.
-
-- informs::[[Newcomers Cross the Second-Cycle Threshold]]
-  - The contributor-level specialization of this project-level target. The newcomer-transition Aspiration names the specific contributor-facing work — acknowledgment, curation-visibility, follow-up cadence — that the project-level target leaves unspecified.
 
 - informs::[[Pride and Humility Are Both Cultivable]]
   - The trait-cultivation Aspiration names the specific design response to one of the filters the second-cycle target has to address. Cultivating the trait-pair widens the contributor population who can sustain through to the second cycle.

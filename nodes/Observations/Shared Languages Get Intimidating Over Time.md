@@ -44,10 +44,7 @@ A counter-case where accumulated vocabulary made newcomer contribution *easier* 
 ## Relations
 
 - informs::[[The Second Cycle of Contribution Happens]]
-  - The Aspiration names sustained second-cycle contribution as the project's success metric. This Observation names one of the mechanisms the second cycle has to survive: accreted vocabulary breadth that would otherwise cost newcomers more than they're willing to spend to get past.
-
-- informs::[[Newcomers Cross the Second-Cycle Threshold]]
-  - The contributor-level specialization of the second-cycle Aspiration. If shared languages get intimidating over time, crossing the second-cycle threshold becomes harder for each successive cohort -- the Aspiration has to contend with an accumulating headwind.
+  - The Aspiration names sustained second-cycle contribution as the project's success metric. This Observation names two mechanisms the second cycle has to survive: accreted vocabulary breadth that costs newcomers more than they're willing to spend to get past, and the compounding of that cost at the contributor-level first-to-second-cycle transition the Aspiration's contributor-level work addresses. If shared languages get intimidating over time, crossing the transition becomes harder for each successive cohort — the Aspiration has to contend with an accumulating headwind.
 
 - informs::[[Terms Become Common Through Unanimity, Not Precedent]]
   - The Conviction asks the project to let new common vocabulary enter only through explicit agreement. This Observation supplies one reason the stance is load-bearing: vocabulary accretion has a cost, and the cost falls disproportionately on later participants.
