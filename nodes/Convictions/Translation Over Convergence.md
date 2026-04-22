@@ -62,6 +62,10 @@ A review cadence in which normalization suggestions go unchallenged is subtler d
   - Both are vocabulary-discipline commitments operating at different scopes. Adopt Predicate Atomicity governs *within* a vocabulary — a predicate must answer one question, and overloaded predicates are split. Translation Over Convergence governs *across* vocabularies — when two vocabularies meet, both stay intact and translation bridges them. The two commitments compose: each vocabulary keeps its own single-axis predicates, and translation handles the cross-vocabulary case.
 
 - informs::[[source_voice -- whose thinking is captured when different from the author]]
+  - The authorship-split predicate adopted from an adjacent plural-contributor corpus. Preserves the distinction between whose thinking a node captures and who committed the node — translation-not-convergence at the predicate layer rather than folding the distinction into the local `authored_by::`.
+
 - informs::[[responds_to -- direct reply creating a conversation thread]]
+  - The conversation-threading predicate adopted from the same adjacent corpus. Preserves the distinction between a node that grounds in another and a node that replies to another as part of a dialogic thread — again, translation-not-convergence rather than merging into `informs::` or `grounded_in::`.
+
 - informs::[[assists_by -- facilitation by agent or person]]
-  - Three Predicates adopted from an adjacent plural-contributor corpus's practice. Each preserves a distinction the home corpus surfaced — authorship split (source_voice), conversation threading (responds_to), facilitation-vs-authorship (assists_by). Adopting them here rather than folding them into existing local predicates is translation-not-convergence at the predicate layer.
+  - The facilitation-vs-authorship predicate adopted from the same adjacent corpus. Preserves the distinction between someone whose thinking is being captured and someone whose facilitation made the capture possible — the three adopted Predicates together realize this Conviction's translation stance at the predicate-vocabulary layer.
