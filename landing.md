@@ -21,15 +21,16 @@ Large language models and agentic tools change what curation, translation,
 onboarding, and cross-vocabulary work cost -- not by replacing the people
 doing the work, but by making certain kinds of help cheap that used to be
 expensive. That shifts what a medium for deep context can plausibly carry.
-DeepContext is an experiment in such a medium. Shared meaning accumulates
-as typed markdown nodes whose reasoning is part of the record rather than
-implicit in oral tradition ([[Capture Reasoning, Not Just Knowledge]]).
-Different contributors' distinctions sit alongside each other rather than
-being normalized into a canonical vocabulary. The record is plain markdown,
-so it outlives the tools that authored it ([[Knowledge Outlives Its Tools]]).
-The project's core stance is compact: the author names the relation, and the
-software works with that fact afterward -- it does not arrive with an
-opinion about what the author's words should mean.
+DeepContext is an experiment in such a medium. Different contributors'
+distinctions sit alongside each other rather than being normalized into a
+canonical vocabulary. The record is plain markdown, so it outlives the
+tools that authored it ([[Knowledge Outlives Its Tools]]). Nodes carry
+their reasoning alongside their claims, so the *why* each contributor
+carried is legible to later readers rather than implicit in oral tradition
+([[Capture Reasoning, Not Just Knowledge]]). The project's core stance is
+compact: the author names the relation, and the software works with that
+fact afterward -- it does not arrive with an opinion about what the
+author's words should mean.
 
 ## The stance
 
