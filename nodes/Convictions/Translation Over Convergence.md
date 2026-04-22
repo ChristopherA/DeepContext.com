@@ -50,7 +50,7 @@ A review cadence in which normalization suggestions go unchallenged is subtler d
   - The substrate Conviction. This Conviction specializes the diversity stance with a concrete operational rule for what happens when vocabularies meet. Without the diversity Conviction, the translation rule has no normative basis — translation is what the project does because vocabulary diversity is a feature it is committed to preserving.
 
 - informed_by::[[Consensus Creates Priesthoods]]
-  - The Observation supplies the empirical grounding for the first of the three convergence costs this Conviction's Why rests on — convergence creates natural-authority asymmetries that alienate newcomers. Ghost link until the Observation is seeded in the same commit group.
+  - The Observation supplies the empirical grounding for the first of the three convergence costs this Conviction's Why rests on — convergence creates natural-authority asymmetries that alienate newcomers.
 
 - informed_by::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]
   - The gist's "Why vocabulary diversity matters across systems" section supplies the three-cost analysis and the mutual-intelligibility-through-translation alternative this Conviction's Why compresses.

@@ -57,7 +57,7 @@ A reader scanning the graph after drift would see convergence toward a single vo
   - The earlier 2009 post that framed meaning as provided by users rather than inherent in words. The sovereignty argument in this Conviction rests on that substrate: author-declared edges preserve distinct claims because meaning is not reducible to a canonical vocabulary's terms.
 
 - informed_by::[[Consensus Creates Priesthoods]]
-  - The Observation supplies the empirical grounding for one of the three convergence costs the Why rests on. Ghost link until the Observation is seeded in the same commit group.
+  - The Observation supplies the empirical grounding for one of the three convergence costs the Why rests on.
 
 - informs::[[Translation Over Convergence]]
   - Translation Over Convergence specializes this stance into a concrete operational rule for what happens when vocabularies meet. This Conviction names the feature; Translation Over Convergence names what the feature asks of the project at the contact surface between vocabularies.

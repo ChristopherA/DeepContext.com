@@ -48,7 +48,7 @@ The drift also shows up in edge quality. `relates_to::` becoming a catch-all is 
   - The Decision that makes the graph's architecture a structural implementation of this value. The Decision grounds in this Conviction rather than in the external value of the same name; the foundational grounding now lives inside the graph.
 
 - informs::[[Knowledge Outlives Its Tools]]
-  - The sibling value. Reasoning captured in a format that doesn't survive tool changes loses its fidelity over time; durability is a precondition for sustained fidelity.
+  - The sibling value the durability stance serves. The project holds durability because captured reasoning must survive to remain useful — reasoning captured in a format that doesn't outlast its tooling loses the fidelity this Conviction protects. The motivation direction: this Conviction is why the durability Conviction is load-bearing, not merely convenient.
 
 - informs::[[Decision Form Contract]]
   - The Contract's required sections (Why, Alternatives Considered, What Would Change It) are the form-level implementation of the fidelity commitment. A Decision node that complies carries its reasoning; a Decision that drops the sections carries a fact.

@@ -56,3 +56,6 @@ A counter-case from a different platform or community type where LLM assistance 
 
 - informed_by::[[Wikis Without Curation Drift Toward Write-Only]]
   - The failure-mode Observation describes what wikis do without active curation. This Observation describes a specific mechanism by which newcomer contribution fails even when curation is active — the contribution is rejected at the review layer on register grounds rather than content grounds. The two compose: without curation, contributions accumulate; with curation of the current Wikipedia style, newcomer LLM-assisted contributions are filtered at the membership-fluency register.
+
+- composes_with::[[Pride and Humility Are Both Cultivable]]
+  - Reciprocal of the Aspiration's composes_with edge. The two-gate reading in `[[Meaningful Wiki Contribution Requires Both Pride and Humility]]` says membership fluency (the gate in this Observation) and the trait-pair (the gate the Aspiration addresses) are orthogonal gates. This Observation names one layer of the gate; the Aspiration names the practice-design response at the other layer. Neither fully captures what the other targets.

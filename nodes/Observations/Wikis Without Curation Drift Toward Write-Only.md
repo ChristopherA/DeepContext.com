@@ -41,7 +41,7 @@ The project's own experience is itself in the record's tail. If the Deep Context
   - The architecture decision's emphasis on structural contracts, progressive disclosure, and typed relations follows from this Observation — the write-only failure mode is what the architectural moves are designed to counter. The Decision is the response; this Observation is the grounds.
 
 - informs::[[The Second Cycle of Contribution Happens]]
-  - The second-cycle Aspiration is defined against this Observation as its failure mode. A wiki that fails at the second cycle has drifted toward write-only; the Aspiration is the target of sustained contribution this Observation's drift describes the absence of. Ghost link until the Aspiration is seeded in the next commit group.
+  - The second-cycle Aspiration is defined against this Observation as its failure mode. A wiki that fails at the second cycle has drifted toward write-only; the Aspiration is the target of sustained contribution this Observation's drift describes the absence of.
 
 - informs::[[Reconcile the Standing Account]]
   - The Pattern names the recurring curation move — audit for drift between what a node says and what the graph now is, collapse duplication to pointers, realign stale counts and references. The move is what active curation practice looks like in operation; this Observation is the motivating case for why the Pattern is worth running as a cadence rather than an occasional cleanup.
