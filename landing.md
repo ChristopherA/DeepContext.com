@@ -91,11 +91,11 @@ still ([[Consensus Creates Priesthoods]]).
 
 **Participation follows power-law distributions.** A small fraction of
 participants produce most of the contribution across every online
-collaborative platform studied
-([[Online Participation Follows Power-Law Distributions]]). The bottleneck
-is not first-cycle entry but second-cycle continuation, where roughly one
-in four first-cycle contributors continues
-([[Second-Cycle Contributors Are the Scarce Resource]]). Tooling
+collaborative platform studied. The bottleneck is not first-cycle entry
+but second-cycle continuation, where roughly one in four first-cycle
+contributors continues
+([[Second-Cycle Contributors Are the Scarce Resource]], which carries
+the power-law distributional finding in its Grounds). Tooling
 improvements that lower the surface barrier have not shifted the curve
 alone ([[Markup Simplification Does Not Flatten Participation]]), and
 volume-only measures miss contributors whose work takes the form of
