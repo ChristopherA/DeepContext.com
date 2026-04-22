@@ -15,6 +15,7 @@ from pathlib import Path
 # Ensure sibling modules are importable when run via `python .scripts/build.py`.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+from emit_skills import emit_skill_aliases  # noqa: E402
 from generate_indexes import (  # noqa: E402
     copy_style,
     write_cname,
@@ -66,8 +67,11 @@ def build(root: Path) -> None:
     write_nojekyll(build_dir)
     write_cname(build_dir)
 
+    skill_count = emit_skill_aliases(root=root)
+
     print(f"Built {node_count} node pages across {len(TAXONOMIES)} taxonomies")
-    print(f"Output: {build_dir}")
+    print(f"Emitted {skill_count} skill alias(es) to .agents/skills/")
+    print(f"Site output: {build_dir}")
 
 
 def main() -> None:
