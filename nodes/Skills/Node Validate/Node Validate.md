@@ -85,9 +85,8 @@ For each edge in `## Relations`, verify:
 - The target is multi-word (or is a ghost-link target that will become a multi-word node).
 - An indented sub-bullet annotation follows the edge, stating why the relationship matters.
 - The predicate is not `relates_to::`.
-- The predicate is in the graph's active vocabulary. A predicate with a backing `nodes/Predicates/<predicate> -- <sense>.md` node is definitional; one in use without a backing node is provisional.
 
-Unbacked predicates are reported once per node as a single Signal finding, not per-edge. Report format: "Uses N predicates without backing Predicate nodes: [predicate list]." The bundled signal flags drift without overwhelming output with a repeated per-edge finding; graph-wide vocabulary drift is Graph Audit's concern.
+Vocabulary health — whether a predicate has a backing Predicate node, whether a provisional predicate should be codified, whether two predicates have drifted into synonyms — is Graph Audit's concern, not Node Validate's. Per-node vocabulary reporting conflates base-contract predicates (introduced by `Markdown Node Contract` and form-specific Contracts — `conforms_to`, `authored_by`, `has_lifecycle`, `has_commitment`, `extends_contract`, and so on) with genuinely provisional predicates, producing noise on every node. Defer vocabulary questions to Graph Audit, which separates backed predicates from base-contract predicates from provisional drift at graph scope.
 
 An edge with no annotation is tag spaghetti by `Annotate Edges With Why-They-Matter`; report each unannotated edge as its own finding with the edge text quoted.
 
@@ -97,7 +96,7 @@ Group findings by severity:
 
 - **Violation** — the node contradicts a MUST or MUST NOT Requirement. The node does not conform; the user cannot commit it as the form it claims until this is resolved.
 - **Shortfall** — the node misses a SHOULD Requirement. The node conforms but carries lower quality than the Contract asks for.
-- **Signal** — the node raises a concern the Contract flags as worth noticing (e.g., a predicate used without a backing Predicate node). Not a violation; an invitation.
+- **Signal** — the node raises a concern the Contract flags as worth noticing. Not a violation; an invitation. Signals are usually surfaced by cross-node patterns (Graph Audit) rather than by per-node inspection; Node Validate reports Signals only when they are locally visible without graph-wide context.
 
 For each finding, report:
 
