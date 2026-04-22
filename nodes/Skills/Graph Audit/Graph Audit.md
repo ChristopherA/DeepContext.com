@@ -45,19 +45,17 @@ Run mechanical checks with `rg` via Bash. These are fast, deterministic, and cat
 find nodes -name '*—*' -o -name '*–*' 2>/dev/null
 ```
 
-**Forbidden predicate** — `relates_to::` is prohibited per `No Generic relates_to Predicate`:
+**Forbidden predicate** — `relates_to::` is prohibited per `No Generic relates_to Predicate`. Anchor the pattern to `^-` so prose discussions (which frequently mention the forbidden predicate in backticks) are excluded:
 
 ```sh
-rg -n -I -- 'relates_to::' nodes/
+rg -n -I -- '^- relates_to::' nodes/
 ```
 
-**Identity block presence** — every `.md` node under `nodes/` should have a `conforms_to::` line:
+**Identity block presence** — every `.md` node under `nodes/` should have a `conforms_to::` line. Use `find -print0 | while IFS= read -r -d ''` so filenames with spaces (Gloss and Predicate filenames use ` -- ` separators) survive the loop intact:
 
 ```sh
-for file in $(find nodes -type f -name '*.md'); do
-  if ! grep -q '^- conforms_to::' "$file"; then
-    echo "missing conforms_to: $file"
-  fi
+find nodes -type f -name '*.md' -print0 | while IFS= read -r -d '' file; do
+  grep -q '^- conforms_to::' "$file" || echo "missing conforms_to: $file"
 done
 ```
 
@@ -94,9 +92,13 @@ rg -o -I -- '\[\[[^|\]]+\]\]' nodes/ | sort -u > /tmp/graph-audit-targets.txt
 find nodes -name '*.md' -type f -exec basename {} .md \; | sort -u > /tmp/graph-audit-files.txt
 ```
 
-For each target in the targets file that does not match a file stem (or the concept side of a `-- `-suffixed file), it is a ghost link.
+For each target in the targets file that does not match a file stem (or the concept side of a `-- `-suffixed file), it is a candidate ghost link.
+
+Filter out template-token false positives before reporting. Contract bodies and skill bodies use `[[X]]`, `[[<Domain>]]`, `[[Target]]`, `[[Editor]]`, `[[Principal]]`, `[[Downstream Node]]`, `[[X Form Contract]]`, `[[<placeholder>]]`, and similar as syntactic placeholders in examples — these are documentation shapes, not intended wikilinks. A candidate whose target is a single uppercase letter, contains `<` or `>`, matches `X Form Contract`, or appears inside backtick-fenced content in its source is a false positive. Filter them out before producing the ghost-link list, or name them as "template-token false positives" in a separate bucket so the forker knows to skip them.
 
 Ghost links are not violations — they are planning signals per `Markdown Node Contract`'s Named-edge syntax Requirement. Report them grouped by inbound-edge count: a target with five incoming edges is a stronger planning signal than one with a single incoming edge. The forker reads the list to decide which ghost nodes to promote to real nodes.
+
+Some high-inbound-count ghosts are vocabulary-value targets — identity-predicate values like `[[Seed Stage]]`, `[[Working Draft]]`, `[[Deep Context Architecture]]`, `[[Provisional Commitment]]` that every node in the graph points to via `has_lifecycle::`, `has_curation::`, `in_domain::`, or `has_commitment::` but which have no corresponding Gloss node defining what the value means. These warrant their own bucket in the report; a single graph-wide audit typically finds 5-10 of them and they represent the largest self-documentation gap in the graph.
 
 ### Step 5: Un-annotated edge sweep
 
