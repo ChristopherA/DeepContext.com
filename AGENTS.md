@@ -27,7 +27,10 @@ and
 - Wikilinks: `[[Target]]` resolves by filename stem (or by the concept
   side of a `Concept -- definition` Gloss or Predicate). Pipe form
   `[[Target|Display]]` shows the alias. External marker `[[Target]]↗`
-  names a concept in another graph.
+  names a concept in another graph. The external marker uses the actual
+  `↗` character (U+2197 NORTH EAST ARROW) in source text. Do NOT
+  substitute `\u2197` or similar escape notation -- escapes render as
+  literal characters in markdown, not as the arrow.
 - Named edges: `predicate::[[Target]]` bullets in the identity block and
   in the `## Relations` section carry the graph's typed structure. Each
   Relations-section edge carries an indented annotation explaining why
@@ -59,6 +62,18 @@ into a canonical form. The Convictions
 and
 [Translation Over Convergence](nodes/Convictions/Translation%20Over%20Convergence.md)
 record this directly.
+
+**Name features, not traditions.** When adapting a concept from an
+adjacent tradition or vocabulary (the Egregore vision, the Alexandrian
+pattern language, capability-based security, the project's own Deep
+Context Architecture, and so on), name the specific features you are
+drawing on rather than pointing at the tradition as the source of
+framing. "Egregore-shaped commitment" imports the tradition's frame;
+"self-contained repository, fork-publishes-on-first-push, Web-UI-edit-is-first-class,
+curation-in-conventions" names the features. The Vocabulary Diversity Is
+a Feature stance extends to traditions as well as contributor vocabularies:
+using something is not adopting its vocabulary, and the distinction is
+load-bearing for forks whose context differs from the parent's.
 
 **Treat new common vocabulary as proposal, not adoption.**
 [Terms Become Common Through Unanimity, Not Precedent](nodes/Convictions/Terms%20Become%20Common%20Through%20Unanimity,%20Not%20Precedent.md)
