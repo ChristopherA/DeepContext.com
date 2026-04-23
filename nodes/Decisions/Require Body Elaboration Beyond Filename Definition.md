@@ -48,5 +48,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Adopt Layered Node Structure]]
   - The layered-structure commitment requires each layer to be complete at its scale. The Gloss form's claim layer is split across the filename (definition) and the body's opening (restate-and-elaborate); the body tier must be complete at its scale, which means adding specificity beyond the filename's resolution.
 
-- informs::[[Gloss Form Contract]]
+- informs_downstream::[[Gloss Form Contract]]
   - Gloss Form Contract's Body-shape Requirement carries the thin enforcement clause pointing at this Decision.

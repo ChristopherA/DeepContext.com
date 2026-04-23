@@ -51,5 +51,5 @@ We'll revisit the whole bundle after the first seed-and-run cycle produces 15-30
 - grounded_in::[[Founding Conversation]]
   - The exploration that grounds this Decision — what was considered, what was rejected, what became provisionally committed. The Founding Conversation is a context-folder record rather than a first-class node; the edge points at that record so the reasoning remains traversable.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract encodes the wikilink and named-edge mechanics as file-form requirements (identity block above H1, `- predicate::[[Target]]` bullets, `↗` for external provenance, no scalar mirrors of graph predicates). The wikilink-and-named-edge decision is the upstream substrate; Markdown Node Contract is the first concrete downstream implementation.

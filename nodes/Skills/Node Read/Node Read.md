@@ -114,7 +114,7 @@ When reporting to the user, order the output from cheapest layer to most expensi
 - grounded_in::[[Progressive Summary Before Substance]]
   - The Pattern that names the move the opening paragraph makes. Step 3's card-scale reading depends on authors having realized this Pattern; Step 5's stop-early decision is justified when they have.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - The base Contract specifies the structural shape this skill reads. The Contract states the standing structural rule; the skill carries the reading workflow that uses it.
 
 - composes_with::[[Node Create]]

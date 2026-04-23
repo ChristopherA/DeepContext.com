@@ -82,5 +82,5 @@ Refuse the temptation to fold the objection into the proposal silently. If the p
 - composes_with::[[Acknowledge Before Revise]]
   - Both Patterns structure curator and reviewer posture. Acknowledge Before Revise addresses affirmation at the contribution layer (the curator's first move names what the contribution added). This Pattern addresses attentive reception at the objection layer (the response to an objection is understanding, not re-argument). Both work against the default review posture that treats contribution and objection as friction.
 
-- informs::[[The Second Cycle of Contribution Happens]]
+- informs_downstream::[[The Second Cycle of Contribution Happens]]
   - The contributor-level transition work depends on objection being viable as a contribution form. A first-cycle contributor whose objection to the founder's vocabulary gets treated as friction rather than contribution is less likely to return for a second cycle; the Pattern is one of the scaffolds the second-cycle target depends on.

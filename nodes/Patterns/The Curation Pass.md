@@ -77,5 +77,5 @@ The pass's cadence is a project-level commitment, not a per-pass decision. The c
 - composes_with::[[Gloss the Translation Surface]]
   - A component of the pass — when vocabulary contact surfaces appear, this Pattern is the move the pass applies at those surfaces.
 
-- informs::[[The Second Cycle of Contribution Happens]]
+- informs_downstream::[[The Second Cycle of Contribution Happens]]
   - The Aspiration's Work names "a curation ritual cadence" as one of the first-cycle deliverables. This Pattern names what the ritual's unit of work actually is; the cadence is the frequency at which the unit runs.

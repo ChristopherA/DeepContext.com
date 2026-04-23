@@ -146,5 +146,5 @@ Do not edit the node. Do not stage or commit. Validation produces findings; fixi
 - grounded_in::[[Use ASCII Dashes in Filenames]]
   - Step 4's filename-dash check enforces this Decision. Em-dashes and en-dashes in filenames are mechanical breaks with a one-line remediation.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - The base Contract specifies the structural shape this skill verifies. The Contract states the standing structural rule; this skill carries the verification workflow that tests conformance.

@@ -37,10 +37,10 @@ The Deep Context practice's own experience in its second cycle is a potential re
 
 ## Relations
 
-- informs::[[Vocabulary Diversity Is a Feature]]
+- informs_downstream::[[Vocabulary Diversity Is a Feature]]
   - The Observation supplies the empirical grounding for that Conviction's Why. The Conviction holds that vocabulary diversity is worth preserving; this Observation supplies one of the three convergence costs the Conviction's argument rests on.
 
-- informs::[[Translation Over Convergence]]
+- informs_downstream::[[Translation Over Convergence]]
   - The Observation grounds the operational rule the Conviction implies. Translation rather than convergence is what the project commits to *because* convergence produces the priesthood dynamic this Observation describes — absent the dynamic, the operational rule would be less load-bearing.
 
 - informed_by::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]

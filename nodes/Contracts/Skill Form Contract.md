@@ -78,7 +78,7 @@ The Skill Form Contract was drafted speculatively, ahead of any skill nodes exis
 
 - The Relations section follows the base `Markdown Node Contract`.
 - A Skill SHOULD declare `grounded_in::[[Decision]]` for each Decision it enforces at write time or validation time. The grounding edge makes the skill's purpose traceable to the commitment it realizes.
-- A Skill MAY declare `informs::[[Contract]]` for each Contract whose Requirements the skill helps authors satisfy.
+- A Skill MAY declare `informs_downstream::[[Contract]]` for each Contract whose Requirements the skill helps authors satisfy.
 - A Skill MAY declare `composes_with::[[Other Skill]]` when two skills are routinely invoked together or one invokes the other.
 - A Skill MAY declare `contrasts_with::[[Adjacent Skill]]` to mark the distinction between skills whose triggers overlap.
 

@@ -37,20 +37,20 @@ The project's own experience is itself in the record's tail. If the Deep Context
 
 ## Relations
 
-- informs::[[Deep Context as an Architecture for Captured Reasoning]]
+- informs_downstream::[[Deep Context as an Architecture for Captured Reasoning]]
   - The architecture decision's emphasis on structural contracts, progressive disclosure, and typed relations follows from this Observation — the write-only failure mode is what the architectural moves are designed to counter. The Decision is the response; this Observation is the grounds.
 
-- informs::[[The Second Cycle of Contribution Happens]]
+- informs_downstream::[[The Second Cycle of Contribution Happens]]
   - The second-cycle Aspiration is defined against this Observation as its failure mode. A wiki that fails at the second cycle has drifted toward write-only; the Aspiration is the target of sustained contribution this Observation's drift describes the absence of.
 
-- informs::[[Reconcile the Standing Account]]
+- informs_downstream::[[Reconcile the Standing Account]]
   - The Pattern names the recurring curation move — audit for drift between what a node says and what the graph now is, collapse duplication to pointers, realign stale counts and references. The move is what active curation practice looks like in operation; this Observation is the motivating case for why the Pattern is worth running as a cadence rather than an occasional cleanup.
 
 - informed_by::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]
   - The gist's gardening-metaphor and vocabulary-lifecycle sections supply the micro-level failure modes (weed predicates, un-tended vocabularies, precedent poisoning) this Observation generalizes to the wiki-maintenance level.
 
-- informs::[[LLM Assistance Widens the Participation Gap]]
+- informs_downstream::[[LLM Assistance Widens the Participation Gap]]
   - The write-only failure mode at the system level and the LLM-assistance rejection pattern at the contribution-review level compose. Without curation, contributions accumulate; with curation of the current Wikipedia style, newcomer LLM-assisted contributions are filtered at the membership-fluency register. This Observation names the mechanism at one layer; the LLM Observation names a specific mechanism at a different layer.
 
-- informs::[[Meaningful Wiki Contribution Requires Both Pride and Humility]]
+- informs_downstream::[[Meaningful Wiki Contribution Requires Both Pride and Humility]]
   - The system-level failure mode (this Observation) and the trait-level filtering (the pride-humility Observation) describe the same failure at different layers. The aggregate write-only drift results from trait-level filtering on the contributor tail; the two Observations compose into a two-layer account.

@@ -67,7 +67,7 @@ Do this early. While the corpus has tens of assertions, migration is an afternoo
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The Decision that makes predicates the graph's structural spine. This Pattern is about maintaining the quality of those predicates over time — the Decision carries the vocabulary layer, the Pattern keeps it clean as distinctions emerge.
 
-- informs::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]
+- informs_downstream::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]
   - The gist names the move as "unconflation as discipline"; this Pattern is the prototype's reframed and elaborated rendition of that convention. The gist entry is the convention at stub-level; this Pattern is the convention at Problem-plus-Forces-plus-Solution level.
 
 - composes_with::[[Progressive Summary Before Substance]]

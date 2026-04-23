@@ -51,11 +51,11 @@ Three signals would prompt revisit.
 - grounded_in::[[Adopt Forkable Publication Model]]
   - The Decision that commits the graph to publication as an editable repository rather than a read-only site. This Decision is that commitment's surface manifestation: a click from every rendered page to the editable markdown source.
 
-- informs::[[The Second Cycle of Contribution Happens]]
+- informs_downstream::[[The Second Cycle of Contribution Happens]]
   - The Aspiration names second-cycle contribution as the scarce resource. This Decision's concrete move is to remove one small friction at the point where a second-cycle reader is most likely to contribute: they notice something they would fix, and the edit path is one click away.
 
 - built_on::[[GitHub Pages]]↗
   - The hosting platform this Decision couples to. The `GITHUB_REPO_URL` and `GITHUB_BRANCH` constants in `.scripts/render.py` name that coupling explicitly; forks publishing elsewhere revise those constants.
 
-- informs::[[Publish via Actions Artifact Deploy]]
+- informs_downstream::[[Publish via Actions Artifact Deploy]]
   - The Decision backing the build-and-deploy pipeline this Decision extends. The source-link emission runs as part of `render.py`; the existing Actions workflow deploys the rendered output unchanged.

@@ -45,5 +45,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Embed Citation Parenthetical in Reference Filenames]]
   - The citation-parenthetical commitment structures Reference filenames; the disambiguation commitment adds the artifact descriptor in front of the parenthetical when multiple artifacts require disambiguation. The two rules compose at the filename level.
 
-- informs::[[Reference Form Contract]]
+- informs_downstream::[[Reference Form Contract]]
   - Reference Form Contract's filename pattern Requirement carries the thin enforcement clause pointing at this Decision.

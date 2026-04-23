@@ -177,8 +177,8 @@ it navigates, and the tension it resolves. [[Refactor the Predicate's Axes]]
 and [[Let the Exercise Audit the Contract]] are two.
 
 **The predicates** -- [Predicates](/nodes/predicates/) document the typed
-edges themselves. [[conforms_to]], [[grounded_in]], [[informed_by]], and
-[[contrasts_with]] are the most load-bearing.
+edges themselves. [[grounded_in]], [[conforms_to]], [[informs_downstream]],
+[[informed_by]], and [[contrasts_with]] are the most load-bearing.
 
 **The term definitions** -- [Glosses](/nodes/glosses/) frame terms used
 elsewhere in the graph, with the working definition carried in the filename

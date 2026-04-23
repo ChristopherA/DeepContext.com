@@ -57,11 +57,11 @@ Reviews stop treating naming as load-bearing. A rename proposal is evaluated for
 - informed_by::[[Deep Context Shared Languages Post (Christopher Allen, 2014)]]
   - The earlier 2014 framing that specialized terminology carries design decisions encoded as web-of-associations is the upstream of this Conviction's claim that naming choices activate semantic fields shaping downstream inference.
 
-- informs::[[Name Decisions by Action Verb or Role Declarative]]
+- informs_downstream::[[Name Decisions by Action Verb or Role Declarative]]
   - The Decision that specifies Decision filename shapes. Its filename-shape rule and its verbatim-embedding rule are downstream concretizations of the stance that naming is architectural — form-from-filename classification and citation stability are architectural properties the rule exists to preserve.
 
-- informs::[[Name Patterns by Alexandrian Evocation]]
+- informs_downstream::[[Name Patterns by Alexandrian Evocation]]
   - The Decision that specifies Pattern filename shapes. Pattern naming carries its own architectural load — a Pattern name that reads as a recurring move or situation is a different architectural commitment than a name that reads as a topic.
 
-- informs::[[No Generic relates_to Predicate]]
+- informs_downstream::[[No Generic relates_to Predicate]]
   - The Decision that prohibits `relates_to::`. The prohibition follows directly from the stance — `relates_to::` names too little for the architectural weight a predicate carries, and its use substitutes a naming shortcut for the deliberation the stance requires.

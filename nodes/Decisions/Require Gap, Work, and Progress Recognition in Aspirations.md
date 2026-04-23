@@ -59,5 +59,5 @@ The commitment bundles three sections; the revisit conditions converge.
 - grounded_in::[[Adopt Layered Node Structure]]
   - The layered-structure commitment requires each layer to be complete at its scale. The Gap, Work, and Progress Recognition sections together complete the Aspiration's elaboration tier — the target is the claim tier, these three sections are the elaboration tier. All three are required for the tier to stand.
 
-- informs::[[Aspiration Form Contract]]
+- informs_downstream::[[Aspiration Form Contract]]
   - Aspiration Form Contract's Body-current-gap, Body-work-it-asks, and Body-progress-recognition Requirements carry the thin enforcement clauses pointing at this Decision.

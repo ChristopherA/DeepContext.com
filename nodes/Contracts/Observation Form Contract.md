@@ -76,7 +76,7 @@ Enforces [[Require Revision Conditions on Observations]].
 - An Observation typically carries these edges:
   - `grounded_in::[[Prior Observation or Reference]]` — the substrate the claim rests on.
   - `informed_by::[[Precedent Observation]]` — a precedent that influences how the claim is framed.
-  - `informs::[[Downstream Node]]` — Convictions, Decisions, Contract Requirements, or Patterns the observation supports as evidence.
+  - `informs_downstream::[[Downstream Node]]` — Convictions, Decisions, Contract Requirements, or Patterns the observation supports as evidence.
   - `contrasts_with::[[Adjacent Observation]]` — a sibling observation occupying adjacent territory.
   - `drawn_from::[[Canonical Set]]` — when the observation was imported from a named external set.
 
@@ -94,10 +94,10 @@ Enforces [[Require Revision Conditions on Observations]].
   - This file is itself a Contract; it conforms to the meta-contract that specifies what Contract nodes look like.
 
 - contrasts_with::[[Conviction Form Contract]]
-  - A Conviction records a held normative stance — what the project's authors hold ought to be the case; an Observation records a descriptive claim about what is the case. An Observation may support a Conviction as evidence (via `informs::`), but an Observation does not commit to anything.
+  - A Conviction records a held normative stance — what the project's authors hold ought to be the case; an Observation records a descriptive claim about what is the case. An Observation may support a Conviction as evidence (via `informs_downstream::`), but an Observation does not commit to anything.
 
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
-  - The named-edge spine that lets `has_epistemic_status::`, `grounded_in::`, `informs::`, and `drawn_from::` land as first-class classification and relational edges.
+  - The named-edge spine that lets `has_epistemic_status::`, `grounded_in::`, `informs_downstream::`, and `drawn_from::` land as first-class classification and relational edges.
 
 - grounded_in::[[Classify Observations by Epistemic Status With Matched Grounds]]
   - Grounds the `has_epistemic_status::` predicate and its matched body-Grounds requirements.

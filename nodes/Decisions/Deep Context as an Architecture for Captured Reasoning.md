@@ -64,10 +64,10 @@ The `has_commitment::[[Firm Commitment]]` predicate marks this decision as expen
 - grounded_in::[[Knowledge Outlives Its Tools]]
   - The Conviction that makes plain markdown, git, and the zero-tooling floor load-bearing rather than aesthetic. The captured reasoning must survive tool changes; the architecture's durability commitments are how it meets that requirement.
 
-- informs::[[Adopt Wikilinks and Named Edges]]
+- informs_downstream::[[Adopt Wikilinks and Named Edges]]
   - The wikilinks-and-named-edges decision commits this graph's semantic layer to author-declared named edges. Taking the architecture decision seriously requires committing to the mechanism that makes predicate traversal expressible; the gist-level decision is that mechanism's concrete form.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - The contract encodes the file-form half of "typed forms with known internal structure" — identity block, Relations section, named-edge syntax, filename discipline. A downstream concretization of the architecture's first requirement.
 
 - informed_by::[[Hybrid Bootstrapping for Garden Migration]]↗
@@ -76,5 +76,5 @@ The `has_commitment::[[Firm Commitment]]` predicate marks this decision as expen
 - informed_by::[[Wikis Without Curation Drift Toward Write-Only]]
   - The Observation names the failure mode this architecture is designed to counter — shared wikis that accumulate contribution but stall in navigability, ontology arbitration, and onboarding. The architectural moves (typed forms, progressive disclosure, named edges, structural contracts) are specifically responses to that failure mode.
 
-- informs::[[The Second Cycle of Contribution Happens]]
+- informs_downstream::[[The Second Cycle of Contribution Happens]]
   - The second-cycle Aspiration is the directional target this architecture serves across cycles. The architecture is the structural substrate; the Aspiration is the practice-level target the substrate makes reachable.

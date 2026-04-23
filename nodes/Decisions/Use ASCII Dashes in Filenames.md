@@ -55,8 +55,8 @@ The double-hyphen separator half of the commitment would be revisited if `--` ev
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The wikilink spine resolves by filename. Filename portability is substrate for that resolution — every layer between the user and the graph must read the filename consistently. This Decision is the specific filename-portability commitment the substrate requires.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract's file-form Requirement carries the thin enforcement clause pointing at this Decision.
 
-- informs::[[Gloss Form Contract]]
+- informs_downstream::[[Gloss Form Contract]]
   - Gloss Form Contract's filename pattern (`<Concept> -- <one-clause definition>.md`) is a specific application of the double-hyphen separator rule. The Gloss contract's filename requirement is grounded in this Decision; the double-hyphen separator is what makes the definition-in-filename visible in folder listings while remaining portable across tools.

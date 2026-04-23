@@ -1,7 +1,7 @@
 ---
 created: 2026-04-19
 tagline: URLs appear as body URL: lines or Sources section entries; they are never encoded as named-edge predicate values
-brief_summary: A commitment that URLs for external source artifacts appear as scalar content — a `URL:` line in the body or bulleted entries in a `## Sources` section — not as named-edge predicate values. URLs are scalar data; graph-structural claims about sources (what role the source plays, what it informs, what it is superseded by) live in named edges (`serves_as::`, `informs::`, `supersedes::`). Conflating the two would either misuse predicate syntax for flat data or push structural claims into scalar-only formats.
+brief_summary: A commitment that URLs for external source artifacts appear as scalar content — a `URL:` line in the body or bulleted entries in a `## Sources` section — not as named-edge predicate values. URLs are scalar data; graph-structural claims about sources (what role the source plays, what it informs, what it is superseded by) live in named edges (`serves_as::`, `informs_downstream::`, `supersedes::`). Conflating the two would either misuse predicate syntax for flat data or push structural claims into scalar-only formats.
 ---
 
 - conforms_to::[[Decision Form Contract]]
@@ -20,7 +20,7 @@ URLs preserving the external location of a source appear as scalar body content 
 
 The commitment preserves **graph spine clean of flat data**. Named-edge predicates carry graph-structural semantics — they connect nodes by typed relations that the graph's reader traverses for meaning. URLs connect nodes to external resources, but the connection's shape is different: a URL is a flat pointer to a document, not a typed relation between two graph vertices. Encoding URLs as predicate values would either misuse the predicate vocabulary (predicates become dual-purpose — some carry structural claims, others carry flat data) or force wiki-style wrapping of URLs as pseudo-targets (`[[https://example.com]]↗`), which the wiki layer does not resolve as a node.
 
-The separation makes **structural and flat data legible at the tier layer**. A reader scanning a Reference's body for the external location finds the `URL:` line or the `## Sources` section — predictable placements that carry URLs specifically. A reader traversing the Reference's graph relations finds `serves_as::`, `informs::`, `supersedes::` — predicate edges that carry structural claims. The two readers have different jobs; keeping URLs in scalar form and structural claims in predicate form lets each reader find what they need at the tier the prototype's vocabulary reserves for it.
+The separation makes **structural and flat data legible at the tier layer**. A reader scanning a Reference's body for the external location finds the `URL:` line or the `## Sources` section — predictable placements that carry URLs specifically. A reader traversing the Reference's graph relations finds `serves_as::`, `informs_downstream::`, `supersedes::` — predicate edges that carry structural claims. The two readers have different jobs; keeping URLs in scalar form and structural claims in predicate form lets each reader find what they need at the tier the prototype's vocabulary reserves for it.
 
 The rule applies specifically to URLs-as-artifact-locations. A Reference's canonical URL (where the artifact lives) is scalar. A typed edge to another graph node by wikilink is not — `serves_as::[[Primary Convention Source]]` is a named edge whose target is a graph node, not a URL. The rule distinguishes URLs (flat, scalar, body content) from wikilinks (typed, graph-participating, named edges). Wiki tooling's `↗` marker applies to external-tradition wikilink targets (nodes in other wikis), not to URLs — the marker signals "this target lives elsewhere in wiki space," not "this is a URL."
 
@@ -48,5 +48,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The named-edge spine is what URLs-as-predicate would colonize if permitted. Keeping URLs out of predicate vocabulary preserves the spine for graph-structural claims.
 
-- informs::[[Reference Form Contract]]
+- informs_downstream::[[Reference Form Contract]]
   - Reference Form Contract's URL-preservation Requirement carries the thin enforcement clause pointing at this Decision.

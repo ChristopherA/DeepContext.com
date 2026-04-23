@@ -48,20 +48,20 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The named-edge spine makes predicates first-class structural elements. Form-specific reservation extends the spine's discipline into form-level classification — predicates signal form, not just relation.
 
-- informs::[[Decision Form Contract]]
+- informs_downstream::[[Decision Form Contract]]
   - Decision Form Contract's identity predicate block Requirement carries the thin enforcement clause pointing at this Decision for Decision's form-specific predicates.
 
-- informs::[[Observation Form Contract]]
+- informs_downstream::[[Observation Form Contract]]
   - Observation Form Contract's identity predicate block Requirement carries the thin enforcement clause pointing at this Decision for `has_epistemic_status::` reservation.
 
-- informs::[[Conviction Form Contract]]
+- informs_downstream::[[Conviction Form Contract]]
   - Conviction Form Contract's identity predicate block Requirement forbids `has_commitment::`, `decided_on::`, and `has_epistemic_status::` on Convictions; the prohibitions point at this Decision.
 
-- informs::[[Aspiration Form Contract]]
+- informs_downstream::[[Aspiration Form Contract]]
   - Aspiration Form Contract's identity predicate block Requirement forbids `has_commitment::`, `decided_on::`, and `has_epistemic_status::` on Aspirations; the prohibitions point at this Decision.
 
-- informs::[[Pattern Form Contract]]
+- informs_downstream::[[Pattern Form Contract]]
   - Pattern Form Contract's identity predicate block Requirement forbids `has_commitment::` and `decided_on::` on Patterns; the prohibitions point at this Decision.
 
-- informs::[[Reference Form Contract]]
+- informs_downstream::[[Reference Form Contract]]
   - Reference Form Contract's identity predicate block Requirement establishes `serves_as::` as Reference-specific; the reservation points at this Decision for the form-distinctness rationale.

@@ -59,11 +59,11 @@ A reader scanning the graph after drift would see convergence toward a single vo
 - informed_by::[[Consensus Creates Priesthoods]]
   - The Observation supplies the empirical grounding for one of the three convergence costs the Why rests on.
 
-- informs::[[Translation Over Convergence]]
+- informs_downstream::[[Translation Over Convergence]]
   - Translation Over Convergence specializes this stance into a concrete operational rule for what happens when vocabularies meet. This Conviction names the feature; Translation Over Convergence names what the feature asks of the project at the contact surface between vocabularies.
 
-- informs::[[Document Predicate Crescents Against Adjacent Predicates]]
+- informs_downstream::[[Document Predicate Crescents Against Adjacent Predicates]]
   - The Decision that operationalizes this Conviction at the predicate layer. Per-neighbor Crescent subsections are the structural enforcement that keeps adjacent predicates' distinctions from being silently merged under convergence pressure.
 
-- informs::[[Require Carries Section in Predicate Nodes]]
+- informs_downstream::[[Require Carries Section in Predicate Nodes]]
   - The Decision that pairs with the Crescent Requirement at the predicate layer. A dedicated positive-sense Carries section gives each Predicate an independent account of itself — Crescent's contrast work is what it is not, and Carries is what it is.

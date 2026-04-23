@@ -49,5 +49,5 @@ The commitment bundles two sections; the revisit conditions converge.
 - grounded_in::[[Adopt Layered Node Structure]]
   - The layered-structure commitment requires each layer to be complete at its scale. The what-it-asks and drift-recognition sections are part of the Conviction's elaboration tier — the stance is the claim tier, and these two sections together complete the elaboration. Both tiers must be complete.
 
-- informs::[[Conviction Form Contract]]
+- informs_downstream::[[Conviction Form Contract]]
   - Conviction Form Contract's Body-what-it-asks and Body-drift-recognition Requirements carry the thin enforcement clauses pointing at this Decision.

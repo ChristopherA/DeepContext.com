@@ -73,10 +73,10 @@ Apply the same move recursively within sections when it helps — lead a section
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The Decision that makes Tier 0 and Tier 3 possible as machine-traversable structural data. Without the named-edge vocabulary, the progressive structure would collapse into prose tiers with no cheap-read layer.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - The base contract whose structural shape — identity predicates above H1, H1, body, Relations — is this Pattern's enforcement at the base-form level. Every form contract extending Markdown Node Contract inherits the layered shape.
 
-- informs::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]
+- informs_downstream::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]
   - The gist names the move as "Progressive disclosure for agents"; this Pattern is the prototype's reframed and elaborated rendition at Problem-plus-Forces-plus-Solution scale.
 
 - composes_with::[[Refactor the Predicate's Axes]]

@@ -53,10 +53,10 @@ The commitment is provisional in the sense that it sits on empirical claims abou
 - grounded_in::[[Founding Vocabularies Constrain Later Participants]]
   - The pre-convergence architect-imposition Observation that makes the forkability commitment more than a technical choice. If founding vocabularies calcify, forking is the structural escape hatch that lets later participants carry the practice forward without being bound to the founding choices.
 
-- informs::[[Adopt Minimum-Viable-Architecture Stance]]
+- informs_downstream::[[Adopt Minimum-Viable-Architecture Stance]]
   - The MVA Decision defers capabilities (heading links, transclusion, cross-garden resolution, interactive graph explorer) that would add pipeline complexity. The MVA deferrals are partly a forkability-cost discipline: every capability added to the pipeline is a capability every fork inherits as a maintenance surface.
 
-- informs::[[Publish via Actions Artifact Deploy]]
+- informs_downstream::[[Publish via Actions Artifact Deploy]]
   - The Actions-deploy Decision records the specific Pages mechanism the forkability commitment runs on. The forkability commitment is the upstream claim; the Actions-deploy choice is one implementation of it.
 
 - informed_by::[[Vocabulary Diversity Is a Feature]]

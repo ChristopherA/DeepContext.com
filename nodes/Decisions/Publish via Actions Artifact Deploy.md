@@ -55,5 +55,5 @@ The cost of switching is that first-time fork owners have to do one more configu
 - grounded_in::[[Adopt Forkable Publication Model]]
   - The upstream commitment this Decision implements. Forkability requires some mechanism for forks to publish their own sites; Actions artifact deploy is the specific mechanism chosen.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - The Contract specifies the source form the pipeline consumes; this Decision specifies one of the Pages-deployment paths the output can take. The Contract is stable across deployment choices; this Decision can change without affecting source form.

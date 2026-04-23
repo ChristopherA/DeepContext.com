@@ -45,5 +45,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The named-edge spine resolves wikilinks by filename. Citation parentheticals in filenames make the wikilink target self-citing — the prose layer and the graph layer agree on what the target says.
 
-- informs::[[Reference Form Contract]]
+- informs_downstream::[[Reference Form Contract]]
   - Reference Form Contract's filename pattern Requirement carries the thin enforcement clause pointing at this Decision.

@@ -62,5 +62,5 @@ The commitment bundles two rules; the revisit conditions are independent enough 
 - grounded_in::[[Adopt Layered Node Structure]]
   - The layered-structure commitment makes the Why part of the elaboration tier. Prose is what the elaboration tier is for — a card-scale claim tier carries the commitment in a few sentences, and the elaboration tier carries the argument that supports it. Bulleted elaboration flattens the tier into a list that could as easily live in the cheap structural layers, eroding the cost-gradient distinction.
 
-- informs::[[Decision Form Contract]]
+- informs_downstream::[[Decision Form Contract]]
   - Decision Form Contract's Body-Why Requirement carries the thin enforcement clause pointing at this Decision.

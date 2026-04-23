@@ -53,5 +53,5 @@ The decision is provisional and tied to tested assumptions about reader response
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The substrate Decision the wikilink-and-named-edge convention sits on. This rendering rule is a downstream implementation choice: given that the source carries `[[brackets]]`, what visible form should the rendered page present? The substrate Decision does not specify the rendering; this Decision does, and either rendering would leave the substrate Decision intact. The dependency runs one direction -- changing how pages render wouldn't invalidate the source convention, but changing the source convention (e.g., away from `[[brackets]]`) would obviate this Decision.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract specifies the source form (`[[Target]]`, `[[Target|Display]]`, `[[Target]]↗`); this Decision specifies one rendering of that source form. A different rendering pipeline could implement the Contract differently, but the Contract does not prescribe a single rendering.

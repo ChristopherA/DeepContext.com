@@ -1,7 +1,7 @@
 ---
 created: 2026-04-19
 tagline: The relates_to:: predicate is prohibited; contributors choose a specific predicate or add one to the local vocabulary
-brief_summary: A commitment that the generic `relates_to::` predicate is not permitted anywhere in the graph. When an author wants to assert that two nodes are connected, they MUST pick a specific predicate from the local vocabulary — `grounded_in::`, `informs::`, `contrasts_with::`, `built_on::`, `informed_by::`, or similar — or add a new predicate to the vocabulary. The commitment protects the query sharpness the named-edge spine promises by forbidding the one predicate that would absorb every unspecific connection and collapse the vocabulary's distinctions.
+brief_summary: A commitment that the generic `relates_to::` predicate is not permitted anywhere in the graph. When an author wants to assert that two nodes are connected, they MUST pick a specific predicate from the local vocabulary — `grounded_in::`, `informs_downstream::`, `contrasts_with::`, `built_on::`, `informed_by::`, or similar — or add a new predicate to the vocabulary. The commitment protects the query sharpness the named-edge spine promises by forbidding the one predicate that would absorb every unspecific connection and collapse the vocabulary's distinctions.
 ---
 
 - conforms_to::[[Decision Form Contract]]
@@ -14,11 +14,11 @@ brief_summary: A commitment that the generic `relates_to::` predicate is not per
 
 # No Generic relates_to Predicate
 
-The `relates_to::` predicate MUST NOT be used anywhere in the graph. When an author wants to assert a connection between two nodes, the author picks a specific predicate from the local vocabulary — `grounded_in::`, `informs::`, `contrasts_with::`, `built_on::`, `informed_by::`, `contends_with::`, `composes_with::`, or any other typed edge in use — or adds a new predicate to the vocabulary when none of the existing family members fits. The commitment forecloses the path of least resistance: "these two things are related, let's just say so." That path collapses the query vocabulary into a single undifferentiated edge.
+The `relates_to::` predicate MUST NOT be used anywhere in the graph. When an author wants to assert a connection between two nodes, the author picks a specific predicate from the local vocabulary — `grounded_in::`, `informs_downstream::`, `contrasts_with::`, `built_on::`, `informed_by::`, `contends_with::`, `composes_with::`, or any other typed edge in use — or adds a new predicate to the vocabulary when none of the existing family members fits. The commitment forecloses the path of least resistance: "these two things are related, let's just say so." That path collapses the query vocabulary into a single undifferentiated edge.
 
 ## Why
 
-The commitment preserves **what the relationship IS, not just that it exists**. Specific predicates carry semantic weight: `grounded_in::[[X]]` says this node rests on X as substrate; `informs::[[X]]` says this node shapes X; `contrasts_with::[[X]]` says this node and X are adjacent on a load-bearing boundary; `contends_with::[[X]]` says there is a live tension between them. A query filtering on `grounded_in::` returns substrate relationships specifically, not informing, contrasting, or contending ones. The predicate vocabulary IS the semantic distinction — it is not metadata decorating a relation; it is the relation.
+The commitment preserves **what the relationship IS, not just that it exists**. Specific predicates carry semantic weight: `grounded_in::[[X]]` says this node rests on X as substrate; `informs_downstream::[[X]]` says this node shapes X; `contrasts_with::[[X]]` says this node and X are adjacent on a load-bearing boundary; `contends_with::[[X]]` says there is a live tension between them. A query filtering on `grounded_in::` returns substrate relationships specifically, not informing, contrasting, or contending ones. The predicate vocabulary IS the semantic distinction — it is not metadata decorating a relation; it is the relation.
 
 `relates_to::` is the predicate that makes every query imprecise. When the graph allows `relates_to::[[X]]` as a valid assertion, contributors reach for it whenever naming the specific relationship feels uncertain or effortful. The resulting graph carries a mass of connections whose type is "related in some way," and every query that wants substrate, contrast, or tension has to fall back to reading each node's body to reconstruct what the author actually meant. The query vocabulary's sharpness degrades with each generic edge added; once `relates_to::` becomes available, it out-competes specific predicates by offering lower authoring cost, and the graph drifts toward tag-spaghetti semantics under a wikilink surface.
 
@@ -50,8 +50,8 @@ The commitment would be revisited under conditions that make the specific-predic
 - grounded_in::[[Adopt Predicate Atomicity]]
   - The commitment that every predicate answers one specific question. `relates_to::` is the degenerate limit of overloaded predicate design — its question is "is there any connection?" — and prohibiting it enforces atomicity at the extreme case.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract's Relations Requirement carries the thin enforcement clause pointing at this Decision. The Contract carries the compliance rule; this Decision carries the reasoning and the revisit conditions.
 
-- informs::[[Refactor the Predicate's Axes]]
+- informs_downstream::[[Refactor the Predicate's Axes]]
   - The Pattern that performs the refactor when an overloaded predicate is discovered. A generic `relates_to::` encountered during curation is the forcing case for the Pattern's move — the refactor names the specific predicate the relation actually wanted.

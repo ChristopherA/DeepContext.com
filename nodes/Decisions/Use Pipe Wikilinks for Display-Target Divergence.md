@@ -51,8 +51,8 @@ Three signals would prompt revisit.
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The wikilinks-and-named-edges convention commits the graph to plain-markdown expressibility and author-declared edges. Pipe form is the same convention's answer to display-target divergence: an author-declared target and an author-declared display, no tooling between them.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - The Markdown Node Contract's wikilink syntax inherits this decision. The contract's description of how bare wikilinks resolve must note that gloss filenames (and any ` -- ` filename) do not resolve from the concept side alone; pipe form is the canonical way to reference such nodes from prose or named edges.
 
-- informs::[[Gloss Form Contract]]
+- informs_downstream::[[Gloss Form Contract]]
   - The Gloss Form Contract establishes the filename-carries-definition pattern. Pipe form is the mechanism that makes the pattern usable in prose: contributors reference the gloss by its concept name without the definition flooding the reader's view.

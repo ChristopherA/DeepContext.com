@@ -45,10 +45,10 @@ A counter-case from a different platform or community type where LLM assistance 
 
 ## Relations
 
-- informs::[[Agents Translate, Not Extract]]
+- informs_downstream::[[Agents Translate, Not Extract]]
   - The Conviction's stance on agent posture has direct implications for whether Deep Context's own agent-mediated design reproduces this dynamic. Translating-mode agents do not produce novel contribution content; extracting-mode agents do. The Observation supplies the empirical grounds that make the distinction load-bearing — not as etiquette but as a participation-gate question.
 
-- informs::[[Contributors Across Vocabularies Can Collaborate]]
+- informs_downstream::[[Contributors Across Vocabularies Can Collaborate]]
   - The Aspiration targets cross-vocabulary collaboration. This Observation suggests the load-bearing gate is at the membership-fluency layer, not the vocabulary-literacy layer alone. Vocabulary plurality is a necessary condition for the Aspiration; membership-fluency recognition and cultivation may be an additional condition the Observation surfaces.
 
 - contrasts_with::[[Markup Simplification Does Not Flatten Participation]]

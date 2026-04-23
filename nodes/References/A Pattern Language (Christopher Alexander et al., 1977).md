@@ -39,14 +39,14 @@ The 1977 book by Christopher Alexander, Sara Ishikawa, and Murray Silverstein th
 
 ## Relations
 
-- informs::[[Pattern Form Contract]]
+- informs_downstream::[[Pattern Form Contract]]
   - The Contract's body-shape requirements (Heart, Problem, Forces, Solution) and its filename-and-naming discipline are the direct structural inheritance from this source. The Contract specializes the book's tradition for this graph's local use.
 
-- informs::[[Name Patterns by Alexandrian Evocation]]
+- informs_downstream::[[Name Patterns by Alexandrian Evocation]]
   - The Decision that commits Pattern naming in this graph to the evocative form. Grounded in this Reference's tradition of pattern naming as carrying felt quality.
 
-- informs::[[Require Forces Authenticity in Patterns]]
+- informs_downstream::[[Require Forces Authenticity in Patterns]]
   - The Decision that makes genuine competing Forces a structural Requirement rather than an aesthetic preference. Grounded in the tradition's insight that unopposed-value patterns degrade.
 
-- informs::[[Require Heart Section at Pattern Card Scale]]
+- informs_downstream::[[Require Heart Section at Pattern Card Scale]]
   - The Decision that commits Pattern nodes to the card-scale-with-Heart discipline. Grounded specifically in the Group Works deck tradition, which carries the card-scale discipline into collaborative-process patterns.

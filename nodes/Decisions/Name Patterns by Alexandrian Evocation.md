@@ -48,5 +48,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[A Pattern Language (Christopher Alexander et al., 1977)]]
   - The Alexandrian tradition, via the Group Works deck and its descendants, supplies the naming-convention substrate: evocative names over descriptive ones, carrying the pattern's felt quality rather than a functional label. This graph imports the naming semantics rather than inventing one.
 
-- informs::[[Pattern Form Contract]]
+- informs_downstream::[[Pattern Form Contract]]
   - Pattern Form Contract's filename pattern Requirement carries the thin enforcement clause pointing at this Decision.

@@ -48,5 +48,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Use Pipe Wikilinks for Display-Target Divergence]]
   - The pipe-wikilink Decision is what makes `<Concept> -- <definition>` filenames usable in prose. Without pipe form, every citation of a gloss would have to display the full filename; with pipe form, citations display the concept name while targeting the full filename.
 
-- informs::[[Gloss Form Contract]]
+- informs_downstream::[[Gloss Form Contract]]
   - Gloss Form Contract's filename pattern Requirement carries the thin enforcement clause pointing at this Decision.

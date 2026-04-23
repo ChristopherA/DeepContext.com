@@ -88,10 +88,10 @@ The project reaches a steady state where contribution happens on at least two co
 - informed_by::[[Wikis Without Curation Drift Toward Write-Only]]
   - The Observation names the failure mode this Aspiration is the counter-target of. A wiki that drifts toward write-only has not reached a second cycle; the Aspiration is the directional commitment not to drift, and the Observation grounds why the directional commitment is worth carrying the work it asks.
 
-- informs::[[Contributors Across Vocabularies Can Collaborate]]
+- informs_downstream::[[Contributors Across Vocabularies Can Collaborate]]
   - The cross-vocabulary Aspiration specializes the second-cycle target to the plural-contributor case. This Aspiration is the general target; the cross-vocabulary Aspiration is a specific dimension of it.
 
-- informs::[[The Graph Survives Its Tooling]]
+- informs_downstream::[[The Graph Survives Its Tooling]]
   - The tool-independence Aspiration specializes the second-cycle target to the tool-independence dimension. A second cycle that depends on a specific tool configuration remaining available has not reached the durability the Aspiration implies; the tool-independence Aspiration is what durability means at the tool layer.
 
 - informed_by::[[Second-Cycle Contributors Are the Scarce Resource]]
@@ -100,5 +100,5 @@ The project reaches a steady state where contribution happens on at least two co
 - informed_by::[[Participation Takes Different Forms Not Different Levels]]
   - A second cycle may arrive in a different form than the first — a contributor whose first cycle was authoring-dominant may return in a responding-dominant or curating-dominant form. The Aspiration's progress recognition needs to be form-sensitive to catch this; the form-plurality Observation is what makes the form-sensitive reading available.
 
-- informs::[[Pride and Humility Are Both Cultivable]]
+- informs_downstream::[[Pride and Humility Are Both Cultivable]]
   - The trait-cultivation Aspiration names the specific design response to one of the filters the second-cycle target has to address. Cultivating the trait-pair widens the contributor population who can sustain through to the second cycle.

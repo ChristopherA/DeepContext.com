@@ -98,7 +98,7 @@ Do not drop a required section because it "feels redundant" — the form section
 
 Add `## Relations` at the end if the node carries relational edges. Each edge is a top-level bullet `- predicate::[[Target]]` followed by an indented sub-bullet annotation explaining why the edge matters. The annotation is required by `Annotate Edges With Why-They-Matter`; an edge without an annotation is tag spaghetti, not graph.
 
-Choose the most specific predicate the graph's vocabulary supports. `relates_to::` is prohibited by `No Generic relates_to Predicate` — pick `grounded_in::`, `informs::`, `informed_by::`, `built_on::`, `composes_with::`, `contrasts_with::`, `contends_with::`, `extends_contract::`, or invoke [[Predicate Propose]] to add a new predicate to the vocabulary rather than fall back on a generic.
+Choose the most specific predicate the graph's vocabulary supports. `relates_to::` is prohibited by `No Generic relates_to Predicate` — pick `grounded_in::`, `informs_downstream::`, `informed_by::`, `built_on::`, `composes_with::`, `contrasts_with::`, `contends_with::`, `extends_contract::`, or invoke [[Predicate Propose]] to add a new predicate to the vocabulary rather than fall back on a generic.
 
 If a target node does not yet exist, the edge is a ghost link — permitted per `Markdown Node Contract` and a planning signal that the graph wants to grow there. Use `↗` (the literal U+2197 NORTH EAST ARROW character, never the escape notation `↗`) to mark external wiki targets.
 
@@ -144,7 +144,7 @@ Write the file at `nodes/<Taxonomy>/<Filename>.md` (or `nodes/Skills/<Folder>/<F
 - grounded_in::[[Reserve Predicate Vocabularies to Specific Forms]]
   - Step 4's form-specific-predicate reservation encodes this Decision's cross-form boundaries. The skill does not attach `has_commitment::` to a Conviction, `has_epistemic_status::` to a Decision, or `serves_as::` to a Gloss.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - This skill realizes the base Contract's Requirements at write time. The Contract states the standing structural rule; the skill carries the authoring workflow that satisfies it.
 
 - composes_with::[[Node Read]]

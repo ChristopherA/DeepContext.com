@@ -48,5 +48,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[A Pattern Language (Christopher Alexander et al., 1977)]]
   - The Alexandrian tradition, via the Group Works deck and its descendants, supplies the card-IS-the-pattern convention: each pattern is legible at card scale through its Heart alone; further sections serve elaboration, not completion. The `## Heart` section is this graph's specific realization of that convention.
 
-- informs::[[Pattern Form Contract]]
+- informs_downstream::[[Pattern Form Contract]]
   - Pattern Form Contract's Body-Heart Requirement carries the thin enforcement clause pointing at this Decision.

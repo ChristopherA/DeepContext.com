@@ -40,11 +40,11 @@ The gist Christopher Allen published as an agent-reference guide for a plain-mar
 
 ## Relations
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract encodes the gist's wikilinks-and-named-edges specification as file-form requirements — identity block above H1, `- predicate::[[Target]]` bullets, `↗` for external provenance, no scalar mirrors of graph predicates.
 
-- informs::[[Adopt Wikilinks and Named Edges]]
+- informs_downstream::[[Adopt Wikilinks and Named Edges]]
   - The Decision that commits this graph to wikilinks plus named edges plus contributor-vocabulary plurality. This Reference is the source the Decision is `informed_by::`.
 
-- informs::[[Contract Form Contract]]
+- informs_downstream::[[Contract Form Contract]]
   - Contract Form Contract specializes the gist's `conforms_to::[[X Form Contract]]` move into the self-conformance and inheritance patterns that Contract nodes use.

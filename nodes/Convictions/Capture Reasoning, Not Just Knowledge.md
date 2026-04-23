@@ -20,7 +20,7 @@ The stance does not demand completeness. A graph with three well-connected Convi
 
 The value distinguishes this graph from encyclopedic knowledge management, from document repositories, and from AI fine-tuning approaches that try to replicate surface patterns rather than capture reasoning. Each of those stores outputs; none of them stores the reasoning that produced the outputs, so each of them produces output that is technically informed but can be personally wrong -- right for the average case, wrong for the specific contributor whose reasoning was supposed to inform it.
 
-The graph's form contracts are the structural implementation. [[Decision Form Contract]] requires Why, Alternatives Considered, and What Would Change It; those sections are reasoning, not facts. [[Observation Form Contract]] requires epistemic grounds and What Would Revise It; those sections are reasoning, not claims. [[Conviction Form Contract]] requires Why It Is Held and Drift Recognition; same pattern. The named-edge convention adds the traversable substrate: `grounded_in::`, `informed_by::`, `informs::`, `contends_with::` each carry reasoning between nodes. Without the contracts and the edges, the graph would store claims; with them, the graph stores the web of reasoning that justifies the claims.
+The graph's form contracts are the structural implementation. [[Decision Form Contract]] requires Why, Alternatives Considered, and What Would Change It; those sections are reasoning, not facts. [[Observation Form Contract]] requires epistemic grounds and What Would Revise It; those sections are reasoning, not claims. [[Conviction Form Contract]] requires Why It Is Held and Drift Recognition; same pattern. The named-edge convention adds the traversable substrate: `grounded_in::`, `informed_by::`, `informs_downstream::`, `contends_with::` each carry reasoning between nodes. Without the contracts and the edges, the graph would store claims; with them, the graph stores the web of reasoning that justifies the claims.
 
 In a multi-contributor graph, fidelity is pluralized: the goal is fidelity to each contributor's reasoning, not to a normalized consensus. [[Vocabulary Diversity Is a Feature]] is the stance that lets this work; fidelity without diversity collapses into convergence, and convergence loses the specific reasoning each contributor brought. Reasoning fidelity and vocabulary diversity compose: each preserves what would otherwise be lost to flattening.
 
@@ -28,7 +28,7 @@ In a multi-contributor graph, fidelity is pluralized: the goal is fidelity to ea
 
 Nodes carry their reasoning, not just their conclusions. A Decision names the alternatives it rejected and the condition that would change the call. An Observation names the grounds it rests on and what would revise the claim. A Conviction names the stance it holds and what would count as drift from it. A Pattern names the tension it resolves. The sections are load-bearing; a node that skips them carries a fact without the reasoning that justifies it.
 
-Edges carry reasoning between nodes. `grounded_in::` points at the foundation a claim rests on; `informed_by::` points at a weaker influence; `informs::` points forward at what a node shapes downstream. An annotation under each edge names why the edge is load-bearing -- what the reader gains from following it. A graph of unannotated edges is tag spaghetti; a graph of annotated edges is reasoning made traversable.
+Edges carry reasoning between nodes. `grounded_in::` points at the foundation a claim rests on; `informed_by::` points at a weaker influence; `informs_downstream::` points forward at what a node shapes downstream. An annotation under each edge names why the edge is load-bearing -- what the reader gains from following it. A graph of unannotated edges is tag spaghetti; a graph of annotated edges is reasoning made traversable.
 
 Contributor reasoning stays in the contributor's voice. When a Decision captures how one contributor reasoned, it does not normalize that reasoning into a house style or flatten it into the aggregate. The contributor's specific framing, their specific concerns, their specific rejected alternatives are what make the Decision worth capturing; removing them to fit a template collapses the thing the value is protecting.
 
@@ -44,13 +44,13 @@ The drift also shows up in edge quality. `relates_to::` becoming a catch-all is 
 
 ## Relations
 
-- informs::[[Deep Context as an Architecture for Captured Reasoning]]
+- informs_downstream::[[Deep Context as an Architecture for Captured Reasoning]]
   - The Decision that makes the graph's architecture a structural implementation of this value. The Decision grounds in this Conviction rather than in the external value of the same name; the foundational grounding now lives inside the graph.
 
-- informs::[[Knowledge Outlives Its Tools]]
+- informs_downstream::[[Knowledge Outlives Its Tools]]
   - The sibling value the durability stance serves. The project holds durability because captured reasoning must survive to remain useful — reasoning captured in a format that doesn't outlast its tooling loses the fidelity this Conviction protects. The motivation direction: this Conviction is why the durability Conviction is load-bearing, not merely convenient.
 
-- informs::[[Decision Form Contract]]
+- informs_downstream::[[Decision Form Contract]]
   - The Contract's required sections (Why, Alternatives Considered, What Would Change It) are the form-level implementation of the fidelity commitment. A Decision node that complies carries its reasoning; a Decision that drops the sections carries a fact.
 
 - informed_by::[[Vocabulary Diversity Is a Feature]]

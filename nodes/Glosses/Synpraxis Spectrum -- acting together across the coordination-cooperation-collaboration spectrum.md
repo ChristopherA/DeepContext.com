@@ -20,10 +20,10 @@ Deep Context is itself a synpraxis — plural-contributor knowledge work in whic
 
 ## Relations
 
-- informs::[[Vocabulary Diversity Is a Feature]]
+- informs_downstream::[[Vocabulary Diversity Is a Feature]]
   - Synpraxis framing grounds the Conviction's commitment to preserving contributor distinctions. Cooperation (as distinct from collaboration) accommodates vocabulary asymmetry — each contributor keeps their own naming tradition, and the graph carries translation rather than convergence.
 
-- informs::[[Translation Over Convergence]]
+- informs_downstream::[[Translation Over Convergence]]
   - The operational Conviction that encodes synpraxis's cooperation-side discipline: keep both `critiques::` and `challenges::` when two communities meet, rather than forcing a shared ontology. Convergence is a collaboration-level move that requires preconditions cooperation does not.
 
 - informed_by::[[Synpraxis Domain]]↗

@@ -141,13 +141,13 @@ Enforces [[Adopt Predicate Atomicity]].
 - extended_by::[[Contract Form Contract]]
   - Contract Form Contract extends this contract with requirements for parseable `## Requirements` sections and the self-conformance pattern.
 
-- informs::[[Compound Node -- a folder of markdown nodes with a designated lead|Compound Node]]
+- informs_downstream::[[Compound Node -- a folder of markdown nodes with a designated lead|Compound Node]]
   - The compound-node pattern realizes node atomicity for concepts whose supporting material warrants its own sub-files: the compound names one concept, the sub-files are supporting material, and the node-atomicity Requirement's split criterion is what tells the author whether a prospective sub-file is supporting material (stays compound) or an independent concept (promote to atomic).
 
-- informs::[[Progressive Summary Before Substance]]
+- informs_downstream::[[Progressive Summary Before Substance]]
   - The Pattern that realizes the layered-structure Requirement in the prototype's specific vocabulary. The Requirement states the standing structural rule; the Pattern names the move an author makes composing a node in practice.
 
-- informs::[[Refactor the Predicate's Axes]]
+- informs_downstream::[[Refactor the Predicate's Axes]]
   - The Pattern that realizes or restores predicate atomicity when a predicate is found carrying multiple axes. The Requirement states the rule; the Pattern names the craft applied when the rule is violated in the wild.
 
 - informed_by::[[Use Pipe Wikilinks for Display-Target Divergence]]

@@ -83,5 +83,5 @@ Repeat the exercise with a second and third conforming instance. The Contract st
 - composes_with::[[Refactor the Predicate's Axes]]
   - Both are craft moves triggered by working with the graph rather than by pre-planning. This Pattern applies to Contracts and surfaces their gaps through exercise; Refactor the Predicate's Axes applies to predicates and surfaces their conflations through use. Each recognizes that speculative design often misses what real data reveals.
 
-- informs::[[Skill Form Contract]]
+- informs_downstream::[[Skill Form Contract]]
   - The Skill Form Contract's own `has_lifecycle::[[Seed Stage]]` marking and its "first skills drafted under it are expected to revise it" prose anticipate this Pattern. The Pattern names the move the Contract's own lifecycle design was inviting.

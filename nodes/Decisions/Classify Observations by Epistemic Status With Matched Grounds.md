@@ -52,5 +52,5 @@ The commitment bundles the taxonomy and the matched-grounds discipline; the revi
 - grounded_in::[[Adopt Predicate Atomicity]]
   - `has_epistemic_status::` answers one question: what epistemic tier grounds this claim? The atomicity commitment ensures the predicate stays sharp; this commitment specifies the values and their matched requirements.
 
-- informs::[[Observation Form Contract]]
+- informs_downstream::[[Observation Form Contract]]
   - Observation Form Contract's identity predicate and Body-Grounds Requirements carry the thin enforcement clauses pointing at this Decision.

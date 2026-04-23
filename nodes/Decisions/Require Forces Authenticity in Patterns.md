@@ -45,5 +45,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[A Pattern Language (Christopher Alexander et al., 1977)]]
   - The Alexandrian tradition identifies "resolution of competing Forces" as the Pattern's distinguishing move. The authenticity requirement inherits from that tradition's insight that single-force or unopposed-value Patterns degrade into advice rather than naming real recurring tensions.
 
-- informs::[[Pattern Form Contract]]
+- informs_downstream::[[Pattern Form Contract]]
   - Pattern Form Contract's Body-Forces Requirement carries the thin enforcement clause pointing at this Decision.

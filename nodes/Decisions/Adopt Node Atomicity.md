@@ -18,7 +18,7 @@ One node names one concept, and one concept has one node. A file — or, when th
 
 ## Why
 
-The commitment provides **unambiguous traversal of the graph's edges**. Every typed predicate in the vocabulary (`conforms_to::`, `grounded_in::`, `informs::`, `supersedes::`) is written assuming a single concept at the endpoint. Wikilinks resolve by filename, and each filename is one name; if a single file elaborated two concepts, a wikilink referencing the file would pick up both while the predicate on the wikilink traversed as if there were one. Atomicity at the vertex is what keeps the spine's semantics coherent — the alternative is predicates whose meaning depends on which concept in a file the reader chose to foreground.
+The commitment provides **unambiguous traversal of the graph's edges**. Every typed predicate in the vocabulary (`conforms_to::`, `grounded_in::`, `informs_downstream::`, `supersedes::`) is written assuming a single concept at the endpoint. Wikilinks resolve by filename, and each filename is one name; if a single file elaborated two concepts, a wikilink referencing the file would pick up both while the predicate on the wikilink traversed as if there were one. Atomicity at the vertex is what keeps the spine's semantics coherent — the alternative is predicates whose meaning depends on which concept in a file the reader chose to foreground.
 
 Supersession works concept by concept. When a commitment is revised, a new Decision replaces the old and `supersedes::` carries the relation. If an old node held two commitments and only one was revised, supersession breaks — the new node cannot cleanly supersede the old because the old also carried the unchanged commitment. Atomic revision requires atomic nodes; the supersession machinery the Decision Form Contract specifies presupposes this commitment without stating it.
 
@@ -45,7 +45,7 @@ Two classes of condition would prompt revisit, both distant.
 ## Relations
 
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
-  - The wikilink-by-filename and named-edge infrastructure assumes atomic endpoints. Every edge in the vocabulary — `conforms_to::`, `grounded_in::`, `informs::`, `supersedes::` — presupposes that the target is a single concept. This Decision is the standing commitment that makes that presupposition coherent; without it, the edge vocabulary would carry silent ambiguity on every traversal.
+  - The wikilink-by-filename and named-edge infrastructure assumes atomic endpoints. Every edge in the vocabulary — `conforms_to::`, `grounded_in::`, `informs_downstream::`, `supersedes::` — presupposes that the target is a single concept. This Decision is the standing commitment that makes that presupposition coherent; without it, the edge vocabulary would carry silent ambiguity on every traversal.
 
 - grounded_in::[[Adopt Predicate Atomicity]]
   - The parallel atomicity commitment at the edge level. Node atomicity (one concept per node) and predicate atomicity (one question per predicate) are the two faces of the same design discipline — the graph has atomicity claims both at the vertices and at the edges, and each grounds the other.
@@ -53,8 +53,8 @@ Two classes of condition would prompt revisit, both distant.
 - contrasts_with::[[Folders Serve Human Legibility, Not the Graph]]
   - Both commitments name what the graph's granularity rests on. The Conviction names the filesystem/graph boundary — folder paths are reader-facing, not part of the graph. This Decision names the concept/file boundary — each node names one concept, and that correspondence is what the graph's edges traverse. Adjacent commitments defining different axes of what "the graph" actually is.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract's node-atomicity Requirement is the thin enforcement clause pointing at this Decision. The Contract carries the compliance rule; this Decision carries the reasoning and the revisit conditions.
 
-- informs::[[Compound Node -- a folder of markdown nodes with a designated lead|Compound Node]]
+- informs_downstream::[[Compound Node -- a folder of markdown nodes with a designated lead|Compound Node]]
   - The compound-node pattern is this Decision's answer to concepts with substantial supporting material. The compound groups a concept's supporting material under a lead; the Decision's Why is what tells the author whether a prospective sub-file is supporting material (stays compound) or an independent concept (promote to atomic).

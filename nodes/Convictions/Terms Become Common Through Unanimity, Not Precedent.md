@@ -52,10 +52,10 @@ The stance also drifts in the opposite direction -- toward unanimity-as-paralysi
 - informed_by::[[Consensus Creates Priesthoods]]
   - The Observation that converged vocabularies acquire authority over the participants who helped create them, leaving newcomers with a learn-or-leave choice. This Conviction names a process that intervenes before convergence calcifies, so the newcomer's position is proposer rather than supplicant.
 
-- informs::[[Vocabulary Diversity Is a Feature]]
+- informs_downstream::[[Vocabulary Diversity Is a Feature]]
   - Vocabulary Diversity Is a Feature names the property the graph preserves (contributor-local vocabulary as design decision); this Conviction names the process that decides when a term is allowed to leave contributor-local scope and become shared. The two compose: most vocabulary stays local; the vocabulary that travels to Common does so only through unanimity.
 
-- informs::[[Translation Over Convergence]]
+- informs_downstream::[[Translation Over Convergence]]
   - Translation Over Convergence specializes the diversity stance into an operational rule for what happens when vocabularies meet. This Conviction specifies when that rule applies: whenever a term is about to travel from one contributor's dialect into shared vocabulary without explicit cross-contributor agreement.
 
 - contrasts_with::[[Consensus Creates Priesthoods]]

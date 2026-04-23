@@ -105,7 +105,7 @@ The skipped surfaces are not unimportant; they are load-on-demand. Naming them s
 - grounded_in::[[Progressive Summary Before Substance]]
   - The Pattern this skill realizes at graph scale. Node Read walks the cost-graded layers within one node; Graph Orient walks the cost-graded nodes within the graph. Both realize the same progressive-disclosure stance, at different scales.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - This skill depends on the base Contract being honored across the graph. If a node lacks an identity predicate block, the orientation sweep misses it; the skill's output quality is a function of the graph's compliance with the base Contract.
 
 - composes_with::[[Node Read]]

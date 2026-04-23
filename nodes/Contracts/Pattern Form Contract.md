@@ -87,10 +87,10 @@ Enforces [[Require Forces Authenticity in Patterns]].
 
 - The Relations section follows the base Markdown Node Contract.
 - A Pattern typically carries these edges:
-  - `grounded_in::[[Markdown Node Contract]]` or `grounded_in::[[Conviction Name]]` — the standing claim this Pattern realizes or restores. The paired node typically carries the inverse `informs::[[Pattern]]`.
+  - `grounded_in::[[Markdown Node Contract]]` or `grounded_in::[[Conviction Name]]` — the standing claim this Pattern realizes or restores. The paired node typically carries the inverse `informs_downstream::[[Pattern]]`.
   - `contrasts_with::[[Adjacent Pattern]]` — a sibling pattern occupying adjacent territory where the distinction is load-bearing.
   - `composes_with::[[Related Pattern]]` — another pattern routinely applied alongside this one.
-  - `informs::[[Downstream Node]]` — nodes (contracts, conventions, other patterns) that encode or invoke this pattern's move.
+  - `informs_downstream::[[Downstream Node]]` — nodes (contracts, conventions, other patterns) that encode or invoke this pattern's move.
 
 ### Optional scalar metadata
 

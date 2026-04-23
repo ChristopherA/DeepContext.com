@@ -85,5 +85,5 @@ Write the updated document as a single coherent revision, not as scattered edits
 - composes_with::[[Progressive Summary Before Substance]]
   - Both are craft moves on the corpus, operating at different orientations. Progressive Summary is the authoring move when writing a node; Reconcile the Standing Account is the curation move when auditing a document. Progressive Summary produces nodes that are readable at multiple depths; this Pattern ensures the documents that reference and describe those nodes stay accurate as the graph grows.
 
-- informs::[[Convention Overhead vs Graph Quality]]
+- informs_downstream::[[Convention Overhead vs Graph Quality]]
   - The standing tension the Pattern counters. The graph's convention overhead (multi-word predicates, form contracts, structured edges, annotation bullets) is only worth its cost if the corpus stays coherent — which requires the ritual. Currently a ghost link in CONVENTIONS.md; the Pattern's existence now makes the tension tractable rather than merely named.

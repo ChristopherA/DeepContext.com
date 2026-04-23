@@ -47,7 +47,7 @@ The commitment bundles two rules; the revisit conditions share a source.
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The wikilink spine resolves by filename. Filename-shape conventions are what let the graph's folder-level classification and citation operate at zero-tooling cost on top of that resolution.
 
-- informs::[[Decision Form Contract]]
+- informs_downstream::[[Decision Form Contract]]
   - Decision Form Contract's filename-pattern Requirement carries the thin enforcement clause pointing at this Decision.
 
 - contrasts_with::[[Conviction Form Contract]]

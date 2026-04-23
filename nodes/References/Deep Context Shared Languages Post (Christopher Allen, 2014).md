@@ -36,10 +36,10 @@ The Life with Alacrity blog post, published 2014-06-18, that names "deep context
 
 ## Relations
 
-- informs::[[Vocabulary Diversity Is a Feature]]
+- informs_downstream::[[Vocabulary Diversity Is a Feature]]
   - The Conviction this post most directly substrates. The 2014 framing of shared languages as layered machinery for community-specific meaning grounds the 2026 Conviction that adjacent vocabularies' distinctions are load-bearing content.
 
-- informs::[[Naming Is Architectural, Not Decorative]]
+- informs_downstream::[[Naming Is Architectural, Not Decorative]]
   - The Conviction that specializes this post's stance at the naming-decisions layer. The 2014 claim that specialized terminology carries design decisions becomes the 2026 Conviction that the act of naming is itself architectural.
 
 - informed_by::[[Creating Shared Language and Shared Artifacts Post (Christopher Allen, 2009)]]

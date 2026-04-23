@@ -48,5 +48,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Distinguish Adopted from Not-Adopted in References]]
   - The adopted/not-adopted commitment makes Reference bodies accountable to specific adoption claims. Ecosystem-scale References cannot be accountable in the same way — a catalog's adoption claims would be diffuse. The tight-cluster scale keeps the adoption distinction maintainable.
 
-- informs::[[Reference Form Contract]]
+- informs_downstream::[[Reference Form Contract]]
   - Reference Form Contract's "When to split or consolidate" Requirement carries the thin enforcement clause pointing at this Decision.

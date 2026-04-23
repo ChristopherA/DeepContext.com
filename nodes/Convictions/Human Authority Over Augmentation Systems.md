@@ -55,11 +55,11 @@ The operational consequence for a Deep Context graph: design every agent interac
 - informed_by::[[George (2026) Harness Engineering Is Cybernetics]]↗
   - George grounds the operational-viability claim in the P-vs-NP intuition — humans out-evaluate but do not out-implement. The cybernetics lineage (Watt's governor, Kubernetes, agent harnesses) provides the historical evidence that generation-verification asymmetry is a robust engineering pattern, not a convenient rationalization.
 
-- informs::[[Deep Context as an Architecture for Captured Reasoning]]
+- informs_downstream::[[Deep Context as an Architecture for Captured Reasoning]]
   - The architecture decision names "expressible agent-versus-human authority boundaries" as one of the requirements that rules out fully autonomous alternatives. This conviction is the standing stance that requirement serves — the architecture is the structural move that takes the stance seriously.
 
-- informs::[[Adopt Wikilinks and Named Edges]]
+- informs_downstream::[[Adopt Wikilinks and Named Edges]]
   - The wikilinks-and-named-edges decision commits the graph's semantic layer to author-declared predicates rather than tool-inferred similarity. Taking human authority seriously structurally requires that the graph's meaning is author-declared: every named edge is an act of authorship a human contributor can inspect, edit, and version-control.
 
-- informs::[[Agents Translate, Not Extract]]
+- informs_downstream::[[Agents Translate, Not Extract]]
   - Agents Translate specializes this Conviction at the graph-interaction layer. Human authority over outputs is operationally incomplete without a translating-mode commitment — an extracting agent can respect every approval gate and still enroll contributors as subjects of its schema. The specialization names what human authority requires of the agent's posture toward the graph's predicates.

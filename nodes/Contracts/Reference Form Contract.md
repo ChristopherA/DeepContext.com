@@ -67,7 +67,7 @@ Enforces [[Distinguish Adopted from Not-Adopted in References]].
 
 - The Relations section follows the base Markdown Node Contract.
 - A Reference MAY carry these reference-specific or broadly-useful edges:
-  - `informs::[[Downstream Node]]` — a decision, contract, or node this source informs.
+  - `informs_downstream::[[Downstream Node]]` — a decision, contract, or node this source informs.
   - `contrasts_with::[[Sibling Reference]]` — when two sources occupy adjacent territory.
   - `supersedes::[[Older Reference]]` — when a newer version replaces an older one the graph previously cited.
   - `serves_as::[[<Target>]]` — also valid in the identity block.
@@ -99,7 +99,7 @@ Enforces [[Restrict References to Tight Artifact Clusters]].
   - A Decision records a commitment this project has made; a Reference records a source this project has drawn from.
 
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
-  - The decision that makes `serves_as::`, `informs::`, and `under_license::` first-class named edges.
+  - The decision that makes `serves_as::`, `informs_downstream::`, and `under_license::` first-class named edges.
 
 - grounded_in::[[Embed Citation Parenthetical in Reference Filenames]]
   - Grounds the (Author, Year) parenthetical rule in the Filename pattern Requirement.

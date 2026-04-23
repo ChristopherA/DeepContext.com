@@ -45,5 +45,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Classify Observations by Epistemic Status With Matched Grounds]]
   - The epistemic-status commitment and the revision-conditions commitment are paired Observation-form disciplines. Classification makes the claim's epistemic tier explicit; revision conditions make the claim's accountability to evidence explicit. Both together distinguish Observations from Convictions and from Requirements.
 
-- informs::[[Observation Form Contract]]
+- informs_downstream::[[Observation Form Contract]]
   - Observation Form Contract's Body-What-Would-Revise-It Requirement carries the thin enforcement clause pointing at this Decision.

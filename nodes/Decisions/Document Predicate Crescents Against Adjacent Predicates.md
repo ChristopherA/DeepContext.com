@@ -48,5 +48,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Translation Over Convergence]]
   - The Conviction whose operational rule this Requirement encodes at the predicate layer. Translation between adjacent predicates requires each predicate's distinctive claim to be documented; per-neighbor Crescent subsections are the documentation.
 
-- informs::[[Predicate Form Contract]]
+- informs_downstream::[[Predicate Form Contract]]
   - Predicate Form Contract's Body-Crescent Requirement carries the thin enforcement clause pointing at this Decision.

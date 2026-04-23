@@ -20,7 +20,7 @@ Three mechanisms make the stance warranted.
 
 Wikilinks resolve by filename. In CommonMark wiki extensions and Obsidian's default configuration, `[[Ghost Link -- a wikilink to a target that does not yet exist]]` resolves to the file with that name regardless of which directory it sits in. The resolver does not consult folder paths; it consults the filesystem for a file whose name matches. A gloss placed in `Glosses/` and a gloss placed at the top of `prototype/nodes/` resolve identically from any prose reference.
 
-Named edges carry graph semantics. The connection between two nodes is expressed by a predicate — `conforms_to::`, `grounded_in::`, `informs::` — attached to a wikilink. That predicate is author-declared and readable as plain markdown. No predicate in this prototype says "is in the same folder as" or derives meaning from filesystem adjacency; two nodes colocated in `Contracts/` are no more related by the graph than two nodes in different folders.
+Named edges carry graph semantics. The connection between two nodes is expressed by a predicate — `conforms_to::`, `grounded_in::`, `informs_downstream::` — attached to a wikilink. That predicate is author-declared and readable as plain markdown. No predicate in this prototype says "is in the same folder as" or derives meaning from filesystem adjacency; two nodes colocated in `Contracts/` are no more related by the graph than two nodes in different folders.
 
 Committing filesystem paths to the graph would conflate two orthogonal concerns. Folders serve scanning: which directory should I open to find contracts? Edges serve traversal: which node does this one conform to, and where does that one derive its authority? Binding the graph to paths would make every reorganization destructive — renaming a folder would require rewriting every edge — and would force one organization scheme to carry both reader-facing and graph-facing load. Separating the two leaves folders free to change as reader needs evolve while the graph's meaning stays stable.
 
@@ -48,10 +48,10 @@ A lint check that surfaces a file whose form-predicate disagrees with its folder
 - contrasts_with::[[Adopt Node Atomicity]]
   - Both commitments define what the graph's granularity rests on, along different axes. Adopt Node Atomicity names the concept/file boundary — each node names one concept, and that correspondence is what the graph's edges traverse. This Conviction names the filesystem/graph boundary — folder paths are reader-facing, not part of the graph. Adjacent commitments defining different axes of what "the graph" actually is.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - The Markdown Node Contract specifies the file-level form (identity block, H1, body, Relations) without constraining folder placement. This Conviction is the held stance that explains the silence: the contract is silent on folders because folders are not part of the graph the contract describes.
 
-- informs::[[Gloss Form Contract]]
+- informs_downstream::[[Gloss Form Contract]]
   - The Gloss Form Contract's filename pattern (`<Concept> -- <definition>.md`) encodes enough information for a contributor to recognize the form from the filename alone. Folder placement in `Glosses/` is a parallel reader convenience that reinforces the filename signal; the contract does not require it, because requiring it would bind the form to a filesystem scheme rather than to the file's own content.
 
 - grounded_in::[[Human Authority Over Augmentation Systems]]

@@ -48,5 +48,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Name Decisions by Action Verb or Role Declarative]]
   - The filename-shape commitment is what makes the new Decision's filename differ from the old one's. A revised Decision's new commitment is phrased as a new action-verb lead or declarative; the filename reflects the commitment. The filename-shape rule and the supersession rule compose — the shape ensures the new name differs meaningfully from the old.
 
-- informs::[[Decision Form Contract]]
+- informs_downstream::[[Decision Form Contract]]
   - Decision Form Contract's Superseding Requirement carries the thin enforcement clause pointing at this Decision.

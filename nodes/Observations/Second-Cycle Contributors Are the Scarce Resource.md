@@ -42,7 +42,7 @@ A community adopting these conventions will produce data in this record's tail. 
 
 ## Relations
 
-- informs::[[The Second Cycle of Contribution Happens]]
+- informs_downstream::[[The Second Cycle of Contribution Happens]]
   - The Aspiration targets reaching a second cycle; this Observation names the scarcity that makes the target load-bearing rather than assumed. Without the Observation, the second cycle reads as a natural progression; with it, the second cycle reads as a specific attrition point the practice must be designed to address.
 
 - informed_by::[[Wikis Without Curation Drift Toward Write-Only]]

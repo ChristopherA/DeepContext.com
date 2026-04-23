@@ -36,11 +36,11 @@ The Life with Alacrity blog post, published 2009-09-17, that frames shared langu
 
 ## Relations
 
-- informs::[[Deep Context Shared Languages Post (Christopher Allen, 2014)]]
+- informs_downstream::[[Deep Context Shared Languages Post (Christopher Allen, 2014)]]
   - The later post by the same author that specializes this foundational framing into community-specific shared language carrying "deep context." The 2014 post is downstream; this 2009 post is the substrate it rests on.
 
-- informs::[[Vocabulary Diversity Is a Feature]]
+- informs_downstream::[[Vocabulary Diversity Is a Feature]]
   - The Conviction whose "author-declared edges preserve distinct claims" commitment rests on the 2009 framing that meaning is provided by users, not words. Without that substrate, the Conviction's sovereignty argument does not land.
 
-- informs::[[Translation Over Convergence]]
+- informs_downstream::[[Translation Over Convergence]]
   - The specialized Conviction that encodes the translation-not-normalization operational rule. The 2009 stance that different communities legitimately use the same word differently (the banker/cryptographer/layperson example) is the upstream of the project's translation-over-convergence commitment.

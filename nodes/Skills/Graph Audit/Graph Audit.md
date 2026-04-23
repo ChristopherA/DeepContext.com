@@ -183,5 +183,5 @@ The follow-up naming lets the forker route the audit's findings without re-deriv
 - grounded_in::[[Adopt Predicate Atomicity]]
   - Step 3's vocabulary audit is the graph-wide expression of predicate atomicity. Provisional predicates accumulating without backing Predicate nodes mean the vocabulary is accreting without each predicate's distinction being documented.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - The base Contract specifies the structural shape this skill surveys. Graph Audit's aggregate findings surface where the graph has drifted from the Contract at scale; single-node validation surfaces where one specific node has drifted.

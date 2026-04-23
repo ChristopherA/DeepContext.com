@@ -51,10 +51,10 @@ The Deep Context practice itself is a partial test. The project's founding vocab
 
 ## Relations
 
-- informs::[[Terms Become Common Through Unanimity, Not Precedent]]
+- informs_downstream::[[Terms Become Common Through Unanimity, Not Precedent]]
   - The Conviction is the project's response to this Observation: a commitment that precedent -- including founder precedent -- does not establish a term as the group's term. The Observation supplies the grounds for the Conviction; the Conviction specifies the stance the project takes when the pattern applies.
 
-- informs::[[The Second Cycle of Contribution Happens]]
+- informs_downstream::[[The Second Cycle of Contribution Happens]]
   - The Aspiration's contributor-level work addresses the first-to-second-cycle transition. Founding vocabularies constraining later participants is one of the specific mechanisms that work has to contend with -- later participants facing a vocabulary they did not help shape are less likely to cross the threshold.
 
 - contrasts_with::[[Consensus Creates Priesthoods]]

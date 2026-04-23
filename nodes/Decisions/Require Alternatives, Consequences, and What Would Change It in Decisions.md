@@ -48,5 +48,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Require Prose, Capability-First Why in Decisions]]
   - The prose and capability-first Why commitment together with this bundle define what a Decision's body looks like. The Why carries the argument; Alternatives, Consequences, and What Would Change It carry the accountability scaffolding. Both together produce a Decision body that is both reasoned and answerable.
 
-- informs::[[Decision Form Contract]]
+- informs_downstream::[[Decision Form Contract]]
   - Decision Form Contract's Alternatives Considered, Consequences, and What Would Change It Requirements carry the thin enforcement clauses pointing at this Decision.

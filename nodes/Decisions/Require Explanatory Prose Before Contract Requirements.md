@@ -45,5 +45,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Adopt Layered Node Structure]]
   - The layered-structure commitment requires each layer to be complete at its scale. The Contract's body tier has a specific structure — opening prose orients, Requirements section specifies, Relations structures edges. The opening prose is the claim-layer complement to the Requirements' spec layer; both are required for the body tier to be complete.
 
-- informs::[[Contract Form Contract]]
+- informs_downstream::[[Contract Form Contract]]
   - Contract Form Contract's Body-precedes-Requirements Requirement carries the thin enforcement clause pointing at this Decision.

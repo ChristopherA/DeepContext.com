@@ -115,5 +115,5 @@ Note: committing is not unilateral acceptance. A Predicate node at Seed Stage / 
 - grounded_in::[[No Generic relates_to Predicate]]
   - The Decision that prohibits catch-all predicates. Step 2's vocabulary check against existing predicates enforces this Decision by refusing to let a new predicate be proposed as a synonym when a specific predicate already exists.
 
-- informs::[[Predicate Form Contract]]
+- informs_downstream::[[Predicate Form Contract]]
   - The Contract this skill realizes at write time. The Contract states the standing structural rule for Predicate nodes; this skill carries the authoring workflow that satisfies the Contract deliberately rather than mechanically.

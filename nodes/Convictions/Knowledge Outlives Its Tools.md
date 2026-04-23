@@ -46,20 +46,20 @@ The subtlest drift is in the authoring experience. A contributor who cannot cont
 
 ## Relations
 
-- informs::[[Deep Context as an Architecture for Captured Reasoning]]
+- informs_downstream::[[Deep Context as an Architecture for Captured Reasoning]]
   - The Decision's zero-tooling floor is a direct implementation of this Conviction. The Decision now grounds in this local Conviction rather than in the external value; the grounding lives inside the graph.
 
 - informed_by::[[Capture Reasoning, Not Just Knowledge]]
   - Captured reasoning that doesn't survive tool changes loses its fidelity over time. Durability is a precondition for sustained fidelity; the two values compose.
 
-- informs::[[Adopt Forkable Publication Model]]
+- informs_downstream::[[Adopt Forkable Publication Model]]
   - The forkability model depends on durability at the content layer. A fork inherits durable content and a durable pipeline; without durability, forkability is formal rather than substantive.
 
-- informs::[[Adopt Minimum-Viable-Architecture Stance]]
+- informs_downstream::[[Adopt Minimum-Viable-Architecture Stance]]
   - Every pipeline dependency is a coupling that could break in a future environment. The MVA stance keeps the durability surface tractable.
 
-- informs::[[Adopt Wikilinks and Named Edges]]
+- informs_downstream::[[Adopt Wikilinks and Named Edges]]
   - Structural claims as text rather than as tool-specific metadata -- the author-declared wikilink convention is what makes the graph's structure survive tool changes.
 
-- informs::[[Folders Serve Human Legibility, Not the Graph]]
+- informs_downstream::[[Folders Serve Human Legibility, Not the Graph]]
   - A folder structure legible at the filesystem layer survives tool changes; one that only makes sense through a specific tool's view does not.

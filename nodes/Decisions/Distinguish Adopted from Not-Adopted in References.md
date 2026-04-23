@@ -43,7 +43,7 @@ The commitment would be revisited under one condition.
 ## Relations
 
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
-  - The named-edge spine lets References inform Decisions, Contracts, and other downstream nodes through `informs::` edges. The adopted-vs-not-adopted body structure is what makes the `informs::` edges specifiable — the body names what the Reference informs (the adopted side) and what it does not (the not-adopted side).
+  - The named-edge spine lets References inform Decisions, Contracts, and other downstream nodes through `informs_downstream::` edges. The adopted-vs-not-adopted body structure is what makes the `informs_downstream::` edges specifiable — the body names what the Reference informs (the adopted side) and what it does not (the not-adopted side).
 
-- informs::[[Reference Form Contract]]
+- informs_downstream::[[Reference Form Contract]]
   - Reference Form Contract's Body-shape Requirement carries the thin enforcement clause pointing at this Decision.

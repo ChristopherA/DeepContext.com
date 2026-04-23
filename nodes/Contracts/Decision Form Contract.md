@@ -82,7 +82,7 @@ Enforces [[Require Supersession Chain for Revised Decisions]].
   - `superseded_by::[[Newer Decision]]` — the inverse; added to the older decision when a successor is written.
   - `extended_by::[[Refining Decision]]` — a later decision that refines but does not replace this one.
   - `derived_from::[[Source]]` — the occasion or antecedent that produced this decision. This is a construction predicate and SHOULD carry an annotation noting the expected upgrade once the source becomes a first-class node.
-  - `informs::[[Downstream Node]]` — for contracts, nodes, or further decisions that implement this commitment.
+  - `informs_downstream::[[Downstream Node]]` — for contracts, nodes, or further decisions that implement this commitment.
 
 ### Bundling and splitting
 

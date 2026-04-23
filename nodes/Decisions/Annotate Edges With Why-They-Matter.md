@@ -50,5 +50,5 @@ The commitment would be revisited under two conditions.
 - grounded_in::[[Adopt Layered Node Structure]]
   - The layered-structure commitment requires each layer to be complete at its own scale. Annotations are what make the Relations tier complete — without them, the tier is a machine-readable skeleton that forces every reader to the body tier for context.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract's Relations-section Requirement carries the thin enforcement clause pointing at this Decision. The Contract carries the compliance rule; this Decision carries the reasoning and the revisit conditions.

@@ -53,7 +53,7 @@ The stance is also asymmetric with respect to different kinds of deferrals. Capa
 - grounded_in::[[Adopt Forkable Publication Model]]
   - The forkability commitment is one reason the MVA stance is load-bearing. Every capability the pipeline ships is a capability every fork inherits as a maintenance surface; keeping the minimum small keeps fork cost low.
 
-- informs::[[Publish via Actions Artifact Deploy]]
+- informs_downstream::[[Publish via Actions Artifact Deploy]]
   - Actions-deploy is one expression of the MVA stance at the deployment layer: one dependency, one workflow file, no custom infrastructure. The deployment Decision inherits the minimum-surface discipline this Decision names.
 
 - informed_by::[[Shared Languages Get Intimidating Over Time]]

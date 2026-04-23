@@ -81,7 +81,7 @@ Enforces [[Require What-It-Asks and Drift Recognition in Convictions]].
 - A Conviction typically carries these edges:
   - `grounded_in::[[Prior Conviction or Value]]` — the substrate the stance rests on.
   - `informed_by::[[Observation or Reference]]` — evidence or external work that supports the stance.
-  - `informs::[[Downstream Node]]` — Decisions, Patterns, Contract Requirements, or further Convictions the stance motivates.
+  - `informs_downstream::[[Downstream Node]]` — Decisions, Patterns, Contract Requirements, or further Convictions the stance motivates.
   - `contrasts_with::[[Adjacent Conviction]]` — a sibling conviction occupying adjacent territory.
 
 ### Optional scalar metadata
@@ -107,7 +107,7 @@ Enforces [[Require What-It-Asks and Drift Recognition in Convictions]].
   - A Decision records a situational choice made at a moment with revisit conditions; a Conviction records a held stance without `has_commitment::` or `decided_on::`. The filename shapes enforce the distinction.
 
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
-  - The named-edge spine that lets `grounded_in::`, `informed_by::`, `informs::`, and `contrasts_with::` land as first-class relational edges.
+  - The named-edge spine that lets `grounded_in::`, `informed_by::`, `informs_downstream::`, and `contrasts_with::` land as first-class relational edges.
 
 - grounded_in::[[Require Held-Stance Filename Shape for Convictions]]
   - Grounds the Filename pattern Requirement.

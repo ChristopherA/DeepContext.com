@@ -54,5 +54,5 @@ The commitment bundles three rules; the revisit conditions split by part.
 - grounded_in::[[Adopt Layered Node Structure]]
   - The layered-structure commitment places graph-structural claims in the identity block above the H1 and the Relations section below the body. This commitment is the mirror: YAML carries scalar metadata about the file; the identity block and Relations carry graph-structural claims. The separation between file-metadata tier and graph-structural tiers depends on both commitments.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract's YAML-frontmatter Requirement is the thin enforcement clause pointing at this Decision. The Contract carries the compliance rule; this Decision carries the reasoning and the revisit conditions.

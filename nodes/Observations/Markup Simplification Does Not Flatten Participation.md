@@ -40,7 +40,7 @@ A reinterpretation of the 2015 study's methodology — for example, that the mea
 
 ## Relations
 
-- informs::[[The Second Cycle of Contribution Happens]]
+- informs_downstream::[[The Second Cycle of Contribution Happens]]
   - The second-cycle target depends on understanding which gates filter newcomers out of sustained contribution. This Observation rules out the markup-literacy gate as the load-bearing one; the Aspiration's work must address whatever remaining gates the study does not disprove.
 
 - contrasts_with::[[LLM Assistance Widens the Participation Gap]]

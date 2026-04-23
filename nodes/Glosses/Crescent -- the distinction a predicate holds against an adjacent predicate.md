@@ -22,10 +22,10 @@ The metaphor presupposes adjacency. Crescents exist only where circles overlap; 
 
 ## Relations
 
-- informs::[[Predicate Form Contract]]
+- informs_downstream::[[Predicate Form Contract]]
   - The Contract's `## Crescent` Requirement uses this term. The Venn-non-overlap metaphor is what gives the section its shape — per-neighbor H3 subsections, asymmetric content across adjacent nodes, scoped to predicates with declared adjacency.
 
-- informs::[[Document Predicate Crescents Against Adjacent Predicates]]
+- informs_downstream::[[Document Predicate Crescents Against Adjacent Predicates]]
   - The Decision that grounds the Crescent Requirement. The metaphor is the reason the Requirement takes the shape it does — per-neighbor rather than global paragraph, asymmetric rather than mirrored.
 
 - grounded_in::[[Vocabulary Diversity Is a Feature]]

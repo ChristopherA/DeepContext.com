@@ -57,5 +57,5 @@ Idempotent regeneration is what keeps the emission safe under authoring churn. T
 - informed_by::[[Publish via Actions Artifact Deploy]]
   - The sibling Decision that names the same drift concern at the site-rendering layer. Committed build output doubles the diff and drifts silently from its source; Actions-deploy regenerates from source each push. Symlinks are the same answer at the runtime-alias layer -- a view of the source rather than a committed copy -- adapted to the constraint that the runtime layout has to be present in the cloned repository.
 
-- informs::[[Skill Form Contract]]
+- informs_downstream::[[Skill Form Contract]]
   - The Contract carries the runtime-alias-emission clause as a Requirement; this Decision is the commitment the Requirement points at. The Contract states the rule (source-of-truth in `nodes/Skills/`, runtime-emitted at `.agents/skills/`, idempotent regeneration, no hand edits); this Decision records the reasoning and the revisit conditions.

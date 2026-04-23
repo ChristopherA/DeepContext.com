@@ -55,7 +55,7 @@ The curation contract slackens into "agent proposes, agent enacts" is the final-
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The substrate Decision commits this graph to author-declared edges. The translating mode is the agent-side correlate of that commitment — author-declared edges on the graph side, agent-translated reading on the interpretation side. Without the Decision, translation has no declared edges to read; without this Conviction, the Decision's author-declared property erodes silently through agent extraction.
 
-- informs::[[Claude as Curator Contract]]
+- informs_downstream::[[Claude as Curator Contract]]
   - The ghost link in CLAUDE.md currently names Claude's role in this project as curator. This Conviction grounds what the Curator Contract specifies — suggest, flag, upgrade construction predicates, audit the `relates_to::` trap, never rewrite contributor vocabulary without confirmation. The Contract, once seeded, will carry the behavioral requirements; this Conviction is the normative substrate those requirements rest on.
 
 - informed_by::[[LLM Assistance Widens the Participation Gap]]

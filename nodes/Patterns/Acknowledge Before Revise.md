@@ -75,5 +75,5 @@ The sequence's order matters. Acknowledging after revising — a curation-pass n
 - composes_with::[[Treat Objection as Structural Contribution]]
   - Both Patterns structure curator posture against default review flow. Treat Objection reframes objection as contribution; this Pattern reframes contribution itself as requiring acknowledgment before revision. Both resist the default posture that treats contributor work (positive contribution or objection) as friction to resolve rather than input to engage.
 
-- informs::[[The Second Cycle of Contribution Happens]]
+- informs_downstream::[[The Second Cycle of Contribution Happens]]
   - The Aspiration's contributor-level transition names "acknowledgment within a week" as a candidate cadence; this Pattern is what acknowledgment operationally looks like inside that cadence. The Pattern supplies the content; the Aspiration's cadence supplies the timing.

@@ -36,5 +36,5 @@ Nothing directly adopted in MVA. The paper is deferred substrate.
 
 ## Relations
 
-- informs::[[Deep Context Community]]
+- informs_downstream::[[Deep Context Community]]
   - The Gloss that carries the project's MVA authorship model. The Community Gloss cites this paper as deferred substrate — the role system to draw on when specific-role predicates become warranted.

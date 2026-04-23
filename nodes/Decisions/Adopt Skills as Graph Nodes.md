@@ -50,8 +50,8 @@ The skill-as-node commitment does not preclude agent runtimes emitting their own
 - grounded_in::[[Adopt Forkable Publication Model]]
   - The forkability commitment that makes co-locating skills with the graph load-bearing. A fork inherits what the repository carries; putting skills in the repository means a fork inherits the maintenance capabilities alongside the content, without external dependencies. The skill-as-node commitment is the capability-layer expression of the forkability discipline.
 
-- informs::[[Skill Form Contract]]
+- informs_downstream::[[Skill Form Contract]]
   - This Decision is the commitment that makes the Skill Form Contract worth writing. The Contract specifies what skill nodes look like structurally; this Decision records the prior claim that skills are graph nodes in the first place. A graph in which skills were external artifacts would not need a Skill Form Contract at all.
 
-- informs::[[Emit Skill Runtime Aliases at Build Time]]
+- informs_downstream::[[Emit Skill Runtime Aliases at Build Time]]
   - The downstream Decision that resolves the runtime-emission question this Decision deliberately leaves open. This Decision locates source-of-truth in the graph; the downstream Decision specifies how runtime aliases are emitted from that source.

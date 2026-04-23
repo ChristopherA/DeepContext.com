@@ -71,7 +71,7 @@ The graph's recognition surface is visible in at least one contributor's experie
 - grounded_in::[[Vocabulary Diversity Is a Feature]]
   - The sovereignty stance extends from vocabulary to contribution. The same argument that contributor vocabularies are preserved rather than normalized argues that contributor contributions are preserved rather than overwritten; revision is collaboration, not correction. Without the sovereignty stance, the cultivation frame reads as an unearned demand on the contributor; with it, the cultivation is what the practice gives in return for the contributor's participation.
 
-- informs::[[The Second Cycle of Contribution Happens]]
+- informs_downstream::[[The Second Cycle of Contribution Happens]]
   - Cultivating both traits is one of the scaffolds the second-cycle target depends on. A community that cannot cultivate the trait-pair sustains only the contributors who arrived with them, which narrows the population able to reach the second cycle. The Aspiration widens the population through cultivation.
 
 - composes_with::[[LLM Assistance Widens the Participation Gap]]

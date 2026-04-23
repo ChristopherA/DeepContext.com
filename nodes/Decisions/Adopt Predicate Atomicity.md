@@ -50,8 +50,8 @@ Two classes of condition would prompt revisit.
 - grounded_in::[[Adopt Node Atomicity]]
   - The parallel atomicity commitment at the vertex level. Node atomicity (one concept per node) and predicate atomicity (one question per predicate) are the two faces of the same design discipline — the graph has atomicity claims at both levels, and each grounds the other.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract's predicate-atomicity Requirement is the thin enforcement clause pointing at this Decision. The Contract carries the compliance rule; this Decision carries the reasoning and the revisit conditions.
 
-- informs::[[Refactor the Predicate's Axes]]
+- informs_downstream::[[Refactor the Predicate's Axes]]
   - The Pattern that realizes or restores this commitment when a predicate is discovered in the wild carrying multiple axes. This Decision states the standing commitment; the Pattern names the craft move applied when the commitment is violated.

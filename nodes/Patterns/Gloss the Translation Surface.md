@@ -76,7 +76,7 @@ Do not write the Gloss as a choice-of-vocabulary recommendation. The Gloss is a 
 - grounded_in::[[Terms Become Common Through Unanimity, Not Precedent]]
   - The Conviction that governs when a term moves from contributor-local to Common vocabulary. This Pattern operates one layer down — at the contact surface where contributor-local terms meet without (yet) traveling into Common. The Gloss keeps both terms local and legible; Terms Become Common governs whether either later enters shared vocabulary.
 
-- informs::[[Agents Translate, Not Extract]]
+- informs_downstream::[[Agents Translate, Not Extract]]
   - The Conviction at the agent layer depends on this Pattern at the authoring layer. Agents translate rather than extract because contributors have written Glosses that make the distinctions available to agent reading; without the Glosses, an agent has only the raw predicates and must infer the distinction or normalize. The Pattern is what makes the agent-posture commitment executable.
 
 - composes_with::[[Treat Objection as Structural Contribution]]

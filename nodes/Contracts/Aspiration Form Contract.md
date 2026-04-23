@@ -85,7 +85,7 @@ Enforces [[Require Gap, Work, and Progress Recognition in Aspirations]].
 - An Aspiration typically carries these edges:
   - `grounded_in::[[Value or Conviction]]` — the substrate that makes the target worth pursuing.
   - `informed_by::[[Observation or Reference]]` — evidence or external work that shapes how the target is framed or pursued.
-  - `informs::[[Downstream Node]]` — Decisions, Patterns, or further Aspirations the target motivates.
+  - `informs_downstream::[[Downstream Node]]` — Decisions, Patterns, or further Aspirations the target motivates.
   - `contrasts_with::[[Adjacent Aspiration]]` — a sibling aspiration occupying adjacent territory.
   - `composes_with::[[Related Aspiration]]` — another aspiration routinely pursued alongside this one.
 
@@ -109,7 +109,7 @@ Enforces [[Require Gap, Work, and Progress Recognition in Aspirations]].
   - A Decision is a situational choice made at a moment with revisit conditions; an Aspiration is a directional target pursued over time.
 
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
-  - The named-edge spine that lets `grounded_in::`, `informed_by::`, `informs::`, `contrasts_with::`, and `composes_with::` land as first-class relational edges.
+  - The named-edge spine that lets `grounded_in::`, `informed_by::`, `informs_downstream::`, `contrasts_with::`, and `composes_with::` land as first-class relational edges.
 
 - grounded_in::[[Require Gap, Work, and Progress Recognition in Aspirations]]
   - Grounds the three paired body-section Requirements (Gap, Work, Progress Recognition). The three sections share one accountability Why and roll back together.

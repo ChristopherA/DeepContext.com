@@ -47,8 +47,8 @@ The commitment would be revisited under conditions that no longer hold.
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The named-edge infrastructure is what lets the cheap structural layers (identity block, Relations section) be machine-traversable. Without author-declared predicate edges, those tiers would collapse into prose with no tier distinction left — classification and relation would become inferential rather than structural.
 
-- informs::[[Markdown Node Contract]]
+- informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract's layered-structure Requirement is the thin enforcement clause pointing at this Decision. The Contract carries the compliance rule; this Decision carries the reasoning and the revisit conditions.
 
-- informs::[[Progressive Summary Before Substance]]
+- informs_downstream::[[Progressive Summary Before Substance]]
   - The Pattern that realizes this commitment in the prototype's specific vocabulary — identity predicates above the H1, card-scale opening or `## Heart`, elaboration body, and Relations. This Decision states the standing commitment; the Pattern names the authoring move an author makes composing a node in practice.

@@ -46,5 +46,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Adopt Layered Node Structure]]
   - The layered-structure commitment requires each layer to be complete at its scale. A Predicate node's body layer carries two complementary moves — Carries (positive sense) and Crescent (contrast) — each complete at its own scale. This Decision names the positive-sense move's layer as a dedicated section.
 
-- informs::[[Predicate Form Contract]]
+- informs_downstream::[[Predicate Form Contract]]
   - Predicate Form Contract's Body-Carries Requirement carries the thin enforcement clause pointing at this Decision.

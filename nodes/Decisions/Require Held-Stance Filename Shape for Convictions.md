@@ -45,7 +45,7 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Name Decisions by Action Verb or Role Declarative]]
   - The Decision-form filename-shape rule is the mirror commitment. Decisions must use action-verb or Subject-as-Role shapes; Convictions must not. The two rules compose — a filename that fits one does not fit the other, and classification follows the filename.
 
-- informs::[[Conviction Form Contract]]
+- informs_downstream::[[Conviction Form Contract]]
   - Conviction Form Contract's filename pattern Requirement carries the thin enforcement clause pointing at this Decision.
 
 - contrasts_with::[[Decision Form Contract]]

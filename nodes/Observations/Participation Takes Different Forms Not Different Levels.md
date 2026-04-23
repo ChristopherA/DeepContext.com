@@ -35,10 +35,10 @@ A community adopting these conventions may produce data in this record's tail. I
 
 ## Relations
 
-- informs::[[Contributors Across Vocabularies Can Collaborate]]
+- informs_downstream::[[Contributors Across Vocabularies Can Collaborate]]
   - The Aspiration targets vocabulary-plurality as a contributor-sovereignty property. This Observation names form-plurality as an adjacent and possibly-composing property — contributors bring both different naming traditions (vocabulary-plurality) and different participation forms (form-plurality), and a plural-participation stance needs both. The Aspiration's scope may want to extend to cover form-plurality; whether the extension is a new Aspiration or an expanded scope is an open authorial decision.
 
-- informs::[[The Second Cycle of Contribution Happens]]
+- informs_downstream::[[The Second Cycle of Contribution Happens]]
   - Second-cycle contribution may arrive in a different form than first-cycle contribution — a contributor whose first cycle was authoring-dominant may return in a responding-dominant or curating-dominant form. A volume-only measurement of "did the contributor return" would miss this; a form-sensitive measurement would recognize the return. The Aspiration's Progress Recognition may need to name form-sensitive return as one of the markers.
 
 - informed_by::[[Second-Cycle Contributors Are the Scarce Resource]]

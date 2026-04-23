@@ -45,5 +45,5 @@ The commitment would be revisited under one condition.
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The named-edge spine lets Contract Requirements reference their grounding Decisions by typed edge. The keyword discipline works inside a sub-section; the grounding Decision reference lives in the sub-section's body or the Contract's Relations. The two conventions compose — keywords mark obligation, edges mark derivation.
 
-- informs::[[Contract Form Contract]]
+- informs_downstream::[[Contract Form Contract]]
   - Contract Form Contract's Requirements section Requirement carries the thin enforcement clause pointing at this Decision.
