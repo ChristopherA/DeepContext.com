@@ -219,31 +219,28 @@ reader can see where the graph ends.
 
 Each node conforms to one of ten Form Contracts. Each contract names a shape
 and a compliance rule; the Decisions that ground each contract carry the
-reasoning.
+reasoning. The ten group by the role the form plays -- the reasoning the graph
+captures, the vocabulary that makes the reasoning legible, and the
+infrastructure the graph runs on. Each form name links to its taxonomy index.
 
-- **Contract** -- what a node of this form looks like. Example: [[Gloss Form Contract]].
-- **Decision** -- what was chosen, why, and what would change it. Example: [[Adopt Wikilinks and Named Edges]].
-- **Conviction** -- a normative stance the project holds. Example: [[Human Authority Over Augmentation Systems]].
-- **Aspiration** -- a direction the project pulls toward, with acknowledged gaps. Example: [[The Second Cycle of Contribution Happens]].
-- **Observation** -- a descriptive claim with epistemic grounds (Empirical, Retrospective, Contested). Example: [[Wikis Without Curation Drift Toward Write-Only]].
-- **Pattern** -- a recurring craft move that resolves a tension. Example: [[Refactor the Predicate's Axes]].
-- **Predicate** -- a typed edge with Carries, Crescent, and Typing sections. Example: [[conforms_to]].
-- **Gloss** -- an interpretive definition that frames a concept. Example: [[Atomic Node]].
-- **Reference** -- an external source the graph draws on. Example: [[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]].
-- **Skill** -- an agent-invocable workflow grounded in the Decisions it enforces. Example: [[Node Create]].
+**Reasoning the graph captures.**
 
-## Browse by taxonomy
+- **[Decision](/nodes/decisions/)** -- what was chosen, why, and what would change it. Example: [[Adopt Wikilinks and Named Edges]].
+- **[Conviction](/nodes/convictions/)** -- a normative stance the project holds. Example: [[Human Authority Over Augmentation Systems]].
+- **[Aspiration](/nodes/aspirations/)** -- a direction the project pulls toward, with acknowledged gaps. Example: [[The Second Cycle of Contribution Happens]].
+- **[Observation](/nodes/observations/)** -- a descriptive claim with epistemic grounds (Empirical, Retrospective, Contested). Example: [[Wikis Without Curation Drift Toward Write-Only]].
+- **[Pattern](/nodes/patterns/)** -- a recurring craft move that resolves a tension. Example: [[Refactor the Predicate's Axes]].
 
-- [Contracts](/nodes/contracts/)
-- [Decisions](/nodes/decisions/)
-- [Convictions](/nodes/convictions/)
-- [Aspirations](/nodes/aspirations/)
-- [Observations](/nodes/observations/)
-- [Patterns](/nodes/patterns/)
-- [Predicates](/nodes/predicates/)
-- [Glosses](/nodes/glosses/)
-- [References](/nodes/references/)
-- [Skills](/nodes/skills/)
+**Vocabulary that makes the reasoning legible.**
+
+- **[Gloss](/nodes/glosses/)** -- an interpretive definition that frames a concept. Example: [[Atomic Node]].
+- **[Predicate](/nodes/predicates/)** -- a typed edge with Carries, Crescent, and Typing sections. Example: [[conforms_to]].
+- **[Reference](/nodes/references/)** -- an external source the graph draws on. Example: [[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]].
+
+**Infrastructure the graph runs on.**
+
+- **[Contract](/nodes/contracts/)** -- what a node of a given form looks like; every node declares which Contract it conforms to. Example: [[Gloss Form Contract]].
+- **[Skill](/nodes/skills/)** -- an agent-invocable workflow grounded in the Decisions it enforces. Example: [[Node Create]].
 
 ## For agents
 
