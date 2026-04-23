@@ -80,18 +80,19 @@ def render_html(
     taxonomy_url: str | None,
     source_rel_path: str | None = None,
     style_href: str = "/style.css",
+    is_home: bool = False,
 ) -> str:
     normalized = normalize_list_indents(markdown_body)
     html_body = markdown.markdown(normalized, extensions=MD_EXTENSIONS)
 
     crumb = ""
-    if taxonomy_name and taxonomy_url:
-        crumb = (
-            '<nav class="crumb">'
-            '<a href="/">DeepContext</a> / '
-            f'<a href="{html.escape(taxonomy_url)}">{html.escape(taxonomy_name)}</a>'
-            "</nav>"
-        )
+    if not is_home:
+        segments = ['<a href="/">DeepContext</a>']
+        if taxonomy_name and taxonomy_url:
+            segments.append(
+                f'<a href="{html.escape(taxonomy_url)}">{html.escape(taxonomy_name)}</a>'
+            )
+        crumb = '<nav class="crumb">' + " / ".join(segments) + "</nav>"
 
     source_link = ""
     if source_rel_path and GITHUB_REPO_URL:

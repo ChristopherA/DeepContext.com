@@ -140,6 +140,7 @@ def write_landing_page(
         taxonomy_name=None,
         taxonomy_url=None,
         source_rel_path=str(landing.relative_to(root)),
+        is_home=True,
     )
     (build_dir / "index.html").write_text(page, encoding="utf-8")
 
