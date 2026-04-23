@@ -55,6 +55,9 @@ The subtlest drift is in the authoring experience. A contributor who cannot cont
 - informs_downstream::[[Adopt Scion Publication Model]]
   - The scion publication model depends on durability at the content layer. A scion inherits durable content and a durable pipeline; without durability, scioning is formal rather than substantive.
 
+- informed_by::[[Open Integrity Project (Blockchain Commons, 2025)]]
+  - The OI specification carries the durability commitment at the identity layer. A scion's `did:repo:<sha1>` DID is content-addressed — derived from the inception-commit SHA — and therefore stable across hosts. The Conviction's "knowledge survives particular tools" commitment composes with OI's "identity survives particular hosts" mechanism; together they extend durability across both content and cryptographic naming.
+
 - informs_downstream::[[Adopt Minimum-Viable-Architecture Stance]]
   - Every pipeline dependency is a coupling that could break in a future environment. The MVA stance keeps the durability surface tractable.
 

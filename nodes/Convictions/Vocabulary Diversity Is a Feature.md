@@ -67,3 +67,6 @@ A reader scanning the graph after drift would see convergence toward a single vo
 
 - informs_downstream::[[Require Carries Section in Predicate Nodes]]
   - The Decision that pairs with the Crescent Requirement at the predicate layer. A dedicated positive-sense Carries section gives each Predicate an independent account of itself — Crescent's contrast work is what it is not, and Carries is what it is.
+
+- informs_downstream::[[Adopt Scion Publication Model]]
+  - The scion publication model is load-bearing for this Conviction at the architecture layer. Without scioning, a contributor whose vocabulary diverges would have to converge on the parent's vocabulary or stop participating; with scioning, they continue the practice under their own cryptographic identity while holding their own vocabulary. The Conviction commits the graph to preserving diversity at the edge-and-annotation layer; the scion Decision is what preserves it at the graph-instance layer.

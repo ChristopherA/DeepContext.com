@@ -69,3 +69,6 @@ A review cadence in which normalization suggestions go unchallenged is subtler d
 
 - informs_downstream::[[assists_by -- facilitation by agent or person]]
   - The facilitation-vs-authorship predicate adopted from the same adjacent corpus. Preserves the distinction between someone whose thinking is being captured and someone whose facilitation made the capture possible — the three adopted Predicates together realize this Conviction's translation stance at the predicate-vocabulary layer.
+
+- informed_by::[[Agora Project (Flancian, 2019)]]
+  - Agora's cross-source wikilink resolution presents multiple gardens' contributions as a union rather than a merge — a practical precedent for translation-over-convergence at the rendering layer. The Conviction commits DeepContext to the stance at the author-declared-edges level; the Agora Reference names what the stance looks like at aggregator-resolution scale.
