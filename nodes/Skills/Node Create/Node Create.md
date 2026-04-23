@@ -6,7 +6,7 @@ description: |
 
   WHEN: the user wants to add a new node to the graph; the user says "add a Decision", "new Gloss", "record an Observation", "write a Conviction", "create a Pattern", "define a Predicate", "add a Reference", or "new node"; the agent is drafting a node structured as the graph expects.
 
-  WHEN NOT: editing an existing node (use Node Read to orient, then edit directly); drafting prose outside the graph's form system; proposing a new predicate vocabulary (use Predicate Propose once it exists; for now, write a Predicate node by invoking this skill with form=Predicate).
+  WHEN NOT: editing an existing node (use Node Read to orient, then edit directly); drafting prose outside the graph's form system; proposing a new predicate to the local vocabulary (use Predicate Propose, which gates the addition and drafts the Predicate node).
 ---
 
 - conforms_to::[[Skill Form Contract]]
@@ -98,7 +98,7 @@ Do not drop a required section because it "feels redundant" — the form section
 
 Add `## Relations` at the end if the node carries relational edges. Each edge is a top-level bullet `- predicate::[[Target]]` followed by an indented sub-bullet annotation explaining why the edge matters. The annotation is required by `Annotate Edges With Why-They-Matter`; an edge without an annotation is tag spaghetti, not graph.
 
-Choose the most specific predicate the graph's vocabulary supports. `relates_to::` is prohibited by `No Generic relates_to Predicate` — pick `grounded_in::`, `informs::`, `informed_by::`, `built_on::`, `composes_with::`, `contrasts_with::`, `contends_with::`, `extends_contract::`, or add a new predicate to the vocabulary by invoking Predicate Propose (once it exists) rather than fall back on a generic.
+Choose the most specific predicate the graph's vocabulary supports. `relates_to::` is prohibited by `No Generic relates_to Predicate` — pick `grounded_in::`, `informs::`, `informed_by::`, `built_on::`, `composes_with::`, `contrasts_with::`, `contends_with::`, `extends_contract::`, or invoke [[Predicate Propose]] to add a new predicate to the vocabulary rather than fall back on a generic.
 
 If a target node does not yet exist, the edge is a ghost link — permitted per `Markdown Node Contract` and a planning signal that the graph wants to grow there. Use `↗` (the literal U+2197 NORTH EAST ARROW character, never the escape notation `↗`) to mark external wiki targets.
 
