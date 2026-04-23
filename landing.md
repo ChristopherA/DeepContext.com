@@ -217,7 +217,7 @@ reader can see where the graph ends.
 
 ## Form types
 
-Each node conforms to one of nine Form Contracts. Each contract names a shape
+Each node conforms to one of ten Form Contracts. Each contract names a shape
 and a compliance rule; the Decisions that ground each contract carry the
 reasoning.
 
@@ -230,6 +230,7 @@ reasoning.
 - **Predicate** -- a typed edge with Carries, Crescent, and Typing sections. Example: [[conforms_to]].
 - **Gloss** -- an interpretive definition that frames a concept. Example: [[Atomic Node]].
 - **Reference** -- an external source the graph draws on. Example: [[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]].
+- **Skill** -- an agent-invocable workflow grounded in the Decisions it enforces. Example: [[Node Create]].
 
 ## Browse by taxonomy
 
@@ -242,6 +243,7 @@ reasoning.
 - [Predicates](/nodes/predicates/)
 - [Glosses](/nodes/glosses/)
 - [References](/nodes/references/)
+- [Skills](/nodes/skills/)
 
 ## For agents
 
