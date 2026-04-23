@@ -1,3 +1,7 @@
+---
+tagline: A descriptive claim with matched epistemic grounds (Empirical, Retrospective, Contested, On-Faith) and the conditions that would revise it
+---
+
 - conforms_to::[[Contract Form Contract]]
 - extends_contract::[[Markdown Node Contract]]
 - authored_by::[[Deep Context Community]]

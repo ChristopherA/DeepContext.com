@@ -1,3 +1,7 @@
+---
+tagline: The base file-form every node inherits: encoding, filename rules, YAML scope, identity predicate block above the H1, Relations section, and named-edge syntax
+---
+
 - conforms_to::[[Contract Form Contract]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]

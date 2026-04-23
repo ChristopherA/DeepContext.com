@@ -1,3 +1,7 @@
+---
+tagline: An interpretive definition whose filename carries the working definition, usable from the filesystem without opening the file
+---
+
 - conforms_to::[[Contract Form Contract]]
 - extends_contract::[[Markdown Node Contract]]
 - authored_by::[[Deep Context Community]]

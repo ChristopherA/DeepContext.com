@@ -1,3 +1,7 @@
+---
+tagline: A committed choice with Why, Alternatives Considered, and What Would Change It; situational rather than standing
+---
+
 - conforms_to::[[Contract Form Contract]]
 - extends_contract::[[Markdown Node Contract]]
 - authored_by::[[Deep Context Community]]

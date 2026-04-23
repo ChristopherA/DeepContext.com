@@ -1,3 +1,7 @@
+---
+tagline: A held normative stance the project asks contributors to share, carrying Why-It-Is-Held and Drift Recognition sections
+---
+
 - conforms_to::[[Contract Form Contract]]
 - extends_contract::[[Markdown Node Contract]]
 - authored_by::[[Deep Context Community]]

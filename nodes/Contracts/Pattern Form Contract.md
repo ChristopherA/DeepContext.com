@@ -1,3 +1,7 @@
+---
+tagline: A recurring craft move named from practice, with Heart at card scale, Problem, Forces, Solution, and Consequences
+---
+
 - conforms_to::[[Contract Form Contract]]
 - extends_contract::[[Markdown Node Contract]]
 - authored_by::[[Deep Context Community]]

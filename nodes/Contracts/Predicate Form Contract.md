@@ -1,3 +1,7 @@
+---
+tagline: A typed-edge definition with Carries, Crescent-per-adjacent-predicate, and Typing sections; a specialization of Gloss for predicate names
+---
+
 - conforms_to::[[Contract Form Contract]]
 - extends_contract::[[Gloss Form Contract]]
 - authored_by::[[Deep Context Community]]

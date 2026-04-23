@@ -1,3 +1,7 @@
+---
+tagline: An external source pointer with an Adopted / Not adopted (yet) split and publication metadata; cite-by-wikilink rather than cite-by-URL
+---
+
 - conforms_to::[[Contract Form Contract]]
 - extends_contract::[[Markdown Node Contract]]
 - authored_by::[[Deep Context Community]]

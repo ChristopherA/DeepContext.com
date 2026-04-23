@@ -1,3 +1,7 @@
+---
+tagline: A directional target the project works toward, carrying its acknowledged Gap, current Work, and Progress-Recognition markers
+---
+
 - conforms_to::[[Contract Form Contract]]
 - extends_contract::[[Markdown Node Contract]]
 - authored_by::[[Deep Context Community]]
