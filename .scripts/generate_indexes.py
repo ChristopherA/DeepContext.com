@@ -23,6 +23,7 @@ TAXONOMY_DESCRIPTIONS: dict[str, str] = {
     "Predicates": "Typed edges with Carries, Crescent-per-neighbor, and Typing sections.",
     "Glosses": "Interpretive definitions that frame concepts through a broader lens.",
     "References": "External sources the graph draws on, with publication metadata.",
+    "Skills": "Agent-invocable workflows with numbered steps, grounded in the Decisions they enforce.",
 }
 
 

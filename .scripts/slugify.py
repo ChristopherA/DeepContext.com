@@ -26,7 +26,12 @@ TAXONOMIES = {
     "Predicates": "predicates",
     "Glosses": "glosses",
     "References": "references",
+    "Skills": "skills",
 }
+
+# Taxonomies whose nodes are compound-node folders (`<Folder>/<Folder>.md`)
+# rather than flat markdown files. See Skill Form Contract for the layout rule.
+COMPOUND_NODE_TAXONOMIES = {"Skills"}
 
 
 def _slug_general(name: str) -> str:
@@ -71,7 +76,17 @@ def build_slug_table(root: Path) -> dict[str, dict]:
         tax_dir = nodes_dir / taxonomy_name
         if not tax_dir.is_dir():
             continue
-        for md in sorted(tax_dir.glob("*.md")):
+
+        if taxonomy_name in COMPOUND_NODE_TAXONOMIES:
+            md_files = sorted(
+                subdir / f"{subdir.name}.md"
+                for subdir in tax_dir.iterdir()
+                if subdir.is_dir() and (subdir / f"{subdir.name}.md").is_file()
+            )
+        else:
+            md_files = sorted(tax_dir.glob("*.md"))
+
+        for md in md_files:
             stem = md.stem
             concept = _concept_side(stem)
 
