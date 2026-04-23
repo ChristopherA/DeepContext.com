@@ -193,8 +193,9 @@ Compound Node is long; the pipe lets a reference read as
 
 **Ghost link** -- a named but unseeded concept. The target has no node yet, so
 the graph shows the name in ghost styling. Every identity block in this graph
-currently carries `has_lifecycle::[[Seed Stage]]`, but [[Seed Stage]] itself
-is a ghost -- the lifecycle vocabulary is named but not yet seeded as nodes.
+currently carries `authored_by::[[Deep Context Community]]`, but [[authored_by]]
+itself is a ghost -- the predicate is named in use but not yet seeded as a
+Predicate node.
 
 **External marker** -- a concept named in another graph. The `↗` suffix is
 the source-form convention -- the target is recognized as living in another
