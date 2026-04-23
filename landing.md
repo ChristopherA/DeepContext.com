@@ -270,7 +270,7 @@ Agents collaborating on this graph should start with
 [AGENTS.md](https://github.com/ChristopherA/DeepContext.com/blob/main/AGENTS.md),
 which names the curator stance (suggest, flag, translate -- do not rewrite a
 contributor's vocabulary without confirmation) and points at the taxonomy
-entry points. Agents joining a fork should read their own fork's AGENTS.md
+entry points. Agents joining a scion should read their own scion's AGENTS.md
 first; forks may customize the stance.
 
 ## About this repository
@@ -305,7 +305,8 @@ are welcome through GitHub.
   [README.md](https://github.com/ChristopherA/DeepContext.com#readme) for
   setup.
 
-The practice is forkable, collaboratively editable, and has no single
-editorial gatekeeper. The curation discipline lives in the conventions, not
-in permissions. See [[Adopt Forkable Publication Model]] for the specific
-commitments this implies.
+The practice publishes as scions — each reader can instantiate the template
+into their own graph with its own cryptographic identity, collaboratively
+editable, with no single editorial gatekeeper. The curation discipline lives
+in the conventions, not in permissions. See [[Adopt Scion Publication Model]]
+for the specific commitments this implies.

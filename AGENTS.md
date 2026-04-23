@@ -69,11 +69,11 @@ pattern language, capability-based security, the project's own Deep
 Context Architecture, and so on), name the specific features you are
 drawing on rather than pointing at the tradition as the source of
 framing. "Egregore-shaped commitment" imports the tradition's frame;
-"self-contained repository, fork-publishes-on-first-push, Web-UI-edit-is-first-class,
+"self-contained repository, scion-publishes-on-first-push, Web-UI-edit-is-first-class,
 curation-in-conventions" names the features. The Vocabulary Diversity Is
 a Feature stance extends to traditions as well as contributor vocabularies:
 using something is not adopting its vocabulary, and the distinction is
-load-bearing for forks whose context differs from the parent's.
+load-bearing for scions whose context differs from the template's.
 
 **Treat new common vocabulary as proposal, not adoption.**
 [Terms Become Common Through Unanimity, Not Precedent](nodes/Convictions/Terms%20Become%20Common%20Through%20Unanimity,%20Not%20Precedent.md)
@@ -112,11 +112,11 @@ Output lands in `.build/`. The GitHub Action runs the same command in a
 runner and uploads `.build/` as a Pages artifact; nothing commits back to
 the repository. `.build/` is gitignored.
 
-## A fork's AGENTS.md may differ
+## A scion's AGENTS.md may differ
 
-Forks are first-class. A fork may revise this file to reflect its own
-stance on agent behavior. Agents working on a fork should read that fork's
-AGENTS.md rather than assume this one applies. The parent's Conviction
-nodes are inherited by default; what the fork keeps, extends, or overrides
-is the fork's to decide, and should be visible in the fork's own node
-graph rather than inferred from the parent.
+Scions are first-class. A scion may revise this file to reflect its own
+stance on agent behavior. Agents working on a scion should read that
+scion's AGENTS.md rather than assume this one applies. The template's
+Conviction nodes are inherited by default; what the scion keeps, extends,
+or overrides is the scion's to decide, and should be visible in the
+scion's own node graph rather than inferred from the template.

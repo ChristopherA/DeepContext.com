@@ -16,7 +16,7 @@ brief_summary: A stance governing what the project will and will not build. The 
 
 The first cycle of DeepContext.com ships the minimum architecture that lets the practice run end to end: the node conventions, the Python build pipeline, the projection mechanism from workshop to publication, the seed set of nodes, a working Pages deploy. Capabilities beyond that minimum are deferred, and the deferrals are named explicitly so they are revisitable rather than forgotten.
 
-The current deferrals are: heading-link targets within nodes (`[[File#Section]]`), cross-garden external-marker resolution (the `↗` suffix currently renders as styled text rather than resolving to a specific adjacent graph), transclusion across nodes, an interactive graph explorer, full-text search, custom theming beyond the minimal CSS, and collaboration features (invitations, agent orchestration, multi-fork coordination). Each of these is a capability the PRD names; each is a capability the project does not build in the first cycle.
+The current deferrals are: heading-link targets within nodes (`[[File#Section]]`), cross-scion external-marker resolution (the `↗` suffix currently renders as styled text rather than resolving to a specific adjacent graph), transclusion across nodes, an interactive graph explorer, full-text search, custom theming beyond the minimal CSS, and collaboration features (invitations, agent orchestration, multi-scion coordination). Each of these is a capability the PRD names; each is a capability the project does not build in the first cycle.
 
 ## Why
 
@@ -24,19 +24,19 @@ The stance exists because knowledge-graph projects consistently accumulate pipel
 
 The project also holds that the architecture committed to in the first cycle will shape what the practice becomes in ways that are hard to reverse. [[Founding Vocabularies Constrain Later Participants]] names the dynamic at the vocabulary layer; the same structural constraint applies at the capability layer. Committing to a graph-explorer UI in the first cycle would bake in a specific model of how the graph is navigated before the project knows what navigation pattern actual readers need. Deferring it leaves the question open.
 
-The stance is honest about what is being traded. An original vision for DeepContext.com was substantially larger -- thousands of patterns in deep shared language, many committed participants, rich navigation and collaboration tooling. The first cycle delivers much less than that vision. The trade is deliberate: build less now so the project can learn from actual use what the vision should look like when it grows, rather than committing architecture to a vision that has not yet been tested against practice. If the seeded nodes and the forkability commitment produce a second cycle of contribution, the project learns what capabilities that cycle actually needs; if they do not, the deferred capabilities would not have been what made the difference.
+The stance is honest about what is being traded. An original vision for DeepContext.com was substantially larger -- thousands of patterns in deep shared language, many committed participants, rich navigation and collaboration tooling. The first cycle delivers much less than that vision. The trade is deliberate: build less now so the project can learn from actual use what the vision should look like when it grows, rather than committing architecture to a vision that has not yet been tested against practice. If the seeded nodes and the scion commitment produce a second cycle of contribution, the project learns what capabilities that cycle actually needs; if they do not, the deferred capabilities would not have been what made the difference.
 
 The stance is also asymmetric with respect to different kinds of deferrals. Capabilities that would change the shape of the graph or the contribution contract (transclusion, cross-garden resolution, a graph explorer that becomes load-bearing for navigation) are deferred firmly, because returning from them would be costly. Capabilities that are cosmetic or additive (custom theming, search, hover-previews) are deferred softly -- they can be added without reshaping the project's commitments.
 
 ## Alternatives Considered
 
-**Ship the full PRD vision in the first cycle.** Build heading-link resolution, transclusion, a React-based graph explorer, search, fuller theming, and collaboration features all before the first public deploy. Rejected because it commits the project's architecture to anticipated rather than observed needs, and because the maintenance surface of the full feature set would dwarf the seeded content. A fork inheriting the full surface inherits a much larger project than the practice currently is.
+**Ship the full PRD vision in the first cycle.** Build heading-link resolution, transclusion, a React-based graph explorer, search, fuller theming, and collaboration features all before the first public deploy. Rejected because it commits the project's architecture to anticipated rather than observed needs, and because the maintenance surface of the full feature set would dwarf the seeded content. A scion inheriting the full surface inherits a much larger project than the practice currently is.
 
 **Ship only enough to prove the pipeline and defer even the conventions.** Publish the pipeline with a handful of demonstration nodes and wait for contributor interest before investing in the Form Contracts, the Predicate vocabulary, or the Convictions. Rejected because the conventions are the practice; without them, the project is a static-site generator looking for a use case. The seeded nodes are what make the practice evaluable.
 
 **Defer publication entirely until the graph is substantial enough to justify it.** Work in the workshop repository until a larger critical mass of nodes and conventions exists, then publish as a more complete artifact. Rejected because publication is part of how the project learns what the practice needs. A published seed that fails to produce a second cycle teaches the project something the workshop-only path cannot.
 
-**Use an existing static-site generator (Jekyll, Hugo, Eleventy, Astro) with a thin adapter.** Defer the pipeline itself by adopting a stable tool and writing only the node-specific adapters. Rejected because the pipeline's forkability commitments ([[Adopt Forkable Publication Model]]) require a self-contained repository, and existing SSGs carry dependency surface (plugin ecosystems, toolchain versions, content model assumptions) that forks would inherit and need to maintain. The first cycle's pipeline is ~500 lines of Python with one dependency; a fork can read it end to end.
+**Use an existing static-site generator (Jekyll, Hugo, Eleventy, Astro) with a thin adapter.** Defer the pipeline itself by adopting a stable tool and writing only the node-specific adapters. Rejected because the pipeline's scion commitments ([[Adopt Scion Publication Model]]) require a self-contained repository, and existing SSGs carry dependency surface (plugin ecosystems, toolchain versions, content model assumptions) that scions would inherit and need to maintain. The first cycle's pipeline is ~500 lines of Python with one dependency; a scion can read it end to end.
 
 ## What Would Change It
 
@@ -46,12 +46,12 @@ The stance is also asymmetric with respect to different kinds of deferrals. Capa
 
 **The maintenance cost of the minimum exceeds what the minimum delivers.** If the current pipeline accumulates edge cases faster than the corpus grows, the minimum is not actually minimum; it is carrying complexity without carrying value. The revisit would ask whether the first cycle's architecture itself needs reduction, not addition.
 
-**A clearly-better architecture emerges that the project could adopt without breaking fork promises.** If a different minimum (simpler pipeline, different contribution mechanism, different publication story) becomes available and preserves the forkability commitment, the stance's specific implementation changes even though the stance itself survives.
+**A clearly-better architecture emerges that the project could adopt without breaking scion promises.** If a different minimum (simpler pipeline, different contribution mechanism, different publication story) becomes available and preserves the scion commitment, the stance's specific implementation changes even though the stance itself survives.
 
 ## Relations
 
-- grounded_in::[[Adopt Forkable Publication Model]]
-  - The forkability commitment is one reason the MVA stance is load-bearing. Every capability the pipeline ships is a capability every fork inherits as a maintenance surface; keeping the minimum small keeps fork cost low.
+- grounded_in::[[Adopt Scion Publication Model]]
+  - The scion commitment is one reason the MVA stance is load-bearing. Every capability the pipeline ships is a capability every scion inherits as a maintenance surface; keeping the minimum small keeps scion cost low.
 
 - informs_downstream::[[Publish via Actions Artifact Deploy]]
   - Actions-deploy is one expression of the MVA stance at the deployment layer: one dependency, one workflow file, no custom infrastructure. The deployment Decision inherits the minimum-surface discipline this Decision names.
@@ -66,4 +66,4 @@ The stance is also asymmetric with respect to different kinds of deferrals. Capa
   - The deferred cross-garden external-marker resolution and the deferred collaboration-at-aggregator capabilities point at Agora's model as one precedent of what those capabilities would look like when they return to scope. This Reference is the study substrate the deferral refers to without committing the project to adopting the specific implementation.
 
 - informed_by::[[Egregore Framework (Egregore Labs, 2026)]]
-  - The deferred collaboration features (invitations, agent orchestration, multi-fork coordination) point at Egregore's model as one precedent of what those capabilities look like when implemented. This Reference is the study substrate the deferral refers to; the MVA Stance names what the project would study should those capabilities become load-bearing without committing to the Egregore frame.
+  - The deferred collaboration features (invitations, agent orchestration, multi-scion coordination) point at Egregore's model as one precedent of what those capabilities look like when implemented. This Reference is the study substrate the deferral refers to; the MVA Stance names what the project would study should those capabilities become load-bearing without committing to the Egregore frame.

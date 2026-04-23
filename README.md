@@ -10,28 +10,35 @@ is [Deep Context as an Architecture for Captured Reasoning](nodes/Decisions/Deep
 -- typed markdown forms with traversable named-edge predicates, not
 fine-tuning, not retrieval chunks, not databases, not tags.
 
-This README is the GitHub-facing view: what you need to fork, build, and
-contribute.
+This README is the GitHub-facing view: what you need to stand up a scion,
+build, and contribute.
 
-## Forking
+## Scioning
 
-The repository is self-contained. A fork produces its own Pages site on
-first push -- no external build service, no linked data repository, no
-package registry beyond PyPI. The curation discipline lives in the
-conventions captured under `nodes/Contracts/`, not in editorial
-permissions; a fork inherits the conventions and decides what to keep or
-revise.
+The repository is a **template**. A reader stands up a **scion** — a graph
+instantiated from the template with its own cryptographic identity — by
+using GitHub's "Use this template" action (not "Fork"). Each scion has its
+own Open Integrity inception commit producing a unique `did:repo:<sha1>`
+DID, its own Pages site on first push, and its own content to diverge as
+the scion-owner sees fit. The curation discipline lives in the conventions
+captured under `nodes/Contracts/`, not in editorial permissions; a scion
+inherits the conventions and decides what to keep or revise.
 
-To fork:
+To stand up a scion:
 
-1. Fork on GitHub.
-2. In the fork's **Settings -> Actions -> General**, allow Actions to run
-   (forked workflows are disabled by default for security).
-3. In the fork's **Settings -> Pages**, set **Source = GitHub Actions**.
-4. Edit nodes directly via the web UI, or clone locally.
-5. Push. The Action builds `.build/` and deploys it as a Pages artifact.
+1. On GitHub, click **"Use this template" -> "Create a new repository"**
+   (not "Fork" — fork would inherit this template's inception commit and
+   therefore its DID, which collides identity).
+2. Run the Scion Bootstrap skill in your new repository — it re-roots the
+   repo with a fresh Open Integrity inception commit so the scion has its
+   own DID, and records the template's DID via a `scion_of::` edge in the
+   scion's identity declaration.
+3. In the scion's **Settings -> Actions -> General**, allow Actions to run.
+4. In the scion's **Settings -> Pages**, set **Source = GitHub Actions**.
+5. Edit nodes directly via the web UI, or clone locally.
+6. Push. The Action builds `.build/` and deploys it as a Pages artifact.
 
-Decision backing this model: [Adopt Forkable Publication Model](nodes/Decisions/Adopt%20Forkable%20Publication%20Model.md).
+Decision backing this model: [Adopt Scion Publication Model](nodes/Decisions/Adopt%20Scion%20Publication%20Model.md).
 
 ## Local build
 

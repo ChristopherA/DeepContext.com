@@ -20,7 +20,7 @@ The commitment runs deeper than a preference for open formats. It is a stance ab
 
 The value generates specific technical constraints that show up in every subsequent Decision about the graph's pipeline. Plain markdown rather than proprietary formats because markdown works everywhere with no tooling commitment. File-per-node rather than database records because files outlast any particular database engine. Predicates as text (`predicate::[[Target]]` as a literal markdown line) rather than plugin-dependent metadata because plugin-dependent metadata is coupled to the plugin. Git for version control because git is portable and its wire format is durable. Each constraint is a specific bet against a specific failure mode: if the current tooling disappears tomorrow, can the graph still be read, traversed, and edited?
 
-The commitment also makes forkability workable. [[Adopt Forkable Publication Model]] requires that a fork produces its own site with no external dependencies; durability is what makes that promise hold at the content layer. A fork inherits the nodes, the conventions, and the pipeline code -- all of which are plain text, all of which can be run, edited, or replaced without contacting any external service. If the parent repository disappears, every fork still works.
+The commitment also makes scioning workable. [[Adopt Scion Publication Model]] requires that a scion produces its own site with no external dependencies; durability is what makes that promise hold at the content layer. A scion inherits the nodes, the conventions, and the pipeline code -- all of which are plain text, all of which can be run, edited, or replaced without contacting any external service. If the template disappears, every scion still works.
 
 The value does not prohibit tooling. Obsidian plugins, shell scripts, agent-mediated curation, specialized editors are all legitimately used by contributors. The requirement is that no tooling become a single point of failure. A reader without the plugins can still read the node; a contributor without the agent can still author the node; the graph's capabilities with tooling are a layer on top, not a foundation under.
 
@@ -36,7 +36,7 @@ The pipeline stays minimum-viable. Every pipeline dependency is a coupling that 
 
 The value has drifted when the graph starts requiring specific tools to be legible. A reader opening a node file in a plain text editor and finding the reasoning illegible -- because predicates have been encoded in a plugin's proprietary syntax, because wikilinks have been replaced by tool-resolved IDs, because metadata lives in a database the reader cannot query -- is the visible form of the drift.
 
-The drift also shows up at the pipeline layer. A build script that requires a specific Node version or a specific package registry is a coupling; a dependency tree that needs lockfile regeneration on every contributor's machine is a coupling; a deployment mechanism that depends on a single hosting provider is a coupling. Each of these can be justified individually; together, they produce a graph that is forkable in theory but not in practice.
+The drift also shows up at the pipeline layer. A build script that requires a specific Node version or a specific package registry is a coupling; a dependency tree that needs lockfile regeneration on every contributor's machine is a coupling; a deployment mechanism that depends on a single hosting provider is a coupling. Each of these can be justified individually; together, they produce a graph that can be scioned in theory but not in practice.
 
 The subtlest drift is in the authoring experience. A contributor who cannot contribute without a specific editor, a specific agent, or a specific workflow is filtered by tooling -- whether or not that filtering was intended. Fidelity to the durability commitment asks that the baseline authoring path stay tool-free: plain text, any editor, any git client.
 
@@ -52,8 +52,8 @@ The subtlest drift is in the authoring experience. A contributor who cannot cont
 - informed_by::[[Capture Reasoning, Not Just Knowledge]]
   - Captured reasoning that doesn't survive tool changes loses its fidelity over time. Durability is a precondition for sustained fidelity; the two values compose.
 
-- informs_downstream::[[Adopt Forkable Publication Model]]
-  - The forkability model depends on durability at the content layer. A fork inherits durable content and a durable pipeline; without durability, forkability is formal rather than substantive.
+- informs_downstream::[[Adopt Scion Publication Model]]
+  - The scion publication model depends on durability at the content layer. A scion inherits durable content and a durable pipeline; without durability, scioning is formal rather than substantive.
 
 - informs_downstream::[[Adopt Minimum-Viable-Architecture Stance]]
   - Every pipeline dependency is a coupling that could break in a future environment. The MVA stance keeps the durability surface tractable.

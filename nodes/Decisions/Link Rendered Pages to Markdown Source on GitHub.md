@@ -18,15 +18,15 @@ The build pipeline renders a small "Edit on GitHub" link at the bottom right of 
 
 ## Why
 
-The commitment makes the graph's forkable model concrete at the reader's point of contact. A reader arriving at a rendered page who notices an error, disagrees with a claim, or wants to propose a revision can jump to the markdown source in one click and open a GitHub web-UI editor from there. The render-to-source path was implicit — any reader who understood the project could construct the URL themselves — but the click eliminates the distance between reading and contributing. The project's Adopt Forkable Publication Model Decision commits the graph to being contributable-in-place; this Decision is that commitment's surface manifestation on the rendered site.
+The commitment makes the graph's scion publication model concrete at the reader's point of contact. A reader arriving at a rendered page who notices an error, disagrees with a claim, or wants to propose a revision can jump to the markdown source in one click and open a GitHub web-UI editor from there. The render-to-source path was implicit — any reader who understood the project could construct the URL themselves — but the click eliminates the distance between reading and contributing. The [[Adopt Scion Publication Model]] Decision commits the graph to being contributable-in-place; this Decision is that commitment's surface manifestation on the rendered site.
 
 The commitment also serves later-cycle contributors specifically. A first-cycle reader rarely contributes. A second-cycle reader — someone who has read enough of the graph to form a specific correction or elaboration — will contribute only if the path from reading to editing is short. A footer link that reads "Edit on GitHub" names the action and opens the path. The Aspiration `[[The Second Cycle of Contribution Happens]]` names the scarcity; this Decision's concrete move is to remove one small friction between reading and the second-cycle act of editing.
 
-The GitHub-specific URL construction is a deliberate coupling to the hosting platform. The project is published via GitHub Pages, its source lives in a GitHub repository, and the Web UI editor is GitHub's. The Decision commits to that platform rather than trying to be hosting-neutral. Forks hosted elsewhere would need to revise the link generation; the `GITHUB_REPO_URL` and `GITHUB_BRANCH` constants in `.scripts/render.py` are the intended revision surface.
+The GitHub-specific URL construction is a deliberate coupling to the hosting platform. The project is published via GitHub Pages, its source lives in a GitHub repository, and the Web UI editor is GitHub's. The Decision commits to that platform rather than trying to be hosting-neutral. Scions hosted elsewhere would need to revise the link generation; the `GITHUB_REPO_URL` and `GITHUB_BRANCH` constants in `.scripts/render.py` are the intended revision surface.
 
 ## Alternatives Considered
 
-**No source link; trust the reader to find their way.** Rely on the project's Forkable Publication Model plus the README's fork-and-edit instructions. Readers who want to contribute can navigate from the rendered site to the repository by reading the README. Rejected because the README is a destination a contribution-minded reader must actively seek out; the footer link is a destination that finds the reader. The Decision's whole rationale is friction reduction at the point of contact; trusting the reader to find the path is exactly the friction the commitment exists to remove.
+**No source link; trust the reader to find their way.** Rely on the Scion Publication Model plus the README's template-and-edit instructions. Readers who want to contribute can navigate from the rendered site to the repository by reading the README. Rejected because the README is a destination a contribution-minded reader must actively seek out; the footer link is a destination that finds the reader. The Decision's whole rationale is friction reduction at the point of contact; trusting the reader to find the path is exactly the friction the commitment exists to remove.
 
 **Link to the rendered-page view, not the source.** Point at `/nodes/decisions/adopt-node-atomicity/` rather than at the markdown. Rejected because the rendered page is what the reader is already looking at; the link's purpose is to reach the *editable* form. A link back to the rendered page serves navigation, not contribution.
 
@@ -48,7 +48,7 @@ Three signals would prompt revisit.
 
 ## Relations
 
-- grounded_in::[[Adopt Forkable Publication Model]]
+- grounded_in::[[Adopt Scion Publication Model]]
   - The Decision that commits the graph to publication as an editable repository rather than a read-only site. This Decision is that commitment's surface manifestation: a click from every rendered page to the editable markdown source.
 
 - informs_downstream::[[The Second Cycle of Contribution Happens]]
