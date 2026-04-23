@@ -1,3 +1,7 @@
+---
+tagline: An agent-invocable workflow as a compound-node graph node, carrying a runtime-invocation name, an Anthropic-spec description, and numbered steps
+---
+
 - conforms_to::[[Contract Form Contract]]
 - extends_contract::[[Markdown Node Contract]]
 - authored_by::[[Deep Context Community]]
@@ -39,7 +43,8 @@ The Skill Form Contract was drafted speculatively, ahead of any skill nodes exis
 - Required scalar keys:
   - `runtime_name` MUST be the lowercase-hyphenated form of the folder name (`Node Create` → `node-create`). It matches Anthropic's `name` field and becomes the invocation name (`/node-create`).
   - `description` MUST carry an Anthropic-spec-compliant description: a brief third-person statement of what the skill does, followed by a WHEN line listing trigger conditions and a WHEN NOT line listing non-invocation cases.
-- Optional scalar keys inherited from `Markdown Node Contract`: `created`, `tagline`, `brief_summary`.
+- The lead file SHOULD include `tagline` as a one-line summary distinct from `description`. The two fields serve different readers: `description` serves the Anthropic Agent Skills runtime (third-person, WHEN / WHEN NOT, loaded whole); `tagline` serves the Skills taxonomy index page, which surfaces each skill's tagline as the row summary for humans browsing the list of capabilities. Without `tagline`, the index row is silent — the skill appears as a bare wikilink with no orientation to what the skill does.
+- Optional scalar keys inherited from `Markdown Node Contract`: `created`, `brief_summary`.
 - YAML MUST NOT carry named-edge predicates. Identity predicates live in the body above the H1 per the base contract.
 
 ### Identity predicate block

@@ -1,3 +1,7 @@
+---
+tagline: The meta-contract: how a Contract node in this project is named, structured, declares inheritance, and conforms to itself
+---
+
 - conforms_to::[[Contract Form Contract]]
 - extends_contract::[[Markdown Node Contract]]
 - authored_by::[[Deep Context Community]]
@@ -53,6 +57,12 @@ Enforces [[Require Explanatory Prose Before Contract Requirements]].
 
 - A Contract MUST include prose body between the H1 and the `## Requirements` section that explains the purpose of the contract and when it is used.
 - The prose body MUST NOT restate the Requirements normatively; it provides orientation, not a second source of truth.
+
+### YAML frontmatter
+
+- A Contract's lead file SHOULD carry YAML frontmatter including `tagline` as a one-line summary of the form the Contract specifies. The Contracts taxonomy index page surfaces each Contract's tagline as the row summary for readers browsing the list of forms; without it, the index row is silent — the Contract appears as a bare wikilink with no orientation to what shape the form carries. Contracts are the forms readers reach for when orienting to the graph, and a silent row at the orientation surface defeats the purpose of the index.
+- Optional scalar keys follow `Markdown Node Contract`: `created`, `brief_summary`.
+- YAML MUST NOT carry named-edge predicates per the base contract.
 
 ### Relations
 
