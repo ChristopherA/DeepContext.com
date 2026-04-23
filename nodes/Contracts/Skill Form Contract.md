@@ -1,7 +1,7 @@
 - conforms_to::[[Contract Form Contract]]
 - extends_contract::[[Markdown Node Contract]]
 - authored_by::[[Deep Context Community]]
-- has_lifecycle::[[Seed Stage]]
+- has_lifecycle::[[Growth Stage]]
 - has_curation::[[Working Draft]]
 - in_domain::[[Deep Context Architecture]]
 
@@ -11,7 +11,7 @@ A Skill is a node that encodes an agent-invocable capability — a named workflo
 
 A Skill is not a Pattern (which names a craft move an author makes by hand) and not a Decision (which records a commitment). What distinguishes a Skill is that it is designed to be executed by an agent on demand — its body is a workflow, not a claim — and its presence at a runtime path lets an agent runtime discover and invoke it by name. The invocation surface is what forces the structural additions in this contract: a runtime-visible scalar name, an Anthropic-style `description` block, and a compound-node layout that can carry scripts alongside the lead file.
 
-The Skill Form Contract is Seed Stage. The project committed to skills-as-nodes ahead of any skill nodes existing, so this contract codifies expected shape in advance of the 2-to-3-conforming-nodes-already-exist threshold that `Contract Form Contract` would usually prefer. The first skills drafted under this contract are expected to reveal gaps that revise it.
+The Skill Form Contract was drafted speculatively, ahead of any skill nodes existing, because skills needed a `conforms_to::` target to declare. Six skills were then drafted under it — `graph-orient`, `graph-audit`, `node-create`, `node-read`, `node-validate`, `predicate-propose` — and each was exercised against real work. The exercises surfaced revisions to adjacent Contracts (`Markdown Node Contract`'s Named-edge syntax gained a scalar-valued-predicate clause; `Use Pipe Wikilinks for Display-Target Divergence` had its MUST scoped to prose-flow contexts) but this Contract's own shape held. The `has_lifecycle::[[Growth Stage]]` marking reflects that exercise-driven resolution. See [[Let the Exercise Audit the Contract]] for the Pattern the progression realized.
 
 ## Requirements
 
@@ -95,7 +95,10 @@ The Skill Form Contract is Seed Stage. The project committed to skills-as-nodes 
   - The commitment that makes named-edge predicates the structural spine. Skills are graph nodes like any other; their Relations edges let an agent reading one skill discover the Decisions it enforces and the skills it composes with.
 
 - contends_with::[[Convention Overhead vs Graph Quality]]
-  - Introducing a Contract ahead of the two-or-three-conforming-nodes threshold raises the bar for skill authoring speculatively. The Seed Stage lifecycle and Working Draft curation mark the contract as provisional; the first skills drafted under it are expected to revise it.
+  - Introducing a Contract ahead of the two-or-three-conforming-nodes threshold raised the bar for skill authoring speculatively. The exercise-driven progression from Seed to Growth Stage resolved that tension honestly: six skills drafted and run demonstrated the Contract's shape held; revisions it prompted landed on adjacent Contracts rather than on itself.
+
+- composes_with::[[Let the Exercise Audit the Contract]]
+  - The Pattern that names the craft move this Contract's lifecycle progression realized. The Contract was drafted speculatively, exercised against six real skills, and advanced from Seed to Growth through the audit the exercises produced.
 
 - contrasts_with::[[Pattern Form Contract]]
   - A Pattern names a craft move an author makes by hand; a Skill encodes an agent-invocable workflow. Both shape practice, but Patterns address human authorship and Skills address agent execution. The distinction is load-bearing because some operations warrant both — a Pattern describing how an author should think, and a Skill encoding the agent-side execution.
