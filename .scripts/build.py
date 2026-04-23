@@ -17,6 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from emit_skills import SKILLS_TARGET_DIRS, emit_skill_aliases  # noqa: E402
 from generate_indexes import (  # noqa: E402
+    copy_attachments,
     copy_style,
     write_cname,
     write_landing_page,
@@ -66,6 +67,7 @@ def build(root: Path) -> None:
     write_taxonomy_indexes(root=root, build_dir=build_dir, slug_table=slug_table)
     write_landing_page(root=root, build_dir=build_dir, slug_table=slug_table)
     copy_style(root=root, build_dir=build_dir)
+    copy_attachments(root=root, build_dir=build_dir)
     write_nojekyll(build_dir)
     write_cname(build_dir)
 

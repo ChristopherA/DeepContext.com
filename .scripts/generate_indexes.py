@@ -7,6 +7,7 @@ For each taxonomy folder under nodes/:
 
 from __future__ import annotations
 
+import shutil
 from pathlib import Path
 
 from linkify import linkify_text
@@ -150,6 +151,20 @@ def copy_style(*, root: Path, build_dir: Path) -> None:
     if not style_src.exists():
         return
     (build_dir / "style.css").write_text(style_src.read_text(encoding="utf-8"), encoding="utf-8")
+
+
+def copy_attachments(*, root: Path, build_dir: Path) -> None:
+    """Copy root-level Attachments/ tree into the build output.
+
+    Images and other attachments referenced via Obsidian-style embeds
+    (`![[Attachments/name.png]]`) resolve at render time to site-root URLs
+    (`/Attachments/name.png`). This copy makes the paths live.
+    """
+    attachments_src = root / "Attachments"
+    if not attachments_src.is_dir():
+        return
+    attachments_dest = build_dir / "Attachments"
+    shutil.copytree(attachments_src, attachments_dest)
 
 
 def write_nojekyll(build_dir: Path) -> None:
