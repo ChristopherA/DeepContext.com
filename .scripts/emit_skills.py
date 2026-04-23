@@ -1,9 +1,16 @@
-"""Emit .agents/skills/<runtime_name>/ symlink tree from nodes/Skills/.
+"""Emit skill-runtime-alias symlink trees from nodes/Skills/.
 
 Source of truth is nodes/Skills/<Title Case>/<Title Case>.md (compound-node
-lead file matching its folder per Skill Form Contract). The Anthropic Agent
-Skills runtime expects .agents/skills/<runtime_name>/SKILL.md; this module
-emits the symlinks that map one layout onto the other.
+lead file matching its folder per Skill Form Contract). Two agent runtimes
+discover skills under lowercase-hyphenated paths:
+
+  .agents/skills/<runtime_name>/SKILL.md   -- Anthropic Agent Skills runtime
+  .claude/skills/<runtime_name>/SKILL.md   -- Claude Code CLI slash commands
+
+This module emits symlink trees at both paths, each pointing at the single
+source-of-truth lead file. Keeping both trees in the repository means a
+clone or fresh scion has working runtime layouts and CLI autocomplete
+without running build.py locally.
 
 Usage:
     python .scripts/emit_skills.py [repo-root]
@@ -18,7 +25,7 @@ import sys
 from pathlib import Path
 
 SKILLS_SOURCE_DIR = "nodes/Skills"
-SKILLS_TARGET_DIR = ".agents/skills"
+SKILLS_TARGET_DIRS = (".agents/skills", ".claude/skills")
 SKILL_SUBDIRS = ("scripts", "references")
 
 _FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
@@ -67,48 +74,49 @@ def _link_into(link_path: Path, source_path: Path) -> None:
 
 
 def emit_skill_aliases(*, root: Path) -> int:
-    """Emit .agents/skills/<runtime_name>/ symlinks for every compound-node
-    skill under nodes/Skills/. Returns the count of skills emitted.
+    """Emit symlinks for every compound-node skill under nodes/Skills/ into
+    each of the SKILLS_TARGET_DIRS. Returns the count of skills emitted
+    (same count per target).
     """
     source_dir = root / SKILLS_SOURCE_DIR
-    target_dir = root / SKILLS_TARGET_DIR
-
     if not source_dir.is_dir():
         return 0
 
-    target_dir.mkdir(parents=True, exist_ok=True)
-    _clear_target(target_dir)
-
-    emitted = 0
+    skills = []
     for skill_folder in sorted(source_dir.iterdir()):
         if not skill_folder.is_dir():
             continue
         lead_file = skill_folder / f"{skill_folder.name}.md"
         if not lead_file.is_file():
             continue
-
         runtime_name = _read_runtime_name(lead_file) or _derive_runtime_name(
             skill_folder.name
         )
+        skills.append((skill_folder, lead_file, runtime_name))
 
-        alias_dir = target_dir / runtime_name
-        alias_dir.mkdir(parents=True, exist_ok=True)
-        _link_into(alias_dir / "SKILL.md", lead_file)
+    for target_name in SKILLS_TARGET_DIRS:
+        target_dir = root / target_name
+        target_dir.mkdir(parents=True, exist_ok=True)
+        _clear_target(target_dir)
 
-        for subdir_name in SKILL_SUBDIRS:
-            source_sub = skill_folder / subdir_name
-            if source_sub.is_dir():
-                _link_into(alias_dir / subdir_name, source_sub)
+        for skill_folder, lead_file, runtime_name in skills:
+            alias_dir = target_dir / runtime_name
+            alias_dir.mkdir(parents=True, exist_ok=True)
+            _link_into(alias_dir / "SKILL.md", lead_file)
 
-        emitted += 1
+            for subdir_name in SKILL_SUBDIRS:
+                source_sub = skill_folder / subdir_name
+                if source_sub.is_dir():
+                    _link_into(alias_dir / subdir_name, source_sub)
 
-    return emitted
+    return len(skills)
 
 
 def main() -> None:
     root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path.cwd()
     count = emit_skill_aliases(root=root.resolve())
-    print(f"Emitted {count} skill alias(es) to {SKILLS_TARGET_DIR}/")
+    targets = ", ".join(f"{t}/" for t in SKILLS_TARGET_DIRS)
+    print(f"Emitted {count} skill alias(es) to {targets}")
 
 
 if __name__ == "__main__":
