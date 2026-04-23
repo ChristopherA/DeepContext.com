@@ -59,5 +59,8 @@ The commitment is provisional in the sense that it sits on empirical claims abou
 - informs_downstream::[[Publish via Actions Artifact Deploy]]
   - The Actions-deploy Decision records the specific Pages mechanism the forkability commitment runs on. The forkability commitment is the upstream claim; the Actions-deploy choice is one implementation of it.
 
+- informs_downstream::[[Link Rendered Pages to Markdown Source on GitHub]]
+  - The source-link surface manifestation of the forkability commitment. The Decision adds an Edit-on-GitHub link to every rendered page so a reader who wants to edit never has to reason about the repository's structure to find the source -- one click exits the rendered site into the editable markdown.
+
 - informed_by::[[Vocabulary Diversity Is a Feature]]
   - The Conviction that makes forkability load-bearing beyond technical concern. Without the diversity stance, a single-repo publication would be adequate; with it, forkability is what prevents vocabulary convergence from becoming the project's growth path.

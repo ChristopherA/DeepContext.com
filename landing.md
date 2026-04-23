@@ -204,7 +204,7 @@ edges. Six surface forms appear in node bodies.
 **Resolved wikilink** -- source `[[Target]]`; rendered as a working link that
 preserves the brackets, so the source pattern stays legible on the site.
 [[Atomic Node]] is a live example; clicking it opens the Gloss. Brackets are
-kept deliberately ([see the Decision](/nodes/decisions/render-bare-wikilinks-with-visible-brackets/)).
+kept deliberately per [[Render Bare Wikilinks with Visible Brackets]].
 
 **Pipe wikilink** -- source `[[Target|Display]]`; rendered as the display text
 only so it reads naturally in prose. The full filename stem on a Gloss like
@@ -239,8 +239,8 @@ reader can see where the graph ends.
 
 ## Form types
 
-Each node conforms to one of ten Form Contracts. Each contract names a shape
-and a compliance rule; the Decisions that ground each contract carry the
+Each node conforms to one of ten [[Form Contract]]s. Each contract names a
+shape and a compliance rule; the Decisions that ground each contract carry the
 reasoning. The ten group by the role the form plays -- the reasoning the graph
 captures, the vocabulary that makes the reasoning legible, and the
 infrastructure the graph runs on. Each form name links to its taxonomy index.

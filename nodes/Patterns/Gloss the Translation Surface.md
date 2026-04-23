@@ -84,3 +84,6 @@ Do not write the Gloss as a choice-of-vocabulary recommendation. The Gloss is a 
 
 - composes_with::[[Refactor the Predicate's Axes]]
   - Both are predicate-layer craft moves. Refactor the Predicate's Axes addresses the single-contributor case where one predicate carries two axes (split into single-axis predicates in the same vocabulary). This Pattern addresses the cross-contributor case where two predicates in different vocabularies overlap (translate between them, keep both). Applied together, they keep each contributor's vocabulary internally atomic and preserve distinctions across contributors.
+
+- composes_with::[[The Curation Pass]]
+  - The compound curation Pattern this Pattern is a component of. The Curation Pass is the session-level unit of curation work; this Pattern is the move the session applies at vocabulary contact surfaces. The compound names the session; this Pattern names the vocabulary-layer move the session composes alongside the contributor-layer and document-layer moves.
