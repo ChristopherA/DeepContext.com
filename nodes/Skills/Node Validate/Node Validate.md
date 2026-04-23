@@ -1,5 +1,6 @@
 ---
 runtime_name: node-validate
+tagline: Verifies a single node against the Form Contract it conforms to, walking the inheritance chain and distinguishing mechanical violations from semantic ones
 description: |
   Verifies a single node against the Requirements of the Form Contract it conforms to, walking the inheritance chain from Markdown Node Contract through the form-specific Contract. Reports each violation with a specific remediation, distinguishing mechanical breaks (filename, identity-block presence, ASCII dashes) from semantic ones (missing body sections, form-specific predicate reservations, un-annotated edges).
 

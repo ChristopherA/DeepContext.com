@@ -1,5 +1,6 @@
 ---
 runtime_name: node-read
+tagline: Reads a node progressively by layer (identity, H1, opening, Relations), letting an agent spend a finite context budget on the layer its task needs
 description: |
   Reads a single node using progressive disclosure: identity predicate block, H1, opening card-scale prose, and annotated Relations section first; the full elaboration body is loaded only when the cheaper layers do not satisfy the agent's reason for reading. Lets an agent spend a finite context budget deliberately on the layers most worth reading.
 

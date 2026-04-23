@@ -1,5 +1,6 @@
 ---
 runtime_name: node-create
+tagline: Authors a new node conforming to the form Contract it claims: filename pattern, identity predicate block, required body sections, annotated Relations edges
 description: |
   Authors a new node conforming to this graph's Markdown Node Contract and the form-specific contract the new node claims. Interviews for form, applies the filename pattern, drafts the identity predicate block above the H1, drafts the required body sections the form specifies, and drafts annotated Relations edges.
 
