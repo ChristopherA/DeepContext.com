@@ -55,3 +55,6 @@ Two classes of condition would prompt revisit.
 
 - informs_downstream::[[Refactor the Predicate's Axes]]
   - The Pattern that realizes or restores this commitment when a predicate is discovered in the wild carrying multiple axes. This Decision states the standing commitment; the Pattern names the craft move applied when the commitment is violated.
+
+- informs_downstream::[[scion_of -- content lineage from a template graph]]
+  - The Predicate carries one axis: template-to-scion instantiation at the graph-instance layer. Keeping it distinct from built_on (substrate), grounded_in (normative), and informed_by (content influence) is the atomicity discipline this Decision commits to.

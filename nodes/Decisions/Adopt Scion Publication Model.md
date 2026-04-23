@@ -87,3 +87,6 @@ The commitment derives the pipeline's other architectural choices. Python-only w
 
 - informed_by::[[Egregore Framework (Egregore Labs, 2026)]]
   - The adjacent precedent that commits to provision-from-template plus collaborator-invite. This Decision adopts Egregore's provision-from-template move (decoupled from the collaborator-invite and terminal-first bundle) and extends it with OI inception for cryptographic identity. The Egregore Reference names the discrete features this Decision draws on and the ones it leaves aside.
+
+- informs_downstream::[[scion_of -- content lineage from a template graph]]
+  - The Predicate that expresses a scion's template relationship as a first-class named edge. Each scion's AGENTS.md or identity declaration carries `scion_of::[[did:repo:<template-sha1>]]↗` pointing at the template's DID; the edge is the graph-layer mechanism this Decision's identity-sovereignty commitment is expressed through on a specific scion.

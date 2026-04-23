@@ -55,3 +55,6 @@ Post-inception commits carry authority through a delegated-authority file at `.r
 
 - contrasts_with::[[Egregore Framework (Egregore Labs, 2026)]]
   - Egregore uses `gh repo create --template` for instance provisioning — the same mechanism DeepContext adopts — but does not layer cryptographic identity over it. Each Egregore instance shares the same underlying GitHub identity model as any other repo in the organization. DeepContext adopts Egregore's provision-from-template move and extends it with OI inception to give each scion its own DID.
+
+- informs_downstream::[[scion_of -- content lineage from a template graph]]
+  - The Predicate that expresses template-to-scion lineage as a first-class named edge. Because OI makes the scion's DID distinct from the template's, the relationship between them cannot be the shared-root-commit git-fork relation; it must live at the graph layer. This Predicate is the graph-layer expression of a distinction that OI makes real at the cryptographic layer.
