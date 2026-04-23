@@ -159,7 +159,7 @@ record what was chosen, what was considered, and what would change the call.
 **The stance** -- [Convictions](/nodes/convictions/) are normative positions
 the practice holds. [[Human Authority Over Augmentation Systems]],
 [[Vocabulary Diversity Is a Feature]], and [[Translation Over Convergence]]
-are the current six.
+are three of the most load-bearing.
 
 **The direction** -- [Aspirations](/nodes/aspirations/) name what the
 project pulls toward with honest acknowledgement of the gap.
@@ -171,9 +171,30 @@ Contested). Contested observations like
 [[LLM Assistance Widens the Participation Gap]] are claims the project takes
 seriously but does not yet have a definitive answer to.
 
+**The craft moves** -- [Patterns](/nodes/patterns/) name recurring moves
+an author makes by hand, each stated at card scale with a Heart, the Forces
+it navigates, and the tension it resolves. [[Refactor the Predicate's Axes]]
+and [[Let the Exercise Audit the Contract]] are two.
+
 **The predicates** -- [Predicates](/nodes/predicates/) document the typed
 edges themselves. [[conforms_to]], [[grounded_in]], [[informed_by]], and
 [[contrasts_with]] are the most load-bearing.
+
+**The term definitions** -- [Glosses](/nodes/glosses/) frame terms used
+elsewhere in the graph, with the working definition carried in the filename
+so a reader encounters it without opening the file. [[Atomic Node]] and
+[[Compound Node]] are short examples.
+
+**The external sources** -- [References](/nodes/references/) point at the
+published material this graph draws on, with an Adopted / Not-adopted split
+per source. [[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]] is
+the most load-bearing for this project's structural spine.
+
+**The agent capabilities** -- [Skills](/nodes/skills/) are agent-invocable
+workflows that operate on the graph -- reading, authoring, validating,
+auditing. [[Node Create]] is the entry point for writing new nodes;
+[[Graph Orient]] is the entry point for agents arriving at the graph
+for the first time.
 
 ## Link legend
 
