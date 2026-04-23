@@ -90,3 +90,6 @@ The commitment derives the pipeline's other architectural choices. Python-only w
 
 - informs_downstream::[[scion_of -- content lineage from a template graph]]
   - The Predicate that expresses a scion's template relationship as a first-class named edge. Each scion's AGENTS.md or identity declaration carries `scion_of::[[did:repo:<template-sha1>]]↗` pointing at the template's DID; the edge is the graph-layer mechanism this Decision's identity-sovereignty commitment is expressed through on a specific scion.
+
+- informs_downstream::[[Embed Images via Obsidian Wikilink Syntax]]
+  - The image-embed Decision's commitment to committing `Attachments/` alongside the content, and to copying it into the build output, is grounded in this Decision's self-containment rule: every scion must get working image rendering on first clone with no additional configuration. Gitignored attachments or externally-hosted images would break the scion promise at the asset layer; committed attachments and the copy-attachments build step keep it holding.

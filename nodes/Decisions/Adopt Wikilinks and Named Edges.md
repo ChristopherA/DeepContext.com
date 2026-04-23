@@ -53,3 +53,6 @@ We'll revisit the whole bundle after the first seed-and-run cycle produces 15-30
 
 - informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract encodes the wikilink and named-edge mechanics as file-form requirements (identity block above H1, `- predicate::[[Target]]` bullets, `↗` for external provenance, no scalar mirrors of graph predicates). The wikilink-and-named-edge decision is the upstream substrate; Markdown Node Contract is the first concrete downstream implementation.
+
+- informs_downstream::[[Embed Images via Obsidian Wikilink Syntax]]
+  - The image-embed Decision extends this wikilink commitment to images: `![[path]]` is the embed counterpart of `[[target]]`. Adopting Obsidian-compatible wikilink syntax for links implied committing to its embed variant for images once image embeds became load-bearing; the downstream Decision names the specifics (path resolution, Attachments/ folder colocation, pipeline translation step) that this upstream Decision leaves abstract.

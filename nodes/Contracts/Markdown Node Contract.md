@@ -94,6 +94,15 @@ Enforces [[Adopt Wikilinks and Named Edges]].
 - A target whose referent belongs to a different wiki or to an external tradition MUST be marked with a trailing `↗`. The `↗` marks the referent's provenance, not a URL. URLs, when recorded, live in a stub node under `sources/`.
 - Ghost links (wikilinks to targets that do not yet exist) are permitted and signal intended future nodes.
 
+### Image embeds
+
+Enforces [[Embed Images via Obsidian Wikilink Syntax]].
+
+- Image embeds MUST use Obsidian's wikilink-embed syntax: `![[path/to/image.ext]]`. The pipe form `![[path|alt text]]` overrides the default alt text (otherwise derived from the filename stem).
+- Recognized image extensions are `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`, `.webp`. Embeds whose target has another extension pass through the render pipeline unchanged, reserving the syntax for future non-image uses.
+- Attachment files MUST live in an `Attachments/` folder co-located with the referring note: at the repository root for root-level notes (`landing.md`, and similar), and as a sibling subdirectory for compound nodes (`nodes/<Tax>/<Folder>/Attachments/`).
+- The render pipeline MUST translate each embed into a standard markdown image reference with a site-root-relative URL and MUST copy every `Attachments/` tree into the build output so those URLs resolve at request time.
+
 ### Predicate atomicity
 
 Enforces [[Adopt Predicate Atomicity]].
@@ -134,6 +143,9 @@ Enforces [[Adopt Predicate Atomicity]].
 
 - grounded_in::[[No Generic relates_to Predicate]]
   - The Decision grounding the `relates_to::` prohibition in the Relations-section Requirement.
+
+- grounded_in::[[Embed Images via Obsidian Wikilink Syntax]]
+  - The Decision grounding the Image embeds Requirement. The Contract states the rule (`![[path]]` syntax, `Attachments/` folder colocation, site-root URL resolution, pipeline copy step); the Decision records the reasoning and revisit conditions.
 
 - extended_by::[[Gloss Form Contract]]
   - Gloss Form Contract extends this contract with filename-carries-definition and body-shape allowances.

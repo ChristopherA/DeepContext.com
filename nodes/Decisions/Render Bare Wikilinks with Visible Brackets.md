@@ -55,3 +55,6 @@ The decision is provisional and tied to tested assumptions about reader response
 
 - informs_downstream::[[Markdown Node Contract]]
   - Markdown Node Contract specifies the source form (`[[Target]]`, `[[Target|Display]]`, `[[Target]]↗`); this Decision specifies one rendering of that source form. A different rendering pipeline could implement the Contract differently, but the Contract does not prescribe a single rendering.
+
+- informs_downstream::[[Embed Images via Obsidian Wikilink Syntax]]
+  - The sibling Decision at the image-embed layer. Both Decisions specify how a source-layer convention survives the render pass: bracket-preserving wikilinks for text, Obsidian-embed syntax translated to standard markdown images for embeds. Both live inside the same render-pipeline responsibility; the embed Decision composes with this one rather than repeating its reasoning.
