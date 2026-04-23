@@ -61,3 +61,9 @@ The stance is also asymmetric with respect to different kinds of deferrals. Capa
 
 - informed_by::[[Wikis Without Curation Drift Toward Write-Only]]
   - The write-only failure mode compounds with feature complexity: a graph with more capabilities requires more curation to keep coherent, and the curation burden is what makes the write-only dynamic bite. MVA keeps the curation surface proportional to the content surface.
+
+- informed_by::[[Agora Project (Flancian, 2019)]]
+  - The deferred cross-garden external-marker resolution and the deferred collaboration-at-aggregator capabilities point at Agora's model as one precedent of what those capabilities would look like when they return to scope. This Reference is the study substrate the deferral refers to without committing the project to adopting the specific implementation.
+
+- informed_by::[[Egregore Framework (Egregore Labs, 2026)]]
+  - The deferred collaboration features (invitations, agent orchestration, multi-fork coordination) point at Egregore's model as one precedent of what those capabilities look like when implemented. This Reference is the study substrate the deferral refers to; the MVA Stance names what the project would study should those capabilities become load-bearing without committing to the Egregore frame.

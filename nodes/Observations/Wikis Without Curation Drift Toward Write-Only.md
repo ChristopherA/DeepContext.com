@@ -49,6 +49,9 @@ The project's own experience is itself in the record's tail. If the Deep Context
 - informed_by::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]
   - The gist's gardening-metaphor and vocabulary-lifecycle sections supply the micro-level failure modes (weed predicates, un-tended vocabularies, precedent poisoning) this Observation generalizes to the wiki-maintenance level.
 
+- informed_by::[[Agora Project (Flancian, 2019)]]
+  - The Observation's Grounds reconstruct the write-only plateau pattern partly from Agora and Anagora — sustained contributor enthusiasm for a period, then a slowdown as link-integrity and ontology-reconciliation work outpaced contributor willingness to do bookkeeping. This Reference is the specific source the Grounds reference at that layer.
+
 - informs_downstream::[[LLM Assistance Widens the Participation Gap]]
   - The write-only failure mode at the system level and the LLM-assistance rejection pattern at the contribution-review level compose. Without curation, contributions accumulate; with curation of the current Wikipedia style, newcomer LLM-assisted contributions are filtered at the membership-fluency register. This Observation names the mechanism at one layer; the LLM Observation names a specific mechanism at a different layer.
 

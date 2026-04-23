@@ -64,3 +64,9 @@ The commitment is provisional in the sense that it sits on empirical claims abou
 
 - informed_by::[[Vocabulary Diversity Is a Feature]]
   - The Conviction that makes forkability load-bearing beyond technical concern. Without the diversity stance, a single-repo publication would be adequate; with it, forkability is what prevents vocabulary convergence from becoming the project's growth path.
+
+- informed_by::[[Agora Project (Flancian, 2019)]]
+  - The adjacent precedent that commits to aggregator-plus-many-gardens rather than forkable-single-repo. The Alternatives section's "Forkability via external tooling" rejection contrasts against Agora's model at the infrastructure layer; the Reference captures the discrete features Agora names that DeepContext's forkability commitment decided differently on (unit of participation, whether the contributor's garden produces a live site, whether aggregation is a separate service).
+
+- informed_by::[[Egregore Framework (Egregore Labs, 2026)]]
+  - The adjacent precedent that commits to provision-from-template plus collaborator-invite rather than forkable-publication. The Alternatives section's "Pages-enabled but private-repo-only" and "Forkability via external tooling" rejections both diverge from the Egregore model at distinct layers; the Reference captures the discrete features Egregore names (semantic commands wrapping git, SessionStart hook, terminal-first contribution path) that this Decision's Web-UI-edit-is-first-class commitment decided away from.
