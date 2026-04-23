@@ -94,6 +94,12 @@ The Skill Form Contract was drafted speculatively, ahead of any skill nodes exis
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The commitment that makes named-edge predicates the structural spine. Skills are graph nodes like any other; their Relations edges let an agent reading one skill discover the Decisions it enforces and the skills it composes with.
 
+- grounded_in::[[Adopt Skills as Graph Nodes]]
+  - The prior claim that makes this Contract worth writing. The Decision commits to skills being first-class graph nodes rather than auxiliary tooling, user-level-only artifacts, or content hosted in a separate repository; this Contract is the structural specification that commitment implies. Without the Decision, skills would be runtime files and this Contract would have no home in the graph.
+
+- grounded_in::[[Emit Skill Runtime Aliases at Build Time]]
+  - The Decision that grounds the Runtime alias emission Requirement. The Decision carries the reasoning (dual-residence resolved by symlinks, source-of-truth in the graph, runtime directory committed rather than gitignored, idempotent regeneration, no hand edits); this Contract carries the compliance rule.
+
 - contends_with::[[Convention Overhead vs Graph Quality]]
   - Introducing a Contract ahead of the two-or-three-conforming-nodes threshold raised the bar for skill authoring speculatively. The exercise-driven progression from Seed to Growth Stage resolved that tension honestly: six skills drafted and run demonstrated the Contract's shape held; revisions it prompted landed on adjacent Contracts rather than on itself.
 
