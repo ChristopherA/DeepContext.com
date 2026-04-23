@@ -101,12 +101,14 @@ def write_taxonomy_indexes(
         readme = tax_dir / "README.md"
         if readme.exists():
             markdown_source = readme.read_text(encoding="utf-8")
+            source_rel = str(readme.relative_to(root))
         else:
             markdown_source = build_taxonomy_index(
                 taxonomy_name=taxonomy_name,
                 taxonomy_slug=taxonomy_slug,
                 slug_table=slug_table,
             )
+            source_rel = None
 
         linkified = linkify_text(markdown_source, slug_table)
         _, body = strip_frontmatter(linkified)
@@ -115,6 +117,7 @@ def write_taxonomy_indexes(
             title=f"{taxonomy_name} - DeepContext",
             taxonomy_name=None,
             taxonomy_url=None,
+            source_rel_path=source_rel,
         )
 
         out = build_dir / "nodes" / taxonomy_slug / "index.html"
@@ -135,6 +138,7 @@ def write_landing_page(
         title="DeepContext",
         taxonomy_name=None,
         taxonomy_url=None,
+        source_rel_path=str(landing.relative_to(root)),
     )
     (build_dir / "index.html").write_text(page, encoding="utf-8")
 

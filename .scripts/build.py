@@ -38,12 +38,14 @@ def render_nodes(*, root: Path, build_dir: Path, slug_table: dict[str, dict]) ->
         source = entry["path"]
         linkified = linkify_file(source, slug_table)
         taxonomy_url = f"/nodes/{entry['taxonomy']}/"
+        source_rel = str(source.relative_to(root))
         html_text = render_file(
             source_path=source,
             linkified_text=linkified,
             title=entry["title"],
             taxonomy_name=entry["taxonomy_name"],
             taxonomy_url=taxonomy_url,
+            source_rel_path=source_rel,
         )
         out = build_dir / "nodes" / entry["taxonomy"] / entry["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)

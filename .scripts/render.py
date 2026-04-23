@@ -5,6 +5,7 @@ from __future__ import annotations
 import html
 import re
 from pathlib import Path
+from urllib.parse import quote
 
 import markdown
 
@@ -13,6 +14,11 @@ FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n", re.DOTALL)
 MD_EXTENSIONS = ["tables", "fenced_code", "attr_list", "sane_lists"]
 
 BULLET_RE = re.compile(r"^( {0,4})([*+\-]|\d+[.)]) ")
+
+# GitHub source link for the "Edit on GitHub" footer widget. Forks should set
+# GITHUB_REPO_URL to their own repo or to an empty string to suppress the link.
+GITHUB_REPO_URL = "https://github.com/ChristopherA/DeepContext.com"
+GITHUB_BRANCH = "main"
 
 
 def normalize_list_indents(text: str) -> str:
@@ -72,6 +78,7 @@ def render_html(
     title: str,
     taxonomy_name: str | None,
     taxonomy_url: str | None,
+    source_rel_path: str | None = None,
     style_href: str = "/style.css",
 ) -> str:
     normalized = normalize_list_indents(markdown_body)
@@ -84,6 +91,15 @@ def render_html(
             '<a href="/">DeepContext</a> / '
             f'<a href="{html.escape(taxonomy_url)}">{html.escape(taxonomy_name)}</a>'
             "</nav>"
+        )
+
+    source_link = ""
+    if source_rel_path and GITHUB_REPO_URL:
+        encoded = quote(source_rel_path, safe="/")
+        source_url = f"{GITHUB_REPO_URL}/blob/{GITHUB_BRANCH}/{encoded}"
+        source_link = (
+            f'<a class="source-link" href="{html.escape(source_url)}">'
+            "Edit on GitHub</a>"
         )
 
     return f"""<!doctype html>
@@ -99,7 +115,7 @@ def render_html(
 <main>
 {html_body}
 </main>
-<footer><a href="/">DeepContext</a></footer>
+<footer><a href="/">DeepContext</a>{source_link}</footer>
 </body>
 </html>
 """
@@ -112,6 +128,7 @@ def render_file(
     title: str,
     taxonomy_name: str | None,
     taxonomy_url: str | None,
+    source_rel_path: str | None = None,
 ) -> str:
     _, body = strip_frontmatter(linkified_text)
     return render_html(
@@ -119,4 +136,5 @@ def render_file(
         title=title,
         taxonomy_name=taxonomy_name,
         taxonomy_url=taxonomy_url,
+        source_rel_path=source_rel_path,
     )
