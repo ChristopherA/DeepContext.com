@@ -81,7 +81,7 @@ Enforces [[Annotate Edges With Why-They-Matter]] and [[No Generic relates_to Pre
 - If the node has relational edges, they MUST appear in a section headed `## Relations` after the body.
 - Each relational edge MUST be a top-level bullet in the form `- predicate::[[Target]]` or `- predicate::[[Target]]↗`.
 - Each relational edge SHOULD carry an indented sub-bullet annotation explaining why the relationship matters.
-- The `relates_to::` predicate MUST NOT be used. Choose a specific predicate (`extends_contract::`, `has_component::`, `composed_of::`, `grounded_in::`, `built_on::`, `informed_by::`, `contrasts_with::`, `contends_with::`, and so on) or add one to the local vocabulary.
+- The `relates_to::` predicate MUST NOT be used. Choose a specific predicate (`extends_contract::`, `has_component::`, `grounded_in::`, `built_on::`, `informed_by::`, `informs_downstream::`, `contrasts_with::`, `contends_with::`, and so on) or add one to the local vocabulary.
 
 ### Named-edge syntax
 

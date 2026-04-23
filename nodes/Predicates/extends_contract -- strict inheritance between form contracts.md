@@ -22,9 +22,9 @@ The web of associations the predicate activates is the Contract hierarchy. A rea
 
 `conforms_to::` is an instance-to-specification relationship: any node declares compliance with a Form Contract it satisfies. `extends_contract::` is a specification-to-specification relationship: one Form Contract inherits another Form Contract's Requirements and refines them. The two predicates operate at different layers of the form hierarchy and on different subject types — `conforms_to::` on any node; `extends_contract::` only between Form Contracts. The distinction matters because a single Form Contract typically carries both: the Gloss Form Contract `conforms_to::[[Contract Form Contract]]` (it is itself a Contract subject to the meta-Contract's rules) and `extends_contract::[[Markdown Node Contract]]` (it inherits the base file-form Requirements and adds gloss-specific ones).
 
-### Against [[composed_of]]
+### Against [[has_component -- mereological relation where the subject contains the object as a component]]
 
-Ghost link; the target Predicate node is not yet seeded. Composition is whole-to-part — the subject is composed of the object as a structural component of itself. Extension is specialization-to-generalization — the subject inherits the object and specializes it. The two are different structural shapes: a compound node `composed_of::` its constituent nodes carries the constituents as parts; a Form Contract `extends_contract::` another Form Contract carries the parent's Requirements as inherited structure, not as parts the child contains.
+Containment is whole-to-part — the subject contains the object as a structural component of itself. Extension is specialization-to-generalization — the subject inherits the object and specializes it. The two are different structural shapes: a compound node `has_component::` its constituent nodes carries the constituents as parts; a Form Contract `extends_contract::` another Form Contract carries the parent's Requirements as inherited structure, not as parts the child contains. (The previous `composed_of::` predicate that had carried this contrast was consolidated into `has_component::` when the mereological axis collapsed to one predicate.)
 
 ## Typing
 
@@ -41,8 +41,8 @@ Ghost link; the target Predicate node is not yet seeded. Composition is whole-to
 - contrasts_with::[[conforms_to -- compliance with a specification]]
   - Different layers of the form hierarchy: `conforms_to::` is instance-to-specification compliance; `extends_contract::` is contract-to-contract inheritance.
 
-- contrasts_with::[[composed_of]]
-  - Ghost link; `composed_of::` is not yet seeded as a Predicate. The Crescent names the distinction between whole-to-part composition and specialization-to-generalization extension.
+- contrasts_with::[[has_component -- mereological relation where the subject contains the object as a component]]
+  - The Crescent names the distinction between whole-to-part composition and specialization-to-generalization extension. `has_component` absorbed the previously-separate `composed_of` predicate when the mereological axis was consolidated.
 
 - grounded_in::[[Vocabulary Diversity Is a Feature]]
   - The Conviction that makes naming the inheritance-vs-composition distinction load-bearing. Both shapes get their own predicate rather than collapsing to a generic structural-relation term.

@@ -22,13 +22,9 @@ Composition is an authorial observation, not a mechanical correlation. Two nodes
 
 `contrasts_with::` names adjacency-with-separation; `composes_with::` names adjacency-with-pairing. Both describe conceptual adjacency, but the authorial stance toward that adjacency is opposite. Contrast treats the adjacency as a distinction to preserve; composition treats it as a pairing to name. Choosing the wrong predicate inverts the intended reader response, as discussed in the `contrasts_with::` Crescent from the opposite side.
 
-### Against [[has_component]]
+### Against [[has_component -- mereological relation where the subject contains the object as a component]]
 
-Ghost link; `has_component::` is in the Relations-section vocabulary but not seeded as a Predicate node. `has_component::` names whole-to-part structural containment — the subject is made of the object as a part. `composes_with::` names adjacency composition — the subject and object are separate nodes typically used together. The distinction is structural: containment implies that the object is inside the subject's own boundaries; composition implies that the two remain separate and meet at a usage site. A compound node `has_component::` its constituent atomic nodes; a Pattern `composes_with::` another Pattern means the two Patterns are typically invoked in the same work even though they remain separate nodes.
-
-### Against [[composed_of]]
-
-Ghost link; `composed_of::` is in the Relations-section vocabulary but not seeded as a Predicate node. `composed_of::` is the whole-to-part edge on the whole side — the subject is the whole that is made of the object as a part. `composes_with::` is the adjacency-composition edge on either side — both nodes remain separate and typically meet in practice. Whole-to-part containment is a different structural shape than adjacent pairing.
+`has_component::` names whole-to-part structural containment — the subject is made of the object as a part. `composes_with::` names adjacency composition — the subject and object are separate nodes typically used together. The distinction is structural: containment implies the object is inside the subject's own boundaries; composition implies the two remain separate and meet at a usage site. A compound node `has_component::` its constituent atomic nodes; a Pattern `composes_with::` another Pattern means the two Patterns are typically invoked in the same work even though they remain separate nodes. `has_component::` absorbed the previous `composed_of::` predicate when the partial/exhaustive distinction was consolidated; the adjacency-versus-containment contrast this Crescent names now runs against the single mereological predicate.
 
 ## Typing
 
@@ -45,11 +41,8 @@ Ghost link; `composed_of::` is in the Relations-section vocabulary but not seede
 - contrasts_with::[[contrasts_with -- adjacent concept occupying different territory]]
   - Opposite authorial stances toward the same geometric adjacency: composition pairs, contrast separates.
 
-- contrasts_with::[[has_component]]
-  - Ghost link; target Predicate not seeded. Adjacency composition vs whole-to-part containment.
-
-- contrasts_with::[[composed_of]]
-  - Ghost link; target Predicate not seeded. Adjacency composition vs whole-to-part containment on the whole side.
+- contrasts_with::[[has_component -- mereological relation where the subject contains the object as a component]]
+  - Adjacency composition vs whole-to-part containment. The `has_component` Predicate absorbed the previously-separate `composed_of` predicate when the mereological axis was consolidated; the contrast this Crescent carries now runs against a single target.
 
 - grounded_in::[[Vocabulary Diversity Is a Feature]]
   - The Conviction that makes the composes_with-vs-contrasts_with stance distinction load-bearing. The same geometric adjacency supports two authorial stances; keeping both predicates preserves the difference.

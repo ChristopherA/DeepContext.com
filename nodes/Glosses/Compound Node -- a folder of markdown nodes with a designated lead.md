@@ -22,8 +22,8 @@ The compound is a structural answer to concepts with substantial supporting mate
 
 ## Relations
 
-- composed_of::[[Markdown Node -- a markdown file read as a node in a graph|Markdown Node]]
-  - A Compound Node is a folder of Markdown Nodes. The lead and its supporting sub-files are each Markdown Nodes at the file-form level; the folder groups them for filesystem navigation. The compound as a whole names one concept.
+- has_component::[[Markdown Node -- a markdown file read as a node in a graph|Markdown Node]]
+  - A Compound Node is a folder of Markdown Nodes -- the lead and its supporting sub-files are each Markdown Nodes at the file-form level, and those file-form nodes are exhaustively what constitutes the compound at the filesystem layer. The compound as a whole names one concept; the folder groups its constituent files for navigation. This edge was previously written as `composed_of::` before that predicate was consolidated into `has_component::`.
 
 - contrasts_with::[[Atomic Node -- a single markdown file resolving to a wikilink target|Atomic Node]]
   - An Atomic Node is a single markdown file; a Compound Node is a folder with a lead plus supporting material. Both name exactly one concept — the contrast is filesystem layout (single file vs folder with sub-files), not the count of concepts named.
