@@ -1,5 +1,7 @@
 # DeepContext
 
+![[Attachments/Where Our Vocabularies Don't Match.png]]
+
 Every collaborative community builds up **deep context** -- the shared
 meaning, distinctions, and compressions that make communication efficient
 inside the group. A community's hashtags, specialized terms, in-jokes, and
