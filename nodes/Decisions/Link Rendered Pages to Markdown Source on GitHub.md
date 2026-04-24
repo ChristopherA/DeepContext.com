@@ -1,7 +1,7 @@
 ---
 created: 2026-04-22
 tagline: Every rendered page that has a single markdown source carries a footer link to that source on GitHub
-brief_summary: A commitment that the build pipeline renders a small "Edit on GitHub" link in the footer of every page whose HTML was rendered from a single markdown source -- node pages, the landing page, and hand-authored taxonomy indexes. Auto-generated taxonomy indexes (synthesized from multiple files) omit the link. The target URL is constructed from a GITHUB_REPO_URL constant plus the source file's repo-relative path, URL-encoded for filenames with spaces or special characters. Forks point the constant at their own repo, or set it empty to suppress the link entirely.
+brief_summary: A commitment that the build pipeline renders a small "Edit on GitHub" link in the footer of every page whose HTML was rendered from a single markdown source -- node pages, the landing page, and hand-authored taxonomy indexes. Auto-generated taxonomy indexes (synthesized from multiple files) omit the link. The target URL is constructed from a GITHUB_REPO_URL constant plus the source file's repo-relative path, URL-encoded for filenames with spaces or special characters. Scions point the constant at their own repo, or set it empty to suppress the link entirely.
 ---
 
 - conforms_to::[[Decision Form Contract]]
@@ -40,7 +40,7 @@ The GitHub-specific URL construction is a deliberate coupling to the hosting pla
 
 Three signals would prompt revisit.
 
-**A fork adopts a different hosting platform and keeps the convention.** If forks start publishing to GitLab, Codeberg, Gitea, or self-hosted alternatives, the hard-coded GitHub URL becomes a drift hazard. The current `GITHUB_REPO_URL` / `GITHUB_BRANCH` constants suffice for single-platform forks; multi-platform abstraction would become worth adopting. No such pressure exists yet.
+**A scion adopts a different hosting platform and keeps the convention.** If scions start publishing to GitLab, Codeberg, Gitea, or self-hosted alternatives, the hard-coded GitHub URL becomes a drift hazard. The current `GITHUB_REPO_URL` / `GITHUB_BRANCH` constants suffice for single-platform scions; multi-platform abstraction would become worth adopting. No such pressure exists yet.
 
 **The link accumulates maintenance burden out of proportion to its value.** If later work reveals that the footer link breaks (e.g., files renamed without updating references; branches other than main become relevant; filenames with characters the URL-encoding doesn't handle) at a rate that costs meaningful time to repair, the Decision would be reconsidered in favor of a lazier link-construction strategy or removal.
 
@@ -55,7 +55,7 @@ Three signals would prompt revisit.
   - The Aspiration names second-cycle contribution as the scarce resource. This Decision's concrete move is to remove one small friction at the point where a second-cycle reader is most likely to contribute: they notice something they would fix, and the edit path is one click away.
 
 - built_on::[[GitHub Pages]]↗
-  - The hosting platform this Decision couples to. The `GITHUB_REPO_URL` and `GITHUB_BRANCH` constants in `.scripts/render.py` name that coupling explicitly; forks publishing elsewhere revise those constants.
+  - The hosting platform this Decision couples to. The `GITHUB_REPO_URL` and `GITHUB_BRANCH` constants in `.scripts/render.py` name that coupling explicitly; scions publishing elsewhere revise those constants.
 
 - informs_downstream::[[Publish via Actions Artifact Deploy]]
   - The Decision backing the build-and-deploy pipeline this Decision extends. The source-link emission runs as part of `render.py`; the existing Actions workflow deploys the rendered output unchanged.

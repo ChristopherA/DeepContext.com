@@ -117,7 +117,7 @@ Do not edit the node. Do not stage or commit. Validation produces findings; fixi
 ## Relations
 
 - conforms_to::[[Skill Form Contract]]
-  - This skill declares compliance with the Skill Form Contract's Requirements. Used alongside Node Create and Node Read as the read-side-plus-verification triad for the first-session forker arc.
+  - This skill declares compliance with the Skill Form Contract's Requirements. Used alongside Node Create and Node Read as the read-side-plus-verification triad for the first-session scion-author arc.
 
 - composes_with::[[Node Create]]
   - Node Create's Step 8 delegates its pre-write validation to this skill's logic. Running Node Validate on a just-drafted node reproduces that check; running it on an existing node verifies the draft has not drifted from its claim.

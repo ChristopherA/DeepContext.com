@@ -53,7 +53,7 @@ The cost of switching is that first-time scion owners have to do one more config
 ## Relations
 
 - grounded_in::[[Adopt Scion Publication Model]]
-  - The upstream commitment this Decision implements. Forkability requires some mechanism for forks to publish their own sites; Actions artifact deploy is the specific mechanism chosen.
+  - The upstream commitment this Decision implements. Scionability requires some mechanism for scions to publish their own sites; Actions artifact deploy is the specific mechanism chosen.
 
 - informs_downstream::[[Markdown Node Contract]]
   - The Contract specifies the source form the pipeline consumes; this Decision specifies one of the Pages-deployment paths the output can take. The Contract is stable across deployment choices; this Decision can change without affecting source form.

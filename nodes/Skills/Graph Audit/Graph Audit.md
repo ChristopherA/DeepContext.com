@@ -2,9 +2,9 @@
 runtime_name: graph-audit
 tagline: Sweeps the graph for drift across categories (vocabulary, ghost links, orphans, un-annotated edges, forbidden predicates, non-ASCII filenames); aggregates by pattern, not by file
 description: |
-  Sweeps the graph (or a scoped subset) looking for drift and violations that Node Validate cannot catch at single-node scope: vocabulary drift, ghost-link inventory, orphan nodes, un-annotated edges, forbidden predicate sightings, and non-ASCII filenames. Aggregates findings across files and reports by category rather than per-node, so the forker sees patterns of drift instead of drowning in per-file repetition.
+  Sweeps the graph (or a scoped subset) looking for drift and violations that Node Validate cannot catch at single-node scope: vocabulary drift, ghost-link inventory, orphan nodes, un-annotated edges, forbidden predicate sightings, and non-ASCII filenames. Aggregates findings across files and reports by category rather than per-node, so the scion author sees patterns of drift instead of drowning in per-file repetition.
 
-  WHEN: the user asks to audit the graph, sweep for drift, check graph hygiene, find ghost links, list orphans, or audit the vocabulary; the graph has grown by enough nodes (roughly 10+) that drift is plausible; the user is preparing for a curation pass or a fork-cleanup; a Contract or Decision was recently revised and cross-graph effects need surveying.
+  WHEN: the user asks to audit the graph, sweep for drift, check graph hygiene, find ghost links, list orphans, or audit the vocabulary; the graph has grown by enough nodes (roughly 10+) that drift is plausible; the user is preparing for a curation pass or a scion cleanup; a Contract or Decision was recently revised and cross-graph effects need surveying.
 
   WHEN NOT: a single specific node needs checking (use Node Validate, which walks a full Form Contract inheritance chain at node scope); the graph is small enough that a by-hand survey is faster; the task is writing new content rather than surveying existing content; periodic hygiene on a very recently-audited graph (re-auditing within a session wastes context without producing new signal).
 ---
@@ -19,7 +19,7 @@ description: |
 
 Sweeps the graph looking for drift and violations at scales Node Validate cannot reach. Node Validate checks one node against its Form Contract and reports findings local to that node; Graph Audit walks the corpus, aggregates findings across files, and reports patterns — vocabularies accreting without documentation, ghost links accumulating into planning debt, edges that never got their annotation, predicates that forbid themselves appearing at scale.
 
-The skill's output is not a comprehensive list of every small violation. It is a compressed audit report grouped by category, naming the scale of each finding and the remediation path. A forker reading the report decides which categories warrant a cleanup pass now, which deserve their own follow-up work, and which are acceptable drift for the current stage.
+The skill's output is not a comprehensive list of every small violation. It is a compressed audit report grouped by category, naming the scale of each finding and the remediation path. A scion author reading the report decides which categories warrant a cleanup pass now, which deserve their own follow-up work, and which are acceptable drift for the current stage.
 
 The audit is intentionally read-only. Graph Audit does not fix violations, does not delete stale nodes, and does not propose edits. Fixing is the work that follows the audit — usually direct editing, sometimes Node Validate per flagged node, sometimes Predicate Propose for a vocabulary gap the audit surfaced.
 
@@ -29,7 +29,7 @@ The audit is intentionally read-only. Graph Audit does not fix violations, does 
 
 Ask the user the scope unless one is already named. Common scopes:
 
-- **Whole graph** — every file under `nodes/`. Default when a forker has just arrived.
+- **Whole graph** — every file under `nodes/`. Default when a scion author has just arrived.
 - **One taxonomy** — `nodes/Decisions/`, `nodes/Predicates/`, etc. Useful after seeding a taxonomy with new nodes.
 - **One predicate** — every edge using a specific predicate. Useful when a predicate's semantics shifted and a sweep should check downstream uses.
 - **Since a commit or date** — files touched since a reference point. Useful after a contract revision that might have cascade effects.
@@ -95,7 +95,7 @@ find nodes -name '*.md' -type f -exec basename {} .md \; | sort -u > /tmp/graph-
 
 For each target in the targets file that does not match a file stem (or the concept side of a `-- `-suffixed file), it is a candidate ghost link.
 
-Filter out template-token false positives before reporting. Contract bodies and skill bodies use `[[X]]`, `[[<Domain>]]`, `[[Target]]`, `[[Editor]]`, `[[Principal]]`, `[[Downstream Node]]`, `[[X Form Contract]]`, `[[<placeholder>]]`, and similar as syntactic placeholders in examples — these are documentation shapes, not intended wikilinks. A candidate whose target is a single uppercase letter, contains `<` or `>`, matches `X Form Contract`, or appears inside backtick-fenced content in its source is a false positive. Filter them out before producing the ghost-link list, or name them as "template-token false positives" in a separate bucket so the forker knows to skip them.
+Filter out template-token false positives before reporting. Contract bodies and skill bodies use `[[X]]`, `[[<Domain>]]`, `[[Target]]`, `[[Editor]]`, `[[Principal]]`, `[[Downstream Node]]`, `[[X Form Contract]]`, `[[<placeholder>]]`, and similar as syntactic placeholders in examples — these are documentation shapes, not intended wikilinks. A candidate whose target is a single uppercase letter, contains `<` or `>`, matches `X Form Contract`, or appears inside backtick-fenced content in its source is a false positive. Filter them out before producing the ghost-link list, or name them as "template-token false positives" in a separate bucket so the scion author knows to skip them.
 
 Ghost links are not violations — they are planning signals per `Markdown Node Contract`'s Named-edge syntax Requirement. Not every ghost is equal, though; four buckets sharpen the signal:
 
@@ -105,7 +105,7 @@ Ghost links are not violations — they are planning signals per `Markdown Node 
 
 **Vocabulary-value ghosts** — identity-predicate values (`[[Seed Stage]]`, `[[Working Draft]]`, `[[Provisional Commitment]]`, `[[Empirical Observation]]`, etc.) that every node points to via `has_lifecycle::`, `has_curation::`, `has_commitment::`, or `has_epistemic_status::` but which have no corresponding Gloss. These carry the highest-inbound-count ghosts in a new graph and represent the largest self-documentation gap. A healthy graph seeds Glosses for them early; an unhealthy graph accumulates identity predicates pointing to undefined values.
 
-**Planning-surface ghosts** — single- or low-count bare wikilinks to genuinely-unfinished concepts (`[[Convention Overhead vs Graph Quality]]`, a person's Gloss, a future Decision). These are the forker's to-write list.
+**Planning-surface ghosts** — single- or low-count bare wikilinks to genuinely-unfinished concepts (`[[Convention Overhead vs Graph Quality]]`, a person's Gloss, a future Decision). These are the scion author's to-write list.
 
 Report each bucket separately, with the bucket name in the report. Deliberate and template-token buckets are informational; vocabulary-value and drift buckets are actionable; planning-surface is curation. A ghost whose targets appears in MORE than one bucket (e.g., a predicate-name bare wikilink that's also a provisional predicate) counts as Drift until the author promotes it to a Predicate node, at which point it resolves.
 
@@ -181,7 +181,7 @@ End the report by naming which follow-up skills or operations would address whic
 - Missing reciprocals → direct Edit per target file to add the reciprocal back-edge with annotation.
 - Orphans → case-by-case; no single skill covers them.
 
-The follow-up naming lets the forker route the audit's findings without re-deriving what each category asks for.
+The follow-up naming lets the scion author route the audit's findings without re-deriving what each category asks for.
 
 ## Relations
 

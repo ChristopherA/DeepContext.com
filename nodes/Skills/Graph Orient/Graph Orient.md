@@ -97,7 +97,7 @@ The skipped surfaces are not unimportant; they are load-on-demand. Naming them s
 ## Relations
 
 - conforms_to::[[Skill Form Contract]]
-  - This skill declares compliance with the Skill Form Contract's Requirements. Along with Node Read and Node Create, it forms the first-session triad a forker walks through before touching the graph.
+  - This skill declares compliance with the Skill Form Contract's Requirements. Along with Node Read and Node Create, it forms the first-session triad a scion author walks through before touching the graph.
 
 - grounded_in::[[Adopt Layered Node Structure]]
   - The layered-structure Decision is what makes this skill possible. Reading identity blocks and opening paragraphs across many nodes is cheap precisely because those layers are authored to be cheap; a graph without layered structure would force the agent to read full bodies to orient.

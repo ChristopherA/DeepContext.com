@@ -273,7 +273,7 @@ Agents collaborating on this graph should start with
 which names the curator stance (suggest, flag, translate -- do not rewrite a
 contributor's vocabulary without confirmation) and points at the taxonomy
 entry points. Agents joining a scion should read their own scion's AGENTS.md
-first; forks may customize the stance.
+first; scions may customize the stance.
 
 ## About this repository
 

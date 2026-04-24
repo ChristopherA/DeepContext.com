@@ -1,7 +1,7 @@
 ---
 created: 2026-04-20
 tagline: The collective of contributors to the Deep Context practice and graph — the default author identity under which nodes are attributed
-brief_summary: The Deep Context Community is the collective identity under which nodes in the Deep Context graph are authored. It is the default value of `authored_by::` on nodes original to this graph — carried on Decisions, Convictions, Contracts, Patterns, Predicates, Glosses, Observations, and Aspirations. The Community includes everyone who contributes to the practice and the graph: the current lead (Christopher Allen), future contributors who fork and extend the graph, and the agents that translate and curate alongside the humans. The Community is not a legal entity, not a formal organization, and not tied to any specific tool; it exists insofar as contributors author in its name and preserve the practice's Convictions across their own work.
+brief_summary: The Deep Context Community is the collective identity under which nodes in the Deep Context graph are authored. It is the default value of `authored_by::` on nodes original to this graph — carried on Decisions, Convictions, Contracts, Patterns, Predicates, Glosses, Observations, and Aspirations. The Community includes everyone who contributes to the practice and the graph: the current lead (Christopher Allen), future contributors who scion and extend the graph, and the agents that translate and curate alongside the humans. The Community is not a legal entity, not a formal organization, and not tied to any specific tool; it exists insofar as contributors author in its name and preserve the practice's Convictions across their own work.
 ---
 
 - conforms_to::[[Gloss Form Contract]]

@@ -35,7 +35,7 @@ A reader encountering `X built_on::Y` learns that X could not stand as itself wi
 
 - `Markdown Node Contract` built_on `CommonMark Markdown` ↗ -- the Contract adds reading and authoring discipline on top of the CommonMark file format.
 - `Markdown Node` built_on `CommonMark Markdown` ↗ -- a Markdown Node stays valid CommonMark; the node-reading discipline is layered on top, not a divergent dialect.
-- `Link Rendered Pages to Markdown Source on GitHub` built_on `GitHub Pages` ↗ -- the Decision couples to GitHub Pages as the hosting platform; forks publishing elsewhere revise the coupling.
+- `Link Rendered Pages to Markdown Source on GitHub` built_on `GitHub Pages` ↗ -- the Decision couples to GitHub Pages as the hosting platform; scions publishing elsewhere revise the coupling.
 
 ## Relations
 
