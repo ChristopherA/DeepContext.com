@@ -117,7 +117,28 @@ The check pattern: within the `## Relations` section of each node, for every top
 
 Report un-annotated edges as Shortfall findings, grouped by file. If the count is large enough that the fix is a dedicated curation pass rather than quick edits, flag the scale in the summary rather than listing every instance.
 
-### Step 6: Orphan detection
+### Step 6: Reciprocal-edge sweep
+
+When a node carries a forward edge like `informs_downstream::[[X]]` in its Relations, the target X typically carries a reciprocal edge back. Bidirectional edges are the convention across Decisions, References, Contracts, and Predicates; missing reciprocals are cascade failures — a forward edge was added without the back-edge being wired on the target.
+
+The conventional pairs:
+
+| Forward edge | Reciprocal on target |
+|--------------|---------------------|
+| `informs_downstream::[[X]]` | X has `informed_by::` or `grounded_in::` back |
+| `grounded_in::[[X]]` | X has `informs_downstream::` back |
+| `informed_by::[[X]]` | X has `informs_downstream::` back |
+| `extends_contract::[[X]]` | X has `extended_by::` back |
+| `supersedes::[[X]]` | X has `superseded_by::` back |
+| `contrasts_with::[[X]]` | X has `contrasts_with::` back (symmetric) |
+
+The check pattern: for each forward edge in every node's `## Relations` section, resolve the target to its file, and search that file for the corresponding reciprocal pointing back at the source node. Implementations vary; an `rg` sweep for forward edges piped into a per-target check is one pattern. Some forward edges are legitimately one-directional — an external reference marked with `↗` does not live in the graph, and a ghost link's target does not yet exist; skip externals and ghost-link targets.
+
+Report missing reciprocals as Shortfall findings, grouped by the source node. Most missing reciprocals are quick Edit fixes — add the reciprocal on the target with an annotation explaining the relationship.
+
+The sweep catches a specific failure pattern: when a new node is added and its forward edges are wired, it is easy to miss wiring the corresponding back-edges on older, established target nodes. The sweep makes the gap visible at graph scope rather than relying on per-node validation to notice.
+
+### Step 7: Orphan detection
 
 An orphan node has no incoming edges from any other node. Some orphans are intentional (the landing page; founding documents that are only linked-to from outside the graph). Others are drift (a node that was written but never wired into the graph).
 
@@ -136,7 +157,7 @@ done
 
 Report orphans with their form (from `conforms_to::`) and lifecycle stage. A Seed Stage orphan is usually a work-in-progress; an Evergreen orphan is a candidate for either promotion (adding incoming edges) or demotion (stepping back the lifecycle).
 
-### Step 7: Aggregate and report
+### Step 8: Aggregate and report
 
 Group findings by category, not by file. The report structure:
 
@@ -144,11 +165,12 @@ Group findings by category, not by file. The report structure:
 - **Vocabulary drift** — provisional predicates from Step 3. Each is a candidate for Predicate-node creation or consolidation into an existing predicate.
 - **Planning surface** — ghost-link inventory from Step 4, grouped by inbound-edge count. High-count ghost links are the graph's most-wanted future nodes.
 - **Un-annotated edges** — from Step 5, grouped by file. Shortfalls; the `Annotate Edges With Why-They-Matter` Decision asks for annotations but allows nodes to exist without them; flagged for curation.
-- **Orphans** — from Step 6, with form and lifecycle. Signals: intentional isolation (often fine), work-in-progress (fine), drift (fix).
+- **Missing reciprocals** — from Step 6, grouped by source node. Shortfalls; most are quick Edit fixes once surfaced.
+- **Orphans** — from Step 7, with form and lifecycle. Signals: intentional isolation (often fine), work-in-progress (fine), drift (fix).
 
-Report each category compressed. Do not dump every finding; sample representative cases per category and name the total count. A forker wants to know "there are 40 ghost links, the top five are…" — not 40 individual list items.
+Report each category compressed. Do not dump every finding; sample representative cases per category and name the total count. A scion owner wants to know "there are 40 ghost links, the top five are…" — not 40 individual list items.
 
-### Step 8: Name the follow-ups
+### Step 9: Name the follow-ups
 
 End the report by naming which follow-up skills or operations would address which categories:
 
@@ -156,6 +178,7 @@ End the report by naming which follow-up skills or operations would address whic
 - Vocabulary drift → `/predicate-propose` per provisional predicate, or edit-and-consolidate when two provisional predicates overlap.
 - Ghost links → `/node-create` for the high-count targets; ignore the rest until they accumulate more incoming edges.
 - Un-annotated edges → direct Edit per file, or `/node-validate` per file to get the full Form Contract check while fixing.
+- Missing reciprocals → direct Edit per target file to add the reciprocal back-edge with annotation.
 - Orphans → case-by-case; no single skill covers them.
 
 The follow-up naming lets the forker route the audit's findings without re-deriving what each category asks for.
@@ -169,7 +192,7 @@ The follow-up naming lets the forker route the audit's findings without re-deriv
   - Node Validate operates at node scope; this skill operates at graph scope. An audit that flags a specific node can hand that node to Node Validate for the full Form Contract check. Each skill defers its out-of-scope concerns to the other.
 
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
-  - The spine commitment this skill audits at graph scale. Every check in Steps 2 through 6 traces back to a named-edge or wikilink Requirement.
+  - The spine commitment this skill audits at graph scale. Every check in Steps 2 through 7 traces back to a named-edge or wikilink Requirement.
 
 - grounded_in::[[No Generic relates_to Predicate]]
   - Step 2's `relates_to::` sweep enforces this Decision across the whole graph. A single `relates_to::` hit is an architectural breach; the sweep exists to catch it even when per-node validation did not run.
