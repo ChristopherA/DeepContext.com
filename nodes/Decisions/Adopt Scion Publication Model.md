@@ -123,5 +123,14 @@ The commitment derives the pipeline's other architectural choices. Python-only w
 - informs_downstream::[[scion_of -- content lineage from a template graph]]
   - The Predicate that expresses a scion's template relationship as a first-class named edge. Each scion's `.scion-identity.yml` records the `scion_of` relationship structurally (template DID and the scion's own DID, written by Bootstrap); the Predicate's wikilink form `scion_of::[[did:repo:<template-sha1>]]↗` is the graph-layer expression the scion may additionally use when traversability matters. The edge is the graph-layer mechanism this Decision's identity-sovereignty commitment is expressed through on a specific scion.
 
+- informs_downstream::[[Scion Bootstrap]]
+  - The Skill that operationalizes this Decision's local-only ceremony for standing up a scion. The Decision's Scion Bootstrap Ceremony section names the procedure at the architectural level; the Skill walks a first steward through the concrete steps (prerequisite install chain via brew / gh / ssh-keygen, the clone + rm .git + inception commit sequence, the `.scion-identity.yml` update, the GitHub repo creation and Pages enablement). Without the Skill, the Decision's ceremony is prose only; with the Skill, it is an agent-invocable procedure.
+
+- informs_downstream::[[Scion Address -- the compound DID form identifying a specific node within a specific graph]]
+  - The Gloss that names the compound DID form this Decision's node-level addressing commitment takes. When the Decision says "cross-scion references carry identity rather than URL," the Scion Address is the shape those references have at page granularity — a `did:repo:<sha1>/<path>` that identifies a specific node within a specific scion without embedding any git-forge URL convention. Every rendered page's footer emits this form in anticipation of future resolvers.
+
+- informs_downstream::[[External Node -- a node that lives in another graph, referenced without being imported]]
+  - The Gloss that names the concept scions create: a node this graph references but does not own because it lives in another graph (a peer scion, the template, or some unrelated graph). The Decision's peering paragraph acknowledges that nodes flow bidirectionally between some scions; External Node is the vocabulary for the receiving side of any such reference.
+
 - informs_downstream::[[Embed Images via Obsidian Wikilink Syntax]]
   - The image-embed Decision's commitment to committing `Attachments/` alongside the content, and to copying it into the build output, is grounded in this Decision's self-containment rule: every scion must get working image rendering on first clone with no additional configuration. Gitignored attachments or externally-hosted images would break the scion promise at the asset layer; committed attachments and the copy-attachments build step keep it holding.

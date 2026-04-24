@@ -72,3 +72,9 @@ The root template (DeepContext.com) ships the same file with `this_did:` set to 
 
 - grounded_in::[[Open Integrity Project (Blockchain Commons, 2025)]]
   - The specification that makes the subject-and-object-have-distinct-DIDs claim cryptographically load-bearing rather than merely conceptual. Without OI, a scion and its template would share git history and therefore share inception commits; the predicate expresses a distinction that OI is what makes real.
+
+- composes_with::[[Scion Address -- the compound DID form identifying a specific node within a specific graph]]
+  - The compound form the predicate's object takes when referenced at node granularity. A `scion_of::[[did:repo:<sha1>]]↗` edge names the template repo; a Scion Address extends that same DID to `did:repo:<sha1>/<path>` for node-level addressing. The predicate and the Gloss are two scales of the same identifier system.
+
+- composes_with::[[External Node -- a node that lives in another graph, referenced without being imported]]
+  - The predicate's object is always an External Node — a node that lives in another graph and whose DID is necessarily distinct from the subject's. `scion_of::` is the specific predicate that names one kind of relationship to an External Node (content lineage); other edges may name other relationships (citation, contrast, composition) to other External Nodes.

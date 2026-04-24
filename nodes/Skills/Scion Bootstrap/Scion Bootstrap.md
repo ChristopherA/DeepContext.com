@@ -224,4 +224,7 @@ The OI inception primitive this skill's wrapper calls. Produces a fresh empty si
   - The Predicate whose value this skill writes into `.scion-identity.yml` at step 6 of the Bootstrap script. The scion's `scion_of` value is the template's `this_did`, recorded structurally in the YAML file and (at the scion author's option) expressible as a graph-layer wikilink in the scion's identity predicate block.
 
 - composes_with::[[Graph Orient]]
-  - Invoked after Bootstrap completes to walk the newly-stood-up scion's inherited graph into context. Bootstrap establishes the scion's identity; Orient establishes the scion's content understanding for subsequent work. The two skills are the standard first-session pair for a new scion.
+  - Invoked after Bootstrap completes to walk the newly-stood-up scion's inherited graph into context. Bootstrap establishes the scion's identity; Orient establishes the scion's content understanding for subsequent work.
+
+- composes_with::[[Node Read]]
+  - Invoked alongside Graph Orient in the scion's first session to drill into specific inherited nodes the steward wants to understand in depth. Bootstrap produces the scion; Graph Orient walks the inherited graph at breadth; Node Read walks specific nodes at depth. Together the three form the standard first-session triad for a new scion's first steward.
