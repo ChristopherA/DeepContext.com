@@ -302,10 +302,14 @@ are welcome through GitHub.
   or ask a question about the conventions.
 - **Edit directly in the GitHub Web UI.** Any node under `nodes/` can be
   edited in-browser; clicking "Commit changes" opens a pull request.
-- **Fork the repository** to build your own garden on these conventions. A
-  fork publishes to its own Pages site on first push -- see
+- **Use this template** to stand up your own scion on these conventions.
+  [Create your copy](https://github.com/new?template_name=DeepContext.com&template_owner=ChristopherA);
+  the scion publishes to its own Pages site on first push, with its own
+  Open Integrity inception commit and DID rather than inheriting this
+  template's. See
   [README.md](https://github.com/ChristopherA/DeepContext.com#readme) for
-  setup.
+  the setup procedure, and [[Adopt Scion Publication Model]] for why
+  "Use this template" rather than "Fork".
 
 The practice publishes as scions — each reader can instantiate the template
 into their own graph with its own cryptographic identity, collaboratively
