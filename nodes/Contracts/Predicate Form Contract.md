@@ -73,7 +73,7 @@ Enforces [[Document Predicate Crescents Against Adjacent Predicates]].
 
 ### Vocabulary registration
 
-- A Predicate node's existence is the project's structural way of admitting a predicate to the local vocabulary. Creating a Predicate node SHOULD coincide with adding the predicate to `CONVENTIONS.md`.
+- A Predicate node's existence IS the project's structural registration of a predicate in the local vocabulary. The graph holds its vocabulary in the Predicate nodes themselves rather than in a separate registry file.
 - A predicate used in the graph without a corresponding Predicate node is a drift signal — the vocabulary is accreting without its distinctions being documented.
 
 ## Relations

@@ -24,7 +24,7 @@ Le Guin's *A Wizard of Earthsea* ("For magic consists in this, the true naming o
 
 ## What It Asks
 
-New predicates are deliberated at the naming layer, not just the semantic layer. When the project adds a predicate to `CONVENTIONS.md`, the proposal carries a named alternative and a reason for preferring the chosen name — `grounded_in::` over `derived_from::` because grounding names a normative substrate while derivation names a provenance chain, and the distinction is load-bearing. A predicate added without a named alternative has skipped the deliberation the stance requires.
+New predicates are deliberated at the naming layer, not just the semantic layer. When the project seeds a Predicate node via the Predicate Propose skill, the proposal carries a named alternative and a reason for preferring the chosen name — `grounded_in::` over `derived_from::` because grounding names a normative substrate while derivation names a provenance chain, and the distinction is load-bearing. A predicate added without a named alternative has skipped the deliberation the stance requires.
 
 Filename-shape conventions are held as design, not style. The `Adopt <X>`, `Use <X>`, `Prefer <X>`, `<Subject> as <Role>` shapes for Decisions and the held-stance shapes for Convictions (value declaration, subject-carries-object declarative, bounded stance) are not ornamental preferences. They encode form-from-filename classification — a reader scanning a folder can tell a Decision from a Conviction from a Gloss by filename shape alone. Loosening the shape rules to accept "whatever reads best" converts the filename from a classification tier to a readability tier and loses the cheap-classification property the conventions were designed to preserve.
 

@@ -26,7 +26,7 @@ The stance is what makes author-declared edges load-bearing. When one contributo
 
 Authors translate between vocabularies rather than normalize them. When a contributor brings naming that differs from existing conventions, the first response is to understand what distinction the new naming encodes — not to route it back to an existing predicate.
 
-New predicates join the local vocabulary rather than being turned back at the door. A predicate unique to one contributor's tradition is added to `CONVENTIONS.md` and used. A predicate that overlaps with existing ones is kept as distinct whenever the contributor's distinction is load-bearing, with a glossary entry documenting the overlap and the difference.
+New predicates join the local vocabulary rather than being turned back at the door. A predicate unique to one contributor's tradition is seeded as a Predicate node in `nodes/Predicates/` and used. A predicate that overlaps with existing ones is kept as distinct whenever the contributor's distinction is load-bearing, with a glossary entry documenting the overlap and the difference.
 
 Reviews flag convergence pressure as a drift signal. When a reviewer suggests "use the standard predicate" without asking what distinction the original carried, the suggestion is itself a sign that the reviewer is treating vocabulary variation as error rather than as preserved distinction. The review surface for vocabulary is translation, not normalization.
 
@@ -34,7 +34,7 @@ Cross-system collaboration adds translation layers rather than shared vocabulari
 
 ## Drift Recognition
 
-The stance has drifted when the project starts treating contributor vocabularies as problems to resolve rather than as distinctions to preserve. Convergence pressure appears in reviews without being flagged; new predicates stop being added to the local vocabulary because authors default to existing terms; the `CONVENTIONS.md` vocabulary list stops growing by accretion.
+The stance has drifted when the project starts treating contributor vocabularies as problems to resolve rather than as distinctions to preserve. Convergence pressure appears in reviews without being flagged; new predicates stop being added to the local vocabulary because authors default to existing terms; `nodes/Predicates/` stops growing by accretion.
 
 A reader scanning the graph after drift would see convergence toward a single vocabulary — redundant predicates merged without preserving the merged distinction, contributor-specific terms replaced silently during review, glossary entries for the project's local dialect disappearing from the vocabulary section rather than being kept as translation anchors. A cross-system interop attempt that reaches for a shared schema rather than a translation layer is a louder signal of the same drift. None of these require a structural Requirement to fail; they accumulate as cultural erosion.
 

@@ -85,7 +85,7 @@ The second is usually more complete but adds authoring cost on a neighbor the au
 
 Commit the new Predicate node as its own commit. The commit message names the predicate, the axis it answers, and the near-neighbors its Crescent is drawn against. The commit is the public act by which the proposal enters the graph's vocabulary.
 
-If the graph maintains a `CONVENTIONS.md` or similar vocabulary registry, add the predicate there. If not, the Predicate node's existence in `nodes/Predicates/` is the registration.
+The Predicate node's existence in `nodes/Predicates/` is the registration — this graph holds its vocabulary in the Predicate nodes themselves rather than in a separate registry file.
 
 Note: committing is not unilateral acceptance. A Predicate node at Seed Stage / Working Draft is a proposal; subsequent use (or non-use) by the community is the actual test of whether the predicate joins the vocabulary. A Predicate node with zero edges using it after multiple sessions is a signal that the proposal did not meet a live need — demotion, revision, or removal may be appropriate.
 

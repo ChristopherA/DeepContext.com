@@ -1,7 +1,7 @@
 ---
 created: 2026-04-19
 tagline: The gist specifying wikilinks plus named edges plus indented annotations as a plain-markdown graph convention
-brief_summary: Christopher Allen's gist is the primary convention source Deep Context builds on. It specifies author-declared wikilinks (`[[Multi Word Target]]`), named-edge predicates (`predicate::[[Target]]`), and indented sub-bullet annotations as the three-piece machinery for expressing a typed graph in plain markdown — with companion moves (↗ for external provenance, `conforms_to::` over `is_a::`, unconflation as discipline, translation over convergence) that constitute the rest of the convention layer. Deep Context adopts it in full as the starting point; local dialect choices (which predicates, which form contracts, which folder layout) belong in CONVENTIONS.md.
+brief_summary: Christopher Allen's gist is the primary convention source Deep Context builds on. It specifies author-declared wikilinks (`[[Multi Word Target]]`), named-edge predicates (`predicate::[[Target]]`), and indented sub-bullet annotations as the three-piece machinery for expressing a typed graph in plain markdown — with companion moves (↗ for external provenance, `conforms_to::` over `is_a::`, unconflation as discipline, translation over convergence) that constitute the rest of the convention layer. Deep Context adopts it in full as the starting point; local dialect choices (which predicates, which form contracts, which folder layout) are carried by the graph's own Predicate nodes, Contract nodes, and the folder structure itself rather than in a separate conventions document.
 ---
 
 - conforms_to::[[Reference Form Contract]]

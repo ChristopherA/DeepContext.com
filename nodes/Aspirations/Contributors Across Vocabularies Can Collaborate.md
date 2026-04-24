@@ -28,7 +28,7 @@ No multi-vocabulary authoring has been tested. The seed graph carries the foundi
 
 Glosses that would ground cross-vocabulary translation are mostly ghost links. The Reference Form Contract's `serves_as::` vocabulary, for instance, references `[[Primary Convention Source]]`, `[[Structural Pattern Source]]`, and `[[Federation Precedent]]` as target concepts that do not yet have gloss nodes. These are the kinds of nodes that would carry translation between contributors' vocabularies when the first cross-vocabulary pressure appears, and they are not yet seeded.
 
-No contributor onboarding path exists. A new contributor arriving at the graph today can read `CONVENTIONS.md` and the Contract nodes, but has no walkthrough of how to introduce their own predicates, how to document a translation between their vocabulary and the existing one, or how to signal to reviewers that a proposed rename would be a convergence move the project rejects. The onboarding surface is implicit in the existing conventions; explicit onboarding does not exist.
+No contributor onboarding path exists. A new contributor arriving at the graph today can read the Contract nodes and AGENTS.md, but has no walkthrough of how to introduce their own predicates, how to document a translation between their vocabulary and the existing one, or how to signal to reviewers that a proposed rename would be a convergence move the project rejects. The onboarding surface is implicit in the existing conventions; explicit onboarding does not exist.
 
 The founding author's agent-curator configuration is itself a vocabulary. Claude's curatorial behavior — which predicates it suggests, which shapes it flags, which conventions it treats as stable — encodes the founding author's vocabulary decisions. A second contributor with divergent predicates encounters not just the first author but the first author's agent configuration; whether that agent translates or normalizes determines whether the cross-vocabulary Aspiration is achievable at all.
 
@@ -40,7 +40,7 @@ Seed glosses that translate between the founder's vocabulary and the incoming co
 
 Run the first curation pass across two vocabularies. The pass should report what translation required, which predicates needed glosses, which cross-references had to be added, and where normalization pressure appeared in the curator's suggestions. The pass is as much a diagnostic of the curator's translating-versus-extracting mode as it is a maintenance operation on the graph.
 
-Test whether new predicates added by a second contributor stay first-class rather than being rewritten. The test is procedural: does the review surface accept the new predicate as a distinct edge, or does it propose rewriting? Does the next curation pass keep the predicate in `CONVENTIONS.md`, or does it consolidate it silently? The answer determines whether the Aspiration is on track or already drifting.
+Test whether new predicates added by a second contributor stay first-class rather than being rewritten. The test is procedural: does the review surface accept the new predicate as a distinct edge, or does it propose rewriting? Does the next curation pass keep the Predicate node in `nodes/Predicates/`, or does it consolidate it silently? The answer determines whether the Aspiration is on track or already drifting.
 
 ## Progress Recognition
 
@@ -50,13 +50,13 @@ Translation glosses accumulate as vocabularies meet. Each new cross-vocabulary p
 
 A curation pass reconciles the graph through translation rather than merging. The pass's output is a diff of glosses and cross-references added, not a diff of predicates renamed to canonical forms. Where translation was needed, it was written; where normalization was tempting, the pass resisted.
 
-A new contributor's predicates survive into the graph's standing vocabulary rather than being rewritten into existing ones. `CONVENTIONS.md`'s predicate list grows by accretion as new contributors join, and the growth is visibly attributable to specific contributors' traditions.
+A new contributor's predicates survive into the graph's standing vocabulary rather than being rewritten into existing ones. `nodes/Predicates/` grows by accretion as new contributors join, and the growth is visibly attributable to specific contributors' traditions.
 
 The agent-curator configuration demonstrably operates in translating mode across multiple contributors' vocabularies. A cross-vocabulary session produces curatorial suggestions that respect each contributor's predicates rather than proposing convergence; where the agent did suggest normalization, the suggestion was flagged and corrected.
 
 ## Sources
 
-- `CONVENTIONS.md` — the "Scope of these conventions" section names cross-contributor vocabulary diversity as the project's test case; the "Contributor vocabulary" section specifies the translate-don't-converge instruction this Aspiration's work depends on.
+- [[Vocabulary Diversity Is a Feature]] and [[Translation Over Convergence]] — the two Convictions that specify the translate-don't-converge instruction this Aspiration's work depends on; the graph's commitment to cross-contributor vocabulary diversity lives in the Convictions themselves, not in a separate conventions document.
 - `context/Founding Conversation.md` — the "What was considered" and "The question" sections name diverse knowledge workers (not software engineers, not a single organization) as the intended contributor population; cross-vocabulary collaboration is the concrete form that diversity takes.
 
 ## Relations

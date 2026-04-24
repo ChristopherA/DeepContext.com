@@ -24,7 +24,7 @@ The commitment preserves **what the relationship IS, not just that it exists**. 
 
 The commitment is the edge-level expression of the same discipline that drives [[Adopt Predicate Atomicity]]: predicates answer one question, and the question is specific. `relates_to::` is the degenerate limit of overloaded predicate design — a predicate whose question is "is there any connection at all?" — and the answer it returns carries no information the rest of the graph's traversable structure does not already carry (the absence of a predicate-path between two nodes is itself a statement, differently informative). Prohibiting `relates_to::` rules out the limit case; predicate atomicity governs all the middle cases.
 
-When no existing predicate fits, the discipline is to add a new predicate to the local vocabulary — as `CONVENTIONS.md` records under "local vocabulary" — rather than to fall back on a generic. A new predicate names the specific question it answers, earns its place in the vocabulary, and is available for other contributors to use. The vocabulary grows by accretion; it does not grow by admitting catch-alls.
+When no existing predicate fits, the discipline is to add a new predicate to the local vocabulary by seeding a Predicate node in `nodes/Predicates/` (via the Predicate Propose skill) rather than to fall back on a generic. A new predicate names the specific question it answers, earns its place in the vocabulary, and is available for other contributors to use. The vocabulary grows by accretion; it does not grow by admitting catch-alls.
 
 ## Alternatives Considered
 

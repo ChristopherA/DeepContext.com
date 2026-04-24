@@ -72,7 +72,7 @@ Enforces [[Require Explanatory Prose Before Contract Requirements]].
 ### Vocabulary introduction
 
 - A Contract MAY introduce new local predicates as part of its requirements.
-- When it does, the new predicate MUST be named and defined within the Requirements section, and SHOULD be surfaced in `CONVENTIONS.md` under local vocabulary.
+- When it does, the new predicate MUST be named and defined within the Requirements section, and SHOULD be seeded as a Predicate node in `nodes/Predicates/` to register it in the local vocabulary.
 
 ## Relations
 

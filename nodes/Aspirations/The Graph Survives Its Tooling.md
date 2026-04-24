@@ -38,7 +38,7 @@ Periodically test reading the graph with different tools. A bare text editor (Vi
 
 Audit the graph for silent tool dependencies. The audit reads through a sample of nodes and asks, for each convention in use, whether a reader without the current tool set would recognize the convention as intended. Where the audit finds a tool-dependent behavior, the finding is a candidate for either reclassification as a convenience (documented as non-substrate) or correction of the underlying node (brought into tool-independent form).
 
-Document in-scope substrate versus tool-specific convenience explicitly. The distinction exists implicitly in the Decisions; making it explicit as a reference document — or as a section of `CONVENTIONS.md` — gives contributors and readers an authoritative record of what the graph requires a tool to support versus what the graph allows a tool to enhance.
+Document in-scope substrate versus tool-specific convenience explicitly. The distinction exists implicitly in the Decisions; making it explicit as its own Decision or Reference node gives contributors and readers an authoritative record of what the graph requires a tool to support versus what the graph allows a tool to enhance.
 
 Migrate between tools once. A single deliberate migration — from the current editor to a different editor, from the current agent harness to a different one, from the current file-system layout to a migrated one — provides the most concentrated test the Aspiration can get. The migration does not need to be permanent; it needs to produce a record of what broke, what held, and what ambiguity the migration revealed.
 
@@ -50,9 +50,9 @@ Agent configuration changes without breaking graph interpretation. A different s
 
 A migration (editor, wiki layer, git host, agent harness) completes without requiring the graph's content to be rewritten. Filenames remain valid, wikilinks resolve, predicates read correctly, YAML frontmatter parses. Any migration-specific artifact produced (a compatibility shim, a rename script) operates on the tool layer, not on the graph layer.
 
-Tool-dependent behaviors stay documented as conveniences, not substrate. The in-scope / convenience distinction appears explicitly in `CONVENTIONS.md` or a reference document, and review surfaces use the distinction when evaluating whether a proposed convention is tool-binding or tool-independent.
+Tool-dependent behaviors stay documented as conveniences, not substrate. The in-scope / convenience distinction appears explicitly in a Decision or Reference node, and review surfaces use the distinction when evaluating whether a proposed convention is tool-binding or tool-independent.
 
-The audit for silent tool dependencies runs at least once and produces either findings or an explicit record of no findings. A `CONVENTIONS.md` section or reference document captures the audit's scope and outcome; the audit is a standing practice, not a one-time pass.
+The audit for silent tool dependencies runs at least once and produces either findings or an explicit record of no findings. A Decision or Reference node captures the audit's scope and outcome; the audit is a standing practice, not a one-time pass.
 
 ## Sources
 

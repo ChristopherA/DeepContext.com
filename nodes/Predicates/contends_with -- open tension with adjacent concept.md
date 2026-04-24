@@ -33,8 +33,8 @@ Ghost link; `contradicts::` is used in adjacent vocabularies but not seeded as a
 
 ## Instances
 
-- `CONVENTIONS.md` carries `contends_with::[[Convention Overhead vs Graph Quality]]` — the trade-off between the discipline the conventions require and the friction that discipline creates is acknowledged as an unresolved tension rather than resolved by picking a side. Periodic audits confirm whether the trade-off still serves the project.
-- `CLAUDE.md` carries `contends_with::[[Wikis Without Curation Drift Toward Write-Only]]` — the failure mode the project exists to address is held as an open tension with the project's work rather than declared resolved by any particular convention or practice.
+- `Contract Form Contract` carries `contends_with::[[Convention Overhead vs Graph Quality]]` — the Contract's existence raises the cost of authoring a new Contract, and the trade-off between the discipline the Contract enforces and the friction that discipline creates is acknowledged as an unresolved tension rather than resolved by picking a side.
+- `Skill Form Contract` carries `contends_with::[[Convention Overhead vs Graph Quality]]` — same shape, at a different layer: the Skill Form Contract raises the cost of authoring a skill in exchange for structural legibility of skills as graph nodes, and the edge declares the trade-off as open rather than resolved.
 
 ## Relations
 

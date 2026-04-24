@@ -33,8 +33,8 @@ The predicate is the graph's default for acknowledging intellectual debts. When 
 
 ## Instances
 
-- `prototype/nodes/Convictions/Vocabulary Diversity Is a Feature.md` carries `informed_by::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]` — the gist supplies the argumentative substrate the Conviction compresses (the three-cost analysis of convergence), but the Conviction stands as its own held stance independent of the gist's continued accessibility.
-- `CONVENTIONS.md` carries `informed_by::[[Wikilinks and Named Edges]]↗` — the conventions document draws on the external gist as precedent and specialization target, but does not structurally depend on the gist for its own coherence (the local dialect stands on its own).
+- [[Vocabulary Diversity Is a Feature]] (Conviction) carries `informed_by::[[Wikilinks and Named Edges Gist (Christopher Allen, 2026)]]` — the gist supplies the argumentative substrate the Conviction compresses (the three-cost analysis of convergence), but the Conviction stands as its own held stance independent of the gist's continued accessibility.
+- [[Translation Over Convergence]] (Conviction) carries `informed_by::[[Consensus Creates Priesthoods]]` — the Observation supplies empirical grounding for one of the convergence costs the Conviction's Why rests on, but the Conviction does not structurally depend on the Observation (the held stance stands even if the empirical grounding weakens).
 
 ## Relations
 

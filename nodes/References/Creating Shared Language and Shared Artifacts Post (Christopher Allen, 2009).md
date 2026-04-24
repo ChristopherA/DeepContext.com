@@ -20,7 +20,7 @@ The Life with Alacrity blog post, published 2009-09-17, that frames shared langu
 ### Adopted
 
 - **Meaning is provided by users, not words.** The post's framing that specialized terms carry whatever meaning a group has collectively established is the substrate under this project's commitment to author-declared edges. A contributor's `critiques::` and another's `challenges::` both carry genuine meaning the authors agreed to, and the graph commits to preserving both rather than normalizing to a canonical term.
-- **Shared language is an intentional project, not a byproduct.** The stance that groups must deliberately develop shared language informs this project's treatment of vocabulary as a first-class concern — why CONVENTIONS.md exists as a living document, why Predicate nodes carry Carries and Crescent sections, why vocabulary diversity is a Conviction.
+- **Shared language is an intentional project, not a byproduct.** The stance that groups must deliberately develop shared language informs this project's treatment of vocabulary as a first-class concern — why Predicate nodes carry Carries and Crescent sections, why vocabulary diversity is a Conviction, why the graph holds its vocabulary in the Predicate nodes themselves rather than in a separate registry document.
 - **Shared artifacts as mediums for negotiating meaning.** The post names collaboratively-developed objects as the place where shared language gets worked out. This project's graph itself is a shared artifact in that sense — not just a record of decisions, but the medium through which contributors negotiate what distinctions matter.
 
 ### Not adopted

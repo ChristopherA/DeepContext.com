@@ -40,7 +40,7 @@ A curation pass has four moves in sequence:
 3. **Produce the pass record.** A markdown document (or commit message, or `.state/` log entry) that names what the pass addressed: which contributions were acknowledged, which objections were captured and in what form, which Glosses were written, which accounts were reconciled. The record is concise but complete — a contributor reading it can see what the pass did without reading the underlying diffs.
 4. **Communicate the record to contributors.** The record reaches contributors who authored content addressed in the pass. The specific channel depends on the project's contribution surface (a comment on a PR, a note in a shared document, a message at a cadence the project commits to). The communication is part of the Pattern; a record that does not reach its audience has not completed the pass.
 
-The pass's cadence is a project-level commitment, not a per-pass decision. The cadence is recorded (in `CLAUDE.md`, `CONVENTIONS.md`, or a Decision) and revisited as the contributor population grows. Typical candidate cadences: weekly during active growth, bi-weekly during steady state, on-trigger when specific events (a new contributor arrives; a form contract changes) warrant out-of-cadence attention.
+The pass's cadence is a project-level commitment, not a per-pass decision. The cadence is recorded as a Decision node and revisited as the contributor population grows. Typical candidate cadences: weekly during active growth, bi-weekly during steady state, on-trigger when specific events (a new contributor arrives; a form contract changes) warrant out-of-cadence attention.
 
 ## Consequences
 

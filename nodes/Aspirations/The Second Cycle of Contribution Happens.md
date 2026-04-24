@@ -75,7 +75,6 @@ The project reaches a steady state where contribution happens on at least two co
 ## Sources
 
 - `context/Founding Conversation.md` — the "The meta-point" section supplies the second-cycle framing ("The unit of success is whether the second cycle of contribution happens, not whether any particular artifact ships").
-- `CLAUDE.md` — the "Working assumptions" section names the second cycle as the unit of success and grounds the directional target this Aspiration captures.
 
 ## Relations
 
