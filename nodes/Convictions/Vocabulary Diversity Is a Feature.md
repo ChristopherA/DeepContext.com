@@ -56,6 +56,9 @@ A reader scanning the graph after drift would see convergence toward a single vo
 - informed_by::[[Creating Shared Language and Shared Artifacts Post (Christopher Allen, 2009)]]
   - The earlier 2009 post that framed meaning as provided by users rather than inherent in words. The sovereignty argument in this Conviction rests on that substrate: author-declared edges preserve distinct claims because meaning is not reducible to a canonical vocabulary's terms.
 
+- informed_by::[[Synpraxis Spectrum -- acting together across the coordination-cooperation-collaboration spectrum]]
+  - The Gloss naming the coordination-cooperation-collaboration spectrum. Vocabulary diversity is the cooperation-side discipline that distinguishes cooperation (each contributor keeps their own vocabulary) from collaboration (shared identity, jointly-authored output requiring vocabulary convergence). The Gloss provides the wider framing this Conviction's stance occupies a specific position within.
+
 - informed_by::[[Consensus Creates Priesthoods]]
   - The Observation supplies the empirical grounding for one of the three convergence costs the Why rests on.
 

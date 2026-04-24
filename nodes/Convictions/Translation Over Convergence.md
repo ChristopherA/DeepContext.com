@@ -58,6 +58,9 @@ A review cadence in which normalization suggestions go unchallenged is subtler d
 - informed_by::[[Creating Shared Language and Shared Artifacts Post (Christopher Allen, 2009)]]
   - The 2009 post's banker-cryptographer-layperson framing of how different communities legitimately use the same word differently is upstream of this Conviction's operational commitment to keep both `critiques::` and `challenges::` intact rather than normalizing them.
 
+- informed_by::[[Synpraxis Spectrum -- acting together across the coordination-cooperation-collaboration spectrum]]
+  - The Gloss naming the cooperation-side discipline this Conviction operationalizes. Translation rather than convergence is what cooperation among diverse contributors requires; convergence is a collaboration-level move that requires preconditions cooperation does not. The Gloss provides the spectrum framing that lets this Conviction's operational rule be located precisely.
+
 - contrasts_with::[[Adopt Predicate Atomicity]]
   - Both are vocabulary-discipline commitments operating at different scopes. Adopt Predicate Atomicity governs *within* a vocabulary — a predicate must answer one question, and overloaded predicates are split. Translation Over Convergence governs *across* vocabularies — when two vocabularies meet, both stay intact and translation bridges them. The two commitments compose: each vocabulary keeps its own single-axis predicates, and translation handles the cross-vocabulary case.
 
