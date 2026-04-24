@@ -303,7 +303,7 @@ are welcome through GitHub.
 - **Edit directly in the GitHub Web UI.** Any node under `nodes/` can be
   edited in-browser; clicking "Commit changes" opens a pull request.
 - **Use this template** to stand up your own scion on these conventions.
-  [Create your copy](https://github.com/new?template_name=DeepContext.com&template_owner=ChristopherA);
+  [Create your own](https://github.com/new?template_name=DeepContext.com&template_owner=ChristopherA);
   the scion publishes to its own Pages site on first push, with its own
   Open Integrity inception commit and DID rather than inheriting this
   template's. See
