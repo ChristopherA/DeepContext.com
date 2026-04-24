@@ -38,6 +38,10 @@ The value has drifted when the graph starts accumulating nodes that record what 
 
 The drift also shows up in edge quality. `relates_to::` becoming a catch-all is the most visible form -- the predicate does not carry reasoning, only loose association. Unannotated edges, or edges whose annotations describe rather than explain, are the subtler form. A reader scanning a node's Relations section should be able to tell why each edge is in the graph; when the answer becomes "because these two nodes came up in the same conversation," the reasoning layer is gone.
 
+## Sources
+
+- Allen, Christopher. "Reasoning Fidelity" formulation, 2026 -- the original framing this Conviction adapts. The local version shifts the scope from a single owner's reasoning to the reasoning of multiple contributors and adds composition with [[Vocabulary Diversity Is a Feature]].
+
 ## Relations
 
 - informs_downstream::[[Deep Context as an Architecture for Captured Reasoning]]
