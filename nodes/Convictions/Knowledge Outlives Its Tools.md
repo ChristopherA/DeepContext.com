@@ -40,10 +40,6 @@ The drift also shows up at the pipeline layer. A build script that requires a sp
 
 The subtlest drift is in the authoring experience. A contributor who cannot contribute without a specific editor, a specific agent, or a specific workflow is filtered by tooling -- whether or not that filtering was intended. Fidelity to the durability commitment asks that the baseline authoring path stay tool-free: plain text, any editor, any git client.
 
-## Sources
-
-- Allen, Christopher. "Knowledge Durability" value in personal knowledge garden (2026-03) -- the original framing this Conviction adapts.
-
 ## Relations
 
 - informs_downstream::[[Deep Context as an Architecture for Captured Reasoning]]
