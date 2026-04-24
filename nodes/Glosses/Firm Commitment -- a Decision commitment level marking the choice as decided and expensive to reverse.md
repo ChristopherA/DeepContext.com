@@ -1,3 +1,7 @@
+---
+tagline: A Decision commitment level marking the choice as decided and expensive to reverse
+---
+
 - conforms_to::[[Gloss Form Contract]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]

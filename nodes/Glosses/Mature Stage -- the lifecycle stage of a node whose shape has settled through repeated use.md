@@ -1,3 +1,7 @@
+---
+tagline: The lifecycle stage of a node whose shape has settled through repeated use
+---
+
 - conforms_to::[[Gloss Form Contract]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]

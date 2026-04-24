@@ -1,3 +1,7 @@
+---
+tagline: The architecture for captured reasoning as typed markdown nodes connected by named edges
+---
+
 - conforms_to::[[Gloss Form Contract]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]

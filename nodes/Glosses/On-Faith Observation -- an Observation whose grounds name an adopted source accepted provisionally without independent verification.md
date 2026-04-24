@@ -1,3 +1,7 @@
+---
+tagline: An Observation whose grounds name an adopted source accepted provisionally without independent verification
+---
+
 - conforms_to::[[Gloss Form Contract]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]

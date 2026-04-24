@@ -1,3 +1,7 @@
+---
+tagline: An Observation whose grounds name a record or reconstruction rather than a direct measurement
+---
+
 - conforms_to::[[Gloss Form Contract]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]

@@ -1,3 +1,7 @@
+---
+tagline: An Observation whose grounds name a specific measurement experiment or direct observation
+---
+
 - conforms_to::[[Gloss Form Contract]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]

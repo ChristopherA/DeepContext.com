@@ -1,3 +1,7 @@
+---
+tagline: A Decision commitment level marking the choice as decided but explicitly revisitable
+---
+
 - conforms_to::[[Gloss Form Contract]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]

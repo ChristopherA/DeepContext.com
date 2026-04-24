@@ -1,3 +1,7 @@
+---
+tagline: Foundational substrate the subject rests on
+---
+
 - conforms_to::[[Predicate Form Contract]]
 - in_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]

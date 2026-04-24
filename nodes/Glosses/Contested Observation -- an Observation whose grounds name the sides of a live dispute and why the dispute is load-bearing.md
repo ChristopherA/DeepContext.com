@@ -1,3 +1,7 @@
+---
+tagline: An Observation whose grounds name the sides of a live dispute and why the dispute is load-bearing
+---
+
 - conforms_to::[[Gloss Form Contract]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]

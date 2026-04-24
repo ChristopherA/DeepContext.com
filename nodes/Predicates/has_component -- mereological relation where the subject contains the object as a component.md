@@ -1,3 +1,7 @@
+---
+tagline: Mereological relation where the subject contains the object as a component
+---
+
 - conforms_to::[[Predicate Form Contract]]
 - in_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]

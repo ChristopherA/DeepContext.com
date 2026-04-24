@@ -1,3 +1,7 @@
+---
+tagline: The curation state of a node whose content is authored but not yet curated for cross-graph consistency
+---
+
 - conforms_to::[[Gloss Form Contract]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]

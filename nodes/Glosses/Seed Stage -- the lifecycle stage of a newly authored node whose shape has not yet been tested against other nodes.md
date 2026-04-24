@@ -1,3 +1,7 @@
+---
+tagline: The lifecycle stage of a newly authored node whose shape has not yet been tested against other nodes
+---
+
 - conforms_to::[[Gloss Form Contract]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
