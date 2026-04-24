@@ -50,11 +50,17 @@ The stance is also asymmetric with respect to different kinds of deferrals. Capa
 
 ## Relations
 
+- grounded_in::[[Minimum Viable Architecture -- the simplest architectural substrate sufficient to function and reveal what to add next]]
+  - The Gloss that defines the MVA concept this Decision adopts as a stance. The Decision adopts the discipline; the Gloss carries the bare concept the discipline is committed to. Together they let a new contributor read "what is MVA" (the Gloss) and "what does this graph commit to in its first cycle" (the Decision) as two distinct claims rather than one conflated assertion.
+
 - grounded_in::[[Minimum Viable Architecture Musing (Christopher Allen, 2024)]]
   - The Reference whose framing this Decision's name and discipline come from directly. Allen's MVA stance names upfront architectural planning paired with deferred non-essential components, modular expandability, and interoperable interfaces as the substrate for survivable growth; this Decision specializes that stance for a knowledge-graph project's scale. Without the Musing, this Decision would not carry the specific "Minimum Viable Architecture" formulation.
 
 - grounded_in::[[Adopt Scion Publication Model]]
   - The scion commitment is one reason the MVA stance is load-bearing. Every capability the pipeline ships is a capability every scion inherits as a maintenance surface; keeping the minimum small keeps scion cost low.
+
+- informed_by::[[Convergent Motivation as Load-Bearing Signal]]
+  - The Pattern that gives this Decision its operational test for when a deferred capability returns to scope. The Decision's Revisit Conditions describe what would change the deferrals (a second cycle of contribution, a deferred capability becoming blocking, maintenance cost exceeding minimum, a clearly-better architecture); the Pattern names the underlying evidentiary discipline -- four or more independent motivations converging on a capability is the structural threshold the Revisit Conditions implicitly invoke. The Pattern operationalizes the discipline; the Decision is the standing commitment the discipline serves.
 
 - informs_downstream::[[Publish via Actions Artifact Deploy]]
   - Actions-deploy is one expression of the MVA stance at the deployment layer: one dependency, one workflow file, no custom infrastructure. The deployment Decision inherits the minimum-surface discipline this Decision names.
