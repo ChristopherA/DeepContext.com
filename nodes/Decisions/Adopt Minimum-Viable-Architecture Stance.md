@@ -50,6 +50,9 @@ The stance is also asymmetric with respect to different kinds of deferrals. Capa
 
 ## Relations
 
+- grounded_in::[[Minimum Viable Architecture Musing (Christopher Allen, 2024)]]
+  - The Reference whose framing this Decision's name and discipline come from directly. Allen's MVA stance names upfront architectural planning paired with deferred non-essential components, modular expandability, and interoperable interfaces as the substrate for survivable growth; this Decision specializes that stance for a knowledge-graph project's scale. Without the Musing, this Decision would not carry the specific "Minimum Viable Architecture" formulation.
+
 - grounded_in::[[Adopt Scion Publication Model]]
   - The scion commitment is one reason the MVA stance is load-bearing. Every capability the pipeline ships is a capability every scion inherits as a maintenance surface; keeping the minimum small keeps scion cost low.
 
