@@ -49,10 +49,6 @@ When considering structural commitment:
 - **The discipline can be defended structurally.** When a contributor pushes back on deferral with "but this is the obviously correct architecture," the response is the convergence test rather than counter-argument from preference. The conversation moves from preference to evidence.
 - **The discipline can also be wrong.** When applying the Pattern would block a load-bearing capability whose costs of deferral exceed the costs of premature commitment, the project may commit structure with Provisional Commitment and an explicit revisit condition that re-runs the convergence test once usage data accumulates.
 
-## Sources
-
-- Adapted from `principles/Convergent Motivation as Load-Bearing Signal` in Christopher Allen's personal knowledge garden (obsidian-pkm), 2026-03. The original articulation generalizes from compound-persona session work; this Pattern carries forward the discipline without importing the originating cases.
-
 ## Relations
 
 - grounded_in::[[Adopt Minimum-Viable-Architecture Stance]]

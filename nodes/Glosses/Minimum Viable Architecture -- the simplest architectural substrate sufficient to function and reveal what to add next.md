@@ -21,7 +21,6 @@ The discipline cuts in two directions. Capabilities not yet built are reservatio
 ## Sources
 
 - [[Minimum Viable Architecture Musing (Christopher Allen, 2024)]] -- the Blockchain Commons Musing this Gloss's framing comes from directly. Allen's post originates the term and contrasts it with MVP at the cryptographic-protocol-architecture layer; this Gloss carries the concept forward at the knowledge-graph layer DeepContext occupies.
-- Adapted from `glosses/Minimum Viable Architecture` in Christopher Allen's personal knowledge garden (obsidian-pkm), 2026-03. The garden articulation generalizes the concept across personal-PKM and infrastructure-architecture contexts; this Gloss preserves the same generality without importing the garden-specific instances.
 
 ## Relations
 
