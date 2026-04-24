@@ -126,3 +126,10 @@ footer .source-link {
   color: var(--muted);
   border-bottom-color: rgba(85, 85, 85, 0.3);
 }
+
+footer .did-link {
+  color: var(--muted);
+  border-bottom-color: rgba(85, 85, 85, 0.3);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+}

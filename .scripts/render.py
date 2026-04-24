@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import html
 import re
+import subprocess
 from pathlib import Path
 from urllib.parse import quote
 
@@ -15,10 +16,40 @@ MD_EXTENSIONS = ["tables", "fenced_code", "attr_list", "sane_lists"]
 
 BULLET_RE = re.compile(r"^( {0,4})([*+\-]|\d+[.)]) ")
 
-# GitHub source link for the "Edit on GitHub" footer widget. Forks should set
+# GitHub source link for the "Edit on GitHub" footer widget. Scions should set
 # GITHUB_REPO_URL to their own repo or to an empty string to suppress the link.
 GITHUB_REPO_URL = "https://github.com/ChristopherA/DeepContext.com"
 GITHUB_BRANCH = "main"
+
+# OI inception DID for this repo, of the form did:repo:<sha1-of-root-commit>.
+# Set by build.py via compute_inception_did() before rendering. Scions get
+# their own DID automatically because their root commit differs; no hardcoded
+# value needs updating.
+INCEPTION_DID: str | None = None
+
+
+def compute_inception_did(root: Path) -> str | None:
+    """Return the did:repo:<sha1> of the repo's OI inception commit, or None.
+
+    The inception commit is the repo's root commit (no parents). Shallow
+    clones do not have it; the Actions workflow uses fetch-depth: 0 so CI
+    builds can compute this. When the value cannot be computed, the footer
+    simply omits the DID widget.
+    """
+    try:
+        result = subprocess.run(
+            ["git", "rev-list", "--max-parents=0", "HEAD"],
+            capture_output=True,
+            text=True,
+            check=True,
+            cwd=str(root),
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return None
+    shas = result.stdout.strip().splitlines()
+    if not shas:
+        return None
+    return f"did:repo:{shas[0]}"
 
 
 def normalize_list_indents(text: str) -> str:
@@ -103,6 +134,16 @@ def render_html(
             "Edit on GitHub</a>"
         )
 
+    did_widget = ""
+    if INCEPTION_DID:
+        short_hash = INCEPTION_DID[len("did:repo:"):len("did:repo:") + 8]
+        short_display = f"did:repo:{short_hash}…"
+        did_widget = (
+            f'<a class="did-link" href="{html.escape(INCEPTION_DID)}" '
+            f'title="{html.escape(INCEPTION_DID)}">'
+            f"{html.escape(short_display)}</a>"
+        )
+
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -116,7 +157,7 @@ def render_html(
 <main>
 {html_body}
 </main>
-<footer><a href="/">DeepContext</a>{source_link}</footer>
+<footer><a href="/">DeepContext</a>{did_widget}{source_link}</footer>
 </body>
 </html>
 """

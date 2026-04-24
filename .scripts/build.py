@@ -15,6 +15,7 @@ from pathlib import Path
 # Ensure sibling modules are importable when run via `python .scripts/build.py`.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import render  # noqa: E402
 from emit_skills import SKILLS_TARGET_DIRS, emit_skill_aliases  # noqa: E402
 from generate_indexes import (  # noqa: E402
     copy_attachments,
@@ -60,6 +61,8 @@ def build(root: Path) -> None:
     if build_dir.exists():
         shutil.rmtree(build_dir)
     build_dir.mkdir(parents=True)
+
+    render.INCEPTION_DID = render.compute_inception_did(root)
 
     slug_table = build_slug_table(root)
     node_count = render_nodes(root=root, build_dir=build_dir, slug_table=slug_table)
