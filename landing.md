@@ -302,14 +302,13 @@ are welcome through GitHub.
   or ask a question about the conventions.
 - **Edit directly in the GitHub Web UI.** Any node under `nodes/` can be
   edited in-browser; clicking "Commit changes" opens a pull request.
-- **Use this template** to stand up your own scion on these conventions.
-  [Create your own](https://github.com/new?template_name=DeepContext.com&template_owner=ChristopherA);
-  the scion publishes to its own Pages site on first push, with its own
-  Open Integrity inception commit and DID rather than inheriting this
-  template's. See
+- **Stand up your own scion.** Cloning this repository and running the
+  local Scion Bootstrap ceremony re-roots your copy with its own Open
+  Integrity inception commit and DID. The inception commit is signed with
+  your own SSH key, so your scion's cryptographic identity is yours -- not
+  GitHub's and not this template's. See
   [README.md](https://github.com/ChristopherA/DeepContext.com#readme) for
-  the setup procedure, and [[Adopt Scion Publication Model]] for why
-  "Use this template" rather than "Fork".
+  the setup procedure, and [[Adopt Scion Publication Model]] for the why.
 
 The practice publishes as scions — each reader can instantiate the template
 into their own graph with its own cryptographic identity, collaboratively

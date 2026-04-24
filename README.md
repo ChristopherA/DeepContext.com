@@ -13,34 +13,75 @@ fine-tuning, not retrieval chunks, not databases, not tags.
 This README is the GitHub-facing view: what you need to stand up a scion,
 build, and contribute.
 
-**Stand up your own scion:** [Use this template →](https://github.com/new?template_name=DeepContext.com&template_owner=ChristopherA)
--- then follow the Scioning procedure below so your scion gets its own
-Open Integrity inception commit and DID rather than inheriting this one.
+**Stand up your own scion:** see the Scioning section below. Standing up a
+scion is a local `git clone` plus a Bootstrap ceremony signed by your own
+SSH key -- not a GitHub "Use this template" click, because Actions cannot
+sign an Open Integrity inception commit as you.
 
 ## Scioning
 
-The repository is a **template**. A reader stands up a **scion** — a graph
-instantiated from the template with its own cryptographic identity — by
-using GitHub's "Use this template" action (not "Fork"). Each scion has its
-own Open Integrity inception commit producing a unique `did:repo:<sha1>`
-DID, its own Pages site on first push, and its own content to diverge as
-the scion-owner sees fit. The curation discipline lives in the conventions
-captured under `nodes/Contracts/`, not in editorial permissions; a scion
-inherits the conventions and decides what to keep or revise.
+A DeepContext **scion** is a repository whose content began as a clone of
+another DeepContext graph and was re-rooted locally with its own Open
+Integrity inception commit. Each scion has its own `did:repo:<sha1>` DID,
+its own Pages site, and its own content to diverge as its first steward
+sees fit. The curation discipline lives in the conventions captured under
+`nodes/Contracts/`, not in editorial permissions; a scion inherits the
+conventions and decides what to keep or revise.
 
-To stand up a scion:
+Standing up a scion is a local ceremony. The inception commit must be
+signed by the first steward's own SSH key, so no one-click GitHub path
+works -- Actions cannot sign as the steward. The template-repository
+setting is not enabled on this repository for the same reason; the
+scion-creation entry point is `git clone`, not "Use this template."
 
-1. On GitHub, click **"Use this template" -> "Create a new repository"**
-   (not "Fork" — fork would inherit this template's inception commit and
-   therefore its DID, which collides identity).
-2. Run the Scion Bootstrap skill in your new repository — it re-roots the
-   repo with a fresh Open Integrity inception commit so the scion has its
-   own DID, and records the template's DID via a `scion_of::` edge in the
-   scion's identity declaration.
-3. In the scion's **Settings -> Actions -> General**, allow Actions to run.
-4. In the scion's **Settings -> Pages**, set **Source = GitHub Actions**.
-5. Edit nodes directly via the web UI, or clone locally.
-6. Push. The Action builds `.build/` and deploys it as a Pages artifact.
+### Prerequisites
+
+The Scion Bootstrap skill checks and helps install these; a first steward
+running the ceremony manually sets them up directly.
+
+- `git config user.name` and `git config user.email` set.
+- `git config user.signingkey` pointing at an SSH private or public key.
+- The corresponding SSH public key registered for signing at
+  https://github.com/settings/ssh/signing.
+- `ssh-keygen` available on PATH (standard on macOS and most Linux).
+
+### Ceremony
+
+1. Clone this repository to your machine:
+   ```
+   git clone https://github.com/ChristopherA/DeepContext.com.git <scion-name>
+   cd <scion-name>
+   ```
+
+2. Remove the cloned `.git` directory -- the template's history is
+   discarded along with it; the working-tree content remains:
+   ```
+   rm -rf .git
+   ```
+
+3. Run the Open Integrity inception ceremony to produce a fresh root
+   commit signed by your SSH key. The Scion Bootstrap skill wraps this;
+   running manually, `.scripts/scion-inception.sh` is the core primitive.
+   The new root commit's SHA1 is your scion's DID.
+
+4. Commit the working-tree content as your scion's initial content commit
+   (also SSH-signed). Update `.scion-identity.yml` at the scion root:
+   record the template's DID under `scion_of` and your scion's new DID
+   under `this_did`.
+
+5. Create a new GitHub repository under your account:
+   ```
+   gh repo create <scion-name> --public --source=. --push
+   ```
+   or create via the GitHub web UI, then `git remote add origin <url>`
+   and `git push -u origin main`.
+
+6. In your scion's **Settings -> Actions -> General**, allow Actions to run.
+
+7. In your scion's **Settings -> Pages**, set **Source = GitHub Actions**.
+
+8. Subsequent pushes trigger the build-and-deploy Action and publish your
+   scion's Pages site with its own DID in the footer.
 
 Decision backing this model: [Adopt Scion Publication Model](nodes/Decisions/Adopt%20Scion%20Publication%20Model.md).
 
