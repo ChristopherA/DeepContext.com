@@ -55,6 +55,9 @@ The operational consequence for a Deep Context graph: design every agent interac
 - informed_by::[[George (2026) Harness Engineering Is Cybernetics]]↗
   - George grounds the operational-viability claim in the P-vs-NP intuition — humans out-evaluate but do not out-implement. The cybernetics lineage (Watt's governor, Kubernetes, agent harnesses) provides the historical evidence that generation-verification asymmetry is a robust engineering pattern, not a convenient rationalization.
 
+- informed_by::[[AI Agency Musing (Christopher Allen, 2026)]]
+  - The current public articulation of why human authority over AI-mediated systems is load-bearing at AI speeds. The Musing names the strategic-vs-tactical-oversight reframe (per-action approval becomes impossible at AI speeds; agency must shift to definitions, scope, and audit) and enumerates the agent duties — good faith, loyalty to the principal's interests, reasonable care, transparency, minimal data collection — that operationalize what human authority requires of AI participation. The Musing extends the Principal Authority framing this Conviction's [[Authority Flows from the Person]]↗ grounding builds on; the two Allen articulations together form the public substrate the Conviction now also rests on.
+
 - informs_downstream::[[Deep Context as an Architecture for Captured Reasoning]]
   - The architecture decision names "expressible agent-versus-human authority boundaries" as one of the requirements that rules out fully autonomous alternatives. This conviction is the standing stance that requirement serves — the architecture is the structural move that takes the stance seriously.
 

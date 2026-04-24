@@ -61,5 +61,8 @@ The curation contract slackens into "agent proposes, agent enacts" is the final-
 - informed_by::[[LLM Assistance Widens the Participation Gap]]
   - The Observation supplies empirical grounds for treating the translating-versus-extracting distinction as load-bearing rather than merely stylistic. If the participation gate is community membership fluency and extracting-mode agents produce content the community reads as non-member, then an extracting agent reproduces the O4 dynamic in the Deep Context practice itself. The translating-mode stance is the operational response; the Observation is what makes the stance carry weight beyond agent etiquette.
 
+- informed_by::[[AI Agency Musing (Christopher Allen, 2026)]]
+  - The Musing's framing of AI agents as "delegated instruments without agency of their own" is the substrate behind why translation rather than extraction is the right posture. An instrument without agency cannot legitimately become the originator of new claims; it can only translate the principal's claims across surfaces. The Musing's enumeration of agent duties (good faith, loyalty to the principal's interests, reasonable care, transparency, minimal data collection) is the duty-bearing layer this Conviction asks of agent workflows in their interaction with the graph.
+
 - informed_by::[[Egregore Framework (Egregore Labs, 2026)]]
   - Egregore's Claude Code agent is explicitly cast as "a participant" in the collective via the instance's identity document, a stance that treats the agent as enrolled in the group's cognition rather than as a translator between vocabularies. This Reference is the concrete precedent the Conviction contrasts with at the agent-role layer — adjacent territory, different commitment.

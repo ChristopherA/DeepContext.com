@@ -38,3 +38,6 @@ Nothing directly adopted in MVA. The paper is deferred substrate.
 
 - informs_downstream::[[Deep Context Community]]
   - The Gloss that carries the project's MVA authorship model. The Community Gloss cites this paper as deferred substrate — the role system to draw on when specific-role predicates become warranted.
+
+- composes_with::[[AI Agency Musing (Christopher Allen, 2026)]]
+  - The two References address the same Credit Issue from related angles. The AI Agency Musing names the underlying problem -- AI makes attribution evasion impossible, "the ghost is visible now," and distinguishing human-authored, AI-supported, and AI-driven work becomes load-bearing. This Paper specifies a candidate role vocabulary for that distinction. The Musing motivates; the Paper supplies the schema.
