@@ -137,10 +137,23 @@ def render_html(
     did_widget = ""
     if INCEPTION_DID:
         short_hash = INCEPTION_DID[len("did:repo:"):len("did:repo:") + 8]
-        short_display = f"did:repo:{short_hash}…"
+        if source_rel_path:
+            # Scion Address: compound DID of the form did:repo:<sha1>/<url-encoded-path>
+            # (W3C DID-URL path syntax, host-agnostic — no /blob/main/ insert).
+            encoded_path = quote(source_rel_path, safe="/")
+            full_did = f"{INCEPTION_DID}/{encoded_path}"
+            basename = source_rel_path.split("/")[-1]
+            if basename.endswith(".md"):
+                basename = basename[:-3]
+            short_display = f"did:repo:{short_hash}…/{basename}"
+        else:
+            # Generated taxonomy indexes have no source_rel_path; fall back to
+            # the repo-level DID.
+            full_did = INCEPTION_DID
+            short_display = f"did:repo:{short_hash}…"
         did_widget = (
-            f'<a class="did-link" href="{html.escape(INCEPTION_DID)}" '
-            f'title="{html.escape(INCEPTION_DID)}">'
+            f'<a class="did-link" href="{html.escape(full_did)}" '
+            f'title="{html.escape(full_did)}">'
             f"{html.escape(short_display)}</a>"
         )
 
