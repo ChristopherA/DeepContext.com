@@ -35,6 +35,12 @@ Ghost link; `derived_from::` is not yet seeded as a Predicate. `derived_from::` 
 - **Subject:** Any node whose coherence rests on a substrate — typically Contracts, Requirements, Convictions, Patterns, or other nodes whose authority is claim-bearing.
 - **Object:** Typically a Conviction, Decision, or established Reference. The object MUST be a node whose own authority can bear the subject's weight.
 
+### Conviction-to-Decision case: structural corollary
+
+A Conviction MAY use `grounded_in::[[X Decision]]` when the Conviction is a *structural corollary* of the Decision — when the Decision's property is what makes the Conviction's stance possible to hold. The direction of authority in this case runs Decision → Conviction: the Decision enables the Conviction, and the Conviction would lose its basis if the Decision were withdrawn. Example: [[Folders Serve Human Legibility, Not the Graph]] carries `grounded_in::[[Adopt Wikilinks and Named Edges]]` because without wikilinks-by-filename and author-declared edges, folders would have to carry graph semantics, and the folder-independence stance could not be held.
+
+This case contrasts with the substrate-side relation, where a Conviction is the normative substrate that *generates* a Decision — that direction uses `informs_downstream::` from the Conviction (see [[informs_downstream -- providing substrate or evidence to a downstream node|informs_downstream]] Typing). Both predicates may legitimately connect a Conviction and a Decision; the choice between them encodes which one is the normative source and which is the structural corollary, and the distinction is preserved by writing the edge on the dependent side in each case.
+
 ## Instances
 
 - `prototype/nodes/Contracts/Gloss Form Contract.md` carries `grounded_in::[[Use Double-Hyphen Separator for Gloss Definitions]]` — the Contract's filename-pattern Requirement rests on the Decision's commitment. Removing the Decision from the graph would leave the Requirement without a basis.

@@ -35,6 +35,12 @@ The web of associations the predicate activates is the forward side of provenanc
 - **Subject:** Any node that has downstream presence in the graph.
 - **Object:** Any node that draws on the subject as substrate or influence. The object MUST carry a corresponding `grounded_in::` or `informed_by::` edge back to the subject for the relation to be mutually visible; partial visibility (only `informs_downstream::` on the subject) is permitted but weaker.
 
+### Conviction-to-Decision case: normative substrate
+
+A Conviction MAY use `informs_downstream::[[X Decision]]` when the Conviction is the *normative substrate* the Decision serves — when the stance commits the project to something the Decision is the structural realization of. The direction of authority runs Conviction → Decision: the Conviction generates the Decision, and the Decision would lose its grounding if the Conviction were weakened. Example: [[Human Authority Over Augmentation Systems]] carries `informs_downstream::[[Adopt Wikilinks and Named Edges]]` because the commitment to human authority over augmentation is what generates the requirement that edges be author-declared rather than tool-inferred.
+
+This case contrasts with the corollary-side relation, where a Conviction is a structural corollary *enabled by* a Decision — that direction uses `grounded_in::` from the Conviction (see [[grounded_in -- normative or structural foundation|grounded_in]] Typing). Both predicates may legitimately connect a Conviction and a Decision; the choice between them encodes whether the Conviction generates the Decision (normative substrate) or the Decision enables the Conviction (structural corollary). Back-edges from the Decision (`informs_downstream::` or `informed_by::` pointing back at the Conviction) are optional and discovered by search, matching minimal-back-edges practice rather than being part of the convention.
+
 ## Instances
 
 - `prototype/nodes/Decisions/Require Body Elaboration Beyond Filename Definition.md` carries `informs_downstream::[[Gloss Form Contract]]` — the Decision declares that Gloss Form Contract's Body-shape Requirement carries the thin enforcement clause pointing at this Decision. The corresponding `grounded_in::` edge is on Gloss Form Contract itself.
