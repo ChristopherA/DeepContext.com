@@ -18,6 +18,8 @@ A DeepContext graph publishes as a **scion** — a repository instantiated from 
 
 The scion relationship to its source template is expressed at the graph layer, not the git layer. A scion's identity declaration carries a `scion_of::[[did:repo:<template-sha1>]]↗` edge pointing at the template's DID. No git-fork relationship to the template is maintained, because git-fork would share the root commit and therefore share the DID, which would collapse the identity sovereignty each scion needs in order for cross-scion references to be unambiguous.
 
+Identity sovereignty and identity-over-URL compose here. Because the DID is content-derived (the SHA1 of the OI inception commit), the same scion carries one DID across any git host (GitHub, GitLab, Radicle, and others); cross-host mirroring does not change identity. A resolver that walks from a DID to the scion's current host(s) does not yet exist — the DID widget in each page's footer records the identity in anticipation rather than because anything resolves it today.
+
 ## Scion, defined
 
 A scion is a graph that carries some or all of another graph's content while holding its own cryptographic identity and editorial sovereignty. The term is chosen deliberately. In horticulture a scion is a cutting from a parent plant grafted onto a fresh rootstock; the grafted tree bears the parent's fruit and grows from the rootstock's roots. DeepContext scions work the same way: content can be inherited from the template, but the root — the cryptographic root, the inception commit, the DID — is fresh for each scion. The horticultural sense composes with the aristocratic sense, in which a scion is a descendant who carries a line forward under their own name.
