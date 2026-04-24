@@ -13,6 +13,10 @@ fine-tuning, not retrieval chunks, not databases, not tags.
 This README is the GitHub-facing view: what you need to stand up a scion,
 build, and contribute.
 
+**Stand up your own scion:** [Use this template →](https://github.com/new?template_name=DeepContext.com&template_owner=ChristopherA)
+-- then follow the Scioning procedure below so your scion gets its own
+Open Integrity inception commit and DID rather than inheriting this one.
+
 ## Scioning
 
 The repository is a **template**. A reader stands up a **scion** — a graph
