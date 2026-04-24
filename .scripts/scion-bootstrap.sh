@@ -20,6 +20,13 @@
 #   5. Stages all working-tree content and commits it as the scion's
 #      initial content commit (signed by the first steward)
 #
+# Partial-run recovery:
+#   If a previous run removed .git but exited before completing inception,
+#   .scion-identity.yml is still in template state (scion_of: null). The
+#   script detects this case and resumes from step 3 rather than failing.
+#   If .git is missing but scion_of is set (a bootstrapped scion lost its
+#   .git), the script reports that re-clone from the remote is required.
+#
 # Usage:
 #   .scripts/scion-bootstrap.sh           # Bootstrap in the current directory
 #   .scripts/scion-bootstrap.sh --help    # Print usage and exit
@@ -27,7 +34,7 @@
 set -eu
 
 show_help() {
-    sed -n '2,25p' "$0" | sed 's/^# \{0,1\}//'
+    sed -n '2,32p' "$0" | sed 's/^# \{0,1\}//'
 }
 
 case "${1:-}" in
@@ -48,11 +55,39 @@ if [ ! -f "$REPO_ROOT/.scion-identity.yml" ]; then
     exit 66
 fi
 
+partial_resume=0
 if [ ! -d "$REPO_ROOT/.git" ]; then
-    printf 'Error: no .git directory at %s\n' "$REPO_ROOT" >&2
-    printf 'Bootstrap expects a cloned repository (with .git). If you have already\n' >&2
-    printf 'removed .git, stop and either re-clone or run scion-inception.sh directly.\n' >&2
-    exit 66
+    # Distinguish two missing-.git states:
+    #   (a) Partial-run recovery: a previous Bootstrap removed .git but exited
+    #       before completing inception. .scion-identity.yml is unchanged
+    #       (scion_of: null), so this_did still records the template's DID
+    #       and we can resume from the inception step.
+    #   (b) Bootstrapped-scion lost .git: scion_of is set, meaning Bootstrap
+    #       previously completed. The scion's history lives only on its
+    #       remote at this point and cannot be reconstructed by this script.
+    scion_of_value="$(sed -n 's/^scion_of:[[:space:]]*//p' "$REPO_ROOT/.scion-identity.yml" | head -n 1)"
+    case "$scion_of_value" in
+        null|"")
+            printf 'Detected partial-run state: no .git, .scion-identity.yml unchanged.\n'
+            printf 'Resuming Bootstrap from the inception step.\n\n'
+            partial_resume=1
+            ;;
+        *)
+            printf 'Error: no .git directory at %s\n' "$REPO_ROOT" >&2
+            printf '  scion_of: %s\n' "$scion_of_value" >&2
+            printf '\n' >&2
+            printf 'This directory carries a bootstrapped scion identity (scion_of is set)\n' >&2
+            printf 'but its .git is missing. The scion'\''s commit history lives only on its\n' >&2
+            printf 'remote at this point and cannot be reconstructed by Bootstrap. Re-clone\n' >&2
+            printf 'the scion'\''s repository into a fresh directory and resume work there:\n' >&2
+            printf '\n' >&2
+            printf '  git clone <scion-repo-url> <fresh-dir>\n' >&2
+            printf '\n' >&2
+            printf 'Bootstrap re-roots a fresh clone of a template; it does not reconstruct\n' >&2
+            printf 'an already-bootstrapped scion'\''s lost .git.\n' >&2
+            exit 66
+            ;;
+    esac
 fi
 
 if ! command -v ssh-keygen >/dev/null 2>&1; then
@@ -81,7 +116,7 @@ fi
 
 # --- Read template DID ---
 
-template_did="$(awk -F': *' '/^this_did:/ {print $2; exit}' "$REPO_ROOT/.scion-identity.yml")"
+template_did="$(sed -n 's/^this_did:[[:space:]]*//p' "$REPO_ROOT/.scion-identity.yml" | head -n 1)"
 if [ -z "$template_did" ]; then
     printf 'Error: could not read this_did from .scion-identity.yml\n' >&2
     exit 65
@@ -91,8 +126,12 @@ printf 'Template DID: %s\n' "$template_did"
 
 # --- Remove .git ---
 
-printf 'Removing %s/.git (discarding template history)...\n' "$REPO_ROOT"
-rm -rf "$REPO_ROOT/.git"
+if [ "$partial_resume" -eq 0 ]; then
+    printf 'Removing %s/.git (discarding template history)...\n' "$REPO_ROOT"
+    rm -rf "$REPO_ROOT/.git"
+else
+    printf 'Skipping .git removal (already absent from prior partial run).\n'
+fi
 
 # --- Run OI inception ---
 

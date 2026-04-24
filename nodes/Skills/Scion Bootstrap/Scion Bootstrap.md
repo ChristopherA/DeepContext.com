@@ -147,7 +147,7 @@ The script:
 5. Updates `.scion-identity.yml`: `this_did` becomes the new DID, `scion_of` becomes the template's former `this_did`.
 6. Stages all working-tree content and commits it as the scion's initial content commit, signed by the first steward's SSH key.
 
-If the script errors, read the error message and return to the appropriate step. The script's errors name which prerequisite is missing or which path is wrong; re-running after the fix is safe as long as `.git` is still present from the original clone (if the script partially ran and already removed `.git`, see the skill's troubleshooting notes under `## Scripts` below).
+If the script errors, read the error message and return to the appropriate step. The script's errors name which prerequisite is missing or which path is wrong; re-running after the fix is safe. If a previous attempt exited after the script removed `.git` but before the new inception commit landed, the script detects that state on the next run (no `.git` present, `.scion-identity.yml` still in template form with `scion_of: null`) and resumes from the inception step rather than failing. The unrecoverable case is a previously-bootstrapped scion whose `.git` was lost (`scion_of:` set, no `.git`); the script reports that and points at re-cloning from the scion's remote.
 
 ### Step 7: Create the scion's GitHub repository
 
@@ -203,7 +203,7 @@ The wrapper script for the ceremony proper. POSIX-sh. Runs from the scion-dir ro
 
 - **Inputs**: the current working directory must contain `.scion-identity.yml` and `.git` (a fresh clone of a DeepContext graph). Git signing configuration (`user.name`, `user.email`, `user.signingkey`) must be set and the signing key file must be readable.
 - **Outputs**: `.git` rewritten with two signed commits (the OI inception commit plus the scion's initial content commit); `.scion-identity.yml` updated with the scion's new DID and the template's DID as `scion_of`.
-- **Failure modes**: missing prerequisite → exits with clear message naming the missing piece; partial run (script exited after removing `.git` but before completing inception) → safe to re-clone into a fresh directory and re-run; signing failure → check that the signing key's public half is in GitHub allowed-signers and that `git config user.signingkey` points at the correct path.
+- **Failure modes**: missing prerequisite → exits with clear message naming the missing piece; partial run (script exited after removing `.git` but before completing inception) → re-running detects the partial-run state (no `.git`, `.scion-identity.yml` still recording `scion_of: null`) and resumes from the inception step; bootstrapped-scion lost `.git` (`.scion-identity.yml` has `scion_of` set but no `.git` present) → unrecoverable from this script, re-clone from the scion's remote into a fresh directory; signing failure → check that the signing key's public half is in GitHub allowed-signers and that `git config user.signingkey` points at the correct path.
 
 ### `.scripts/scion-inception.sh`
 
