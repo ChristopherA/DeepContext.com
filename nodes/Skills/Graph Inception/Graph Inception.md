@@ -31,7 +31,7 @@ Before touching prerequisites or running any ceremony commands, confirm with the
 
 If the user has not cloned a donor graph yet, walk them through the clone step first: `git clone https://github.com/ChristopherA/DeepContext.com.git <graph-name>` and `cd <graph-name>`. If the user is in DeepContext.com itself rather than a fresh clone, stop — Inception is for new graphs, not for the donor being cloned from.
 
-Also confirm intent on **scion-of lineage**: most new graphs are not scions, even when they began as a clone of a donor. A scion claim signals upstream-tracking intent (a parallel-fork case where vocabulary divergence among contributors needs structural support). If the user does not have that intent, the new graph will end up with `scion_of: null` regardless of the donor relationship; if the user does want the scion claim, note it now so step 6's identity-file write can be reviewed after the script runs (the script currently writes `scion_of` to the donor's DID by default; clear it manually if the new graph is not claiming scion-of, pending the script's behavioral revision).
+Also confirm intent on **scion-of lineage**: most new graphs are not scions, even when they began as a clone of a donor. A scion claim signals upstream-tracking intent (a parallel-fork case where vocabulary divergence among contributors needs structural support). If the user does not have that intent, run the script without the `--claim-scion-of` flag; the script will write `scion_of: null` to the identity file. If the user does want the scion claim, run the script with `--claim-scion-of` and the script will write the donor's DID under `scion_of:`.
 
 ### Step 2: Verify platform and package manager
 
@@ -134,22 +134,30 @@ git config --global user.email "email@example.com"
 
 ### Step 6: Run the Inception script
 
-With prerequisites satisfied, run:
+With prerequisites satisfied, run (without the flag for the common non-scion case):
 
 ```sh
 .scripts/graph-inception.sh
 ```
 
+Or, if the new graph is intentionally claiming scion-of lineage (the rare parallel-fork-tracking case):
+
+```sh
+.scripts/graph-inception.sh --claim-scion-of
+```
+
 The script:
 
 1. Reads the donor's `this_did` from `.deep-context-identity.yml`.
-2. Removes the cloned `.git` directory (discards donor history).
-3. Runs `.scripts/oi-inception.sh .` to produce a fresh empty OI-signed root commit in the current directory.
-4. Captures the new graph's DID from `git rev-parse HEAD`.
-5. Updates `.deep-context-identity.yml`: `this_did` becomes the new DID, `scion_of` becomes the donor's former `this_did`. Under the corrected framing this auto-write of `scion_of` is over-eager; if the new graph is not claiming scion-of, clear `scion_of` to `null` manually after the script completes (a follow-up commit will make the script's scion-of write conditional on a `--claim-scion-of` flag).
-6. Stages all working-tree content and commits it as the graph's initial content commit, signed by the first steward's SSH key.
+2. Touches `.deep-context-inception-in-progress` (the partial-resume flag, gitignored).
+3. Removes the cloned `.git` directory (discards donor history).
+4. Runs `.scripts/oi-inception.sh .` to produce a fresh empty OI-signed root commit in the current directory.
+5. Captures the new graph's DID from `git rev-parse HEAD`.
+6. Updates `.deep-context-identity.yml`: `this_did` becomes the new DID; `scion_of` becomes the donor's DID if `--claim-scion-of` was passed, otherwise `null`.
+7. Stages all working-tree content and commits it as the graph's initial content commit, signed by the first steward's SSH key.
+8. Removes the partial-resume flag file.
 
-If the script errors, read the error message and return to the appropriate step. The script's errors name which prerequisite is missing or which path is wrong; re-running after the fix is safe. If a previous attempt exited after the script removed `.git` but before the new inception commit landed, the script detects that state on the next run (no `.git` present, `.deep-context-identity.yml` still in donor form with `scion_of: null`) and resumes from the inception step rather than failing. The unrecoverable case is a previously-incepted graph whose `.git` was lost (`scion_of:` set, no `.git`); the script reports that and points at re-cloning from the graph's remote.
+If the script errors, read the error message and return to the appropriate step. The script's errors name which prerequisite is missing or which path is wrong; re-running after the fix is safe. If a previous attempt exited after the script removed `.git` but before the new inception commit landed, the partial-resume flag will still be present; on the next run, the script detects that state (no `.git`, flag present) and resumes from the inception step rather than failing. The unrecoverable case is a previously-incepted graph whose `.git` was lost without the flag present; the script reports that and points at re-cloning from the graph's remote.
 
 ### Step 7: Create the graph's GitHub repository
 
@@ -201,11 +209,11 @@ The graph is now a first-class Deep Context graph with its own cryptographic ide
 
 ### `.scripts/graph-inception.sh`
 
-The wrapper script for the ceremony proper. POSIX-sh. Runs from the new graph's directory root.
+The wrapper script for the ceremony proper. POSIX-sh. Runs from the new graph's directory root. Accepts `--claim-scion-of` flag (default off) to record `scion_of:` in the identity file.
 
 - **Inputs**: the current working directory must contain `.deep-context-identity.yml` and `.git` (a fresh clone of a Deep Context graph). Git signing configuration (`user.name`, `user.email`, `user.signingkey`) must be set and the signing key file must be readable.
-- **Outputs**: `.git` rewritten with two signed commits (the OI inception commit plus the graph's initial content commit); `.deep-context-identity.yml` updated with the new graph's DID and (currently, pending behavioral revision) the donor's DID as `scion_of`.
-- **Failure modes**: missing prerequisite → exits with clear message naming the missing piece; partial run (script exited after removing `.git` but before completing inception) → re-running detects the partial-run state (no `.git`, `.deep-context-identity.yml` still recording `scion_of: null`) and resumes from the inception step; previously-incepted graph lost `.git` (`.deep-context-identity.yml` has `scion_of` set but no `.git` present) → unrecoverable from this script, re-clone from the graph's remote into a fresh directory; signing failure → check that the signing key's public half is in GitHub allowed-signers and that `git config user.signingkey` points at the correct path.
+- **Outputs**: `.git` rewritten with two signed commits (the OI inception commit plus the graph's initial content commit); `.deep-context-identity.yml` updated with the new graph's DID under `this_did`; `scion_of` set to the donor's DID if `--claim-scion-of` was passed, else `null`.
+- **Failure modes**: missing prerequisite → exits with clear message naming the missing piece; partial run (script exited after removing `.git` but before completing inception) → re-running detects the partial-run state via the `.deep-context-inception-in-progress` flag file (no `.git`, flag present) and resumes from the inception step; previously-incepted graph lost `.git` without the flag present → unrecoverable from this script, re-clone from the graph's remote into a fresh directory; inconsistent state (`.git` present and flag present) → reports the inconsistency and refuses to proceed; signing failure → check that the signing key's public half is in GitHub allowed-signers and that `git config user.signingkey` points at the correct path.
 
 ### `.scripts/oi-inception.sh`
 
@@ -223,7 +231,7 @@ The OI inception primitive this skill's wrapper calls. Produces a fresh empty si
   - The cryptographic specification that makes a graph's DID identity-sovereign rather than hosting-derivative. The inception-commit ceremony, the SHA1-derived DID, the allowed-signers delegation model — all are OI moves this skill's script composes together.
 
 - informs_downstream::[[scion_of -- content lineage from a template graph]]
-  - The Predicate whose value this skill currently writes into `.deep-context-identity.yml` at step 5 of the script. Under the corrected framing, the script's auto-write is over-eager — most graphs are not scions and should leave `scion_of: null`. A follow-up commit will gate the scion-of write behind a `--claim-scion-of` flag.
+  - The Predicate whose value this skill writes into `.deep-context-identity.yml` at step 6 of the script — conditionally on the `--claim-scion-of` flag. Most invocations leave `scion_of: null`; the flag is reserved for the parallel-fork-tracking case where the new graph intends to track the donor as upstream.
 
 - informs_downstream::[[grafted_from -- per-node content provenance from a donor graph]]
   - The Predicate that records per-node content provenance independently of the graph-level scion-of claim. A graph that grafts content from a donor without claiming scion-of records the per-node provenance via `grafted_from::` edges (with the donor proxied by a Reference node in the recipient's `nodes/References/`). Inception sets up the graph's identity; `grafted_from::` edges document what content was carried over.
