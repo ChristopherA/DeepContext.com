@@ -10,7 +10,7 @@ tagline: Membership in a Practice Domain — the shared language community a nod
 
 # in_practice_domain
 
-A predicate declaring that the subject node belongs to the Practice Domain the object names — the shared language community of practitioners and conventions within a bounded context where specific terms carry compressed meaning. Replaces the earlier bare `in_domain::`, whose generic noun ("domain") conflated multiple senses (web domain, library-science knowledge domain, problem domain). `in_practice_domain::` names the kind of domain explicitly: a shared-language community in this graph's vocabulary, per [[Practice Domain]].
+A predicate declaring that the subject node belongs to the Practice Domain the object names — the shared language community of practitioners and conventions within a bounded context where specific terms carry compressed meaning. Replaces the earlier bare `in_domain::`, whose generic noun ("domain") conflated multiple senses (web domain, library-science knowledge domain, problem domain). `in_practice_domain::` names the kind of domain explicitly: a shared-language community in this graph's vocabulary. The object is a Gloss whose concept side names the community of practice (e.g., `[[Deep Context Architecture]]`, `[[Self-Sovereign Identity]]`, `[[Anthropology]]`).
 
 The predicate is multi-valued in principle. Most nodes belong to a single Practice Domain (the one whose conventions they were authored under). Bridge content — Concept Facets that cross practitioner communities, References cited across multiple fields — may carry several `in_practice_domain::` edges, recording participation in each community's shared language.
 
@@ -33,7 +33,7 @@ A reader encountering `X in_practice_domain::Y` learns that X participates in Y'
 ## Typing
 
 - **Subject:** Any node in the graph. Every authored node SHOULD carry at least one `in_practice_domain::` edge in its identity block, naming the community whose shared language it participates in. Nodes without such an edge are vocabulary-orphaned — readable only by readers who already know which community's terms apply.
-- **Object:** A node conforming to the [[Practice Domain]] Form Contract — the structural definition of a Practice Domain. Transitionally, the object may be a Gloss naming a Practice Domain that has not yet been promoted to its own form; once Practice Domain instances are authored, all `in_practice_domain::` edges resolve to those.
+- **Object:** A Gloss whose concept side names a community of practice (e.g., `[[Deep Context Architecture]]`, `[[Self-Sovereign Identity]]`). The Gloss's body defines the community and may carry SKOS-style `narrower::`/`broader::`/`related::` edges to other communities. A separate Practice Domain Form Contract was considered but not authored: the structural-index work (Scope, Key Nodes, Open Questions) is optional body content a Gloss may carry by convention, not a form-level requirement.
 
 ## Instances
 
@@ -56,8 +56,8 @@ A bridge example, for a Concept Facet that crosses multiple communities:
 - contrasts_with::[[built_on -- foundational substrate the subject rests on]]
   - Cultural-layer membership vs technical-layer substrate. A node may be in a Practice Domain (community) and built on a substrate (technology) without contradiction; the edges name relations on different axes.
 
-- composes_with::[[Practice Domain]]
-  - The object's typing depends on the Practice Domain Form Contract. The Predicate names node-to-Practice-Domain membership; the Form Contract specifies what makes a Practice Domain a first-class node form (Scope, Key Nodes, Open Questions, etc.). Without the Form Contract, this Predicate's object would be ambiguous; together they form a coherent membership-and-target pair.
+- composes_with::[[Gloss Form Contract]]
+  - The object's typing rests on the Gloss form: a node whose filename carries its working definition. The Predicate names node-to-community-of-practice membership; the object Gloss carries the community's definition and may decorate itself with SKOS-style edges to other communities. A separate Practice Domain Form Contract was considered but not authored — Gloss form is sufficient.
 
 - grounded_in::[[Adopt Predicate Atomicity]]
   - Each predicate answers one question. `in_practice_domain::` answers "what shared language community does this node belong to?" — distinct from substrate dependence (`built_on`), normative foundation (`grounded_in`), and content provenance (`grafted_from`).
