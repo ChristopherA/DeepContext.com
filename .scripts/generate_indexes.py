@@ -92,8 +92,13 @@ def build_taxonomy_index(
 
 
 def write_taxonomy_indexes(
-    *, root: Path, build_dir: Path, slug_table: dict[str, dict]
+    *,
+    root: Path,
+    build_dir: Path,
+    slug_table: dict[str, dict],
+    donors: list | None = None,
 ) -> None:
+    donors = donors or []
     nodes_dir = root / "nodes"
     for taxonomy_name, taxonomy_slug in TAXONOMIES.items():
         tax_dir = nodes_dir / taxonomy_name
@@ -112,7 +117,7 @@ def write_taxonomy_indexes(
             )
             source_rel = None
 
-        linkified = linkify_text(markdown_source, slug_table)
+        linkified = linkify_text(markdown_source, slug_table, donors)
         _, body = strip_frontmatter(linkified)
         page = render_html(
             body,
@@ -128,12 +133,17 @@ def write_taxonomy_indexes(
 
 
 def write_landing_page(
-    *, root: Path, build_dir: Path, slug_table: dict[str, dict]
+    *,
+    root: Path,
+    build_dir: Path,
+    slug_table: dict[str, dict],
+    donors: list | None = None,
 ) -> None:
+    donors = donors or []
     landing = root / "landing.md"
     if not landing.exists():
         return
-    linkified = linkify_text(landing.read_text(encoding="utf-8"), slug_table)
+    linkified = linkify_text(landing.read_text(encoding="utf-8"), slug_table, donors)
     _, body = strip_frontmatter(linkified)
     page = render_html(
         body,
