@@ -69,11 +69,11 @@ pattern language, capability-based security, the project's own Deep
 Context Architecture, and so on), name the specific features you are
 drawing on rather than pointing at the tradition as the source of
 framing. "Egregore-shaped commitment" imports the tradition's frame;
-"self-contained repository, scion-publishes-on-first-push, Web-UI-edit-is-first-class,
+"self-contained repository, graph-publishes-on-first-push, Web-UI-edit-is-first-class,
 curation-in-conventions" names the features. The Vocabulary Diversity Is
 a Feature stance extends to traditions as well as contributor vocabularies:
 using something is not adopting its vocabulary, and the distinction is
-load-bearing for scions whose context differs from the template's.
+load-bearing for graphs whose context differs from any donor they grafted from.
 
 **Treat new common vocabulary as proposal, not adoption.**
 [Terms Become Common Through Unanimity, Not Precedent](nodes/Convictions/Terms%20Become%20Common%20Through%20Unanimity,%20Not%20Precedent.md)
@@ -112,11 +112,17 @@ Output lands in `.build/`. The GitHub Action runs the same command in a
 runner and uploads `.build/` as a Pages artifact; nothing commits back to
 the repository. `.build/` is gitignored.
 
-## A scion's AGENTS.md may differ
+## A graph's AGENTS.md may differ
 
-Scions are first-class. A scion may revise this file to reflect its own
-stance on agent behavior. Agents working on a scion should read that
-scion's AGENTS.md rather than assume this one applies. The template's
-Conviction nodes are inherited by default; what the scion keeps, extends,
-or overrides is the scion's to decide, and should be visible in the
-scion's own node graph rather than inferred from the template.
+Each graph is first-class. A graph may revise this file to reflect its own
+stance on agent behavior. Agents working on another graph should read that
+graph's AGENTS.md rather than assume this one applies. When a graph has
+grafted nodes from a donor (recorded via `grafted_from::`), the donor's
+Conviction nodes are present as starting material; what the graph keeps,
+extends, or overrides is the graph's to decide, and should be visible in
+the graph's own node graph rather than inferred from any donor. A graph
+that additionally claims `scion_of::` lineage from a donor is signalling
+upstream-tracking intent — its AGENTS.md may keep more of the donor's
+stance by reference; a graph that grafted without the scion-of claim is
+not implicitly tracking the donor's stance and should make its own
+imperative explicit.

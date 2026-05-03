@@ -10,34 +10,48 @@ is [Deep Context as an Architecture for Captured Reasoning](nodes/Decisions/Deep
 -- typed markdown forms with traversable named-edge predicates, not
 fine-tuning, not retrieval chunks, not databases, not tags.
 
-This README is the GitHub-facing view: what you need to stand up a scion,
-build, and contribute.
+This README is the GitHub-facing view: what you need to stand up your own
+Deep Context graph, build, and contribute.
 
-**Stand up your own scion:** see the Scioning section below. Standing up a
-scion is a local `git clone` plus a Bootstrap ceremony signed by your own
-SSH key -- not a GitHub "Use this template" click, because Actions cannot
-sign an Open Integrity inception commit as you.
+**Stand up your own graph:** see the Graph Inception section below.
+Standing up a graph is a local `git clone` (or fresh `git init`) plus an
+Inception ceremony signed by your own SSH key -- not a GitHub "Use this
+template" click, because Actions cannot sign an Open Integrity inception
+commit as you. A new graph has its own DID and its own purpose; it may
+optionally claim **scion-of lineage** from a donor graph when the new
+graph intends to track the donor as upstream (the rare parallel-fork
+case), but most new graphs do not.
 
-## Scioning
+## Graph Inception
 
-A DeepContext **scion** is a repository whose content began as a clone of
-another DeepContext graph and was re-rooted locally with its own Open
-Integrity inception commit. Each scion has its own `did:repo:<sha1>` DID,
-its own Pages site, and its own content to diverge as its first steward
-sees fit. The curation discipline lives in the conventions captured under
-`nodes/Contracts/`, not in editorial permissions; a scion inherits the
-conventions and decides what to keep or revise.
+A Deep Context **graph** is a repository carrying typed markdown nodes
+with named-edge predicates. Each graph has its own `did:repo:<sha1>` DID
+derived from its own OI inception commit, its own Pages site, and its own
+content to evolve as its first steward sees fit. The curation discipline
+lives in the conventions captured under `nodes/Contracts/`, not in
+editorial permissions.
 
-Standing up a scion is a local ceremony. The inception commit must be
+A graph standing up from a clone of an existing graph (the donor)
+typically grafts the donor's meta-layer (Contracts, Predicates, generic
+Skills) and authors its own content from there. Per-node graft provenance
+is recorded via the `grafted_from::` predicate when traceability matters.
+The new graph may additionally claim **scion-of lineage** from the donor
+by recording `scion_of:` in `.scion-identity.yml` -- but most graphs do
+not, because the scion claim signals upstream-tracking intent (parallel-
+fork case) rather than mere content adoption. The seed graph
+(DeepContext.com) carries no donor and is not a scion.
+
+Standing up a graph is a local ceremony. The inception commit must be
 signed by the first steward's own SSH key, so no one-click GitHub path
 works -- Actions cannot sign as the steward. The template-repository
-setting is not enabled on this repository for the same reason; the
-scion-creation entry point is `git clone`, not "Use this template."
+setting is not enabled on this repository for the same reason; the entry
+point is `git clone` (or fresh `git init`), not "Use this template."
 
 ### Prerequisites
 
-The Scion Bootstrap skill checks and helps install these; a first steward
-running the ceremony manually sets them up directly.
+The Scion Bootstrap skill (operationally produces Graph Inception; pending
+rename) checks and helps install these; a first steward running the
+ceremony manually sets them up directly.
 
 - `git config user.name` and `git config user.email` set.
 - `git config user.signingkey` pointing at an SSH private or public key.
@@ -47,13 +61,14 @@ running the ceremony manually sets them up directly.
 
 ### Ceremony
 
-1. Clone this repository to your machine:
+1. Clone this repository to your machine (skip if standing up a fresh
+   graph with no donor):
    ```
-   git clone https://github.com/ChristopherA/DeepContext.com.git <scion-name>
-   cd <scion-name>
+   git clone https://github.com/ChristopherA/DeepContext.com.git <graph-name>
+   cd <graph-name>
    ```
 
-2. Remove the cloned `.git` directory -- the template's history is
+2. Remove the cloned `.git` directory -- the donor's history is
    discarded along with it; the working-tree content remains:
    ```
    rm -rf .git
@@ -62,26 +77,28 @@ running the ceremony manually sets them up directly.
 3. Run the Open Integrity inception ceremony to produce a fresh root
    commit signed by your SSH key. The Scion Bootstrap skill wraps this;
    running manually, `.scripts/scion-inception.sh` is the core primitive.
-   The new root commit's SHA1 is your scion's DID.
+   The new root commit's SHA1 is your graph's DID.
 
-4. Commit the working-tree content as your scion's initial content commit
-   (also SSH-signed). Update `.scion-identity.yml` at the scion root:
-   record the template's DID under `scion_of` and your scion's new DID
-   under `this_did`.
+4. Commit the working-tree content as your graph's initial content commit
+   (also SSH-signed). Update `.scion-identity.yml` at the graph root:
+   write your graph's new DID under `this_did`. If your graph claims
+   scion-of lineage from the donor (parallel-fork-tracking intent), write
+   the donor's DID under `scion_of`; otherwise leave `scion_of: null`.
+   Most graphs do not claim scion-of.
 
 5. Create a new GitHub repository under your account:
    ```
-   gh repo create <scion-name> --public --source=. --push
+   gh repo create <graph-name> --public --source=. --push
    ```
    or create via the GitHub web UI, then `git remote add origin <url>`
    and `git push -u origin main`.
 
-6. In your scion's **Settings -> Actions -> General**, allow Actions to run.
+6. In your graph's **Settings -> Actions -> General**, allow Actions to run.
 
-7. In your scion's **Settings -> Pages**, set **Source = GitHub Actions**.
+7. In your graph's **Settings -> Pages**, set **Source = GitHub Actions**.
 
 8. Subsequent pushes trigger the build-and-deploy Action and publish your
-   scion's Pages site with its own DID in the footer.
+   graph's Pages site with its own DID in the footer.
 
 Decision backing this model: [Adopt Scion Publication Model](nodes/Decisions/Adopt%20Scion%20Publication%20Model.md).
 
