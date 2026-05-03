@@ -1,35 +1,46 @@
 #!/bin/sh
-# Orchestrates the Scion Bootstrap ceremony that turns a cloned DeepContext
-# graph into a scion with its own Open Integrity inception commit and DID.
+# Orchestrates the Graph Inception ceremony that turns a cloned Deep Context
+# graph (or a fresh-init directory) into a new graph with its own Open
+# Integrity inception commit and DID. The new graph may optionally claim
+# scion-of lineage from the donor; default behavior is to leave scion_of
+# null (the graph is its own thing, not a scion).
 #
 # Prerequisites the script checks for but does not install (the invoking
 # skill walks a missing-prereq user through brew/gh/ssh-keygen install):
 #   - git config user.name, user.email, user.signingkey
 #   - signing key file readable at user.signingkey
 #   - ssh-keygen on PATH
-#   - The current directory contains a cloned DeepContext graph
-#     (.scion-identity.yml present, .git present).
+#   - The current directory contains a cloned Deep Context graph
+#     (.deep-context-identity.yml present, .git present).
 #
 # Ceremony the script performs:
-#   1. Reads the template's this_did from .scion-identity.yml
-#   2. Removes the cloned .git directory (discards template history)
-#   3. Runs .scripts/scion-inception.sh . to produce a fresh empty
-#      OI-signed root commit (the scion's new inception)
-#   4. Updates .scion-identity.yml: this_did becomes the scion's new DID,
-#      scion_of becomes the template's former this_did
-#   5. Stages all working-tree content and commits it as the scion's
+#   1. Reads the donor's this_did from .deep-context-identity.yml
+#   2. Removes the cloned .git directory (discards donor history)
+#   3. Runs .scripts/oi-inception.sh . to produce a fresh empty
+#      OI-signed root commit (the new graph's inception)
+#   4. Updates .deep-context-identity.yml: this_did becomes the new graph's
+#      own DID. The script currently also writes scion_of as the donor's
+#      former this_did; under the corrected framing this is over-eager and
+#      should become conditional on a --claim-scion-of flag (deferred to a
+#      follow-up commit). Most graphs are not scions; clear scion_of to null
+#      manually after Inception unless the parallel-fork-tracking case applies.
+#   5. Stages all working-tree content and commits it as the graph's
 #      initial content commit (signed by the first steward)
 #
 # Partial-run recovery:
 #   If a previous run removed .git but exited before completing inception,
-#   .scion-identity.yml is still in template state (scion_of: null). The
+#   .deep-context-identity.yml is still in template state (scion_of: null). The
 #   script detects this case and resumes from step 3 rather than failing.
-#   If .git is missing but scion_of is set (a bootstrapped scion lost its
-#   .git), the script reports that re-clone from the remote is required.
+#   This sentinel collides with the corrected-framing final state for
+#   non-scion graphs (scion_of: null both before bootstrap and after for
+#   non-scion graphs); a flag-file approach replaces this in a follow-up.
+#   If .git is missing but scion_of is set (a previously-bootstrapped scion
+#   lost its .git), the script reports that re-clone from the remote is
+#   required.
 #
 # Usage:
-#   .scripts/scion-bootstrap.sh           # Bootstrap in the current directory
-#   .scripts/scion-bootstrap.sh --help    # Print usage and exit
+#   .scripts/graph-inception.sh           # Bootstrap in the current directory
+#   .scripts/graph-inception.sh --help    # Print usage and exit
 
 set -eu
 
@@ -49,8 +60,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # --- Prerequisites ---
 
-if [ ! -f "$REPO_ROOT/.scion-identity.yml" ]; then
-    printf 'Error: .scion-identity.yml not found at %s\n' "$REPO_ROOT" >&2
+if [ ! -f "$REPO_ROOT/.deep-context-identity.yml" ]; then
+    printf 'Error: .deep-context-identity.yml not found at %s\n' "$REPO_ROOT" >&2
     printf 'Run this script from the root of a cloned DeepContext graph.\n' >&2
     exit 66
 fi
@@ -59,16 +70,16 @@ partial_resume=0
 if [ ! -d "$REPO_ROOT/.git" ]; then
     # Distinguish two missing-.git states:
     #   (a) Partial-run recovery: a previous Bootstrap removed .git but exited
-    #       before completing inception. .scion-identity.yml is unchanged
+    #       before completing inception. .deep-context-identity.yml is unchanged
     #       (scion_of: null), so this_did still records the template's DID
     #       and we can resume from the inception step.
     #   (b) Bootstrapped-scion lost .git: scion_of is set, meaning Bootstrap
     #       previously completed. The scion's history lives only on its
     #       remote at this point and cannot be reconstructed by this script.
-    scion_of_value="$(sed -n 's/^scion_of:[[:space:]]*//p' "$REPO_ROOT/.scion-identity.yml" | head -n 1)"
+    scion_of_value="$(sed -n 's/^scion_of:[[:space:]]*//p' "$REPO_ROOT/.deep-context-identity.yml" | head -n 1)"
     case "$scion_of_value" in
         null|"")
-            printf 'Detected partial-run state: no .git, .scion-identity.yml unchanged.\n'
+            printf 'Detected partial-run state: no .git, .deep-context-identity.yml unchanged.\n'
             printf 'Resuming Bootstrap from the inception step.\n\n'
             partial_resume=1
             ;;
@@ -116,9 +127,9 @@ fi
 
 # --- Read template DID ---
 
-template_did="$(sed -n 's/^this_did:[[:space:]]*//p' "$REPO_ROOT/.scion-identity.yml" | head -n 1)"
+template_did="$(sed -n 's/^this_did:[[:space:]]*//p' "$REPO_ROOT/.deep-context-identity.yml" | head -n 1)"
 if [ -z "$template_did" ]; then
-    printf 'Error: could not read this_did from .scion-identity.yml\n' >&2
+    printf 'Error: could not read this_did from .deep-context-identity.yml\n' >&2
     exit 65
 fi
 
@@ -136,22 +147,22 @@ fi
 # --- Run OI inception ---
 
 printf 'Running Open Integrity inception ceremony...\n'
-"$SCRIPT_DIR/scion-inception.sh" "$REPO_ROOT"
+"$SCRIPT_DIR/oi-inception.sh" "$REPO_ROOT"
 
 new_did="did:repo:$(git -C "$REPO_ROOT" rev-parse HEAD)"
 printf 'Scion DID: %s\n' "$new_did"
 
-# --- Update .scion-identity.yml ---
+# --- Update .deep-context-identity.yml ---
 #
 # Portable in-place edit: write to a temp file, then replace.
-printf 'Updating .scion-identity.yml...\n'
+printf 'Updating .deep-context-identity.yml...\n'
 
 awk -v new_did="$new_did" -v scion_of="$template_did" '
     /^this_did:/ { print "this_did: " new_did; next }
     /^scion_of:/ { print "scion_of: " scion_of; next }
     { print }
-' "$REPO_ROOT/.scion-identity.yml" > "$REPO_ROOT/.scion-identity.yml.new"
-mv "$REPO_ROOT/.scion-identity.yml.new" "$REPO_ROOT/.scion-identity.yml"
+' "$REPO_ROOT/.deep-context-identity.yml" > "$REPO_ROOT/.deep-context-identity.yml.new"
+mv "$REPO_ROOT/.deep-context-identity.yml.new" "$REPO_ROOT/.deep-context-identity.yml"
 
 # --- Stage and commit content ---
 

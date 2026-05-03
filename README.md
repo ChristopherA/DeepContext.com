@@ -36,7 +36,7 @@ typically grafts the donor's meta-layer (Contracts, Predicates, generic
 Skills) and authors its own content from there. Per-node graft provenance
 is recorded via the `grafted_from::` predicate when traceability matters.
 The new graph may additionally claim **scion-of lineage** from the donor
-by recording `scion_of:` in `.scion-identity.yml` -- but most graphs do
+by recording `scion_of:` in `.deep-context-identity.yml` -- but most graphs do
 not, because the scion claim signals upstream-tracking intent (parallel-
 fork case) rather than mere content adoption. The seed graph
 (DeepContext.com) carries no donor and is not a scion.
@@ -49,9 +49,8 @@ point is `git clone` (or fresh `git init`), not "Use this template."
 
 ### Prerequisites
 
-The Scion Bootstrap skill (operationally produces Graph Inception; pending
-rename) checks and helps install these; a first steward running the
-ceremony manually sets them up directly.
+The Graph Inception skill checks and helps install these; a first steward
+running the ceremony manually sets them up directly.
 
 - `git config user.name` and `git config user.email` set.
 - `git config user.signingkey` pointing at an SSH private or public key.
@@ -75,12 +74,12 @@ ceremony manually sets them up directly.
    ```
 
 3. Run the Open Integrity inception ceremony to produce a fresh root
-   commit signed by your SSH key. The Scion Bootstrap skill wraps this;
-   running manually, `.scripts/scion-inception.sh` is the core primitive.
+   commit signed by your SSH key. The Graph Inception skill wraps this;
+   running manually, `.scripts/oi-inception.sh` is the core primitive.
    The new root commit's SHA1 is your graph's DID.
 
 4. Commit the working-tree content as your graph's initial content commit
-   (also SSH-signed). Update `.scion-identity.yml` at the graph root:
+   (also SSH-signed). Update `.deep-context-identity.yml` at the graph root:
    write your graph's new DID under `this_did`. If your graph claims
    scion-of lineage from the donor (parallel-fork-tracking intent), write
    the donor's DID under `scion_of`; otherwise leave `scion_of: null`.

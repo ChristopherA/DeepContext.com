@@ -50,7 +50,7 @@ A hypothetical graft recorded in a recipient graph would carry on each grafted n
 ## Relations
 
 - contrasts_with::[[scion_of -- content lineage from a template graph]]
-  - Per-node copy vs whole-graph lineage. Both are cross-graph relationships, but at different scales: scion_of attaches to a graph (recorded canonically in `.scion-identity.yml`), grafted_from attaches to nodes individually.
+  - Per-node copy vs whole-graph lineage. Both are cross-graph relationships, but at different scales: scion_of attaches to a graph (recorded canonically in `.deep-context-identity.yml`), grafted_from attaches to nodes individually.
 
 - contrasts_with::[[informed_by -- weaker influence than grounded_in]]
   - Copying vs reading. informed_by names content influence; grafted_from names content origin. A node may carry both edges to different objects.
