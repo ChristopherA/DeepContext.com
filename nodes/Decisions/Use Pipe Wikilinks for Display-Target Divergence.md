@@ -7,7 +7,7 @@ brief_summary: The pipe form `[[Full Filename|Display Text]]` is the graph-parti
 - conforms_to::[[Decision Form Contract]]
 - has_commitment::[[Provisional Commitment]]
 - decided_on::2026-04-19
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

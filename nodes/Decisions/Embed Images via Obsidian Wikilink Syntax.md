@@ -7,7 +7,7 @@ brief_summary: Images in DeepContext nodes and the landing page are embedded usi
 - conforms_to::[[Decision Form Contract]]
 - has_commitment::[[Provisional Commitment]]
 - decided_on::2026-04-23
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

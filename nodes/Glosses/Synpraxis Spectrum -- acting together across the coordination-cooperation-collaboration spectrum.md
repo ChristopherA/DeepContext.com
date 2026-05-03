@@ -8,7 +8,7 @@ brief_summary: Synpraxis (Greek syn + praxis = "acting together") is a coined do
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Synpraxis Spectrum
 

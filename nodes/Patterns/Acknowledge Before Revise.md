@@ -8,7 +8,7 @@ brief_summary: "A recurring curator move. Before proposing any revision to a con
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Acknowledge Before Revise
 

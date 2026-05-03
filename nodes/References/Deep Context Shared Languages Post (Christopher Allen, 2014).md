@@ -9,7 +9,7 @@ brief_summary: Life with Alacrity blog post from 2014-06-18 that introduces "dee
 - authored_by::[[Christopher Allen]]↗
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Deep Context Shared Languages Post (Christopher Allen, 2014)
 

@@ -8,7 +8,7 @@ brief_summary: "A Compound Node names one concept — the same as an atomic node
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Compound Node
 

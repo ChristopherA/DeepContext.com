@@ -6,7 +6,7 @@ tagline: The lifecycle stage of a newly authored node whose shape has not yet be
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Seed Stage
 

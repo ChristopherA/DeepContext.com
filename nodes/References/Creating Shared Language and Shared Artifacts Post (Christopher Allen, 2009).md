@@ -9,7 +9,7 @@ brief_summary: Life with Alacrity blog post from 2009-09-17 arguing that groups 
 - authored_by::[[Christopher Allen]]↗
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Creating Shared Language and Shared Artifacts Post (Christopher Allen, 2009)
 

@@ -10,7 +10,7 @@ brief_summary: Egregore Labs' Egregore is a framework for multi-participant AI-a
 - authored_by::[[Egregore Labs]]↗
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Egregore Framework (Egregore Labs, 2026)
 

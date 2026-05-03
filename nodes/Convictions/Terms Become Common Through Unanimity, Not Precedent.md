@@ -5,7 +5,7 @@ brief_summary: A held stance about how vocabulary becomes shared in this project
 ---
 
 - conforms_to::[[Conviction Form Contract]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

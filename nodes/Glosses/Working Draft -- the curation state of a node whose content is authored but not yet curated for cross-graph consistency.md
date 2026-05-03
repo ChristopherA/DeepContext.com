@@ -6,7 +6,7 @@ tagline: The curation state of a node whose content is authored but not yet cura
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Working Draft
 

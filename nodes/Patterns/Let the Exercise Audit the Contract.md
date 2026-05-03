@@ -8,7 +8,7 @@ brief_summary: A recurring craft move when a Contract has been authored ahead of
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Let the Exercise Audit the Contract
 

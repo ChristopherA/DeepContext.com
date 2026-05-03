@@ -8,7 +8,7 @@ brief_summary: A named tension the project holds open rather than collapses. Eve
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Convention Overhead vs Graph Quality
 

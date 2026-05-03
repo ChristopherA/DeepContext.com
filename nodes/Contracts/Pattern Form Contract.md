@@ -7,7 +7,7 @@ tagline: A recurring craft move named from practice, with Heart at card scale, P
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Pattern Form Contract
 
@@ -36,7 +36,7 @@ Enforces [[Name Patterns by Alexandrian Evocation]].
 Enforces [[Reserve Predicate Vocabularies to Specific Forms]].
 
 - The identity block above the H1 MUST include `conforms_to::[[Pattern Form Contract]]`.
-- The identity block SHOULD include `in_domain::[[<Domain>]]`.
+- The identity block SHOULD include `in_practice_domain::[[<Practice Domain>]]`.
 - The identity block MAY include `authored_by::`, `has_lifecycle::`, and `has_curation::` as for any Markdown Node.
 - A Pattern MUST NOT carry `has_commitment::` or `decided_on::` — those are Decision predicates.
 

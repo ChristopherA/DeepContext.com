@@ -8,7 +8,7 @@ brief_summary: "A recurring move at the contact surface between vocabularies. Wh
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Gloss the Translation Surface
 

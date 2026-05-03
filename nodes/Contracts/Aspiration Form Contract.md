@@ -7,7 +7,7 @@ tagline: A directional target the project works toward, carrying its acknowledge
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Aspiration Form Contract
 
@@ -33,7 +33,7 @@ An Aspiration is not a Conviction (which records a stance the project currently 
 Enforces [[Reserve Predicate Vocabularies to Specific Forms]].
 
 - The identity block above the H1 MUST include `conforms_to::[[Aspiration Form Contract]]`.
-- The identity block SHOULD include `in_domain::[[<Domain>]]`.
+- The identity block SHOULD include `in_practice_domain::[[<Practice Domain>]]`.
 - The identity block MAY include `authored_by::`, `has_lifecycle::`, and `has_curation::` as for any Markdown Node.
 - An Aspiration MUST NOT carry `has_commitment::` or `decided_on::` — those are Decision predicates.
 - An Aspiration MUST NOT carry `has_epistemic_status::` — that predicate is Observation-specific.

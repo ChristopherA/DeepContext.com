@@ -7,7 +7,7 @@ tagline: A held normative stance the project asks contributors to share, carryin
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Conviction Form Contract
 
@@ -36,7 +36,7 @@ Enforces [[Require Held-Stance Filename Shape for Convictions]].
 Enforces [[Reserve Predicate Vocabularies to Specific Forms]].
 
 - The identity block above the H1 MUST include `conforms_to::[[Conviction Form Contract]]`.
-- The identity block SHOULD include `in_domain::[[<Domain>]]`.
+- The identity block SHOULD include `in_practice_domain::[[<Practice Domain>]]`.
 - The identity block MAY include `authored_by::`, `has_lifecycle::`, and `has_curation::` as for any Markdown Node.
 - A Conviction MUST NOT carry `has_commitment::` or `decided_on::` — those are Decision predicates.
 - A Conviction MUST NOT carry `has_epistemic_status::` — that predicate is Observation-specific.

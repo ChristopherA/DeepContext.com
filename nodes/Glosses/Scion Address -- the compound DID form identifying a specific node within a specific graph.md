@@ -6,7 +6,7 @@ tagline: The compound DID form identifying a specific node within a specific gra
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Scion Address
 

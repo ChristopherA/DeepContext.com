@@ -9,7 +9,7 @@ brief_summary: Blockchain Commons Musing, published 2026-04-22, that extends the
 - authored_by::[[Christopher Allen]]↗
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # AI Agency Musing (Christopher Allen, 2026)
 

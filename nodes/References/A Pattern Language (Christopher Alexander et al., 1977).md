@@ -11,7 +11,7 @@ brief_summary: The 1977 book that named the pattern-form convention: each patter
 - authored_by::[[Murray Silverstein]]↗
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # A Pattern Language (Christopher Alexander et al., 1977)
 

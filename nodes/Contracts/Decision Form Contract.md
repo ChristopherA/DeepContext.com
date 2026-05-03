@@ -7,7 +7,7 @@ tagline: A committed choice with Why, Alternatives Considered, and What Would Ch
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Decision Form Contract
 
@@ -38,7 +38,7 @@ Enforces [[Reserve Predicate Vocabularies to Specific Forms]].
 - The identity block above the H1 MUST include `conforms_to::[[Decision Form Contract]]`.
 - The identity block MUST include `has_commitment::[[<X>]]` where the value is one of `[[Provisional Commitment]]` (decided but revisitable) or `[[Firm Commitment]]` (decided and expensive to change). Items that would otherwise carry `has_commitment::[[Open Question]]` are Inquiries, not Decisions.
 - The identity block MUST include `decided_on::YYYY-MM-DD` recording the date the commitment was made.
-- The identity block SHOULD include `in_domain::[[<Domain>]]`.
+- The identity block SHOULD include `in_practice_domain::[[<Practice Domain>]]`.
 - The identity block MAY include `authored_by::`, `has_lifecycle::`, and `has_curation::` as for any Markdown Node.
 
 ### H1

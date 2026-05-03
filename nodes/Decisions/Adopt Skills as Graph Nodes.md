@@ -7,7 +7,7 @@ brief_summary: The meta-commitment that skills are first-class graph nodes rathe
 - conforms_to::[[Decision Form Contract]]
 - has_commitment::[[Firm Commitment]]
 - decided_on::2026-04-22
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

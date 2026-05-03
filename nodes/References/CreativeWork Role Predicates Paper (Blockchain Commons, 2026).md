@@ -10,7 +10,7 @@ brief_summary: Blockchain Commons Research paper (bcr-2026-xxx), dated 2026-02-0
 - authored_by::[[Blockchain Commons]]↗
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # CreativeWork Role Predicates Paper (Blockchain Commons, 2026)
 

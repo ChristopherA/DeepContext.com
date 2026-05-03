@@ -8,7 +8,7 @@ brief_summary: A Form Contract is a Markdown Node whose purpose is to specify th
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Form Contract
 

@@ -5,7 +5,7 @@ brief_summary: An Aspiration that the project completes a second cycle of contri
 ---
 
 - conforms_to::[[Aspiration Form Contract]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

@@ -7,14 +7,14 @@ brief_summary: A bundled commitment covering three co-specifying rules about YAM
 - conforms_to::[[Decision Form Contract]]
 - has_commitment::[[Provisional Commitment]]
 - decided_on::2026-04-19
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
 
 # Restrict YAML to Scalar Metadata
 
-YAML frontmatter is optional. When present, it carries only scalar metadata about the file — `created` (ISO date of file creation), `tagline` (a pithy one-liner), `brief_summary` (a paragraph-length summary), and tool-required or convention-respecting fields such as `aliases` (Obsidian's autocomplete hint) and `tags`. Named-edge predicates MUST NOT appear in YAML, whether as graph-participating predicates (`conforms_to::`, `in_domain::`, `authored_by::`) or as their scalar mirrors (`author: Christopher Allen` duplicating `authored_by::[[Christopher Allen]]↗`). New Deep Context-specific YAML keys are multi-word `snake_case`, matching the named-edge discipline.
+YAML frontmatter is optional. When present, it carries only scalar metadata about the file — `created` (ISO date of file creation), `tagline` (a pithy one-liner), `brief_summary` (a paragraph-length summary), and tool-required or convention-respecting fields such as `aliases` (Obsidian's autocomplete hint) and `tags`. Named-edge predicates MUST NOT appear in YAML, whether as graph-participating predicates (`conforms_to::`, `in_practice_domain::`, `authored_by::`) or as their scalar mirrors (`author: Christopher Allen` duplicating `authored_by::[[Christopher Allen]]↗`). New Deep Context-specific YAML keys are multi-word `snake_case`, matching the named-edge discipline.
 
 ## Why
 

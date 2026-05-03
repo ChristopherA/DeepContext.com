@@ -7,7 +7,7 @@ tagline: A typed-edge definition with Carries, Crescent-per-adjacent-predicate, 
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Predicate Form Contract
 
@@ -33,7 +33,7 @@ The Predicate Form exists because the project holds vocabulary diversity load-be
 ### Identity predicate block
 
 - The identity block above the H1 MUST include `conforms_to::[[Predicate Form Contract]]`.
-- The identity block SHOULD include `in_domain::[[<Domain>]]`.
+- The identity block SHOULD include `in_practice_domain::[[<Practice Domain>]]`.
 
 ### Body: Carries
 

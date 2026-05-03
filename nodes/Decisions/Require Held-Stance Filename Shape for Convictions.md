@@ -7,7 +7,7 @@ brief_summary: A commitment that Conviction filenames take held-stance shapes â€
 - conforms_to::[[Decision Form Contract]]
 - has_commitment::[[Firm Commitment]]
 - decided_on::2026-04-19
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

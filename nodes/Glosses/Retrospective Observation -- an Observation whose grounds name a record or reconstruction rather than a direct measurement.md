@@ -6,7 +6,7 @@ tagline: An Observation whose grounds name a record or reconstruction rather tha
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Retrospective Observation
 

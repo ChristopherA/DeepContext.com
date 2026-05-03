@@ -13,7 +13,7 @@ description: |
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Node Create
 
@@ -63,7 +63,7 @@ Every filename MUST follow `Markdown Node Contract`'s ASCII-dash rule — no em-
 
 ### Step 4: Draft the identity predicate block
 
-Write the identity block as bullets above the H1. Every node carries `conforms_to::[[<Form> Form Contract]]`. Most carry `in_domain::`, `authored_by::`, `has_lifecycle::`, `has_curation::`.
+Write the identity block as bullets above the H1. Every node carries `conforms_to::[[<Form> Form Contract]]`. Most carry `in_practice_domain::`, `authored_by::`, `has_lifecycle::`, `has_curation::`.
 
 Form-specific additions, reserved by `Reserve Predicate Vocabularies to Specific Forms`:
 

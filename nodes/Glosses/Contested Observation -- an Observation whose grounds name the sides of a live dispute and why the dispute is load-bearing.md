@@ -6,7 +6,7 @@ tagline: An Observation whose grounds name the sides of a live dispute and why t
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Contested Observation
 

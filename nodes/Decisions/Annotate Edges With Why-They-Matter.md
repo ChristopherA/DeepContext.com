@@ -7,7 +7,7 @@ brief_summary: A commitment that every named edge in a node's Relations section 
 - conforms_to::[[Decision Form Contract]]
 - has_commitment::[[Provisional Commitment]]
 - decided_on::2026-04-19
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
@@ -24,7 +24,7 @@ Annotations carry what inline prose would carry if the edge were written in runn
 
 The annotation states *why this edge, for this node*, not *what this predicate means in the vocabulary*. Predicate-level definitions live in the predicate's own Predicate node (Carries, Crescent, Typing sections); repeating them in every annotation would produce a boilerplate tax that reduces the Relations layer's signal. The annotation's job is to carry the specific load-bearing reason the target node appears here — the one-to-three-sentence account that makes the edge meaningful to a reader who has not yet traversed it.
 
-Classification predicates in the identity block above the H1 do not usually need annotations. `conforms_to::[[Decision Form Contract]]`, `in_domain::[[Deep Context Architecture]]`, and similar identity edges are classification, not relation — the reader learns what form the node takes and what domain it belongs to without needing a "why this classification matters" explanation. The Relations-section edges are where cross-node meaning accretes; the annotation requirement lives there.
+Classification predicates in the identity block above the H1 do not usually need annotations. `conforms_to::[[Decision Form Contract]]`, `in_practice_domain::[[Deep Context Architecture]]`, and similar identity edges are classification, not relation — the reader learns what form the node takes and what domain it belongs to without needing a "why this classification matters" explanation. The Relations-section edges are where cross-node meaning accretes; the annotation requirement lives there.
 
 ## Alternatives Considered
 

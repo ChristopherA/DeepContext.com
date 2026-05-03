@@ -8,7 +8,7 @@ brief_summary: "A recurring craft move in node authoring. When writing or review
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Progressive Summary Before Substance
 
@@ -33,7 +33,7 @@ The difficulty is discipline, not mechanics. Once a writer has internalized summ
 
 When authoring or reviewing a node, arrange content in four tiers:
 
-1. **Tier 0 — Identity predicates (above the H1).** Structured data: `conforms_to::`, `in_domain::`, `authored_by::`, `has_lifecycle::`, `has_curation::`. Answers *what is this node?* structurally; cheapest to read for any consumer.
+1. **Tier 0 — Identity predicates (above the H1).** Structured data: `conforms_to::`, `in_practice_domain::`, `authored_by::`, `has_lifecycle::`, `has_curation::`. Answers *what is this node?* structurally; cheapest to read for any consumer.
 2. **Tier 1 — Card-scale claim (H1 plus opening prose, or `## Heart`).** Two to three sentences stating the node's claim, move, or commitment. Complete at its own scale — a consumer stopping here has the claim, not a promise of it.
 3. **Tier 2 — Elaboration (body sections).** Why the claim holds, forces, structural consequences, instances, reasoning. The expensive tier, for consumers who have committed attention.
 4. **Tier 3 — Structured edges (Sources, Relations).** Machine-traversable data: provenance, paired principle or pattern, grounded-in edges, informs edges. Cheap again — a consumer traverses the graph without paying body cost.

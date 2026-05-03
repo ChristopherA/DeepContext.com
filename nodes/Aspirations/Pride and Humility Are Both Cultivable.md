@@ -5,7 +5,7 @@ brief_summary: An Aspiration targeting the design surface where the trait-pair n
 ---
 
 - conforms_to::[[Aspiration Form Contract]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

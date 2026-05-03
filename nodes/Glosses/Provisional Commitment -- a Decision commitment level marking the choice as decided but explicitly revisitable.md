@@ -6,7 +6,7 @@ tagline: A Decision commitment level marking the choice as decided but explicitl
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Provisional Commitment
 

@@ -7,7 +7,7 @@ tagline: A descriptive claim with matched epistemic grounds (Empirical, Retrospe
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Observation Form Contract
 
@@ -34,7 +34,7 @@ Enforces [[Classify Observations by Epistemic Status With Matched Grounds]] and 
 
 - The identity block above the H1 MUST include `conforms_to::[[Observation Form Contract]]`.
 - The identity block MUST include `has_epistemic_status::[[<Status>]]` where the value is one of `[[Empirical Observation]]`, `[[Retrospective Observation]]`, `[[On-Faith Observation]]`, or `[[Contested Observation]]`.
-- The identity block SHOULD include `in_domain::[[<Domain>]]`.
+- The identity block SHOULD include `in_practice_domain::[[<Practice Domain>]]`.
 - The identity block MAY include `authored_by::`, `has_lifecycle::`, and `has_curation::` as for any Markdown Node.
 - The identity block MAY include `drawn_from::[[Canonical Set]]` when the Observation was imported from a named external set.
 - An Observation MUST NOT carry `has_commitment::` or `decided_on::` — those are Decision predicates.

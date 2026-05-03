@@ -7,7 +7,7 @@ brief_summary: A stance governing what the project will and will not build. The 
 - conforms_to::[[Decision Form Contract]]
 - has_commitment::[[Provisional Commitment]]
 - decided_on::2026-04-21
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

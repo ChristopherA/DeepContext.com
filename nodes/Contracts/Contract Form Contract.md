@@ -7,7 +7,7 @@ tagline: The meta-contract: how a Contract node in this project is named, struct
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Contract Form Contract
 

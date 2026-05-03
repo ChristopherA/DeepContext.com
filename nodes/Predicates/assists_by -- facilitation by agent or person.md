@@ -3,7 +3,7 @@ tagline: Facilitation by agent or person
 ---
 
 - conforms_to::[[Predicate Form Contract]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

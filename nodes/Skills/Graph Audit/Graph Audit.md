@@ -13,7 +13,7 @@ description: |
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Graph Audit
 
@@ -80,7 +80,7 @@ Split the vocabulary into three tiers:
 
 - **Backed** — predicate has a `nodes/Predicates/<predicate> -- <sense>.md` node. These are the definitional vocabulary.
 - **Provisional** — predicate is in use but has no backing node. This is drift; report the list.
-- **Base-contract** — predicates introduced by `Markdown Node Contract` or form-specific Contracts without a Predicate node (`conforms_to`, `authored_by`, `in_domain`, `has_lifecycle`, `has_curation`, `has_commitment`, `decided_on`, `has_epistemic_status`, `serves_as`, `under_license`, `extends_contract`, `extended_by`). These are defined structurally in Contracts rather than in Predicate nodes; not drift.
+- **Base-contract** — predicates introduced by `Markdown Node Contract` or form-specific Contracts without a Predicate node (`conforms_to`, `authored_by`, `has_lifecycle`, `has_curation`, `has_commitment`, `decided_on`, `has_epistemic_status`, `serves_as`, `under_license`, `extends_contract`, `extended_by`). These are defined structurally in Contracts rather than in Predicate nodes; not drift.
 
 Report provisional predicates as candidates for `/predicate-propose` work — each is either drift to consolidate or vocabulary to codify.
 

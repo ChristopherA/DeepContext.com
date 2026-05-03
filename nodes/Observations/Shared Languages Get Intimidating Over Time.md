@@ -6,7 +6,7 @@ brief_summary: A Retrospective Observation that shared-language communities accu
 
 - conforms_to::[[Observation Form Contract]]
 - has_epistemic_status::[[Retrospective Observation]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

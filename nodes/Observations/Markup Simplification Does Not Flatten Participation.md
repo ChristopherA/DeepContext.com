@@ -6,7 +6,7 @@ brief_summary: An Empirical Observation grounded in the Wikimedia Foundation's M
 
 - conforms_to::[[Observation Form Contract]]
 - has_epistemic_status::[[Empirical Observation]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

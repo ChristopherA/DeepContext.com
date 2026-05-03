@@ -6,7 +6,7 @@ tagline: An Observation whose grounds name an adopted source accepted provisiona
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # On-Faith Observation
 

@@ -8,13 +8,13 @@ brief_summary: "A Markdown Node is a plain markdown file, valid as CommonMark, t
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Markdown Node
 
 A markdown file read as a node in a graph: its wikilinks and named edges are first-class structure, not prose decoration. The file format does not change — a Markdown Node is valid CommonMark — but a reader that understands the convention parses specific constructs as typed graph edges rather than as arbitrary hyperlinks.
 
-Three constructs carry structure. An **identity predicate block** above the H1 declares what the node IS (`conforms_to::`, `in_domain::`, `has_lifecycle::`, and so on). A **Relations section** after the body lists typed edges to other nodes, each with an optional indented annotation explaining why the edge matters. **Inline wikilinks** in prose are readable cross-references, not structural edges — a reader distinguishes them by section, not by syntax.
+Three constructs carry structure. An **identity predicate block** above the H1 declares what the node IS (`conforms_to::`, `in_practice_domain::`, `has_lifecycle::`, and so on). A **Relations section** after the body lists typed edges to other nodes, each with an optional indented annotation explaining why the edge matters. **Inline wikilinks** in prose are readable cross-references, not structural edges — a reader distinguishes them by section, not by syntax.
 
 The contrast is with markdown-as-prose, where every `[[link]]` is just a convenient cross-reference. A Markdown Node commits to typed, annotated connection — the graph emerges from the file itself rather than from a separate index.
 

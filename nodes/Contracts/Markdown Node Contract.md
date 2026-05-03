@@ -6,7 +6,7 @@ tagline: The base file-form every node inherits: encoding, filename rules, YAML 
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Markdown Node Contract
 
@@ -51,7 +51,7 @@ Enforces [[Adopt Layered Node Structure]].
 
 - The body MUST begin with a bullet list of identity predicates before the H1.
 - This block MUST include `conforms_to::[[<Form> Contract]]` or `conforms_to::[[<Form> Form Contract]]`.
-- This block SHOULD include `in_domain::[[<Domain>]]`.
+- This block SHOULD include `in_practice_domain::[[<Practice Domain>]]`.
 - This block MAY include `has_lifecycle::[[<X> Stage]]`, `has_curation::[[<descriptive phrase>]]`, and `authored_by::[[<Person>]]`.
 - Identity predicates describe what the node IS; they do not describe its relationships to other nodes.
 

@@ -9,7 +9,7 @@ brief_summary: Blockchain Commons Musing, published 2024-06-19 from notes origin
 - authored_by::[[Christopher Allen]]↗
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Minimum Viable Architecture Musing (Christopher Allen, 2024)
 

@@ -7,7 +7,7 @@ brief_summary: The publication unit of Deep Context is the **graph** — a self-
 - conforms_to::[[Decision Form Contract]]
 - has_commitment::[[Firm Commitment]]
 - decided_on::2026-04-23
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Growth Stage]]
 - has_curation::[[Working Draft]]

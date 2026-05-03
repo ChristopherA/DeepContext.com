@@ -8,7 +8,7 @@ brief_summary: "A recurring unit of curation work. A curation pass is the compos
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # The Curation Pass
 

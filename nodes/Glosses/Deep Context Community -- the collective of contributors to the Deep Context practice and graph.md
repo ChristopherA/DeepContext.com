@@ -8,7 +8,7 @@ brief_summary: The Deep Context Community is the collective identity under which
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Deep Context Community
 

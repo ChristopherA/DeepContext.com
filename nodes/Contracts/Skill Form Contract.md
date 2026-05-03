@@ -7,7 +7,7 @@ tagline: An agent-invocable workflow as a compound-node graph node, carrying a r
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Growth Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Skill Form Contract
 
@@ -51,7 +51,7 @@ The Skill Form Contract was drafted speculatively, ahead of any skill nodes exis
 
 - The body MUST begin with an identity predicate block before the H1 per `Markdown Node Contract`'s Identity predicate block Requirement.
 - The block MUST include `conforms_to::[[Skill Form Contract]]`.
-- The block SHOULD include `authored_by::`, `has_lifecycle::`, `has_curation::`, and `in_domain::`.
+- The block SHOULD include `authored_by::`, `has_lifecycle::`, `has_curation::`, and `in_practice_domain::`.
 
 ### H1
 

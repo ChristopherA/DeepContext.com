@@ -5,7 +5,7 @@ brief_summary: A design discipline naming the minimum architecture a project com
 ---
 
 - conforms_to::[[Gloss Form Contract]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]

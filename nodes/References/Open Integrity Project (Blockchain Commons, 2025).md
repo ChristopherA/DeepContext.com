@@ -9,7 +9,7 @@ brief_summary: The Open Integrity Project specifies a cryptographic-identity lay
 - authored_by::[[Blockchain Commons]]↗
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Open Integrity Project (Blockchain Commons, 2025)
 

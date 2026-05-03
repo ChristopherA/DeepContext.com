@@ -8,7 +8,7 @@ brief_summary: "A recurring curation move. When a document is an account of some
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Reconcile the Standing Account
 

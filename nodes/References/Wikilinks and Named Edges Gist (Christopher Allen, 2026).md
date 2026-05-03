@@ -10,7 +10,7 @@ brief_summary: Christopher Allen's gist is the primary convention source Deep Co
 - authored_by::[[Christopher Allen]]↗
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Wikilinks and Named Edges Gist (Christopher Allen, 2026)
 

@@ -8,7 +8,7 @@ brief_summary: An Atomic Node is a single markdown file whose filename matches a
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Atomic Node
 

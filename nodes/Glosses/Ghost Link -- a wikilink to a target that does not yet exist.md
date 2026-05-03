@@ -8,7 +8,7 @@ brief_summary: A Ghost Link is a wikilink whose target node has not yet been aut
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Ghost Link
 

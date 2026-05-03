@@ -13,7 +13,7 @@ description: |
 - authored_by::[[Deep Context Community]]
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Node Read
 
@@ -35,7 +35,7 @@ If the target is a folder rather than a file, the lead file matches the folder n
 
 ### Step 2: Read the identity predicate block
 
-The identity block is the bullet list above the H1. It carries the node's form (`conforms_to::`), its lifecycle (`has_lifecycle::`), curation state (`has_curation::`), domain (`in_domain::`), authorship (`authored_by::`), and any form-specific identity predicates the form owns (`has_commitment::` and `decided_on::` for Decisions, `has_epistemic_status::` for Observations, `serves_as::` for References).
+The identity block is the bullet list above the H1. It carries the node's form (`conforms_to::`), its lifecycle (`has_lifecycle::`), curation state (`has_curation::`), domain (`in_practice_domain::`), authorship (`authored_by::`), and any form-specific identity predicates the form owns (`has_commitment::` and `decided_on::` for Decisions, `has_epistemic_status::` for Observations, `serves_as::` for References).
 
 From the identity block alone, the agent already knows:
 

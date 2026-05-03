@@ -9,7 +9,7 @@ brief_summary: Flancian's Agora is a three-repo software project (root config, a
 - authored_by::[[Flancian]]↗
 - has_lifecycle::[[Seed Stage]]
 - has_curation::[[Working Draft]]
-- in_domain::[[Deep Context Architecture]]
+- in_practice_domain::[[Deep Context Architecture]]
 
 # Agora Project (Flancian, 2019)
 
