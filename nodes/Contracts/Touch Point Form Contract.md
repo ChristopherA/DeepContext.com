@@ -24,13 +24,13 @@ A Touch Point may be designated as the graph's **home page** by carrying `is_hom
 
 ### Inherits Gloss Form Contract
 
-- All requirements of [[Gloss Form Contract]] apply, including the double-hyphen filename pattern, the bare-concept H1, and the restate-and-elaborate body opening.
-- The requirements below are additions for Touch Point instances specifically.
+- The bare-concept H1 and the restate-and-elaborate body opening from [[Gloss Form Contract]] apply. The double-hyphen filename pattern from Gloss does NOT apply — Touch Points override it (see Filename pattern below).
+- The requirements below are additions or overrides for Touch Point instances specifically.
 
 ### Filename pattern
 
-- The filename MUST follow `<Touch Point Name> -- <one-clause sense of the framing>.md`, inherited from Gloss.
-- The concept side names the Touch Point's role for the reader (e.g., "Deep Context Welcome", "Substrate Argument Primer", "Customer Patterns Lens"). Naming heuristic: name what the Touch Point *does* for the reader, not what region it covers — the region is named in the `frames_lens_on::` edge.
+- The filename MUST be `<Touch Point Name>.md` — a single name, no double-hyphen separator, no compressed-definition clause. Touch Points override Gloss's filename pattern because a Touch Point's filename names a *reader-facing role* (Welcome, Primer, Lens) rather than carrying a working definition. The longer framing belongs in the `tagline:` YAML field, not in the filename.
+- The Touch Point Name MUST name what the Touch Point *does* for the reader (e.g., "Deep Context Welcome", "Substrate Argument Primer", "Customer Patterns Lens"). Do not name what region the Touch Point covers — the region is named by the `frames_lens_on::` edge.
 
 ### Identity predicate block
 
@@ -80,7 +80,7 @@ A Touch Point may be designated as the graph's **home page** by carrying `is_hom
 ## Relations
 
 - extends_contract::[[Gloss Form Contract]]
-  - Inherits the double-hyphen filename pattern, the restate-and-elaborate body opening, and the body shape allowances. Adds the Opening Synthesis, Entry Points, Out of Scope sections plus the required `frames_lens_on::` edge and the optional `is_home` frontmatter scalar.
+  - Inherits the bare-concept H1, the restate-and-elaborate body opening, and the body shape allowances. Overrides Gloss's double-hyphen filename pattern with a single-name `<Touch Point Name>.md` form because a Touch Point's filename names a reader-facing role rather than carrying a working definition. Adds the Opening Synthesis, Entry Points, Out of Scope sections plus the required `frames_lens_on::` edge and the optional `is_home` frontmatter scalar.
 
 - conforms_to::[[Contract Form Contract]]
   - This file is itself a Contract; it conforms to the meta-contract specifying what Contract nodes look like.

@@ -37,7 +37,7 @@ A reader encountering `X frames_lens_on::Y` learns that X is a curated welcome t
 
 ## Instances
 
-The graph's home Touch Point — `Deep Context Welcome -- a guided introduction to the practice for first-time readers` (designated by `is_home: true` in its YAML frontmatter) — carries the canonical instances:
+The graph's home Touch Point — `Deep Context Welcome` (designated by `is_home: true` in its YAML frontmatter) — carries the canonical instances:
 
 ```
 - frames_lens_on::[[Deep Context Architecture]]
