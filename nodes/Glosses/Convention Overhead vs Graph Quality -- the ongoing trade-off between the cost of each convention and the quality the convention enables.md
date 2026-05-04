@@ -21,4 +21,4 @@ The project does not treat one side of the trade-off as paramount. Self-sovereig
 ## Relations
 
 - grounded_in::[[Adopt Minimum-Viable-Architecture Stance]]
-  - The MVA stance operationalizes this trade-off at the capability layer: ship the minimum architecture that lets the practice run, defer until use surfaces what to add. This Gloss names the underlying tension the stance navigates; the Decision names the discipline the project applies to the trade-off in first-cycle work.
+  - The Minimum Viable Architecture stance operationalizes this trade-off at the capability layer: ship the minimum architecture that lets the practice run, defer until use surfaces what to add. This Gloss names the underlying tension the stance navigates; the Decision names the discipline the project applies to the trade-off in first-cycle work.

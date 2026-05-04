@@ -144,7 +144,7 @@ If the user wants a follow-up action committed in the same session, surface the 
   - The spine commitment this skill measures. The audit counts wikilink references and named-edge predicate usage; both metrics rest on the graph being committed to author-declared edges in the first place. Without the substrate Decision, neither metric would be meaningful.
 
 - grounded_in::[[Adopt Minimum-Viable-Architecture Stance]]
-  - The MVA stance defers capabilities until use surfaces them. This skill is the survey that tells the project which seeded nodes have accumulated use and which have not. A node flagged as a true orphan after several sessions is a candidate for the MVA discipline's "is this load-bearing yet?" question.
+  - The Minimum Viable Architecture stance defers capabilities until use surfaces them. This skill is the survey that tells the project which seeded nodes have accumulated use and which have not. A node flagged as a true orphan after several sessions is a candidate for the Minimum Viable Architecture discipline's "is this load-bearing yet?" question.
 
 - informs_downstream::[[Convergent Motivation as Load-Bearing Signal]]
   - The Pattern's convergence test asks whether four or more independent motivations have accumulated on a proposed structural commitment. This skill produces the evidence the test consumes -- inbound reference count is one direct measure of motivation accumulation. The Pattern is the discipline; this skill is the measurement that makes the discipline operational at the graph layer.

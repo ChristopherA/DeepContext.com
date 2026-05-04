@@ -24,4 +24,4 @@ The Community is not a legal entity, not a formal organization, and not tied to 
   - The 2009 post's framing of shared artifacts as the medium where collective meaning is negotiated. The Community is the collective; the graph is the shared artifact; author-declared edges are the vocabulary under which the collective meaning accrues.
 
 - informed_by::[[CreativeWork Role Predicates Paper (Blockchain Commons, 2026)]]
-  - Deferred substrate for the role system. The Community identity handles the collective-authorship default; specific-role predicates (author, editor, steward, contributor) are the later layer that the Blockchain Commons 14-role vocabulary would inform. MVA carries the collective identity without the role system.
+  - Deferred substrate for the role system. The Community identity handles the collective-authorship default; specific-role predicates (author, editor, steward, contributor) are the later layer that the Blockchain Commons 14-role vocabulary would inform. Minimum Viable Architecture carries the collective identity without the role system.

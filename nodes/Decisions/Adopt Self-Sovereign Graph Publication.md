@@ -109,7 +109,7 @@ The commitment derives the pipeline's other architectural choices. Python-only w
   - The cryptographic-identity specification that gives each graph its own DID. The inception-commit ceremony, the `did:repo:<sha1>` derivation, the delegated-authority mechanism for post-inception commits — all are Open Integrity moves this Decision rests on.
 
 - informs_downstream::[[Adopt Minimum-Viable-Architecture Stance]]
-  - The MVA Decision defers capabilities (heading links, transclusion, cross-graph resolution, interactive graph explorer) that would add pipeline complexity. The MVA deferrals are partly a graph-cost discipline: every capability added to the pipeline is a capability every graph inherits as a maintenance surface.
+  - The Minimum Viable Architecture Decision defers capabilities (heading links, transclusion, cross-graph resolution, interactive graph explorer) that would add pipeline complexity. The Minimum Viable Architecture deferrals are partly a graph-cost discipline: every capability added to the pipeline is a capability every graph inherits as a maintenance surface.
 
 - informs_downstream::[[Publish via Actions Artifact Deploy]]
   - The Actions-deploy Decision records the specific Pages mechanism the graph publication runs on. Graph publication is the upstream claim; Actions-deploy is one implementation of it.

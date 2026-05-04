@@ -46,7 +46,7 @@ The Agora project is a three-repo software system and its running instance at an
 
 - The governance-fork primitive and the code-level repository fork are distinct moves. The former is a community exit when agreements become incompatible; the latter is a technical operation on a git repository. Both are relevant to DeepContext, but they answer different questions.
 - Agora's unit of participation is a garden registered in an aggregator's manifest; the garden does not produce a live site on its own. This is the structural contrast with DeepContext's scion-publishes-itself commitment that [[Adopt Self-Sovereign Graph Publication]] makes.
-- The aggregator-plus-many-gardens model and the scion-as-single-repo model are not competitors — they address different scales. Agora's patterns are worth naming for the later phase where cross-graph aggregation becomes load-bearing; the MVA Stance defers building until that need surfaces.
+- The aggregator-plus-many-gardens model and the scion-as-single-repo model are not competitors — they address different scales. Agora's patterns are worth naming for the later phase where cross-graph aggregation becomes load-bearing; the Minimum Viable Architecture Stance defers building until that need surfaces.
 - Translation happens at ingest (format-to-format), at resolution (cross-source union), and at contract (the governance-fork exit when vocabularies cannot be reconciled).
 
 ## Relations
@@ -55,7 +55,7 @@ The Agora project is a three-repo software system and its running instance at an
   - The Decision commits to a scion-publishes-itself unit of participation that differs structurally from Agora's aggregator-plus-gardens model. This Reference is one of the precedents the Decision contrasts with — Agora's model shows what aggregation-first federation looks like, and the Decision names why DeepContext's current scope chose self-contained publication instead.
 
 - informs_downstream::[[Adopt Minimum-Viable-Architecture Stance]]
-  - The MVA Decision defers cross-garden aggregation, translation at the aggregator, and interactive federation surfaces. The Agora project is a precedent the deferred capabilities draw their specific shape from; this Reference is the study substrate for if and when those capabilities become load-bearing.
+  - The Minimum Viable Architecture Decision defers cross-garden aggregation, translation at the aggregator, and interactive federation surfaces. The Agora project is a precedent the deferred capabilities draw their specific shape from; this Reference is the study substrate for if and when those capabilities become load-bearing.
 
 - informs_downstream::[[Wikis Without Curation Drift Toward Write-Only]]
   - The Observation's Grounds name Agora and Anagora as one of the traditions the write-only drift appears in — sustained contributor enthusiasm for a period followed by a slowdown as link-integrity and ontology-reconciliation work outpaces contributor willingness to do bookkeeping. This Reference is the specific source that grounding reconstructs from.

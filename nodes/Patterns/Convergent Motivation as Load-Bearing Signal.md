@@ -52,7 +52,7 @@ When considering structural commitment:
 ## Relations
 
 - grounded_in::[[Adopt Minimum-Viable-Architecture Stance]]
-  - The MVA stance asks "what is the minimum architecture the practice can run on, and what gets deferred?" This Pattern provides the operational test for when a deferred capability has accumulated enough independent motivations to return to scope. The Pattern is the discipline the Decision's Revisit Conditions implicitly invoke; the Decision is the standing commitment the discipline serves.
+  - The Minimum Viable Architecture stance asks "what is the minimum architecture the practice can run on, and what gets deferred?" This Pattern provides the operational test for when a deferred capability has accumulated enough independent motivations to return to scope. The Pattern is the discipline the Decision's Revisit Conditions implicitly invoke; the Decision is the standing commitment the discipline serves.
 
 - grounded_in::[[Founding Vocabularies Constrain Later Participants]]
   - The Observation names the cost of premature architectural commitment at the vocabulary layer: founding choices calcify and constrain later participants who arrive with different concerns. The convergence test is one mechanism for slowing that calcification -- structural commitments wait for evidence that the concern is structural rather than founding-time-specific, which gives later participants room to surface concerns the founder did not see.

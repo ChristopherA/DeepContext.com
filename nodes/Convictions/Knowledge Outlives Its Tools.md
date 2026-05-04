@@ -59,7 +59,7 @@ The subtlest drift is in the authoring experience. A contributor who cannot cont
   - The Open Integrity specification carries the durability commitment at the identity layer. A scion's `did:repo:<sha1>` DID is content-addressed — derived from the inception-commit SHA — and therefore stable across hosts. The Conviction's "knowledge survives particular tools" commitment composes with Open Integrity's "identity survives particular hosts" mechanism; together they extend durability across both content and cryptographic naming.
 
 - informs_downstream::[[Adopt Minimum-Viable-Architecture Stance]]
-  - Every pipeline dependency is a coupling that could break in a future environment. The MVA stance keeps the durability surface tractable.
+  - Every pipeline dependency is a coupling that could break in a future environment. The Minimum Viable Architecture stance keeps the durability surface tractable.
 
 - informs_downstream::[[Adopt Wikilinks and Named Edges]]
   - Structural claims as text rather than as tool-specific metadata -- the author-declared wikilink convention is what makes the graph's structure survive tool changes.

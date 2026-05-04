@@ -40,7 +40,7 @@ The stance is also asymmetric with respect to different kinds of deferrals. Capa
 
 ## What Would Change It
 
-**The seeded corpus produces a second cycle of contribution.** [[The Second Cycle of Contribution Happens]] is the project's success metric; if the first cycle actually produces sustained second-cycle contribution, the project has earned the right to invest in capabilities beyond the minimum. The MVA stance would narrow: the capabilities the second cycle specifically wants would return to scope, while the ones still speculative stay deferred.
+**The seeded corpus produces a second cycle of contribution.** [[The Second Cycle of Contribution Happens]] is the project's success metric; if the first cycle actually produces sustained second-cycle contribution, the project has earned the right to invest in capabilities beyond the minimum. The Minimum Viable Architecture stance would narrow: the capabilities the second cycle specifically wants would return to scope, while the ones still speculative stay deferred.
 
 **A deferred capability becomes blocking rather than absent.** The current deferrals assume readers can navigate the graph adequately without heading links, search, or an interactive explorer. If use reveals that specific capabilities are blocking participation -- not just inconvenient -- the stance narrows around those specifically. The revisit condition is evidence of blocking, not preference for more.
 
@@ -51,28 +51,28 @@ The stance is also asymmetric with respect to different kinds of deferrals. Capa
 ## Relations
 
 - grounded_in::[[Minimum Viable Architecture -- the simplest architectural substrate sufficient to function and reveal what to add next]]
-  - The Gloss that defines the MVA concept this Decision adopts as a stance. The Decision adopts the discipline; the Gloss carries the bare concept the discipline is committed to. Together they let a new contributor read "what is MVA" (the Gloss) and "what does this graph commit to in its first cycle" (the Decision) as two distinct claims rather than one conflated assertion.
+  - The Gloss that defines the Minimum Viable Architecture concept this Decision adopts as a stance. The Decision adopts the discipline; the Gloss carries the bare concept the discipline is committed to. Together they let a new contributor read "what is Minimum Viable Architecture" (the Gloss) and "what does this graph commit to in its first cycle" (the Decision) as two distinct claims rather than one conflated assertion.
 
 - grounded_in::[[Minimum Viable Architecture Musing (Christopher Allen, 2024)]]
-  - The Reference whose framing this Decision's name and discipline come from directly. Allen's MVA stance names upfront architectural planning paired with deferred non-essential components, modular expandability, and interoperable interfaces as the substrate for survivable growth; this Decision specializes that stance for a knowledge-graph project's scale. Without the Musing, this Decision would not carry the specific "Minimum Viable Architecture" formulation.
+  - The Reference whose framing this Decision's name and discipline come from directly. Allen's Minimum Viable Architecture stance names upfront architectural planning paired with deferred non-essential components, modular expandability, and interoperable interfaces as the substrate for survivable growth; this Decision specializes that stance for a knowledge-graph project's scale. Without the Musing, this Decision would not carry the specific "Minimum Viable Architecture" formulation.
 
 - grounded_in::[[Adopt Self-Sovereign Graph Publication]]
-  - The scion commitment is one reason the MVA stance is load-bearing. Every capability the pipeline ships is a capability every scion inherits as a maintenance surface; keeping the minimum small keeps scion cost low.
+  - The scion commitment is one reason the Minimum Viable Architecture stance is load-bearing. Every capability the pipeline ships is a capability every scion inherits as a maintenance surface; keeping the minimum small keeps scion cost low.
 
 - informed_by::[[Convergent Motivation as Load-Bearing Signal]]
   - The Pattern that gives this Decision its operational test for when a deferred capability returns to scope. The Decision's Revisit Conditions describe what would change the deferrals (a second cycle of contribution, a deferred capability becoming blocking, maintenance cost exceeding minimum, a clearly-better architecture); the Pattern names the underlying evidentiary discipline -- four or more independent motivations converging on a capability is the structural threshold the Revisit Conditions implicitly invoke. The Pattern operationalizes the discipline; the Decision is the standing commitment the discipline serves.
 
 - informs_downstream::[[Publish via Actions Artifact Deploy]]
-  - Actions-deploy is one expression of the MVA stance at the deployment layer: one dependency, one workflow file, no custom infrastructure. The deployment Decision inherits the minimum-surface discipline this Decision names.
+  - Actions-deploy is one expression of the Minimum Viable Architecture stance at the deployment layer: one dependency, one workflow file, no custom infrastructure. The deployment Decision inherits the minimum-surface discipline this Decision names.
 
 - informed_by::[[Shared Languages Get Intimidating Over Time]]
-  - The Observation names one of the reasons building for anticipated needs is costly: vocabulary and capability both accumulate faster than newcomers can absorb. MVA at the capability layer parallels unanimity-over-precedent at the vocabulary layer -- both are disciplines against premature commitment.
+  - The Observation names one of the reasons building for anticipated needs is costly: vocabulary and capability both accumulate faster than newcomers can absorb. Minimum Viable Architecture at the capability layer parallels unanimity-over-precedent at the vocabulary layer -- both are disciplines against premature commitment.
 
 - informed_by::[[Wikis Without Curation Drift Toward Write-Only]]
-  - The write-only failure mode compounds with feature complexity: a graph with more capabilities requires more curation to keep coherent, and the curation burden is what makes the write-only dynamic bite. MVA keeps the curation surface proportional to the content surface.
+  - The write-only failure mode compounds with feature complexity: a graph with more capabilities requires more curation to keep coherent, and the curation burden is what makes the write-only dynamic bite. Minimum Viable Architecture keeps the curation surface proportional to the content surface.
 
 - informed_by::[[Agora Project (Flancian, 2019)]]
   - The deferred cross-garden external-marker resolution and the deferred collaboration-at-aggregator capabilities point at Agora's model as one precedent of what those capabilities would look like when they return to scope. This Reference is the study substrate the deferral refers to without committing the project to adopting the specific implementation.
 
 - informed_by::[[Egregore Framework (Egregore Labs, 2026)]]
-  - The deferred collaboration features (invitations, agent orchestration, multi-scion coordination) point at Egregore's model as one precedent of what those capabilities look like when implemented. This Reference is the study substrate the deferral refers to; the MVA Stance names what the project would study should those capabilities become load-bearing without committing to the Egregore frame.
+  - The deferred collaboration features (invitations, agent orchestration, multi-scion coordination) point at Egregore's model as one precedent of what those capabilities look like when implemented. This Reference is the study substrate the deferral refers to; the Minimum Viable Architecture Stance names what the project would study should those capabilities become load-bearing without committing to the Egregore frame.

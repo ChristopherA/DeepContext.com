@@ -1,7 +1,7 @@
 ---
 created: 2026-04-20
 tagline: Christopher Allen's Blockchain Commons paper specifying 14 role predicates for creative work contributions — deferred substrate for the project's future role system
-brief_summary: Blockchain Commons Research paper (bcr-2026-xxx), dated 2026-02-02, specifying fourteen role predicates (Author, Editor, Architect, Designer, Manager, Documenter, and others) for creative-work contributions. Designed to function across media types (text, code, audiovisual) and remain agent-agnostic — applying equally to human, AI, and hybrid contributors. Maps to existing standards (CRediT, ONIX, MARC) and operates as registered predicates in the Gordian Envelope system. Deep Context carries this as deferred substrate: the MVA authorship model uses collective `authored_by::[[Deep Context Community]]` with the lead named in the Community Gloss prose; the 14-role vocabulary is the candidate substrate for when specific-role predicates become load-bearing.
+brief_summary: Blockchain Commons Research paper (bcr-2026-xxx), dated 2026-02-02, specifying fourteen role predicates (Author, Editor, Architect, Designer, Manager, Documenter, and others) for creative-work contributions. Designed to function across media types (text, code, audiovisual) and remain agent-agnostic — applying equally to human, AI, and hybrid contributors. Maps to existing standards (CRediT, ONIX, MARC) and operates as registered predicates in the Gordian Envelope system. Deep Context carries this as deferred substrate: the Minimum Viable Architecture authorship model uses collective `authored_by::[[Deep Context Community]]` with the lead named in the Community Gloss prose; the 14-role vocabulary is the candidate substrate for when specific-role predicates become load-bearing.
 ---
 
 - conforms_to::[[Reference Form Contract]]
@@ -20,12 +20,12 @@ A Blockchain Commons Research paper, dated 2026-02-02, specifying a vocabulary o
 
 ### Adopted
 
-Nothing directly adopted in MVA. The paper is deferred substrate.
+Nothing directly adopted in Minimum Viable Architecture. The paper is deferred substrate.
 
 ### Not adopted (yet)
 
-- **The 14-role vocabulary.** Deep Context MVA uses a single collective `authored_by::[[Deep Context Community]]` with the lead steward named in the Community Gloss's prose. Specific-role predicates (for editor, steward, reviewer, contributor distinctions) are not yet load-bearing for the project's work; the simplification is deliberate.
-- **The CRediT / ONIX / MARC mappings.** These alignment tables are useful when Deep Context needs to interoperate with publication and library traditions. No such interop is active in MVA.
+- **The 14-role vocabulary.** Deep Context Minimum Viable Architecture uses a single collective `authored_by::[[Deep Context Community]]` with the lead steward named in the Community Gloss's prose. Specific-role predicates (for editor, steward, reviewer, contributor distinctions) are not yet load-bearing for the project's work; the simplification is deliberate.
+- **The CRediT / ONIX / MARC mappings.** These alignment tables are useful when Deep Context needs to interoperate with publication and library traditions. No such interop is active in Minimum Viable Architecture.
 - **Gordian Envelope predicate registration.** Deep Context's convention layer is plain markdown with author-declared edges; Envelope-registered predicates would be a later convergence move toward a cross-system registry.
 
 ### Key moves to remember
@@ -37,7 +37,7 @@ Nothing directly adopted in MVA. The paper is deferred substrate.
 ## Relations
 
 - informs_downstream::[[Deep Context Community]]
-  - The Gloss that carries the project's MVA authorship model. The Community Gloss cites this paper as deferred substrate — the role system to draw on when specific-role predicates become warranted.
+  - The Gloss that carries the project's Minimum Viable Architecture authorship model. The Community Gloss cites this paper as deferred substrate — the role system to draw on when specific-role predicates become warranted.
 
 - composes_with::[[AI Agency Musing (Christopher Allen, 2026)]]
   - The two References address the same Credit Issue from related angles. The AI Agency Musing names the underlying problem -- AI makes attribution evasion impossible, "the ghost is visible now," and distinguishing human-authored, AI-supported, and AI-driven work becomes load-bearing. This Paper specifies a candidate role vocabulary for that distinction. The Musing motivates; the Paper supplies the schema.
