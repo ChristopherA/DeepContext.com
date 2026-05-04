@@ -94,8 +94,8 @@ Enforces [[Require Forces Authenticity in Patterns]].
 
 ### Optional scalar metadata
 
-- YAML frontmatter MAY include `created:`, `tagline:`, and `brief_summary:`.
-- YAML is OPTIONAL for Patterns.
+- YAML frontmatter SHOULD include `tagline:` (per Markdown Node Contract — surfaced on the Patterns index page row); MAY include `created:` and `brief_summary:`.
+- Beyond the recommended `tagline:`, YAML is OPTIONAL for Patterns.
 
 ## Relations
 

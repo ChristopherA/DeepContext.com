@@ -61,7 +61,7 @@ Enforces [[Require Body Elaboration Beyond Filename Definition]].
 
 ### Optional scalar metadata
 
-- YAML frontmatter MAY include `created:` (ISO date), `tagline:` (a pithy one-liner), and `brief_summary:` (a paragraph-length summary).
+- YAML frontmatter SHOULD include `tagline:` — a pithy one-liner that the build pipeline surfaces on the Glosses index page row (per Markdown Node Contract). MAY include `created:` (ISO date) and `brief_summary:` (a paragraph-length summary, useful when the body's restate-and-elaborate opening is short enough that an additional paragraph adds orientation).
 - All three are scalar metadata, not graph-structural. They support human browsing and build-time rendering.
 
 ## Relations

@@ -74,8 +74,8 @@ Enforces [[Distinguish Adopted from Not-Adopted in References]].
 
 ### Optional scalar metadata
 
-- YAML frontmatter MAY include `created:` (ISO date of node file creation, not the source's publication date), `tagline:`, and `brief_summary:`.
-- YAML is OPTIONAL for References.
+- YAML frontmatter SHOULD include `tagline:` (per Markdown Node Contract — surfaced on the References index page row); MAY include `created:` (ISO date of node file creation, not the source's publication date) and `brief_summary:`.
+- Beyond the recommended `tagline:`, YAML is OPTIONAL for References.
 
 ### When to split or consolidate
 

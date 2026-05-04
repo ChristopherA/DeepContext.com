@@ -39,8 +39,11 @@ Enforces [[Adopt Node Atomicity]].
 
 Enforces [[Restrict YAML to Scalar Metadata]].
 
-- YAML frontmatter is OPTIONAL.
+- YAML frontmatter is OPTIONAL as a structural matter, but every node SHOULD carry at minimum a `tagline:` (see below); a node with no YAML at all is permitted by the Contract but undermines the taxonomy index pages that surface taglines as row summaries.
 - When present, YAML MUST contain only scalar metadata (e.g., `created`, `tagline`, `brief_summary`).
+- Every node SHOULD carry `tagline:` — a single-line summary that the build pipeline surfaces on the node's taxonomy index row. Without it, the index renders the node as a bare wikilink with no orientation to what the node carries; the index becomes silent on the form's question (what does *this* one specifically claim?). Form-specific Contracts may strengthen this to MUST when the form's role makes the absence load-bearing (Contracts and Skills are the canonical cases).
+- A node MAY carry `brief_summary:` — a paragraph-length restatement when one is genuinely additive over the body's restate-and-elaborate opening. Short Glosses, terse Predicate definitions, and other concise forms typically do not need a `brief_summary:`; longer Decisions and Convictions often benefit from one.
+- A node MAY carry `created:` — an ISO date marking when the node file was first authored. Form-specific Contracts may add additional optional or required scalars (e.g., `is_home:` and `hide_identity_block:` on Touch Point; `serves_as:`, `url:`, `this_did:` on Reference).
 - YAML keys for Deep Context-specific scalars MUST be multi-word `snake_case`, matching named-edge predicate discipline. Two classes of exception: tool-reserved or convention-respecting fields (`aliases`, `tags`, `created`) keep their established names, and fused compound words (`tagline`, `wikilink`) operate as single concepts.
 - Named-edge predicates MUST NOT live in YAML. This applies to graph-participating predicates and to their scalar mirrors.
 - An `aliases:` field MAY appear as a tool-level convenience; it is graph-non-participating.

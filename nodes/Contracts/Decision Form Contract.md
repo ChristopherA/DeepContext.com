@@ -94,8 +94,8 @@ Enforces [[Require Supersession Chain for Revised Decisions]].
 
 ### Optional scalar metadata
 
-- YAML frontmatter MAY include `created:` (ISO date of node file creation, distinct from `decided_on::`), `tagline:`, and `brief_summary:`.
-- YAML is OPTIONAL for Decisions.
+- YAML frontmatter SHOULD include `tagline:` (per Markdown Node Contract — surfaced on the Decisions index page row); MAY include `created:` (ISO date of node file creation, distinct from `decided_on::`) and `brief_summary:`.
+- Beyond the recommended `tagline:`, YAML is OPTIONAL for Decisions.
 
 ## Relations
 

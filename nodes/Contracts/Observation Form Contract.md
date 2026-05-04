@@ -82,8 +82,8 @@ Enforces [[Require Revision Conditions on Observations]].
 
 ### Optional scalar metadata
 
-- YAML frontmatter MAY include `created:`, `tagline:`, and `brief_summary:`.
-- YAML is OPTIONAL for Observations.
+- YAML frontmatter SHOULD include `tagline:` (per Markdown Node Contract — surfaced on the Observations index page row); MAY include `created:` and `brief_summary:`.
+- Beyond the recommended `tagline:`, YAML is OPTIONAL for Observations.
 
 ## Relations
 
