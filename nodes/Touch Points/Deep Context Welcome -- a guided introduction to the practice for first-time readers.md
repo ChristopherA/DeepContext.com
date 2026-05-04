@@ -168,7 +168,10 @@ what came before.
 
 ## Entry Points
 
-Different entry points by what you want to understand.
+To browse every node in the graph at once, see the
+[full node directory](/nodes/) — every node grouped by taxonomy with
+one-line summaries. The entries below are curated entry points by what
+you want to understand.
 
 **The conventions** -- [Contracts](/nodes/contracts/) specify node shapes
 (Contract, Decision, Conviction, Gloss, Observation, and so on) with RFC 2119
