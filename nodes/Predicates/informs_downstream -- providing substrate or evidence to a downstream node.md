@@ -56,3 +56,6 @@ This case contrasts with the corollary-side relation, where a Conviction is a st
 
 - grounded_in::[[Vocabulary Diversity Is a Feature]]
   - The Conviction that makes authoring bidirectional provenance edges load-bearing. Leaving the substrate-side visible on its own node (rather than requiring dependents to declare their own draws) preserves navigability that an extraction agent could otherwise flatten.
+
+- contrasts_with::[[frames_lens_on -- frames a reader's lens onto a region of the graph]]
+  - `informs_downstream::` is substrate-side provenance directed at dependent nodes; `frames_lens_on::` is reader-orientation directed at a region of the graph from a Touch Point. The first carries causal/normative influence outward; the second carries a curated way of looking inward.

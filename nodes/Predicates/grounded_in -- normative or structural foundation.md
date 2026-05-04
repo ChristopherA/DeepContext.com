@@ -56,3 +56,12 @@ This case contrasts with the substrate-side relation, where a Conviction is the 
 
 - grounded_in::[[Vocabulary Diversity Is a Feature]]
   - The Conviction that makes naming the grounded_in-vs-informed_by distinction load-bearing at the predicate layer. The distinction encodes a specific kind of dependence that the project commits to preserving against convergence pressure.
+
+- contrasts_with::[[in_practice_domain -- membership in a Practice Domain]]
+  - `grounded_in::` is normative or structural dependence on a foundation node; `in_practice_domain::` is membership of a concept in a community-of-practice's shared language. Same node may grouned_in:: a Conviction and live in_practice_domain:: a Gloss; the Predicates name different kinds of belonging.
+
+- contrasts_with::[[scion_of -- content lineage from a template graph]]
+  - `grounded_in::` carries a normative or structural relation between graph-internal nodes; `scion_of::` carries graph-level lineage between this graph and a template graph. The first is internal authority, the second is genealogical provenance.
+
+- contrasts_with::[[has_component -- mereological relation where the subject contains the object as a component]]
+  - `grounded_in::` is foundation (object supports subject); `has_component::` is mereology (object is part of subject). Both are structural but the inversion of containment direction is load-bearing.

@@ -50,3 +50,6 @@ The predicate is the graph's default for acknowledging intellectual debts. When 
 
 - grounded_in::[[Vocabulary Diversity Is a Feature]]
   - The Conviction that makes the informed_by-vs-grounded_in weight distinction and the informed_by-vs-responds_to conversation distinction load-bearing. Both distinctions encode specific relational kinds the project commits to preserving.
+
+- contrasts_with::[[frames_lens_on -- frames a reader's lens onto a region of the graph]]
+  - `informed_by::` is provenance carrying influence between source and downstream; `frames_lens_on::` is reader-orientation pointing from a Touch Point at a region of the graph. The first answers "what shaped this," the second answers "how should a reader look at this."

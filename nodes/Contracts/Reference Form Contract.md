@@ -118,3 +118,12 @@ Enforces [[Restrict References to Tight Artifact Clusters]].
 
 - grounded_in::[[Reserve Predicate Vocabularies to Specific Forms]]
   - Grounds the `serves_as::` reservation in the identity predicate block Requirement.
+
+- contrasts_with::[[Touch Point Form Contract]]
+  - Reference points outward at external sources; Touch Point points inward at the local graph. Both are "pointer" forms; the boundary direction is opposite.
+
+- composes_with::[[Graft -- a node copied from a donor graph into a recipient graph]]
+  - A donor Reference (one carrying both `this_did:` and `url:`) acts as the Graft target — it identifies the donor graph from which `[[Taxonomy/Target]]↗` external wikilinks resolve, and it is the Reference proxy for grafted-node provenance.
+
+- composes_with::[[grafted_from -- per-node content provenance from a donor graph]]
+  - Donor References supply the URL prefix and DID that `grafted_from::` records when a node is copied across graphs; the Predicate's Typing requires a Reference object, and the Reference Form Contract specifies what makes a Reference a donor.

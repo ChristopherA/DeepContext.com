@@ -24,3 +24,6 @@ A graft differs from a [[Adopt Scion Publication Model|Scion]] (a graph that cla
 
 - contrasts_with::[[External Node -- a node that lives in another graph, referenced without being imported]]
   - A graft has been copied into the recipient graph and is owned-and-edited locally; an External Node lives elsewhere and is referenced without import. Both name cross-graph relationships, but the boundary status differs: the graft has crossed, the external node has not.
+
+- composes_with::[[Reference Form Contract]]
+  - A donor Reference (one carrying both `this_did:` and `url:` in its frontmatter) is the proxy through which a graft's donor graph is identified. The Reference Form Contract specifies what makes a Reference a donor; the Graft Gloss names the act of copying from one.

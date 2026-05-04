@@ -63,3 +63,6 @@ A hypothetical graft recorded in a recipient graph would carry on each grafted n
 
 - grounded_in::[[Vocabulary Diversity Is a Feature]]
   - The Conviction that makes per-node provenance load-bearing rather than collapsible into a graph-level claim. Recording the donor of a specific node preserves the recipient's ability to diverge from the donor's vocabulary without losing the trace of where the content originated.
+
+- composes_with::[[Graft -- a node copied from a donor graph into a recipient graph]]
+  - The Gloss that names the act this Predicate records. A Graft is the node-level copy operation; `grafted_from::` is the edge that captures which donor the copy came from. The Predicate is the structural counterpart to the Gloss's vocabulary entry.

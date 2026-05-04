@@ -80,3 +80,15 @@ Enforces [[Require Body Elaboration Beyond Filename Definition]].
 
 - contrasts_with::[[Reference Form Contract]]
   - A Gloss defines a term used internally; a Reference points to external authoritative source material. Both may be short, but the purposes are distinct.
+
+- extended_by::[[Predicate Form Contract]]
+  - Predicate Form Contract extends Gloss with the Carries, Crescent, and Typing requirements that turn a Gloss-shaped definition into an edge-vocabulary specification.
+
+- extended_by::[[Touch Point Form Contract]]
+  - Touch Point Form Contract extends Gloss with reader-orientation requirements (Opening Synthesis, Entry Points, Out of Scope) and the required `frames_lens_on::` edge.
+
+- contrasts_with::[[Touch Point Form Contract]]
+  - A Gloss defines a single term, often briefly; a Touch Point frames a reader's lens onto a region of the graph. The forms share filename and body shape; they diverge on whom the body addresses (definition reader vs region newcomer).
+
+- composes_with::[[in_practice_domain -- membership in a Practice Domain]]
+  - The Predicate that takes a Gloss naming a community of practice as object. Glosses serve dual duty as concept definitions and as Practice-Domain anchors; the predicate makes the Practice-Domain role explicit.

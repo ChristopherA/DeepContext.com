@@ -191,6 +191,9 @@ The follow-up naming lets the scion author route the audit's findings without re
 - composes_with::[[Node Validate]]
   - Node Validate operates at node scope; this skill operates at graph scope. An audit that flags a specific node can hand that node to Node Validate for the full Form Contract check. Each skill defers its out-of-scope concerns to the other.
 
+- composes_with::[[Graph Load Audit]]
+  - Graph Load Audit checks render-pipeline invariants (slug collisions, broken external wikilinks, unresolved donor proxies); this skill checks structural invariants (Form Contract compliance, predicate vocabulary, ghost links, reciprocals). Both sweep at graph scope but along orthogonal axes — one ensures the graph builds; the other ensures it coheres.
+
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The spine commitment this skill audits at graph scale. Every check in Steps 2 through 7 traces back to a named-edge or wikilink Requirement.
 
