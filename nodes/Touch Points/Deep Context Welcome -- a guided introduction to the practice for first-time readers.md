@@ -1,4 +1,19 @@
-# DeepContext
+---
+tagline: A guided introduction to the Deep Context practice — for first-time readers and returning ones wanting a fresh framing
+created: 2026-05-03
+is_home: true
+hide_identity_block: true
+---
+
+- conforms_to::[[Touch Point Form Contract]]
+- frames_lens_on::[[Deep Context Architecture]]
+- frames_lens_on::[[Deep Context as an Architecture for Captured Reasoning]]
+- in_practice_domain::[[Deep Context Architecture]]
+- authored_by::[[Deep Context Community]]
+- has_lifecycle::[[Growth Stage]]
+- has_curation::[[Working Draft]]
+
+# Deep Context Welcome
 
 ![[Attachments/Where Our Vocabularies Don't Match.png]]
 
@@ -33,6 +48,12 @@ carried is legible to later readers rather than implicit in oral tradition
 compact: the author names the relation, and the software works with that
 fact afterward -- it does not arrive with an opinion about what the
 author's words should mean.
+
+This page is a **Touch Point** -- a guided introduction for someone
+arriving for the first time (or remembering as if for the first time) what
+this graph is for and how to enter it. It is not a summary; the substance
+lives in the linked nodes. It is a curated welcome that gives you a way of
+looking at what's here.
 
 ## The stance
 
@@ -145,7 +166,7 @@ for whether the specific moves recorded in its stance and architecture,
 composed, add up to something that survives its own growth better than
 what came before.
 
-## Where to start
+## Entry Points
 
 Different entry points by what you want to understand.
 
@@ -198,6 +219,21 @@ auditing. [[Node Create]] is the entry point for writing new nodes;
 [[Graph Orient]] is the entry point for agents arriving at the graph
 for the first time.
 
+**The reader-orientation pages** -- [Touch Points](/nodes/touch-points/)
+(this page lives there) are guided introductions to specific regions of
+the graph; this Touch Point welcomes you to the practice as a whole.
+
+## Out of Scope
+
+This Touch Point's lens does not cover:
+
+- **A summary of the graph's content.** The substance lives in the linked nodes; this page is orientation, not synopsis. Follow the Entry Points above to read the substance.
+- **A how-to guide for collaborative-knowledge tooling.** This graph is not a manual for using wiki engines, knowledge-graph databases, or LLM-application frameworks. The practice is about *what to record about reasoning*, not *which tool to use*.
+- **A library-science classification of all human knowledge.** The graph is the deep context of *this* practice's contributors; it is not an attempt to organize knowledge in general. Other graphs (Self-Sovereign Identity, Synpraxis, etc.) carry their own deep contexts via their own conventions.
+- **A pitch for adoption.** The practice does not assume readers will adopt it. The home page is here to receive readers well; what they do next is theirs to decide.
+
+Readers looking for any of those should look elsewhere; the Entry Points above route to what this graph does cover.
+
 ## Link legend
 
 The graph is held together by `[[wikilinks]]` and `predicate::[[Target]]` named
@@ -241,9 +277,9 @@ reader can see where the graph ends.
 
 ## Form types
 
-Each node conforms to one of ten [[Form Contract]]s. Each contract names a
+Each node conforms to one of the [[Form Contract]]s. Each contract names a
 shape and a compliance rule; the Decisions that ground each contract carry the
-reasoning. The ten group by the role the form plays -- the reasoning the graph
+reasoning. The forms group by the role they play -- the reasoning the graph
 captures, the vocabulary that makes the reasoning legible, and the
 infrastructure the graph runs on. Each form name links to its taxonomy index.
 
@@ -266,14 +302,18 @@ infrastructure the graph runs on. Each form name links to its taxonomy index.
 - **[Contract](/nodes/contracts/)** -- what a node of a given form looks like; every node declares which Contract it conforms to. Example: [[Gloss Form Contract]].
 - **[Skill](/nodes/skills/)** -- an agent-invocable workflow grounded in the Decisions it enforces. Example: [[Node Create]].
 
+**Reader orientation.**
+
+- **[Touch Point](/nodes/touch-points/)** -- a guided introduction that frames a reader's lens onto a region of the graph. Example: this page.
+
 ## For agents
 
 Agents collaborating on this graph should start with
 [AGENTS.md](https://github.com/ChristopherA/DeepContext.com/blob/main/AGENTS.md),
 which names the curator stance (suggest, flag, translate -- do not rewrite a
 contributor's vocabulary without confirmation) and points at the taxonomy
-entry points. Agents joining a scion should read their own scion's AGENTS.md
-first; scions may customize the stance.
+entry points. Agents joining a graph that grafted from this one should read
+that graph's AGENTS.md first; each graph customizes the stance.
 
 ## About this repository
 
@@ -293,7 +333,7 @@ relitigate any one prior attempt.
 This repository is the source of truth for the published graph. Contributions
 are welcome through GitHub.
 
-- **Read first.** Browse the taxonomies or follow the reading paths above.
+- **Read first.** Browse the taxonomies or follow the Entry Points above.
   The graph is in its seed stage; not every node you want to reference will
   exist yet. Ghost links mark where gaps are.
 - **Open an [Issue](https://github.com/ChristopherA/DeepContext.com/issues)
@@ -302,16 +342,27 @@ are welcome through GitHub.
   or ask a question about the conventions.
 - **Edit directly in the GitHub Web UI.** Any node under `nodes/` can be
   edited in-browser; clicking "Commit changes" opens a pull request.
-- **Stand up your own scion.** Cloning this repository and running the
-  local Scion Bootstrap ceremony re-roots your copy with its own Open
+- **Stand up your own graph.** Cloning this repository and running the
+  local Graph Inception ceremony re-roots your copy with its own Open
   Integrity inception commit and DID. The inception commit is signed with
-  your own SSH key, so your scion's cryptographic identity is yours -- not
-  GitHub's and not this template's. See
+  your own SSH key, so the new graph's cryptographic identity is yours --
+  not GitHub's and not this graph's. See
   [README.md](https://github.com/ChristopherA/DeepContext.com#readme) for
   the setup procedure, and [[Adopt Scion Publication Model]] for the why.
 
-The practice publishes as scions — each reader can instantiate the template
-into their own graph with its own cryptographic identity, collaboratively
-editable, with no single editorial gatekeeper. The curation discipline lives
-in the conventions, not in permissions. See [[Adopt Scion Publication Model]]
-for the specific commitments this implies.
+The practice publishes as self-sovereign graphs — each reader can
+instantiate this graph's content into their own with its own cryptographic
+identity, collaboratively editable, with no single editorial gatekeeper.
+The curation discipline lives in the conventions, not in permissions. See
+[[Adopt Scion Publication Model]] for the specific commitments this implies.
+
+## Relations
+
+- conforms_to::[[Touch Point Form Contract]]
+  - The first Touch Point in this graph; serves as the home page (`is_home: true` in YAML frontmatter).
+
+- frames_lens_on::[[Deep Context Architecture]]
+  - The Practice Domain Gloss this Touch Point welcomes readers to. Deep Context Architecture is the shared language community whose conventions this graph documents; the Touch Point's lens names the welcoming entry into that community's vocabulary and reasoning.
+
+- frames_lens_on::[[Deep Context as an Architecture for Captured Reasoning]]
+  - The founding Decision the practice rests on. The Touch Point also frames the reader's encounter with this Decision specifically, since everything in the graph descends from it directly or through a short chain.

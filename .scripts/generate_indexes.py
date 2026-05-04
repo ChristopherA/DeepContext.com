@@ -11,7 +11,7 @@ import shutil
 from pathlib import Path
 
 from linkify import linkify_text
-from render import render_html, strip_frontmatter
+from render import render_html, strip_frontmatter, strip_identity_block
 from slugify import TAXONOMIES
 
 TAXONOMY_DESCRIPTIONS: dict[str, str] = {
@@ -176,7 +176,9 @@ def write_landing_page(
             return
         home = legacy
     linkified = linkify_text(home.read_text(encoding="utf-8"), slug_table, donors)
-    _, body = strip_frontmatter(linkified)
+    meta, body = strip_frontmatter(linkified)
+    if meta.get("hide_identity_block", "").strip().lower() == "true":
+        body = strip_identity_block(body)
     page = render_html(
         body,
         title="DeepContext",

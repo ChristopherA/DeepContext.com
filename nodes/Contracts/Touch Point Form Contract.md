@@ -43,6 +43,12 @@ A Touch Point may be designated as the graph's **home page** by carrying `is_hom
 - Exactly one Touch Point per graph SHOULD carry this flag. Zero is permitted (the graph has no home page) but the site's root URL will then be unrouted.
 - If multiple Touch Points carry `is_home: true`, the build pipeline MUST report this as an error and refuse to deploy.
 
+### Optional frontmatter: hide_identity_block
+
+- A Touch Point SHOULD carry `hide_identity_block: true` in its YAML frontmatter so the leading identity-block bullets (`conforms_to::`, `frames_lens_on::`, `in_practice_domain::`, etc.) are stripped from the rendered HTML output.
+- Reader-facing welcomes are diminished by a technical predicate dump appearing above the H1; the rendered page should open with the H1 and synthesis prose. The identity block remains in the source markdown — readers who want it can view source via the "Edit on GitHub" footer link.
+- Authors may set `hide_identity_block: false` (or omit the flag) on Touch Points where exposing the edges is genuinely useful (for example, a Touch Point whose target audience is graph-tooling authors who want to see the predicate vocabulary in action).
+
 ### Body: Opening Synthesis
 
 - The body MUST open with a synthesis paragraph or two that names the region the Touch Point frames, the lens it offers, and what the reader will gain from following the Entry Points. The opening is reader-facing: it speaks to the reader directly, not about the region in the abstract.
