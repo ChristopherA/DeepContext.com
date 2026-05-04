@@ -123,14 +123,35 @@ def _node_donor(path: Path, donors: list) -> tuple[str, str] | None:
     return None
 
 
+TAXONOMY_SINGULAR: dict[str, str] = {
+    "Aspirations": "Aspiration",
+    "Contracts": "Contract",
+    "Convictions": "Conviction",
+    "Decisions": "Decision",
+    "Glosses": "Gloss",
+    "Observations": "Observation",
+    "Patterns": "Pattern",
+    "Predicates": "Predicate",
+    "References": "Reference",
+    "Skills": "Skill",
+    "Touch Points": "Touch Point",
+}
+
+
 def build_node_directory(*, slug_table: dict[str, dict], donors: list) -> str:
     """Build markdown for the global Browse-all-nodes directory.
 
-    Groups every node by taxonomy. Each entry shows title + tagline, with a
-    graft marker (⊕) for nodes carrying a grafted_from:: edge — the marker
-    links to the donor's source URL for that specific node so a reader can
-    follow the lineage in one click.
+    Two surfaces, one page:
+    - **By form type** — compact list of taxonomies linking to each
+      taxonomy index page. The "drill into one form" workflow.
+    - **All nodes** — single alphabetical list across the whole graph,
+      each entry showing form chip + tagline. The "find by name" workflow.
+
+    The graft marker (⊕) appears on nodes carrying a grafted_from:: edge,
+    linking to the donor's source URL for that node so the lineage is
+    one click away.
     """
+    # Collect every unique node, dedup by path.
     by_tax: dict[str, list[dict]] = defaultdict(list)
     seen: set[Path] = set()
     for entry in slug_table.values():
@@ -140,12 +161,16 @@ def build_node_directory(*, slug_table: dict[str, dict], donors: list) -> str:
         by_tax[entry["taxonomy_name"]].append(entry)
 
     total = sum(len(v) for v in by_tax.values())
-    has_grafts = any(_node_donor(e["path"], donors) for entries in by_tax.values() for e in entries)
+    all_entries: list[dict] = []
+    for tax_entries in by_tax.values():
+        all_entries.extend(tax_entries)
+
+    has_grafts = any(_node_donor(e["path"], donors) for e in all_entries)
 
     lines = [
         "# Browse all nodes",
         "",
-        f"Every node in this graph, grouped by taxonomy. {total} nodes across {len(by_tax)} taxonomies.",
+        f"Every node in this graph. {total} nodes across {len(by_tax)} form types.",
         "",
     ]
     if has_grafts:
@@ -154,43 +179,51 @@ def build_node_directory(*, slug_table: dict[str, dict], donors: list) -> str:
         )
         lines.append("")
 
-    # Top-of-page TOC for in-page jump-to navigation.
-    lines.append("## In this graph")
+    # Section 1: Form types — compact navigation hub.
+    lines.append("## By form type")
+    lines.append("")
+    lines.append(
+        "Each form type has its own index page listing nodes of that form with their summaries. Use this when you want to drill into a specific form."
+    )
     lines.append("")
     for tax_name, tax_slug in TAXONOMIES.items():
         if tax_name not in by_tax:
             continue
         count = len(by_tax[tax_name])
-        anchor = tax_slug
-        lines.append(f"- [{tax_name} ({count})](#{anchor})")
+        description = TAXONOMY_DESCRIPTIONS.get(tax_name, "")
+        line = f"- [{tax_name}](/nodes/{tax_slug}/) ({count})"
+        if description:
+            line += f" — {description}"
+        lines.append(line)
     lines.append("")
 
-    # Per-taxonomy sections.
-    for tax_name, tax_slug in TAXONOMIES.items():
-        if tax_name not in by_tax:
-            continue
-        entries = sorted(by_tax[tax_name], key=lambda e: e["title"].lower())
-        # Anchor matches the TOC link target.
-        lines.append(f'## {tax_name} ({len(entries)}) {{ #{tax_slug} }}')
-        lines.append("")
-        if tax_name in TAXONOMY_DESCRIPTIONS:
-            lines.append(TAXONOMY_DESCRIPTIONS[tax_name])
-            lines.append("")
-        for entry in entries:
-            label = entry["title"]
-            url = entry["url"]
-            tagline = _entry_summary(entry["path"])
-            graft = ""
-            donor = _node_donor(entry["path"], donors)
-            if donor:
-                donor_name, donor_url = donor
-                donor_node_url = f"{donor_url}/nodes/{tax_slug}/{entry['slug']}/"
-                graft = f' [{GRAFT_MARKER}]({donor_node_url} "Grafted from {donor_name}")'
-            line = f"- [{label}]({url}){graft}"
-            if tagline:
-                line += f" — {tagline}"
-            lines.append(line)
-        lines.append("")
+    # Section 2: Alphabetical flat list — find-by-name workflow.
+    lines.append(f"## All nodes alphabetically ({total})")
+    lines.append("")
+    lines.append(
+        "Every node in one list, sorted by title. Each entry shows its form type so you can tell what kind of node it is. Use this when you remember a name but not the form, or when you want to scan the whole graph at once."
+    )
+    lines.append("")
+    alphabetical = sorted(all_entries, key=lambda e: e["title"].lower())
+    for entry in alphabetical:
+        label = entry["title"]
+        url = entry["url"]
+        tax_name = entry["taxonomy_name"]
+        tax_slug = TAXONOMIES.get(tax_name, entry["taxonomy"])
+        form_singular = TAXONOMY_SINGULAR.get(tax_name, tax_name)
+        tagline = _entry_summary(entry["path"])
+        graft = ""
+        donor = _node_donor(entry["path"], donors)
+        if donor:
+            donor_name, donor_url = donor
+            donor_node_url = f"{donor_url}/nodes/{tax_slug}/{entry['slug']}/"
+            graft = f' [{GRAFT_MARKER}]({donor_node_url} "Grafted from {donor_name}")'
+        line = f"- [{label}]({url}) — *{form_singular}*"
+        if tagline:
+            line += f" — {tagline}"
+        line += graft
+        lines.append(line)
+    lines.append("")
 
     return "\n".join(lines) + "\n"
 
