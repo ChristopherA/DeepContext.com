@@ -119,6 +119,9 @@ Enforces [[Restrict References to Tight Artifact Clusters]].
 - grounded_in::[[Reserve Predicate Vocabularies to Specific Forms]]
   - Grounds the `serves_as::` reservation in the identity predicate block Requirement.
 
+- grounded_in::[[Reference Targets Must Be Resolvable to Other Readers]]
+  - Grounds the URL resolvability Requirement: a Reference's URL must resolve to an artifact every reader can fetch, not a private path or reader-specific resource. The Decision was authored after a real eos-harness Minimum Viable Architecture workstream FX-6 misstep where two References pointed at sibling-project filesystem paths invisible to anyone but the original author; codifying the rule keeps the citation layer honest across all graphs that ground in this Form Contract.
+
 - contrasts_with::[[Touch Point Form Contract]]
   - Reference points outward at external sources; Touch Point points inward at the local graph. Both are "pointer" forms; the boundary direction is opposite.
 
