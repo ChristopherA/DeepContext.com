@@ -342,19 +342,26 @@ are welcome through GitHub.
   or ask a question about the conventions.
 - **Edit directly in the GitHub Web UI.** Any node under `nodes/` can be
   edited in-browser; clicking "Commit changes" opens a pull request.
-- **Stand up your own graph.** Cloning this repository and running the
-  local Graph Inception ceremony re-roots your copy with its own Open
-  Integrity inception commit and DID. The inception commit is signed with
-  your own SSH key, so the new graph's cryptographic identity is yours --
-  not GitHub's and not this graph's. See
+- **Stand up your own graph.** Run the local [[Graph Inception]] ceremony
+  to produce a fresh Open Integrity inception commit and DID, signed with
+  your own SSH key — the new graph's cryptographic identity is yours, not
+  GitHub's and not this graph's. You can start from a clone of this
+  repository, from any other Deep Context graph, or from an empty
+  directory; the ceremony is the same. The new graph stands on its own;
+  it may optionally claim `scion_of:` lineage back to a donor when you
+  want upstream tracking visible, or carry no lineage claim at all and
+  diverge freely. See
   [README.md](https://github.com/ChristopherA/DeepContext.com#readme) for
-  the setup procedure, and [[Adopt Scion Publication Model]] for the why.
+  the setup procedure, [[Graph Inception]] for the agent-invocable
+  ceremony, and [[Adopt Self-Sovereign Graph Publication]] for the why.
 
-The practice publishes as self-sovereign graphs — each reader can
-instantiate this graph's content into their own with its own cryptographic
-identity, collaboratively editable, with no single editorial gatekeeper.
-The curation discipline lives in the conventions, not in permissions. See
-[[Adopt Scion Publication Model]] for the specific commitments this implies.
+The practice publishes as self-sovereign graphs — anyone can stand up
+their own graph carrying its own cryptographic identity, collaboratively
+editable, with no single editorial gatekeeper. Most graphs are not
+scions; scion-of is reserved for the parallel-fork case where upstream
+tracking is wanted. The curation discipline lives in the conventions,
+not in permissions. See [[Adopt Self-Sovereign Graph Publication]] for
+the specific commitments this implies.
 
 ## Relations
 
