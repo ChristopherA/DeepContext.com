@@ -27,6 +27,7 @@ TAXONOMIES = {
     "Glosses": "glosses",
     "References": "references",
     "Skills": "skills",
+    "Touch Points": "touch-points",
 }
 
 # Taxonomies whose nodes are compound-node folders (`<Folder>/<Folder>.md`)

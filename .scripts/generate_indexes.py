@@ -25,6 +25,7 @@ TAXONOMY_DESCRIPTIONS: dict[str, str] = {
     "Glosses": "Interpretive definitions that frame concepts through a broader lens.",
     "References": "External sources the graph draws on, with publication metadata.",
     "Skills": "Agent-invocable workflows with numbered steps, grounded in the Decisions they enforce.",
+    "Touch Points": "Guided introductions that frame a reader's lens onto a region of the graph — not summaries.",
 }
 
 
@@ -132,6 +133,31 @@ def write_taxonomy_indexes(
         out.write_text(page, encoding="utf-8")
 
 
+def _find_home_touch_point(root: Path) -> Path | None:
+    """Find the Touch Point node with `is_home: true` in YAML frontmatter.
+
+    Per Touch Point Form Contract: exactly one Touch Point per graph
+    SHOULD carry `is_home: true`; the build pipeline renders it to the
+    site root URL. Multiple homes are an error; zero homes degrades to
+    a fallback (legacy `landing.md` at repo root, if present).
+    """
+    touch_points_dir = root / "nodes" / "Touch Points"
+    if not touch_points_dir.is_dir():
+        return None
+    homes: list[Path] = []
+    for md in sorted(touch_points_dir.glob("*.md")):
+        meta, _ = strip_frontmatter(md.read_text(encoding="utf-8"))
+        is_home = meta.get("is_home", "").strip().lower()
+        if is_home == "true":
+            homes.append(md)
+    if len(homes) > 1:
+        raise SystemExit(
+            "Multiple Touch Points carry is_home: true: "
+            + ", ".join(str(h.relative_to(root)) for h in homes)
+        )
+    return homes[0] if homes else None
+
+
 def write_landing_page(
     *,
     root: Path,
@@ -140,17 +166,23 @@ def write_landing_page(
     donors: list | None = None,
 ) -> None:
     donors = donors or []
-    landing = root / "landing.md"
-    if not landing.exists():
-        return
-    linkified = linkify_text(landing.read_text(encoding="utf-8"), slug_table, donors)
+    # First preference: a Touch Point with is_home: true in frontmatter
+    home = _find_home_touch_point(root)
+    if home is None:
+        # Fallback: legacy landing.md at repo root, retained transitionally
+        # while the home page migration is in progress.
+        legacy = root / "landing.md"
+        if not legacy.exists():
+            return
+        home = legacy
+    linkified = linkify_text(home.read_text(encoding="utf-8"), slug_table, donors)
     _, body = strip_frontmatter(linkified)
     page = render_html(
         body,
         title="DeepContext",
         taxonomy_name=None,
         taxonomy_url=None,
-        source_rel_path=str(landing.relative_to(root)),
+        source_rel_path=str(home.relative_to(root)),
         is_home=True,
     )
     (build_dir / "index.html").write_text(page, encoding="utf-8")
