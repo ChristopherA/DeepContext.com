@@ -16,6 +16,12 @@ MD_EXTENSIONS = ["tables", "fenced_code", "attr_list", "sane_lists"]
 
 BULLET_RE = re.compile(r"^( {0,4})([*+\-]|\d+[.)]) ")
 
+# Site brand displayed in crumb and footer. Forks and scions should set this
+# to their own name. The DC-specific value below is the canonical case for
+# this repository; downstream graphs override it as one of the two scion-
+# config constants (the other is GITHUB_REPO_URL just below).
+SITE_NAME = "DeepContext"
+
 # GitHub source link for the "Edit on GitHub" footer widget. Scions should set
 # GITHUB_REPO_URL to their own repo or to an empty string to suppress the link.
 GITHUB_REPO_URL = "https://github.com/ChristopherA/DeepContext.com"
@@ -171,7 +177,7 @@ def render_html(
 
     crumb = ""
     if not is_home:
-        segments = ['<a href="/">DeepContext</a>']
+        segments = [f'<a href="/">{html.escape(SITE_NAME)}</a>']
         if not is_browse:
             segments.append('<a href="/nodes/">Browse</a>')
         if taxonomy_name and taxonomy_url:
@@ -225,7 +231,7 @@ def render_html(
 <main>
 {html_body}
 </main>
-<footer><a href="/">DeepContext</a>{did_widget}{source_link}</footer>
+<footer><a href="/">{html.escape(SITE_NAME)}</a>{did_widget}{source_link}</footer>
 </body>
 </html>
 """

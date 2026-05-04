@@ -13,7 +13,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from linkify import linkify_text
-from render import render_html, strip_frontmatter, strip_identity_block
+from render import SITE_NAME, render_html, strip_frontmatter, strip_identity_block
 from slugify import TAXONOMIES
 
 GRAFT_MARKER = "⊕"  # ⊕
@@ -250,7 +250,7 @@ def write_node_directory(
     _, body = strip_frontmatter(linkified)
     page = render_html(
         body,
-        title="Browse all nodes - DeepContext",
+        title=f"Browse all nodes - {SITE_NAME}",
         taxonomy_name=None,
         taxonomy_url=None,
         source_rel_path=None,
@@ -291,7 +291,7 @@ def write_taxonomy_indexes(
         _, body = strip_frontmatter(linkified)
         page = render_html(
             body,
-            title=f"{taxonomy_name} - DeepContext",
+            title=f"{taxonomy_name} - {SITE_NAME}",
             taxonomy_name=None,
             taxonomy_url=None,
             source_rel_path=source_rel,
@@ -350,7 +350,7 @@ def write_landing_page(
         body = strip_identity_block(body)
     page = render_html(
         body,
-        title="DeepContext",
+        title=SITE_NAME,
         taxonomy_name=None,
         taxonomy_url=None,
         source_rel_path=str(home.relative_to(root)),
