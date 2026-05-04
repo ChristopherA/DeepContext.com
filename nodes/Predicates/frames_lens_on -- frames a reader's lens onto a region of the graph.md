@@ -37,16 +37,14 @@ A reader encountering `X frames_lens_on::Y` learns that X is a curated welcome t
 
 ## Instances
 
-No instances exist in this graph yet. The graph's home page is currently `landing.md` at the repo root, which has not yet been migrated to a Touch Point conforming to the Touch Point Form Contract. Once migrated, the home Touch Point will carry one or more `frames_lens_on::` edges naming what its lens is on.
-
-A future home Touch Point for DeepContext.com would carry, for example:
+The graph's home Touch Point — `Deep Context Welcome -- a guided introduction to the practice for first-time readers` (designated by `is_home: true` in its YAML frontmatter) — carries the canonical instances:
 
 ```
 - frames_lens_on::[[Deep Context Architecture]]
 - frames_lens_on::[[Deep Context as an Architecture for Captured Reasoning]]
 ```
 
-…orienting readers to the Practice Domain Gloss and the founding Decision simultaneously.
+…orienting readers to the Practice Domain Gloss and the founding Decision simultaneously. Additional Touch Points may carry their own `frames_lens_on::` edges naming sub-regions, cross-cutting concepts, or arguments the project is making.
 
 ## Relations
 
