@@ -60,7 +60,56 @@ find nodes -type f -name '*.md' -print0 | while IFS= read -r -d '' file; do
 done
 ```
 
-Report any hits as Violations.
+**YAML basics** — per `Markdown Node Contract`, every node SHOULD carry `tagline:` in its YAML frontmatter; the build pipeline surfaces it as the row summary on each taxonomy's index page, and a missing tagline renders the row silent. `brief_summary:` is genuinely optional; report presence as an informational stat rather than a Shortfall.
+
+```sh
+find nodes -type f -name '*.md' -print0 | while IFS= read -r -d '' file; do
+  awk '/^---$/{c++; next} c==1 && /^tagline:/{print "yes"; exit} c>=2{exit}' "$file" \
+    | grep -q yes || echo "missing tagline: $file"
+done
+```
+
+Report missing-tagline hits as Shortfall (SHOULD violation, not Violation). Form-specific Contracts MAY strengthen `tagline:` to MUST when the form's role makes the absence load-bearing — Contracts and Skills are the canonical cases; for those forms, missing-tagline becomes Violation.
+
+Count `brief_summary:` presence per taxonomy as an informational stat — useful for noticing when a taxonomy's nodes have drifted away from the form's typical body shape (e.g., Decision nodes typically benefit from `brief_summary:` because their bodies are long; if many Decisions lack it, the form's authoring habit may have drifted). The audit does not flag absence as a finding.
+
+Report any hits as Violations or Shortfalls per the categories above.
+
+### Step 2.5: Currency drift candidates
+
+Currency cannot be checked mechanically — whether a tagline still describes the node's current claim is semantic judgment, not regex work. Word-overlap heuristics between tagline and H1 produce mostly false positives because taglines *describe* what the H1 *names* using deliberately complementary vocabulary; a Form Contract whose H1 is "Decision Form Contract" will have a tagline that talks about commitments, choices, and alternatives without the word "decision," and that is the tagline doing its job.
+
+What the audit can flag mechanically is **staleness relative to body edits** — a tagline that hasn't been touched in months while the body has been substantially rewritten. The signal is direct: if the body's framing has shifted, the tagline that hasn't moved with it is a candidate for review.
+
+**Tagline staleness via git-blame** — find the timestamp of the last edit to each node's `tagline:` line and compare against the timestamp of the node's most recent body-affecting commit. A gap larger than N months (start at 3 months) is a candidate.
+
+```sh
+# Implementation pattern: per-file git blame on the tagline line, compared to
+# the file's last commit. Threshold-based candidate flagging.
+find nodes -type f -name '*.md' -print0 | while IFS= read -r -d '' file; do
+  tagline_line=$(awk '/^---$/{c++; next} c==1 && /^tagline:/{print NR; exit}' "$file")
+  [ -z "$tagline_line" ] && continue
+  tagline_date=$(git log -L "${tagline_line},${tagline_line}:$file" --format='%cs' -n 1 -- "$file" 2>/dev/null | head -1)
+  body_date=$(git log -1 --format='%cs' -- "$file" 2>/dev/null)
+  # Flag when body_date - tagline_date exceeds threshold (date math via Python).
+  python3 -c "
+from datetime import date
+import sys
+t='$tagline_date'; b='$body_date'
+if t and b and t<b:
+    td=date.fromisoformat(t); bd=date.fromisoformat(b)
+    days=(bd-td).days
+    if days > 90:
+        print(f'  stale {days}d: $file (tagline {t}, body {b})')
+" 2>/dev/null
+done
+```
+
+**Stale `decided_on::` for Decisions** — a Decision's `decided_on::` date is its commitment timestamp. When the body has been substantially edited months later, the rendered Decision may carry framing that no longer matches what was decided. Flag when most-recent-body-commit minus `decided_on::` exceeds N months (start at 6 months for Decisions, since their bodies legitimately evolve).
+
+Report any flagged candidates as a separate "Currency drift candidates" section in Step 8's aggregate report — distinct from Violations and Shortfalls, and distinct from automated findings. Each candidate is "consider reviewing this node's tagline / brief_summary"; the scion author decides whether each is real drift, acceptable evolution, or evidence the body itself has moved past what the surrounding metadata still claims. The audit does NOT classify these as failures.
+
+If a more sophisticated semantic check is desired, that work belongs in `/node-validate` per node (where the full Form Contract context applies) or in a domain-aware reading pass, not in this graph-scope sweep. Word-overlap, sentiment analysis, or LLM-classifier approaches at graph scale produce noise too high to act on.
 
 ### Step 3: Vocabulary audit
 
@@ -161,7 +210,10 @@ Report orphans with their form (from `conforms_to::`) and lifecycle stage. A See
 
 Group findings by category, not by file. The report structure:
 
-- **Violations** — hits from Step 2 (filename rules, `relates_to::` sightings, missing `conforms_to::`). Each requires a fix before the graph meets its own Contract.
+- **Violations** — hits from Step 2 (filename rules, `relates_to::` sightings, missing `conforms_to::`, missing `tagline:` on a form whose Contract specifies MUST). Each requires a fix before the graph meets its own Contract.
+- **Shortfalls** — SHOULD-violations from Step 2 (missing `tagline:` on forms whose Contract specifies SHOULD). Each is a quick Edit fix; the graph functions without them but the index pages render silent rows.
+- **YAML stats** — informational counts from Step 2: `brief_summary:` presence per taxonomy, optional scalar coverage. Not findings; useful for noticing when a form's authoring habit has drifted.
+- **Currency drift candidates** — from Step 2.5: tagline-vs-H1 word divergence; stale `decided_on::` relative to recent body edits. Heuristic-flagged candidates the scion author reviews to decide whether the tagline, brief_summary, or body needs revision.
 - **Vocabulary drift** — provisional predicates from Step 3. Each is a candidate for Predicate-node creation or consolidation into an existing predicate.
 - **Planning surface** — ghost-link inventory from Step 4, grouped by inbound-edge count. High-count ghost links are the graph's most-wanted future nodes.
 - **Un-annotated edges** — from Step 5, grouped by file. Shortfalls; the `Annotate Edges With Why-They-Matter` Decision asks for annotations but allows nodes to exist without them; flagged for curation.
@@ -175,6 +227,9 @@ Report each category compressed. Do not dump every finding; sample representativ
 End the report by naming which follow-up skills or operations would address which categories:
 
 - Violations → direct Edit per file.
+- Shortfalls (missing tagline) → direct Edit per file; author a one-line tagline that reads as the row summary on the form's index page.
+- YAML stats → no immediate action; revisit if a form's `brief_summary:` coverage falls below typical for that form.
+- Currency drift candidates → review per node; rewrite tagline or brief_summary if stale, dismiss if acceptable lag, escalate to body revision if the framing itself is out of date.
 - Vocabulary drift → `/predicate-propose` per provisional predicate, or edit-and-consolidate when two provisional predicates overlap.
 - Ghost links → `/node-create` for the high-count targets; ignore the rest until they accumulate more incoming edges.
 - Un-annotated edges → direct Edit per file, or `/node-validate` per file to get the full Form Contract check while fixing.
@@ -208,6 +263,9 @@ The follow-up naming lets the scion author route the audit's findings without re
 
 - grounded_in::[[Adopt Predicate Atomicity]]
   - Step 3's vocabulary audit is the graph-wide expression of predicate atomicity. Provisional predicates accumulating without backing Predicate nodes mean the vocabulary is accreting without each predicate's distinction being documented.
+
+- grounded_in::[[Markdown Node Contract]]
+  - Step 2's YAML basics check enforces MNC's SHOULD requirement that every node carry `tagline:`. The base Contract is the source of truth for what every node looks like at the structural layer; this skill surveys the corpus for compliance with that source.
 
 - informs_downstream::[[Markdown Node Contract]]
   - The base Contract specifies the structural shape this skill surveys. Graph Audit's aggregate findings surface where the graph has drifted from the Contract at scale; single-node validation surfaces where one specific node has drifted.
