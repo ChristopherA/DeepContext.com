@@ -31,13 +31,13 @@ A Scion Address is not a URL. Browsers today do not resolve `did:repo:` — the 
 
   Both live in the same markdown element; the URL works today, the Scion Address waits for tooling. Neither depends on the other being present.
 
-The Scion Address differs from the plain `did:repo:<sha1>` in scope: the plain form identifies a repository-as-whole (the graph), while the Scion Address identifies a specific node within that graph. When [[Adopt Scion Publication Model]] says a scion "carries one DID across any git host," that DID is the plain form; when a node needs to be cited at page granularity, the Scion Address is the form.
+The Scion Address differs from the plain `did:repo:<sha1>` in scope: the plain form identifies a repository-as-whole (the graph), while the Scion Address identifies a specific node within that graph. When [[Adopt Self-Sovereign Graph Publication]] says a scion "carries one DID across any git host," that DID is the plain form; when a node needs to be cited at page granularity, the Scion Address is the form.
 
 Limitations are named rather than hidden. A Scion Address uses the file's current path; if the file is renamed or moved, the old address no longer resolves to the file at its new location. For most references this is acceptable because paths are stable in practice, but a rename-survives form would need to use the file's blob SHA1 rather than its path. The graph does not commit to that more principled form today; if rename fragility becomes a real problem, the Address syntax may extend.
 
 ## Relations
 
-- grounded_in::[[Adopt Scion Publication Model]]
+- grounded_in::[[Adopt Self-Sovereign Graph Publication]]
   - The Decision that names the did:repo scheme and makes a scion's DID content-derived. Scion Address is the natural extension to page granularity — if the graph's DID is the SHA1 of the OI inception commit, each page's addressability follows from the repo-relative path within that graph.
 
 - grounded_in::[[Open Integrity Project (Blockchain Commons, 2025)]]

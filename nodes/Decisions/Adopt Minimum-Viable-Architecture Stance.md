@@ -36,7 +36,7 @@ The stance is also asymmetric with respect to different kinds of deferrals. Capa
 
 **Defer publication entirely until the graph is substantial enough to justify it.** Work in the workshop repository until a larger critical mass of nodes and conventions exists, then publish as a more complete artifact. Rejected because publication is part of how the project learns what the practice needs. A published seed that fails to produce a second cycle teaches the project something the workshop-only path cannot.
 
-**Use an existing static-site generator (Jekyll, Hugo, Eleventy, Astro) with a thin adapter.** Defer the pipeline itself by adopting a stable tool and writing only the node-specific adapters. Rejected because the pipeline's scion commitments ([[Adopt Scion Publication Model]]) require a self-contained repository, and existing SSGs carry dependency surface (plugin ecosystems, toolchain versions, content model assumptions) that scions would inherit and need to maintain. The first cycle's pipeline is ~500 lines of Python with one dependency; a scion can read it end to end.
+**Use an existing static-site generator (Jekyll, Hugo, Eleventy, Astro) with a thin adapter.** Defer the pipeline itself by adopting a stable tool and writing only the node-specific adapters. Rejected because the pipeline's scion commitments ([[Adopt Self-Sovereign Graph Publication]]) require a self-contained repository, and existing SSGs carry dependency surface (plugin ecosystems, toolchain versions, content model assumptions) that scions would inherit and need to maintain. The first cycle's pipeline is ~500 lines of Python with one dependency; a scion can read it end to end.
 
 ## What Would Change It
 
@@ -56,7 +56,7 @@ The stance is also asymmetric with respect to different kinds of deferrals. Capa
 - grounded_in::[[Minimum Viable Architecture Musing (Christopher Allen, 2024)]]
   - The Reference whose framing this Decision's name and discipline come from directly. Allen's MVA stance names upfront architectural planning paired with deferred non-essential components, modular expandability, and interoperable interfaces as the substrate for survivable growth; this Decision specializes that stance for a knowledge-graph project's scale. Without the Musing, this Decision would not carry the specific "Minimum Viable Architecture" formulation.
 
-- grounded_in::[[Adopt Scion Publication Model]]
+- grounded_in::[[Adopt Self-Sovereign Graph Publication]]
   - The scion commitment is one reason the MVA stance is load-bearing. Every capability the pipeline ships is a capability every scion inherits as a maintenance surface; keeping the minimum small keeps scion cost low.
 
 - informed_by::[[Convergent Motivation as Load-Bearing Signal]]

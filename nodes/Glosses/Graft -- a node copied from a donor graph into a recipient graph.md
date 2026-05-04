@@ -15,7 +15,7 @@ A graft is a node whose content was copied from one Deep Context graph (the dono
 
 In horticultural terms a graft is the operation that joins a cutting from one plant onto another; in this graph the metaphor narrows to per-node copies. A recipient graph may carry grafts from any number of donors, and an individual node may have been grafted from a graph that itself grafted that node from elsewhere -- the recorded provenance is the immediate donor, not the chain.
 
-A graft differs from a [[Adopt Scion Publication Model|Scion]] (a graph that claims wholesale lineage from a donor via `scion_of::`, intending to track upstream) and from an [[External Node -- a node that lives in another graph, referenced without being imported|External Node]] (a node referenced from another graph but not imported into it). The graft has copied; the scion has claimed; the external node has neither. A recipient graph may carry many grafts without being a scion, and a scion typically carries grafts as well -- the two axes (per-node copy vs graph-level lineage) compose rather than overlap.
+A graft differs from a [[Adopt Self-Sovereign Graph Publication|Scion]] (a graph that claims wholesale lineage from a donor via `scion_of::`, intending to track upstream) and from an [[External Node -- a node that lives in another graph, referenced without being imported|External Node]] (a node referenced from another graph but not imported into it). The graft has copied; the scion has claimed; the external node has neither. A recipient graph may carry many grafts without being a scion, and a scion typically carries grafts as well -- the two axes (per-node copy vs graph-level lineage) compose rather than overlap.
 
 ## Relations
 

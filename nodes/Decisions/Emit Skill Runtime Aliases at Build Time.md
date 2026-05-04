@@ -55,7 +55,7 @@ Idempotent regeneration is what keeps the emission safe under authoring churn. E
 - grounded_in::[[Adopt Skills as Graph Nodes]]
   - The upstream commitment that locates source-of-truth in the graph. This Decision is the downstream resolution: given that skills live in the graph, how the agent runtime's layout is derived from the graph layout. Without the upstream commitment, the question would not arise -- a skill that was primarily a runtime artifact would have no source-in-graph to emit from.
 
-- grounded_in::[[Adopt Scion Publication Model]]
+- grounded_in::[[Adopt Self-Sovereign Graph Publication]]
   - The scion commitment that forces the runtime aliases to be committed rather than built-locally-and-gitignored. A scion owner or a Web-UI editor does not run the build locally; the runtime layout has to be part of the repository's shipped shape for the scion's agent runtime to find skills after clone.
 
 - informed_by::[[Publish via Actions Artifact Deploy]]

@@ -47,8 +47,8 @@ Post-inception commits carry authority through a delegated-authority file at `.r
 
 ## Relations
 
-- informs_downstream::[[Adopt Scion Publication Model]]
-  - The Scion Publication Decision commits to each scion having its own OI inception commit and therefore its own DID. This Reference is the specification the commitment runs on.
+- informs_downstream::[[Adopt Self-Sovereign Graph Publication]]
+  - The Self-Sovereign Graph Publication Decision commits each graph to its own OI inception commit and therefore its own DID. This Reference is the specification the commitment runs on.
 
 - informs_downstream::[[Knowledge Outlives Its Tools]]
   - The Conviction's commitment that knowledge survive particular tools composes with OI's commitment that identity survive particular hosts. A scion's DID is not dependent on GitHub; the scion can migrate between hosts without losing its cryptographic name. This Reference is the mechanism the Conviction's host-agnostic commitment runs on at the identity layer.

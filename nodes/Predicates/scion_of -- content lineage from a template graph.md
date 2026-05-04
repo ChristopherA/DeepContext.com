@@ -28,7 +28,7 @@ A reader encountering `S scion_of::T↗` learns that the subject S is a template
 
 ### Against [[grounded_in -- normative or structural foundation]]
 
-`grounded_in::` names dependence on a normative or structural commitment — a Decision, Conviction, or Contract whose reasoning the subject inherits. `scion_of::` is narrower and does not carry normative inheritance automatically. A scion inherits the template's Convictions by default (see `Adopt Scion Publication Model`), but the scion may revise any of them without losing its scion-of relationship. `grounded_in::` asserts that removing the grounding breaks the subject; `scion_of::` asserts only that the subject's content began as an instantiation of the object's.
+`grounded_in::` names dependence on a normative or structural commitment — a Decision, Conviction, or Contract whose reasoning the subject inherits. `scion_of::` is narrower and does not carry normative inheritance automatically. A scion inherits the template's Convictions by default (see `Adopt Self-Sovereign Graph Publication`), but the scion may revise any of them without losing its scion-of relationship. `grounded_in::` asserts that removing the grounding breaks the subject; `scion_of::` asserts only that the subject's content began as an instantiation of the object's.
 
 ### Against [[informed_by -- weaker influence than grounded_in]]
 
@@ -64,7 +64,7 @@ The root template (DeepContext.com) ships the same file with `this_did:` set to 
 - contrasts_with::[[grounded_in -- normative or structural foundation]]
   - Normative inheritance vs instantiation. A scion can revise any inherited commitment without losing its scion-of relationship; a node cannot revise its grounding without the grounded_in edge ceasing to hold.
 
-- grounded_in::[[Adopt Scion Publication Model]]
+- grounded_in::[[Adopt Self-Sovereign Graph Publication]]
   - The Decision that names the template-plus-scion architecture this predicate operates inside of. Without the scion Decision, this predicate would have no graph-instance layer to edge across. The predicate is the graph-layer mechanism by which the scion Decision's identity-sovereignty commitment is expressed on a specific scion.
 
 - grounded_in::[[Adopt Predicate Atomicity]]

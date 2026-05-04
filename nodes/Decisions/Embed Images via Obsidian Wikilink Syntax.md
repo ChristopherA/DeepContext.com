@@ -1,7 +1,7 @@
 ---
 created: 2026-04-23
 tagline: Image embeds use Obsidian's `![[path]]` wikilink-embed syntax; attachments live in an `Attachments/` folder co-located with the referring note; the render pipeline translates to site-root-relative `<img>`
-brief_summary: Images in DeepContext nodes and the landing page are embedded using Obsidian's wikilink-embed syntax `![[Attachments/name.png]]`. Attachment files live in an `Attachments/` folder co-located with the referring note — at the repository root for root-level notes (`landing.md`), and as a sibling subdirectory for compound nodes (`nodes/<Tax>/<Folder>/Attachments/`). The render pipeline translates the embed into a standard markdown image reference with a site-root-relative URL (`![alt](/Attachments/name.png)`), which python-markdown emits as an `<img>` element; the build copies every `Attachments/` tree into the output so the URLs resolve at request time. Image extensions recognized: `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`, `.webp`. Non-image embeds pass through unchanged, reserving `![[]]` for future transclusion features. The choice composes with Adopt Wikilinks and Named Edges at the embed layer and with Adopt Scion Publication Model at the build-artifact layer: a scion inherits working image rendering on first clone without local build steps.
+brief_summary: Images in DeepContext nodes and the landing page are embedded using Obsidian's wikilink-embed syntax `![[Attachments/name.png]]`. Attachment files live in an `Attachments/` folder co-located with the referring note — at the repository root for root-level notes (`landing.md`), and as a sibling subdirectory for compound nodes (`nodes/<Tax>/<Folder>/Attachments/`). The render pipeline translates the embed into a standard markdown image reference with a site-root-relative URL (`![alt](/Attachments/name.png)`), which python-markdown emits as an `<img>` element; the build copies every `Attachments/` tree into the output so the URLs resolve at request time. Image extensions recognized: `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`, `.webp`. Non-image embeds pass through unchanged, reserving `![[]]` for future transclusion features. The choice composes with Adopt Wikilinks and Named Edges at the embed layer and with Adopt Self-Sovereign Graph Publication at the build-artifact layer: a graph inherits working image rendering on first clone without local build steps.
 ---
 
 - conforms_to::[[Decision Form Contract]]
@@ -36,7 +36,7 @@ The choice composes three decisions that together let images participate in the 
 
 **Emit bespoke HTML rather than translating to standard markdown image.** Have `linkify.py` produce `<img ... class="embed-image">` HTML directly, bypassing python-markdown's image handling. Rejected because it duplicates python-markdown's existing image pipeline (alt-text escaping, URL encoding, output formatting) with project-specific code that would drift. Translating to standard markdown and letting python-markdown produce the `<img>` keeps the rendering path narrow and consistent with how the pipeline handles other markdown constructs.
 
-**Host images externally and reference via URL.** Store images on a CDN or external host and reference them via `![alt](https://example.com/image.png)`. Rejected because it introduces an external-service dependency that [[Adopt Scion Publication Model]]'s self-containment commitment specifically rejects. A scion cloned tomorrow should render images without contacting any service the template-owner controls; committing attachments alongside the content is what makes that property hold.
+**Host images externally and reference via URL.** Store images on a CDN or external host and reference them via `![alt](https://example.com/image.png)`. Rejected because it introduces an external-service dependency that [[Adopt Self-Sovereign Graph Publication]]'s self-containment commitment specifically rejects. A scion cloned tomorrow should render images without contacting any service the template-owner controls; committing attachments alongside the content is what makes that property hold.
 
 ## What Would Change It
 
@@ -55,7 +55,7 @@ The choice composes three decisions that together let images participate in the 
 - grounded_in::[[Adopt Wikilinks and Named Edges]]
   - The upstream Decision that adopted Obsidian-compatible wikilink syntax for the graph's text edges. This Decision extends the same syntax choice to images: `![[path]]` is the embed counterpart of `[[target]]`. Adopting one implies adopting the other to the extent the project treats the Obsidian-family of conventions as a coherent authoring surface.
 
-- grounded_in::[[Adopt Scion Publication Model]]
+- grounded_in::[[Adopt Self-Sovereign Graph Publication]]
   - The scion commitment requires every scion to get working image rendering on first clone with no additional configuration. Committing the `Attachments/` directory alongside the content, and making the copy-attachments step part of the build, is what keeps the property holding. A scion cloning the template inherits working attachments and a working build.
 
 - informs_downstream::[[Markdown Node Contract]]

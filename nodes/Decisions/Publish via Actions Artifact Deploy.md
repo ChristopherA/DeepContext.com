@@ -20,7 +20,7 @@ The Decision records a mid-execution pivot. The project's Static Site Generation
 
 ## Why
 
-The underlying commitment is the scion publication model from [[Adopt Scion Publication Model]]: the pipeline must run in the scion's own environment without external dependencies. Whether the build output is committed or regenerated per deploy is downstream of that commitment, and either works in principle. The specific choice between the two came down to three considerations the constraint forced into view.
+The underlying commitment is self-sovereign graph publication from [[Adopt Self-Sovereign Graph Publication]]: the pipeline must run in each graph's own environment without external dependencies. Whether the build output is committed or regenerated per deploy is downstream of that commitment, and either works in principle. The specific choice between the two came down to three considerations the constraint forced into view.
 
 The first is git-history hygiene. Committed build output doubles the diff on every content change -- once for the source change, once for the regenerated HTML. Git blame becomes noisy, the repository grows faster than content grows, and reviewers scanning commits see artifact churn alongside meaningful changes. Actions artifact deploy keeps generated output out of git entirely; the repository size and diff noise stay proportional to source change.
 
@@ -52,7 +52,7 @@ The cost of switching is that first-time scion owners have to do one more config
 
 ## Relations
 
-- grounded_in::[[Adopt Scion Publication Model]]
+- grounded_in::[[Adopt Self-Sovereign Graph Publication]]
   - The upstream commitment this Decision implements. Scionability requires some mechanism for scions to publish their own sites; Actions artifact deploy is the specific mechanism chosen.
 
 - informs_downstream::[[Markdown Node Contract]]

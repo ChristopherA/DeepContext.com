@@ -21,7 +21,7 @@ Performs the local ceremony that stands up a new Deep Context graph with its own
 
 The skill runs in two phases. The first phase verifies prerequisites and walks a missing-prereq first steward through the install chain — Homebrew if absent, `gh` via Homebrew, and an SSH signing key generated and registered by `gh auth login -p ssh` (the modern `gh` flow generates a key if none exists and registers it with GitHub for both authentication and signing in one interactive walk), with git configured to use the key for signing. The second phase runs `.scripts/graph-inception.sh`, which reads the donor's DID from `.deep-context-identity.yml`, removes the cloned `.git` directory, produces a fresh OI-signed root commit via `.scripts/oi-inception.sh`, commits the new graph's content signed by the first steward, and writes the new graph's DID back into `.deep-context-identity.yml`.
 
-Inception runs once per graph. After it completes, the steward creates a new GitHub repository under their account, pushes, and enables Actions and Pages. The new graph may optionally claim **scion-of lineage** from the donor by recording `scion_of:` in `.deep-context-identity.yml` — but most graphs do not, because scion-of signals upstream-tracking intent (the rare parallel-fork case) rather than mere content adoption. The Decision backing the ceremony's shape is [[Adopt Scion Publication Model]].
+Inception runs once per graph. After it completes, the steward creates a new GitHub repository under their account, pushes, and enables Actions and Pages. The new graph may optionally claim **scion-of lineage** from the donor by recording `scion_of:` in `.deep-context-identity.yml` — but most graphs do not, because scion-of signals upstream-tracking intent (the rare parallel-fork case) rather than mere content adoption. The Decision backing the ceremony's shape is [[Adopt Self-Sovereign Graph Publication]].
 
 ## Steps
 
@@ -224,7 +224,7 @@ The OI inception primitive this skill's wrapper calls. Produces a fresh empty si
 - conforms_to::[[Skill Form Contract]]
   - This skill declares compliance with the Skill Form Contract's Requirements. Sits alongside Graph Orient and Node Read as first-session skills a new graph's first steward walks through: Inception stands up the graph, Orient reads the inherited graph into context, Node Read drills into specific inherited nodes.
 
-- grounded_in::[[Adopt Scion Publication Model]]
+- grounded_in::[[Adopt Self-Sovereign Graph Publication]]
   - The Decision this skill operationalizes. The Decision names what a Deep Context graph is (a self-sovereign repository with its own OI-signed DID), why Inception must be local (OI signing requires the steward's SSH key, which Actions cannot access), and what file records the identity (`.deep-context-identity.yml` with `this_did` always, optional `scion_of` for the lineage-claim case). This skill is the concrete procedure that makes the Decision's commitments actionable for a first steward.
 
 - grounded_in::[[Open Integrity Project (Blockchain Commons, 2025)]]

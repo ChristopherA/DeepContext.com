@@ -78,5 +78,5 @@ The Deep Context practice itself is a partial test. The project's founding vocab
 - informed_by::[[Vocabulary Diversity Is a Feature]]
   - The Conviction names the stance the project holds; this Observation names one of the failure modes the stance protects against. Without the stance, founding vocabularies would be the default outcome; with the stance, the default outcome is contributor-local vocabulary that stays local until unanimity brings a subset of it into Common.
 
-- informs_downstream::[[Adopt Scion Publication Model]]
-  - The scion publication model is the architectural response to this Observation's dynamic. If founding vocabularies calcify, scioning is the structural escape hatch that lets later participants carry the practice forward under their own cryptographic identity rather than being bound to the founding choices — vocabulary divergence gets an exit at the identity layer, not just at the contribution layer.
+- informs_downstream::[[Adopt Self-Sovereign Graph Publication]]
+  - Self-sovereign graph publication is the architectural response to this Observation's dynamic. If founding vocabularies calcify, standing up a parallel graph (with grafts where helpful, and scion-of when upstream tracking is desired) is the structural escape hatch that lets later participants carry the practice forward under their own cryptographic identity rather than being bound to the founding choices — vocabulary divergence gets an exit at the identity layer, not just at the contribution layer.

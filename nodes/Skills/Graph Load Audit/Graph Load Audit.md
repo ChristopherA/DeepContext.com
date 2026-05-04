@@ -106,7 +106,7 @@ For Predicate nodes, the load-bearing measure is edge-usage from Step 3, not wik
 - **Edge-usage 3-9** -- the Predicate is exercised but narrowly. Not a finding by itself; depends on whether the Predicate's distinction against adjacent Predicates is load-bearing (the Crescent section's content). If the Crescent does not name a structural distinction the graph commits to, the Predicate may want consolidation.
 - **Edge-usage 10+** -- working as intended; no finding.
 
-Recently-seeded Predicates (e.g., `scion_of` shortly after the Scion Publication Model was adopted) are expected to grow and should be classified per Step 6.
+Recently-seeded Predicates (e.g., `scion_of` shortly after the Self-Sovereign Graph Publication Decision was adopted) are expected to grow and should be classified per Step 6.
 
 ### Step 8: Produce the tier-based report
 

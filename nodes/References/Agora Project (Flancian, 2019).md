@@ -31,13 +31,13 @@ The Agora project is a three-repo software system and its running instance at an
 - **Cross-source wikilink resolution as a union, not a merge.** Resolution presents every contribution whose slug matches; it does not normalize or elect a canonical version. This is consistent with [[Translation Over Convergence]] and [[Vocabulary Diversity Is a Feature]] at the rendering layer.
 - **No-404 composition.** Every wikilink resolves to something — at minimum, an invitation to contribute. Dead ends become participation surfaces rather than broken links.
 - **Filesystem as truth, rendered graph as derived artifact.** The aggregated JSON graph is exported from parsed filesystem content; the filesystem is authoritative.
-- **Edit-link delegation via URL templates.** The aggregator links back to each source's upstream editor rather than hosting editing itself. Each entry carries an `edit:` URL template (e.g., `https://github.com/flancian/garden/edit/main/{path}`); the aggregator fills in the path per contribution. This pattern is compatible with [[Adopt Scion Publication Model]]'s first-class Web-UI edit path.
+- **Edit-link delegation via URL templates.** The aggregator links back to each source's upstream editor rather than hosting editing itself. Each entry carries an `edit:` URL template (e.g., `https://github.com/flancian/garden/edit/main/{path}`); the aggregator fills in the path per contribution. This pattern is compatible with [[Adopt Self-Sovereign Graph Publication]]'s first-class Web-UI edit path.
 - **Typed sources in one manifest.** The manifest accepts more than one kind of entry: individual authoring gardens and shared collaboration surfaces (named *stoas* upstream) both register through the same API, distinguished by a type tag. DeepContext's later-phase equivalent may name distinct kinds of source while keeping the single-manifest discipline.
 - **Governance-fork clause as a social-layer primitive.** The Agora's `CONTRACT.md` names forking as a legitimate response to contract incompatibility — a subset of the community may fork the Agora itself with no presumption of ill intent. This is distinct from code-level repository forking and names an explicit social exit at the conventions layer.
 
 ### Not adopted
 
-- **Aggregator as a separate always-on service.** The bridge is a worker; the server is a Flask application; the full stack requires deployment infrastructure (uWSGI, SystemD, caching, optional Forgejo hosting). DeepContext's model is self-contained publication: a scion produces its own live site on GitHub Pages with no external service required. The aggregator-as-service model is incompatible with the friction floor [[Adopt Scion Publication Model]] commits to.
+- **Aggregator as a separate always-on service.** The bridge is a worker; the server is a Flask application; the full stack requires deployment infrastructure (uWSGI, SystemD, caching, optional Forgejo hosting). DeepContext's model is self-contained publication: a scion produces its own live site on GitHub Pages with no external service required. The aggregator-as-service model is incompatible with the friction floor [[Adopt Self-Sovereign Graph Publication]] commits to.
 - **Federation as the primary unit.** Agora treats the aggregated namespace, not the individual garden, as what a reader visits. A contributor's garden is source material for someone else's rendered surface rather than a published site in its own right. DeepContext's current scope is single-repo canonical publication; a scion is a first-class live site, not a feeder.
 - **Per-contributor does not publish.** A contributor registering a garden in someone else's Agora does not get their own rendered surface from that registration. This differs from DeepContext's commitment that a scion's first push builds the scion's own site.
 - **ActivityPub federation.** Agora's server publishes per-user ActivityPub actors with signed Create activities for new subnodes. DeepContext has no federation commitment; the pattern is named here because it may become relevant if a later phase touches cross-graph aggregation.
@@ -45,13 +45,13 @@ The Agora project is a three-repo software system and its running instance at an
 ### Key moves to remember
 
 - The governance-fork primitive and the code-level repository fork are distinct moves. The former is a community exit when agreements become incompatible; the latter is a technical operation on a git repository. Both are relevant to DeepContext, but they answer different questions.
-- Agora's unit of participation is a garden registered in an aggregator's manifest; the garden does not produce a live site on its own. This is the structural contrast with DeepContext's scion-publishes-itself commitment that [[Adopt Scion Publication Model]] makes.
+- Agora's unit of participation is a garden registered in an aggregator's manifest; the garden does not produce a live site on its own. This is the structural contrast with DeepContext's scion-publishes-itself commitment that [[Adopt Self-Sovereign Graph Publication]] makes.
 - The aggregator-plus-many-gardens model and the scion-as-single-repo model are not competitors — they address different scales. Agora's patterns are worth naming for the later phase where cross-graph aggregation becomes load-bearing; the MVA Stance defers building until that need surfaces.
 - Translation happens at ingest (format-to-format), at resolution (cross-source union), and at contract (the governance-fork exit when vocabularies cannot be reconciled).
 
 ## Relations
 
-- informs_downstream::[[Adopt Scion Publication Model]]
+- informs_downstream::[[Adopt Self-Sovereign Graph Publication]]
   - The Decision commits to a scion-publishes-itself unit of participation that differs structurally from Agora's aggregator-plus-gardens model. This Reference is one of the precedents the Decision contrasts with — Agora's model shows what aggregation-first federation looks like, and the Decision names why DeepContext's current scope chose self-contained publication instead.
 
 - informs_downstream::[[Adopt Minimum-Viable-Architecture Stance]]

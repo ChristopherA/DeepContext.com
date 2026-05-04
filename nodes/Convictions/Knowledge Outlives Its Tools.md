@@ -20,7 +20,7 @@ The commitment runs deeper than a preference for open formats. It is a stance ab
 
 The value generates specific technical constraints that show up in every subsequent Decision about the graph's pipeline. Plain markdown rather than proprietary formats because markdown works everywhere with no tooling commitment. File-per-node rather than database records because files outlast any particular database engine. Predicates as text (`predicate::[[Target]]` as a literal markdown line) rather than plugin-dependent metadata because plugin-dependent metadata is coupled to the plugin. Git for version control because git is portable and its wire format is durable. Each constraint is a specific bet against a specific failure mode: if the current tooling disappears tomorrow, can the graph still be read, traversed, and edited?
 
-The commitment also makes scioning workable. [[Adopt Scion Publication Model]] requires that a scion produces its own site with no external dependencies; durability is what makes that promise hold at the content layer. A scion inherits the nodes, the conventions, and the pipeline code -- all of which are plain text, all of which can be run, edited, or replaced without contacting any external service. If the template disappears, every scion still works.
+The commitment also makes self-sovereign graph publication workable. [[Adopt Self-Sovereign Graph Publication]] requires that every graph produces its own site with no external dependencies; durability is what makes that promise hold at the content layer. A new graph standing up from a clone inherits the nodes, the conventions, and the pipeline code -- all of which are plain text, all of which can be run, edited, or replaced without contacting any external service. If the donor disappears, every graph standing on its own still works.
 
 The value does not prohibit tooling. Obsidian plugins, shell scripts, agent-mediated curation, specialized editors are all legitimately used by contributors. The requirement is that no tooling become a single point of failure. A reader without the plugins can still read the node; a contributor without the agent can still author the node; the graph's capabilities with tooling are a layer on top, not a foundation under.
 
@@ -52,8 +52,8 @@ The subtlest drift is in the authoring experience. A contributor who cannot cont
 - informed_by::[[Capture Reasoning, Not Just Knowledge]]
   - Captured reasoning that doesn't survive tool changes loses its fidelity over time. Durability is a precondition for sustained fidelity; the two values compose.
 
-- informs_downstream::[[Adopt Scion Publication Model]]
-  - The scion publication model depends on durability at the content layer. A scion inherits durable content and a durable pipeline; without durability, scioning is formal rather than substantive.
+- informs_downstream::[[Adopt Self-Sovereign Graph Publication]]
+  - Self-sovereign graph publication depends on durability at the content layer. A new graph inherits durable content (when cloned from a donor) and a durable pipeline; without durability, the inheritance is formal rather than substantive.
 
 - informed_by::[[Open Integrity Project (Blockchain Commons, 2025)]]
   - The OI specification carries the durability commitment at the identity layer. A scion's `did:repo:<sha1>` DID is content-addressed — derived from the inception-commit SHA — and therefore stable across hosts. The Conviction's "knowledge survives particular tools" commitment composes with OI's "identity survives particular hosts" mechanism; together they extend durability across both content and cryptographic naming.
