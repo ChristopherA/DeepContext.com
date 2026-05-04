@@ -164,6 +164,7 @@ def render_html(
     source_rel_path: str | None = None,
     style_href: str = "/style.css",
     is_home: bool = False,
+    is_browse: bool = False,
 ) -> str:
     normalized = normalize_list_indents(markdown_body)
     html_body = markdown.markdown(normalized, extensions=MD_EXTENSIONS)
@@ -171,6 +172,8 @@ def render_html(
     crumb = ""
     if not is_home:
         segments = ['<a href="/">DeepContext</a>']
+        if not is_browse:
+            segments.append('<a href="/nodes/">Browse</a>')
         if taxonomy_name and taxonomy_url:
             segments.append(
                 f'<a href="{html.escape(taxonomy_url)}">{html.escape(taxonomy_name)}</a>'
