@@ -26,7 +26,7 @@ case), but most new graphs do not.
 
 A Deep Context **graph** is a repository carrying typed markdown nodes
 with named-edge predicates. Each graph has its own `did:repo:<sha1>` DID
-derived from its own OI inception commit, its own Pages site, and its own
+derived from its own Open Integrity inception commit, its own Pages site, and its own
 content to evolve as its first steward sees fit. The curation discipline
 lives in the conventions captured under `nodes/Contracts/`, not in
 editorial permissions.

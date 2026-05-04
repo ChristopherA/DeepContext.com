@@ -44,4 +44,4 @@ The Blockchain Commons Musing, published 2024-06-19 from notes originally drafte
   - The Decision whose name and discipline specialize this Musing's MVA framing for DeepContext's scale. The Decision is the concrete application; this Reference is the framing substrate.
 
 - informed_by::[[Open Integrity Project (Blockchain Commons, 2025)]]
-  - Both Blockchain Commons works share the project's architectural stance. The OI project is a concrete application of MVA principles at the cryptographic-identity layer (layered specifications, modular components, interoperable interfaces for signing and verification); the Musing is the general framing those applications exemplify.
+  - Both Blockchain Commons works share the project's architectural stance. The Open Integrity project is a concrete application of MVA principles at the cryptographic-identity layer (layered specifications, modular components, interoperable interfaces for signing and verification); the Musing is the general framing those applications exemplify.

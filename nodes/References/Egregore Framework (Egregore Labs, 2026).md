@@ -51,7 +51,7 @@ DeepContext uses git as substrate, markdown as content primitive, and agents as 
 ## Relations
 
 - informs_downstream::[[Adopt Self-Sovereign Graph Publication]]
-  - DeepContext's scion model adopts Egregore's provision-from-template move and extends it with an Open Integrity inception commit so each scion has its own DID. The divergences — terminal-first Claude Code contribution, collaborator-invite as the participation-expansion primitive, multi-agent session-coordination as a first-class concern, and two-repo plus managed-sibling structure — are all declined by the scion Decision, which composes the template move with an OI ceremony and a Web-UI-first contribution path instead.
+  - DeepContext's scion model adopts Egregore's provision-from-template move and extends it with an Open Integrity inception commit so each scion has its own DID. The divergences — terminal-first Claude Code contribution, collaborator-invite as the participation-expansion primitive, multi-agent session-coordination as a first-class concern, and two-repo plus managed-sibling structure — are all declined by the scion Decision, which composes the template move with an Open Integrity ceremony and a Web-UI-first contribution path instead.
 
 - informs_downstream::[[Adopt Minimum-Viable-Architecture Stance]]
   - The MVA Decision names "Egregore-adjacent" capabilities as explicitly deferred — invitation mechanics, multi-agent coordination, private-to-public projection, cross-graph sync. This Reference is the study substrate those deferrals point at: the discrete technical patterns (semantic commands, session hooks, collaborator-invite) are named here without commitment to building any of them.

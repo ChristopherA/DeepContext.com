@@ -19,7 +19,7 @@ description: |
 
 Performs the local ceremony that stands up a new Deep Context graph with its own cryptographic identity. The ceremony is local-only because the Open Integrity inception commit must be signed by the first steward's own SSH key; no hosting platform's Actions runner has access to that key, so a single-click "Use this template" path cannot produce an inception with identity sovereignty flowing from the graph owner rather than from the runner's ephemeral token.
 
-The skill runs in two phases. The first phase verifies prerequisites and walks a missing-prereq first steward through the install chain — Homebrew if absent, `gh` via Homebrew, and an SSH signing key generated and registered by `gh auth login -p ssh` (the modern `gh` flow generates a key if none exists and registers it with GitHub for both authentication and signing in one interactive walk), with git configured to use the key for signing. The second phase runs `.scripts/graph-inception.sh`, which reads the donor's DID from `.deep-context-identity.yml`, removes the cloned `.git` directory, produces a fresh OI-signed root commit via `.scripts/oi-inception.sh`, commits the new graph's content signed by the first steward, and writes the new graph's DID back into `.deep-context-identity.yml`.
+The skill runs in two phases. The first phase verifies prerequisites and walks a missing-prereq first steward through the install chain — Homebrew if absent, `gh` via Homebrew, and an SSH signing key generated and registered by `gh auth login -p ssh` (the modern `gh` flow generates a key if none exists and registers it with GitHub for both authentication and signing in one interactive walk), with git configured to use the key for signing. The second phase runs `.scripts/graph-inception.sh`, which reads the donor's DID from `.deep-context-identity.yml`, removes the cloned `.git` directory, produces a fresh Open-Integrity-signed root commit via `.scripts/oi-inception.sh`, commits the new graph's content signed by the first steward, and writes the new graph's DID back into `.deep-context-identity.yml`.
 
 Inception runs once per graph. After it completes, the steward creates a new GitHub repository under their account, pushes, and enables Actions and Pages. The new graph may optionally claim **scion-of lineage** from the donor by recording `scion_of:` in `.deep-context-identity.yml` — but most graphs do not, because scion-of signals upstream-tracking intent (the rare parallel-fork case) rather than mere content adoption. The Decision backing the ceremony's shape is [[Adopt Self-Sovereign Graph Publication]].
 
@@ -27,7 +27,7 @@ Inception runs once per graph. After it completes, the steward creates a new Git
 
 ### Step 1: Confirm the user is ready to run Inception
 
-Before touching prerequisites or running any ceremony commands, confirm with the user that they have cloned a Deep Context graph locally (or initialized a fresh directory) and want to turn this working directory into a new graph. Name what the ceremony does at a high level — it discards the donor's git history (in the cloned case), produces a fresh OI-signed root commit with the steward's own SSH key, and commits the graph's initial content. Name what it cannot do — it cannot be signed by GitHub Actions, cannot be undone by a simple git command once the content commit lands, and requires an SSH key the user controls.
+Before touching prerequisites or running any ceremony commands, confirm with the user that they have cloned a Deep Context graph locally (or initialized a fresh directory) and want to turn this working directory into a new graph. Name what the ceremony does at a high level — it discards the donor's git history (in the cloned case), produces a fresh Open-Integrity-signed root commit with the steward's own SSH key, and commits the graph's initial content. Name what it cannot do — it cannot be signed by GitHub Actions, cannot be undone by a simple git command once the content commit lands, and requires an SSH key the user controls.
 
 If the user has not cloned a donor graph yet, walk them through the clone step first: `git clone https://github.com/ChristopherA/DeepContext.com.git <graph-name>` and `cd <graph-name>`. If the user is in DeepContext.com itself rather than a fresh clone, stop — Inception is for new graphs, not for the donor being cloned from.
 
@@ -151,7 +151,7 @@ The script:
 1. Reads the donor's `this_did` from `.deep-context-identity.yml`.
 2. Touches `.deep-context-inception-in-progress` (the partial-resume flag, gitignored).
 3. Removes the cloned `.git` directory (discards donor history).
-4. Runs `.scripts/oi-inception.sh .` to produce a fresh empty OI-signed root commit in the current directory.
+4. Runs `.scripts/oi-inception.sh .` to produce a fresh empty Open-Integrity-signed root commit in the current directory.
 5. Captures the new graph's DID from `git rev-parse HEAD`.
 6. Updates `.deep-context-identity.yml`: `this_did` becomes the new DID; `scion_of` becomes the donor's DID if `--claim-scion-of` was passed, otherwise `null`.
 7. Stages all working-tree content and commits it as the graph's initial content commit, signed by the first steward's SSH key.
@@ -212,12 +212,12 @@ The graph is now a first-class Deep Context graph with its own cryptographic ide
 The wrapper script for the ceremony proper. POSIX-sh. Runs from the new graph's directory root. Accepts `--claim-scion-of` flag (default off) to record `scion_of:` in the identity file.
 
 - **Inputs**: the current working directory must contain `.deep-context-identity.yml` and `.git` (a fresh clone of a Deep Context graph). Git signing configuration (`user.name`, `user.email`, `user.signingkey`) must be set and the signing key file must be readable.
-- **Outputs**: `.git` rewritten with two signed commits (the OI inception commit plus the graph's initial content commit); `.deep-context-identity.yml` updated with the new graph's DID under `this_did`; `scion_of` set to the donor's DID if `--claim-scion-of` was passed, else `null`.
+- **Outputs**: `.git` rewritten with two signed commits (the Open Integrity inception commit plus the graph's initial content commit); `.deep-context-identity.yml` updated with the new graph's DID under `this_did`; `scion_of` set to the donor's DID if `--claim-scion-of` was passed, else `null`.
 - **Failure modes**: missing prerequisite → exits with clear message naming the missing piece; partial run (script exited after removing `.git` but before completing inception) → re-running detects the partial-run state via the `.deep-context-inception-in-progress` flag file (no `.git`, flag present) and resumes from the inception step; previously-incepted graph lost `.git` without the flag present → unrecoverable from this script, re-clone from the graph's remote into a fresh directory; inconsistent state (`.git` present and flag present) → reports the inconsistency and refuses to proceed; signing failure → check that the signing key's public half is in GitHub allowed-signers and that `git config user.signingkey` points at the correct path.
 
 ### `.scripts/oi-inception.sh`
 
-The OI inception primitive this skill's wrapper calls. Produces a fresh empty signed root commit establishing the new graph's `did:repo:<sha1>`. Not normally called directly by a user; the Graph Inception wrapper invokes it with the current directory as the target.
+The Open Integrity inception primitive this skill's wrapper calls. Produces a fresh empty signed root commit establishing the new graph's `did:repo:<sha1>`. Not normally called directly by a user; the Graph Inception wrapper invokes it with the current directory as the target.
 
 ## Relations
 
@@ -225,10 +225,10 @@ The OI inception primitive this skill's wrapper calls. Produces a fresh empty si
   - This skill declares compliance with the Skill Form Contract's Requirements. Sits alongside Graph Orient and Node Read as first-session skills a new graph's first steward walks through: Inception stands up the graph, Orient reads the inherited graph into context, Node Read drills into specific inherited nodes.
 
 - grounded_in::[[Adopt Self-Sovereign Graph Publication]]
-  - The Decision this skill operationalizes. The Decision names what a Deep Context graph is (a self-sovereign repository with its own OI-signed DID), why Inception must be local (OI signing requires the steward's SSH key, which Actions cannot access), and what file records the identity (`.deep-context-identity.yml` with `this_did` always, optional `scion_of` for the lineage-claim case). This skill is the concrete procedure that makes the Decision's commitments actionable for a first steward.
+  - The Decision this skill operationalizes. The Decision names what a Deep Context graph is (a self-sovereign repository with its own Open-Integrity-signed DID), why Inception must be local (Open Integrity signing requires the steward's SSH key, which Actions cannot access), and what file records the identity (`.deep-context-identity.yml` with `this_did` always, optional `scion_of` for the lineage-claim case). This skill is the concrete procedure that makes the Decision's commitments actionable for a first steward.
 
 - grounded_in::[[Open Integrity Project (Blockchain Commons, 2025)]]
-  - The cryptographic specification that makes a graph's DID identity-sovereign rather than hosting-derivative. The inception-commit ceremony, the SHA1-derived DID, the allowed-signers delegation model — all are OI moves this skill's script composes together.
+  - The cryptographic specification that makes a graph's DID identity-sovereign rather than hosting-derivative. The inception-commit ceremony, the SHA1-derived DID, the allowed-signers delegation model — all are Open Integrity moves this skill's script composes together.
 
 - informs_downstream::[[scion_of -- content lineage from a template graph]]
   - The Predicate whose value this skill writes into `.deep-context-identity.yml` at step 6 of the script — conditionally on the `--claim-scion-of` flag. Most invocations leave `scion_of: null`; the flag is reserved for the parallel-fork-tracking case where the new graph intends to track the donor as upstream.

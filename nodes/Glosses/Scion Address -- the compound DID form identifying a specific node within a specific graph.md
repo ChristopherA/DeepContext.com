@@ -38,10 +38,10 @@ Limitations are named rather than hidden. A Scion Address uses the file's curren
 ## Relations
 
 - grounded_in::[[Adopt Self-Sovereign Graph Publication]]
-  - The Decision that names the did:repo scheme and makes a scion's DID content-derived. Scion Address is the natural extension to page granularity — if the graph's DID is the SHA1 of the OI inception commit, each page's addressability follows from the repo-relative path within that graph.
+  - The Decision that names the did:repo scheme and makes a scion's DID content-derived. Scion Address is the natural extension to page granularity — if the graph's DID is the SHA1 of the Open Integrity inception commit, each page's addressability follows from the repo-relative path within that graph.
 
 - grounded_in::[[Open Integrity Project (Blockchain Commons, 2025)]]
-  - The cryptographic specification that makes the repo-level DID content-addressable. Scion Address composes the OI DID with a repo-relative path to produce node-level addressing without importing any specific git-forge's URL conventions.
+  - The cryptographic specification that makes the repo-level DID content-addressable. Scion Address composes the Open Integrity DID with a repo-relative path to produce node-level addressing without importing any specific git-forge's URL conventions.
 
 - composes_with::[[External Node]]
   - When a node in this graph wants to cite a node in another graph, the reference target is an External Node; a Scion Address is one of the forms that target can take (alongside the `[[target]]↗` wikilink with external marker).
