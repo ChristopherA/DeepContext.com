@@ -112,6 +112,15 @@ Output lands in `.build/`. The GitHub Action runs the same command in a
 runner and uploads `.build/` as a Pages artifact; nothing commits back to
 the repository. `.build/` is gitignored.
 
+The build pipeline under `.scripts/` is designed to be shared verbatim
+with peer graphs that adopt this pipeline. Per-graph configuration
+(site brand, GitHub repo URL, GitHub Pages CNAME) lives in
+`.scripts/site_config.py`; the rest of `.scripts/` is intended to be
+byte-identical across peer graphs. Non-config drift in `.scripts/`
+between peer graphs is drift to reconcile via the bidirectional flow
+(see `nodes/Patterns/Coordinate at Content, Not at Git.md`), not
+divergence to maintain.
+
 ## A graph's AGENTS.md may differ
 
 Each graph is first-class. A graph may revise this file to reflect its own
