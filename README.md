@@ -117,7 +117,7 @@ per deploy -- no generated HTML lives in git.
 ## Pipeline
 
 ```
-Source (nodes/*.md, landing.md)
+Source (nodes/*.md, including the home Touch Point at nodes/Touch Points/)
    |
    v
 slugify.py           filename -> slug table, with collision detection
@@ -137,7 +137,6 @@ Decision backing this pipeline: [Publish via Actions Artifact Deploy](nodes/Deci
 ```
 DeepContext.com/
 |-- README.md            <- this file (GitHub-facing)
-|-- landing.md           <- site landing page source
 |-- AGENTS.md            <- orientation for AI agents
 |-- LICENSE
 |-- pyproject.toml       <- Python dependencies (uv-managed)
