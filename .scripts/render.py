@@ -10,21 +10,14 @@ from urllib.parse import quote
 
 import markdown
 
+from site_config import GITHUB_REPO_URL, SITE_NAME
+
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n", re.DOTALL)
 
 MD_EXTENSIONS = ["tables", "fenced_code", "attr_list", "sane_lists"]
 
 BULLET_RE = re.compile(r"^( {0,4})([*+\-]|\d+[.)]) ")
 
-# Site brand displayed in crumb and footer. Forks and scions should set this
-# to their own name. The DC-specific value below is the canonical case for
-# this repository; downstream graphs override it as one of the two scion-
-# config constants (the other is GITHUB_REPO_URL just below).
-SITE_NAME = "DeepContext"
-
-# GitHub source link for the "Edit on GitHub" footer widget. Scions should set
-# GITHUB_REPO_URL to their own repo or to an empty string to suppress the link.
-GITHUB_REPO_URL = "https://github.com/ChristopherA/DeepContext.com"
 GITHUB_BRANCH = "main"
 
 # OI inception DID for this repo, of the form did:repo:<sha1-of-root-commit>.
